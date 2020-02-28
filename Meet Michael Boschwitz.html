@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html><!--
+
+
+.------..------..------..------..------..------..------.     .------..------..------..------..------..------..------..------..------.
+|M.--. ||I.--. ||C.--. ||H.--. ||A.--. ||E.--. ||L.--. |     |B.--. ||O.--. ||S.--. ||C.--. ||H.--. ||W.--. ||I.--. ||T.--. ||Z.--. |
+|      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
+|      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
+| '--'M|| '--'I|| '--'C|| '--'H|| '--'A|| '--'E|| '--'L|     | '--'B|| '--'O|| '--'S|| '--'C|| '--'H|| '--'W|| '--'I|| '--'T|| '--'Z|
+`------'`------'`------'`------'`------'`------'`------'     `------'`------'`------'`------'`------'`------'`------'`------'`------'
+
+Looks like you're checking out my source code... I suppose that's not surprising when you think about it.
+
+--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="./Resources/icon" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="./Resources/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./Resources/loading.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineering and Creative Design at the University of Minnesota.
+    Passionate about technology and the outdoors, and hungry to learn more.">
+<!-- Open Graph data -->
+<meta property="og:title" content="Meet Michael Boschwitz">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="michael.boschwitz.me">
+<meta property="og:url" content="http://michael.boschwitz.me/">
+<meta property="og:image" src="./Resources/tempPhotoThing.jpg">
+<meta property="og:description" content="Software Engineering and Creative Design Student at the University of Minnesota.
+Passionate about technology, music, games, art, and hungry to learn more.">
+<meta property="fb:app_id" content="331106837246669">
+    <meta name="theme-color" content="#3b496e">
+    <title>Meet Michael Boschwitz</title>
+    <style>
+        .load-fade-in {
+            -webkit-animation: fade-in-anim 3.0s;
+            animation: fade-in-anim 3.0s
+        }
+
+        @-webkit-keyframes fade-in-anim {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade-in-anim {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body class="anchor loaded">
+    <!-- <div class="preloader-background">
+    	<div class="preloader-wrapper big active">
+    		<div class="spinner-layer spinner-blue-only">
+    			<div class="circle-clipper left">
+    				<div class="circle"></div>
+    			</div>
+    			<div class="gap-patch">
+    				<div class="circle"></div>
+    			</div>
+    			<div class="circle-clipper right">
+    				<div class="circle"></div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div> -->
+    <div id="loader-wrapper">
+        <h1 style="font-weight:100;" class="loading_name load-fade-in">Hello there! I'm Michael</h1>
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <span class="loading_text load-fade-in">Loading...</span>
+    </div>
+    <!--<header>
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Materialize</a>
+            <ul class="right side-nav" id="nav-mobile">
+              <li class="hide-on-small-only"><a href="parallax.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+            </ul>
+            <a class="button-collapse" href="#" data-activates='nav-mobile'><i class="mdi-navigation-menu"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>-->
+    <div class="hero" style="height: 925px;">
+        <h1 style="font-weight:100;color:#000000" class="me_name">Hey, I'm Michael!</h1>
+        <div style="font-weight:300;font-size:24px;padding-left:5px;color:#000000"><span class="typed"></span><span class="typed-cursor"></span></div>
+    </div>
+
+    <main>
+        <!--  Floating Navigation buttons   -->
+        <div id="navbuttons">
+            <div class="fixed-action-btn" style="bottom: 70px; right: 24px; z-index:10;">
+                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(38)" style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Previous Section">
+                    <i class="large material-icons">navigation</i>
+                </a>
+            </div>
+            <div class="fixed-action-btn" style="bottom: 40px; right: 48px; z-index:20;">
+                <a class="btn-floating waves-effect waves-light button-collapse ntooltipped" data-activates="slide-out" style="background-color: #4285f4;" data-position="left" data-delay="500" data-tooltip="Menu/Navigation">
+                    <i class="large material-icons">menu</i>
+                </a>
+            </div>
+            <div class="fixed-action-btn" style="bottom: 10px; right: 24px; z-index:10;">
+                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(40)" style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Next Section">
+                    <i class="large material-icons" style="transform:rotateX(180deg)">navigation</i>
+                </a>
+            </div>
+        </div>
+
+
+        <ul id="slide-out" class="side-nav right-aligned" style="width: 280px; transform: translateX(100%);">
+            <li>
+                <div class="userView" style="height:160px">
+                    <img class="background" src="./Resources/compass.jpg" style="width:280px;">
+                    <!-- <a href="#!user"><img class="circle" src="assets/img/prof.jpg"></a>
+      <a href="#!name"><span class="white-text name">David Boschwitz</span></a>
+      <a href="#!email"><span class="white-text email">david@boschwitz.me</span></a> -->
+                </div>
+            </li>
+            <li>
+                <div class="subheader" style="margin-left:30px">Navigation</div>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" onclick="goToID(&#39;#intro&#39;)">Intro</a></li>
+            <li><a class="waves-effect" onclick="goToID(&#39;#leadership&#39;)">Leadership &amp; Work</a></li>
+            <li><a class="waves-effect" onclick="goToID(&#39;#projects&#39;)">Projects</a></li>
+            <li><a class="waves-effect" onclick="goToID(&#39;#adventure&#39;)">Adventure</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">Resources</a></li>
+            <li><a class="waves-effect" target="_blank" href="http://david.boschwitz.me/assets/resume.pdf"><i class="material-icons">description</i>Resume</a></li>
+            <li><a class="waves-effect" target="_blank" href="https://github.com/davidboschwitz"><i class="fa fa-github fa-2x" aria-hidden="true"></i>GitHub</a></li>
+            <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/davidboschwitz"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>LinkedIn</a></li>
+            <li><a class="waves-effect" target="_blank" href="javascript:UnCryptMailto(&#39;nbjmup;ebwjeAcptdixju{/nf&#39;);"><i class="material-icons">mail</i>Email</a></li>
+        </ul>
+
+        <!-- First Section -->
+<!--        <div class="section z-depth-3 anchor" id="intro">
+            <div class="row container">
+                <h2 class="header">I am David Boschwitz.</h2>
+            </div>
+            <div class="row container">
+                <h4 class="light"><fw100>This is a brief overview of my life. Just keep scrolling!</fw100></h4>
+            </div>
+        </div>
+
+        <div class="parallax-container full-height">
+            <div class="parallax"><img src="assets/img/windsurf.png"></div>
+        </div>
+
+        <div class="section z-depth-3 anchor full-height" id="qna">
+            <div class="row container">
+                <h2 class="header">Q&amp;A</h2>
+                <h4 class="light">Why Software Engineering?</h4>
+                <p>
+                  I chose my major because throughout High School I wrote and hosted an online game written in Java 
+                    (programmed the backend of the game, added features users demanded, created a website, etc). 
+                    I really loved programming, and learning more about technology.  So I decided to major in 
+                    a field where I had curiosity and passion.
+                </p>
+
+                <h4 class="light">What do you want to do after you graduate?</h4>
+                <p>
+                  My future job will fit 3 requirements: <br />
+                  <fw400>1.</fw400> Ideally, I would be in a Software Development role&ndash;programming is my passion, and I want to do what I love. <br />
+                  <fw400>2.</fw400> I would be in a position where I will continue to learn and grow. <br />
+                  <fw400>3.</fw400> I would make the world a better place through my work.
+                </p>
+
+                <h4 class="light">Why are there only 3 questions in your Q&amp;A?</h4>
+                <p>
+                  Hopefully this section will be able to give people valuable insights about who I am.
+                    You can always ask me a question via <a target="_blank" href="javascript:UnCryptMailto('nbjmup;ebwjeAcptdixju{/nf');">email</a>.
+                </p>
+                <h4 class="light">Why Iowa State University?</h4>
+                <p>
+                  Place holder blurb
+                </p>
+            </div>
+        </div>
+-->
+
+        <!--
+        _                    _               _     _
+       | |                  | |             | |   (_)
+       | |     ___  __ _  __| | ___ _ __ ___| |__  _ _ __
+       | |    / _ \/ _` |/ _` |/ _ \ '__/ __| '_ \| | '_ \
+       | |___|  __/ (_| | (_| |  __/ |  \__ \ | | | | |_) |
+       |______\___|\__,_|\__,_|\___|_|  |___/_| |_|_| .__/
+                                                    | |
+                                                    |_|
+                          (leadership)-->
+
+        <div class="parallax-container full-height" style="min-height: 945px;">
+            <div class="parallax"><img src="./Resources/shine-on.jpg" style="display: block;"></div>
+        </div>
+        <div class="section z-depth-3 anchor anchor_title full-height" style="min-height: 945px;">
+            <div id="leadership" class="row container anchor" data-offset="-20">
+                <h2 class="header">Leadership &amp; Work</h2>
+                <!-- <p class="grey-text text-darken-3 lighten-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p> -->
+
+                <!-- <div class="card">
+                    <div class="card-content">
+                        <div class="card-title"><i style="padding-top: 6px; height:30px"><img style="width: 2rem;height: 2rem;" src="http://clipart.usscouts.org/library/BSA_Insignia/BSA_Misc_logos/bsa_logo_clipart_bw.gif"></i> Eagle Scout Award&nbsp;<small style="color:#757575">Boy Scouts of America</small></div>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                </div> -->
+                
+                <!-- Amazon -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <i class="david-valign"><img style="width: 30px;filter:brightness(90%) grayscale(100%);height:27px" src="./Resources/amazon.png"></i>&nbsp; SDE Intern&nbsp;
+                            <small style="color:#757575;font-size:60%;" class="right hidden-mobile">Amazon.com</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight: 300;">
+                            <p>
+                                Software Development Engineer Intern on Alexa Voice Services, Device and Service Enablement
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Virteva -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <i class="david-valign"><img style="width: 30px;filter:brightness(90%) grayscale(100%);height:30px" src="./Resources/virteva.png"></i>&nbsp; Development Intern&nbsp;
+                            <small style="color:#757575;font-size:60%;" class="right hidden-mobile">Virteva LLC</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight: 300;">
+                            <p>
+                                Developed in the Service-Now Platform to create internal applications for Virteva. Created a fully functional client-facing reporting system that produces a visual breakdown of the Virteva services. Projects were created using JavaScript, AngularJS, Bootstrap,
+                                and jQuery frameworks. Provided maintenance for a custom PHP/LAMP website, learned value of writing code for the <em>"next guy"</em>. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eagle Scout -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <i class="david-valign"><img style="width: 30px;filter:brightness(130%) grayscale(100%);height:30px" src="./Resources/668px-Boy_Scouts_of_America_corporate_trademark.svg.png"></i>&nbsp;
+                            Eagle Scout Award&nbsp;
+                            <small style="color:#757575;font-size:60%;" class="right hidden-mobile">Boy Scouts of America</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight: 300;">
+                            <p>
+                                Restored a local park by clearing buckthorn, controlling erosion, and planting 26 hearty Minnesota plants. Worked with The Minnetonka Beach City Council, Minnetonka Beach Parks Commission, Three Rivers Park District, and the Hennepin County Railroad Authority
+                                to properly plan the project. Coordinated 47 volunteers who did over 100+ hours of work. Rasied all funds needed for the project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Community Advisor -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">people</i>&nbsp; Community Advisor&nbsp;<small style="color:#757575;font-size:60%;" class="right hidden-mobile">Iowa State University</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight: 300;">
+                            <p>
+                                Developed a community of 70 residents by leading floor activities, conducting meetings and encouraging academic and social success. Initiated confrontations about difficult topics with students
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boating Director -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">pool</i>&nbsp; Boating Director&nbsp;<small style="color:#757575;font-size:60%;" class="right hidden-mobile">Camp Teko</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight: 300;">
+                            <p>
+                                Directly supervised and trained 2 lifeguards, resolved conflicts between campers, enforced rules and safety precautions. Supervised up to 52 campers and camp staff at once. Maintained and supervised the use of a fleet of 40 boats.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Groove VP -->
+                <!-- <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">pool</i>&nbsp; Boating Director&nbsp;<small style="color:#757575;font-size:60%;" class="right">Camp Teko</small></span>
+                        </div>
+                        <hr class="david-hr" />
+                        <div style="font-weight: 300;">
+                            <p>
+                                Directly supervised and trained 2 lifeguards, resolved conflicts between campers, enforced rules and safety precautions. Supervised up to 52 campers and camp staff at once. Maintained and supervised the use of a fleet of 40 boats.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+
+        <!--
+        _____           _           _
+       |  __ \         (_)         | |
+       | |__) | __ ___  _  ___  ___| |_ ___
+       |  ___/ '__/ _ \| |/ _ \/ __| __/ __|
+       | |   | | | (_) | |  __/ (__| |_\__ \
+       |_|   |_|  \___/| |\___|\___|\__|___/
+                      _/ |
+                     |__/
+                   (projects)-->
+        <div class="parallax-container full-height" style="min-height: 945px;">
+            <div class="parallax"><img src="./Resources/raspi.jpg" style="display: block;"></div>
+        </div>
+        <div class="section z-depth-3 anchor anchor_title full-height" style="min-height: 945px;">
+            <div class="row container anchor" data-offset="-20" id="projects">
+                <h2 class="header">Projects</h2>
+                <!-- <p class="grey-text text-darken-3 lighten-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p> -->
+                <!-- <div class="col m6 s12">
+
+                </div>
+                <div class="col m6 s12">
+                    <canvas id="projectsChart" width="400" height="400"></canvas> -->
+                <!-- </div> -->
+            </div>
+            <div class="row container ">
+
+                <!-- Food Texter -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">local_pizza</i>&nbsp; Food Texter&nbsp;<small style="color:#757575;font-size:60%;" class="right">Side Project</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/foodtexter.png" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A program that runs on my RaspberryPi every morning at 6am, scans ISU Dining's website for my favorite foods, and texts me when, where and which favorite foods of mine are available that day.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> Python, and a scheduled cron job to run it.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>Why I made it:</fw400> I like making technology that can make my life easier, this app was inspired when I missed my favorite dinner. I was devastated, and vowed this must never happen again. That night I created the
+                                    food texter.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DSP -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">web</i>&nbsp;Custom Portal/CMS &nbsp;<small style="color:#757575;font-size:60%;" class="right">As ΔΣΦ Webmaster</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/dsp.png" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A Portal/CMS site for ΔΣΦ members at Iowa State. It includes a point tracking system to track how many points an individual has within the fraternity, contacts page auto-generated
+                                    from the users database, an admin panel, and a fully featured CMS system for managing the site content.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I did:</fw400> Created the entire site from scratch
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> PHP, BootstrapCSS, HTML, CSS, Azure.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>Where it is:</fw400> <a href="http://portal.deltasigisu.com/" target="_blank">portal.deltasigisu.com</a>
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>Source:</fw400> <a href="https://github.com/davidboschwitz/dsp-portal" target="_blank">github.com/davidboschwitz/dsp-portal</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Connect -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">videogame_asset</i>&nbsp; Game Connect&nbsp;<small style="color:#757575;font-size:60%;" class="right">Class - coms309</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/gc.png" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A revolutionary gaming platform that uses your web browser as the console, and your mobile device as the controller. Can be used with up to 4 players.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I did:</fw400> Created the backend using Java, set up hosting using a Glassfish Socket Server, structured the database, structured our Client-&gt;Server communications using JSON, wrote the website, and set up the
+                                    linux server to host it all.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> Java, MySQL Database, JSON, HTML, CSS, PHP, BootstrapCSS, RedHat Linux.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>Where its hosted:</fw400> <a href="http://gc.boschwitz.me/" target="_blank">gc.boschwitz.me</a>
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>Source:</fw400> <a href="https://github.com/davidboschwitz/GameConnect" target="_blank">github.com/davidboschwitz/GameConnect</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mars Rover -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign" style="transform:rotateZ(140deg)">settings_input_svideo</i>&nbsp; Mars Rover&nbsp;<small style="color:#757575;font-size:60%;" class="right">Class - cpre288</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/288.jpg" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A Roomba robot, but with a customizable ATMega128 Embedded Systems Chip inside.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I did:</fw400> Enabled the robot to navigate through a course of obsticles, boundries, and holes.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> Lots and lots of C, and some hardware.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pocketwatch -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">date_range</i>&nbsp; Pocketwatch&nbsp;<small style="color:#757575;font-size:60%;" class="right">HackISU - Fall 2016</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/pocketwatch.png" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A app that sends you a notification when you have enough free time on your calendar to complete a task on your task list.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I did:</fw400> Created the backend using Node, helped link the backend between our API communication with Google Calendar, structured the database in MySQL, stylized the UI for the app.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> Node.js, MySQL Database, JSON, HTML, CSS, Material Design.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All-Star -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">radio</i>&nbsp; Raspberry Pi Repeater Project&nbsp;<small style="color:#757575;font-size:60%;" class="right">Class - cpre186</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/raspi.jpg" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A repeater network of a VOIP connected Raspberry Pi computers hooked into small 5W transistor radios to allow for long-range communication typically unseen with normal two-way radios.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I did:</fw400> Created the backend server using Java, and the frontend "client" utility using Java. Created the audio interface to listen/output audio from the 2-Way radios, and created the communication methods
+                                    to communicate between the server and the clients.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> Java, RaspberryPi Computer, USB Sound Card, BF-888S Two-Way Radios
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>Source:</fw400> <a href="https://github.com/davidboschwitz/all-star" target="_blank">github.com/davidboschwitz/all-star</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bookshelf -->
+                <div class="card nhoverable" style="background-color: #fbfbfb;">
+                    <div class="card-content">
+                        <div class="card-title"><i class="material-icons david-valign">library_books</i>&nbsp; Bookshelf&nbsp;<small style="color:#757575;font-size:60%;" class="right">HackTech - Spring 2016</small>
+                        </div>
+                        <hr class="david-hr">
+                        <div class="row" style="font-weight:300;">
+                            <div class="col s12 m4 l3">
+                                <p>
+                                    <div class="material-placeholder"><img class="materialboxed z-depth-3 mobile-centered initialized" src="./Resources/bookshelf.png" width="100%"></div>
+                                </p>
+                            </div>
+                            <div class="col s12 m8 l9 mobile-top-padding">
+                                <p>
+                                    <fw400>What it is:</fw400> A "social closet" that allows you to show your Facebook friends what you're willing to lend out. This was originally intended to be a sharing utility for sharing textbooks that students no longer
+                                    need, but it could be used for anything. Simply browse through what your friends are willing to share with you
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I did:</fw400> Created the backend using PHP, integrated the backend with a MySQL database and Facebook Graph API.
+                                </p>
+                                <br>
+                                <p>
+                                    <fw400>What I used:</fw400> PHP, MySQL Database, HTML, CSS, Facebook OAuth/Graph API.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--
+             _                 _
+    /\      | |               | |
+   /  \   __| |_   _____ _ __ | |_ _   _ _ __ ___
+  / /\ \ / _` \ \ / / _ \ '_ \| __| | | | '__/ _ \
+ / ____ \ (_| |\ V /  __/ | | | |_| |_| | | |  __/
+/_/    \_\__,_| \_/ \___|_| |_|\__|\__,_|_|  \___|
+
+      (adventure)
+
+-->
+        <div class="parallax-container full-height" style="min-height: 945px;">
+            <div class="parallax"><img style="width: 100%; display: block;" src="./Resources/GOPR6869-min.JPG"></div>
+        </div>
+        <div class="section z-depth-3 anchor anchor_title full-height" style="min-height: 945px;">
+            <div class="row container anchor" data-offset="-20" id="adventure">
+                <h2 class="header">Adventure</h2>
+                <p class="grey-text text-darken-3 lighten-3">I love to explore. This section will be updated when I have time with details about my adventures.</p>
+                <p class="grey-text text-darken-3 lighten-3">I'll post a blog here later.</p>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="hero-footer full-height anchor" data-offset="20" style="min-height: 945px;">
+            <h1 style="font-weight:100;" class="me_name">Hey, I'm Michael!</h1>
+            <div style="font-weight:300;font-size:24px;padding-left:5px;"><span class="typed-footer"></span></div>
+            <!--<div class="copyright">Made from scratch with a little ❤, a GoPro, and some fancy web stuff</div>-->
+        </div>
+    </footer>
+
+
+    <!-- Modal Structure -->
+    <div id="shortcuts-modal" class="modal bottom-sheet" style="background-color:#ddd">
+        <div class="modal-content">
+            <h4>Keyboard Shortcuts</h4>
+            <p><kbd>↑</kbd> - Go up one section</p>
+            <p><kbd>↓</kbd> - Go down one section</p>
+            <p><kbd>←</kbd> - Scroll up a little</p>
+            <p><kbd>→</kbd> - Scroll down a little</p>
+            <p><kbd>m</kbd> - Open/Close the menu</p>
+            <p><kbd>?</kbd> - Open/Close this guide</p>
+        </div>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script async="" src="./Resources/analytics.js.download"></script><script type="text/javascript" src="./Resources/jquery.min.js.download"></script>
+    <script>
+        if (!window.jQuery) {
+            var s = document.createElement('script');
+            s.setAttribute('src', 'assets/jquery/jquery-2.1.1.min.js');
+            document.body.appendChild(s);
+        }
+    </script>
+    <script type="text/javascript" src="./Resources/materialize.min.js.download"></script>
+    <script type="text/javascript" src="./Resources/typed.js.download"></script>
+    <link type="text/css" rel="stylesheet" href="./Resources/style.css">
+    <link rel="stylesheet" href="./Resources/font-awesome.min.css">
+    <script type="text/javascript" src="./Resources/Chart.bundle.min.js.download"></script>
+    <script>
+        if (!window.Chart) {
+            var s = document.createElement('script');
+            s.setAttribute('src', 'assets/js/Chart.bundle.min.js');
+            document.body.appendChild(s);
+        }
+    </script>
+    <script type="text/javascript" src="./Resources/scripts.js.download"></script><div class="drag-target" style="right: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-19092222-6', 'auto');
+        ga('send', 'pageview');
+
+        $('a[href*="assets"]').click(function(e) {
+            console.log(e);
+            if (window.ga && ga.create)
+                ga('send', 'pageview', e.currentTarget.pathname);
+        });
+
+        $('a[href*="github.com/davidboschwitz"]').click(function(e) {
+            console.log(e);
+            if (window.ga && ga.create)
+                ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
+        });
+
+        $('a[href*="linkedin.com/in/davidboschwitz"]').click(function(e) {
+            console.log(e);
+            if (window.ga && ga.create)
+                ga('send', 'pageview', 'assets/linkedin');
+        });
+
+        if (!window.ga || !ga.create) {
+            var s = document.createElement('script');
+            s.setAttribute('src', 'assets/js/analytics.js');
+            document.body.appendChild(s);
+        }
+    </script><script src="./Resources/analytics.js(1).download"></script>
+
+
+
+<div class="hiddendiv common"></div><div id="toast-container"></div></body></html>
