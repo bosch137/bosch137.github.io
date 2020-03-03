@@ -33,7 +33,7 @@ Materialize.scrollFire([{
         $(".typed-footer").typed({
             //And I love
             strings: [
-                'And thats about it...^1000<br>•&nbsp;<a target="_blank" href="assets/resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/davidboschwitz">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/davidboschwitz">LinkedIn</a>'
+                'and thats about it...^1000<br>•&nbsp;<a target="_blank" href="assets/resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/davidboschwitz">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/davidboschwitz">LinkedIn</a>'
             ],
             loop: false,
             contentType: 'html',
@@ -64,48 +64,56 @@ $(window).on("load", function() {
             string: "And I love Programming.",
             stopNum: 5,
             backDelay: undefined
-        },/* {
-            string: "And I am a Junior at Iowa State University,<br> Studying Software Engineering.",
-            stopNum: 5,
-            backDelay: undefined
-        },*/ {
-            string: "And I love Sailing.",
-            stopNum: 11,
-            backDelay: undefined
         }, {
-            string: "And I love Solving Problems.",
+            string: "And I love Creative Problem Solving.",
             stopNum: 5,
             backDelay: undefined
         }, {
-            string: "And I'm passionate about Technology.",
-            stopNum: 24,
+            string: "And I love being on Lake Minnetonka, MN.",
+            stopNum: 5,
             backDelay: undefined
         }, {
             string: "And I'm passionate about Learning.",
+            stopNum: 24,
+            backDelay: undefined
+        }, {
+            string: "And I'm passionate about Technology.",
             stopNum: 5,
             backDelay: undefined
         }, {
-            string: "And I enjoy",
+            string: "And I love doodling.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I like Radiohead.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I like making and playing Games.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I enjoy playing Guitar.",
+            stopNum: 19,
+            backDelay: 50
+        }, {
+            string: "And I enjoy playing Piano.",
+            stopNum: 19,
+            backDelay: 50
+        }, {
+            string: "And I enjoy playing Drumset.",
+            stopNum: 19,
+            backDelay: 50
+        }, {
+            string: "And I enjoy playing...",
             stopNum: 5,
             backDelay: 50
         }, {
-            string: "And I LOVE Ice Cream.",
+            string: "And I LOVE all things Music.",
             stopNum: 5,
             backDelay: undefined
         }, {
-            string: "And I yearn for Adventure.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I love Sleeping.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I like Swimming.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I love Exploring.",
+            string: "And I love a Challenge.",
             stopNum: 5,
             backDelay: undefined
         }, {
@@ -114,14 +122,10 @@ $(window).on("load", function() {
             backDelay: 50
         }, {
             string: "And I never make a mistake.",
-            stopNum: 5,
-            backDelay: undefined
+            stopNum: 0,
+            backDelay: 0
         }, {
-            string: "And I love Hackathons.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I enjoy playing Piano.",
+            string: "And I am a Sophomore at the University of Minnesota,<br> studying Software Engineering and Creative Design",
             stopNum: 5,
             backDelay: undefined
         }];
@@ -135,7 +139,7 @@ $(window).on("load", function() {
                     typeSpeed: 70,
                     backDelay: 700,
                     loop: true,
-                    loopCount: false
+                    loopCount: 1
                 });
             });
         }, 1000);
