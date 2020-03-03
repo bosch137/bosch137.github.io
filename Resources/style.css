@@ -15,7 +15,7 @@
         -o-background-size: cover;
         background-size: cover;
         height: 100%;
-        color: white;
+        color: rgb(42, 42, 42);
         transition: background-image 1s ease-in-out;
     }
     .mobile-only {
@@ -82,11 +82,11 @@
 
 .header {
     font-weight: 100;
-    color: #4d4d4d;
+    color: #424242;
 }
 
 .card-title {
-  color: #4d4d4d;
+  color: #424242;
 }
 
 .pop-border {
