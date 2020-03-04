@@ -1,3 +1,29 @@
+.gradientEffect{
+    background: linear-gradient(270deg, #00ff8b, #8700ff);
+    background-size: 400% 400%;
+    height: 150px;
+
+    -webkit-animation: gradientEffect 10.0s ease infinite;
+    -moz-animation: gradientEffect 10.s ease infinite;
+    animation: gradientEffect 10.0s ease infinite;
+}
+
+@-webkit-keyframes gradientEffect {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientEffect {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradientEffect {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 @media (min-width: 601px) {
     .hero {
         background: url(../Resources/tempPhotoThing.jpg) no-repeat center top;
@@ -105,8 +131,16 @@
 
 /* typed.js */
 
+.typed{
+    background-color: black; 
+    opacity: 1;
+    padding-bottom: 5px;
+}
+
 .typed-cursor {
     opacity: 1;
+    padding-bottom: 5px;
+    background-color: black;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;

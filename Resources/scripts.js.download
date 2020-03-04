@@ -123,11 +123,11 @@ $(window).on("load", function() {
         }, {
             string: "And I never make a mistake.",
             stopNum: 0,
-            backDelay: 0
-        }, {
-            string: "And I am a Sophomore at the University of Minnesota,<br> studying Software Engineering and Creative Design",
-            stopNum: 5,
             backDelay: undefined
+        }, {
+            string: "And I am a Sophomore at the University of Minnesota, studying Software Engineering and Creative Design",
+            stopNum: 5,
+            backDelay: 0
         }];
 
 
@@ -138,8 +138,8 @@ $(window).on("load", function() {
                     david: customTypedInput,
                     typeSpeed: 70,
                     backDelay: 700,
-                    loop: true,
-                    loopCount: 1
+                    loop: false,
+                    loopCount: 1,
                 });
             });
         }, 1000);
