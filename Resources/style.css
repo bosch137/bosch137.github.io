@@ -135,6 +135,38 @@
     background-color: black; 
     opacity: 1;
     padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .typed-cursor {
