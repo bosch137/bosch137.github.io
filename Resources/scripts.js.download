@@ -125,7 +125,7 @@ $(window).on("load", function() {
             stopNum: 0,
             backDelay: undefined
         }, {
-            string: "And I am a Sophomore at the University of Minnesota, studying Software Engineering and Creative Design",
+            string: "And I am a Sophomore at the University of Minnesota, studying Software Engineering and Creative Design.",
             stopNum: 5,
             backDelay: 0
         }];

@@ -40,7 +40,8 @@ SOFTWARE.
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #bbbbbb/*#3498db*/;
+    border-top-color: #bbbbbb/*#3498db*/
+    ;
     -webkit-animation: spin 2s linear infinite;
     /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite;
@@ -74,7 +75,7 @@ SOFTWARE.
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #dddddd/*#f9c922*/
+    border-top-color: #bbbbbb/*#f9c922*/
     ;
     -webkit-animation: spin 1.5s linear infinite;
     /* Chrome, Opera 15+, Safari 5+ */
@@ -125,7 +126,7 @@ SOFTWARE.
     top: 0;
     width: 51%;
     height: 100%;
-    background: #000000;
+    background: #222222;
     /*#222222;*/
     z-index: 1000;
     -webkit-transform: translateX(0);

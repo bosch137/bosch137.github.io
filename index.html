@@ -40,8 +40,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <title>Meet Michael Boschwitz</title>
     <style>
         .load-fade-in {
-            -webkit-animation: fade-in-anim 0.5s;
-            animation: fade-in-anim 0.5s
+            -webkit-animation: fade-in-anim 3.0s;
+            animation: fade-in-anim 3.0s
         }
 
         @-webkit-keyframes fade-in-anim {
@@ -64,7 +64,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     </style>
 </head>
 
-<body class="anchor loaded">
+<body class="anchor loaded" style="background-color:rgb(42, 42, 42)">
     <div id="loader-wrapper", style="background-color: black;">
         <h1 style="font-weight:100;" class="loading_name load-fade-in">Sorry about the delay...</h1>
         <div id="loader"></div>
@@ -73,50 +73,59 @@ Looks like you're checking out my source code... I suppose that's not surprising
         <span class="loading_text load-fade-in">Loading...</span>
     </div>
 
-    <div class="container" style="min-height: fit-content; min-width: fit-content; padding-bottom: 15px;">
-        <div id="carousel" class="carousel slide" data-ride="carousel" style="height: fit-content; width: fit-content;">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" style="height: fit-content; width: fit-content;">
-                <div class="item active">
-                    <picture>
-                        <img class="img-fluid" src="./Resources/tempPhotoThing.jpg" media="(min-width: 769px) (min-height: 900px)">
-                    </picture>
-                </div>
-                <div class="item">
-                    <picture>
-                        <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
-                        <source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
-                        <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-                        <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
-                    </picture>
-                </div>
-                <div class="item">
-                    <picture>
-                        <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
-                        <source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
-                        <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-                        <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
-                    </picture>
-                </div>
-            </div>
-            <div style="position: absolute; top:10px;">
-                <div class="col-md-12">
-                    <div style="font-weight:100; font-size: 42px; padding-bottom: 20px; color:#ffffff;">
-                        <span class="me_name">Hi, I'm Michael Boschwitz!</span>
-                    </div>
-                    <div style="font-weight:300; font-size: 20px; color:#ffffff;">
-                        <span class="typed"></span>
-                        <span class="typed-cursor"></span>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </div>
     <main>
+        <div class="container-fluid" style="height: auto; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+            <div id="carousel" class="carousel slide" data-ride="carousel" style="min-height: 350px; height: auto; max-height: 950px; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                    <li data-target="#carousel" data-slide-to="3"></li>
+                    <li data-target="#carousel" data-slide-to="4"></li>
+                    <li data-target="#carousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/NZLifeguard.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                    </div>
+                    <div class="item">
+                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/ParisThumbsUp.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                    </div>
+                    <div class="item">
+                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/tempPhotoThing.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                    </div>
+                    <div class="item">
+                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/NZDavid.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                    </div>
+                    <div class="item">
+                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/IMGDrumset.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                    </div>
+                    <div class="item">
+                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/IMGTuba.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                    </div>
+                </div>
+                <div style="position: absolute; top:10px;">
+                    <div class="col-md-12">
+                        <div style="font-weight:100; font-size: 35px; padding-bottom: 20px; color:#ffffff;">
+                            <span class="me_name">Hi, I'm Michael Boschwitz!</span>
+                        </div>
+                        <div style="font-weight:300; font-size: 20px; color:#ffffff;">
+                            <span class="typed"></span>
+                            <span class="typed-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                @media (min-width: 1680px) {
+                    .resizer {
+                        -ms-transform: translateY(-15%); 
+                        transform: translateY(-15%);
+                    }
+                }
+                </style>
+            </div>
+        </div>
+
         <!--  Floating Navigation buttons   -->
         <div id="navbuttons">
             <div class="fixed-action-btn" style="bottom: 70px; right: 24px; z-index:10;">
@@ -557,7 +566,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         }
     </script>
     <script type="text/javascript" src="./Resources/materialize.min.js.download"></script>
-    <script type="text/javascript" src="./Resources/typed.js"></script>
+    <script type="text/javascript" src="./Resources/typed.js.download"></script>
     <link type="text/css" rel="stylesheet" href="./Resources/style.css">
     <link rel="stylesheet" href="./Resources/font-awesome.min.css">
     <script type="text/javascript" src="./Resources/Chart.bundle.min.js.download"></script>
@@ -568,7 +577,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             document.body.appendChild(s);
         }
     </script>
-    <script type="text/javascript" src="./Resources/scripts.js"></script><div class="drag-target" style="right: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+    <script type="text/javascript" src="./Resources/scripts.js.download"></script><div class="drag-target" style="right: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
