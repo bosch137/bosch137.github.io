@@ -74,8 +74,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
     </div>
 
     <main>
-        <div class="container-fluid" style="height: auto; padding-top: 0px; padding-bottom: 25px; padding-right: 0px; padding-left: 0px;">
-            <div id="carousel" class="carousel slide" data-ride="carousel" style="min-height: 350px; height: auto; max-height: 950px; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+        <div class="container-fluid" style="max-height: 95vh; height: auto; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+            <div id="carousel" class="carousel slide" data-ride="carousel" style="min-height: 40vw; height: auto; max-height: 95vh; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
@@ -86,46 +86,58 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/NZLifeguard.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/NZLifeguard.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/ParisThumbsUp.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/ParisThumbsUp.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/tempPhotoThing.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/tempPhotoThing.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/NZDavid.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/NZDavid.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/IMGDrumset.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/IMGDrumset.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid resizer" src="./Resources/Portraits/IMGTuba.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/IMGTuba.jpg" alt="Responsive image" style="max-height: auto; width: 100%;">
                     </div>
                 </div>
                 <div style="position: absolute; top:10px;">
                     <div class="col-md-12">
-                        <div style="font-weight:100; font-size: 35px; padding-bottom: 20px; color:#ffffff;">
+                        <div class="resizer-head" style="font-weight:100; padding-bottom: 20px; color:#ffffff;">
                             <span class="me_name">Hi, I'm Michael Boschwitz!</span>
                         </div>
-                        <div style="font-weight:300; font-size: 20px; color:#ffffff;">
+                        <div class= "resizer-sub" style="font-weight:300; color:#ffffff;">
                             <span class="typed"></span>
                             <span class="typed-cursor"></span>
                         </div>
                     </div>
                 </div>
                 <style>
-                @media (min-width: 1680px) {
-                    .resizer {
-                        -ms-transform: translateY(-15%); 
-                        transform: translateY(-15%);
+                @media (min-width: 615px) {
+                    .resizer-head {
+                        /* -ms-transform: translateY(-15%); 
+                        transform: translateY(-15%); */
+                        font-size: 35px;
+                    }
+                    .resizer-sub {
+                        /* -ms-transform: translateY(-15%); 
+                        transform: translateY(-15%); */
+                        font-size: 20px;
                     }
                 }
-                @media (max-width: 600px) {
-                    .resizer {
-                        -ms-transform: translateY(0%); 
-                        transform: translateY(0%);
+                @media (max-width: 614px) {
+                    .resizer-head {
+                        /* -ms-transform: translateY(0%); 
+                        transform: translateY(0%); */
+                        font-size: 19px;
+                    }
+                    .resizer-sub {
+                        /* -ms-transform: translateY(0%); 
+                        transform: translateY(0%); */
+                        font-size: 15px;
                     }
                 }
 
