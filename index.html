@@ -73,49 +73,49 @@ Looks like you're checking out my source code... I suppose that's not surprising
         <span class="loading_text load-fade-in">Loading...</span>
     </div>
 
-    
-<div class="container" style="height: 100%; width: 100%;">
-    <div id="carousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" style="height: 100%; width: 100%";>
-            <div class="item active">
-                <img src="./Resources/tempPhotoThing.jpg" alt="First slide" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="container" style="min-height: fit-content; min-width: fit-content; padding-bottom: 15px;">
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="height: fit-content; width: fit-content;">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" style="height: fit-content; width: fit-content;">
+                <div class="item active">
+                    <picture>
+                        <img class="img-fluid" src="./Resources/tempPhotoThing.jpg" media="(min-width: 769px) (min-height: 900px)">
+                    </picture>
+                </div>
+                <div class="item">
+                    <picture>
+                        <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
+                        <source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
+                        <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                        <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+                </div>
+                <div class="item">
+                    <picture>
+                        <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)">
+                        <source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)">
+                        <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                        <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+                </div>
             </div>
-            <div class="item">
-                <img src="./Resources/Compass.jpg" alt="Second slide" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; top:10px;">
+                <div class="col-md-12">
+                    <div style="font-weight:100; font-size: 42px; padding-bottom: 20px; color:#ffffff;">
+                        <span class="me_name">Hi, I'm Michael Boschwitz!</span>
+                    </div>
+                    <div style="font-weight:300; font-size: 20px; color:#ffffff;">
+                        <span class="typed"></span>
+                        <span class="typed-cursor"></span>
+                    </div>
+                </div>
             </div>
-            <div class="item">
-                <img src="./Resources/scream.jpg" alt="Third slide" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-        </div>
-    <div class="main-text">
-        <div class="col-md-12 text-xs-center">
-            <h1 style="font-weight:100; color:#ffffff;" class="me_name">Hi, I'm Michael Boschwitz!</h1>
-            <div style="font-weight:300; font-size:24px; color:#ffffff;"><span class="typed"></span><span class="typed-cursor"></span></div>
-        </div>
+        </div>    
     </div>
-</div>
-
-<style>
-.main-text {
-    position: absolute;
-    top: 50px;
-    width: 96.66666666666666%;
-    color: #FFF;
-}
-.carousel-style{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        color: rgb(42, 42, 42);
-}
-</style>
-
-
     <main>
         <!--  Floating Navigation buttons   -->
         <div id="navbuttons">
@@ -164,53 +164,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fa fa-github fa-2x" aria-hidden="true"></i>GitHub</a></li>
             <li><a class="waves-effect" target="_blank" href="javascript:UnCryptMailto(&#39;nbjmup;ebwjeAcptdixju{/nf&#39;);"><i class="material-icons">mail</i>Email</a></li>
         </ul>
-
-        <!-- First Section -->
-<!--        <div class="section z-depth-3 anchor" id="intro">
-            <div class="row container">
-                <h2 class="header">I am David Boschwitz.</h2>
-            </div>
-            <div class="row container">
-                <h4 class="light"><fw100>This is a brief overview of my life. Just keep scrolling!</fw100></h4>
-            </div>
-        </div>
-
-        <div class="parallax-container full-height">
-            <div class="parallax"><img src="assets/img/windsurf.png"></div>
-        </div>
-
-        <div class="section z-depth-3 anchor full-height" id="qna">
-            <div class="row container">
-                <h2 class="header">Q&amp;A</h2>
-                <h4 class="light">Why Software Engineering?</h4>
-                <p>
-                  I chose my major because throughout High School I wrote and hosted an online game written in Java 
-                    (programmed the backend of the game, added features users demanded, created a website, etc). 
-                    I really loved programming, and learning more about technology.  So I decided to major in 
-                    a field where I had curiosity and passion.
-                </p>
-
-                <h4 class="light">What do you want to do after you graduate?</h4>
-                <p>
-                  My future job will fit 3 requirements: <br />
-                  <fw400>1.</fw400> Ideally, I would be in a Software Development role&ndash;programming is my passion, and I want to do what I love. <br />
-                  <fw400>2.</fw400> I would be in a position where I will continue to learn and grow. <br />
-                  <fw400>3.</fw400> I would make the world a better place through my work.
-                </p>
-
-                <h4 class="light">Why are there only 3 questions in your Q&amp;A?</h4>
-                <p>
-                  Hopefully this section will be able to give people valuable insights about who I am.
-                    You can always ask me a question via <a target="_blank" href="javascript:UnCryptMailto('nbjmup;ebwjeAcptdixju{/nf');">email</a>.
-                </p>
-                <h4 class="light">Why Iowa State University?</h4>
-                <p>
-                  Place holder blurb
-                </p>
-            </div>
-        </div>
--->
-
+        
         <!--
         _                    _               _     _
        | |                  | |             | |   (_)
@@ -575,7 +529,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <footer>
         <div class="hero-footer full-height anchor" data-offset="20" style="min-height: 945px;">
             <h1 style="font-weight:100;" class="me_name">I'm Michael Boschwitz, </h1>
-            <div style="font-weight:300;font-size:24px;padding-left:5px;"><span class="typed-footer"></span></div>
+            <div style="font-weight:300;font-size:24px;"><span class="typed-footer"></span></div>
             <!--<div class="copyright">Made from scratch with a little ❤, a GoPro, and some fancy web stuff</div>-->
         </div>
     </footer>
@@ -603,7 +557,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         }
     </script>
     <script type="text/javascript" src="./Resources/materialize.min.js.download"></script>
-    <script type="text/javascript" src="./Resources/typed.js.download"></script>
+    <script type="text/javascript" src="./Resources/typed.js"></script>
     <link type="text/css" rel="stylesheet" href="./Resources/style.css">
     <link rel="stylesheet" href="./Resources/font-awesome.min.css">
     <script type="text/javascript" src="./Resources/Chart.bundle.min.js.download"></script>
@@ -614,7 +568,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             document.body.appendChild(s);
         }
     </script>
-    <script type="text/javascript" src="./Resources/scripts.js.download"></script><div class="drag-target" style="right: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+    <script type="text/javascript" src="./Resources/scripts.js"></script><div class="drag-target" style="right: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
