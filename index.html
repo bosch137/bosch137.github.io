@@ -74,7 +74,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     </div>
 
     <main>
-        <div class="container-fluid" style="height: auto; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+        <div class="container-fluid" style="height: auto; padding-top: 0px; padding-bottom: 25px; padding-right: 0px; padding-left: 0px;">
             <div id="carousel" class="carousel slide" data-ride="carousel" style="min-height: 350px; height: auto; max-height: 950px; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -122,6 +122,13 @@ Looks like you're checking out my source code... I suppose that's not surprising
                         transform: translateY(-15%);
                     }
                 }
+                @media (max-width: 600px) {
+                    .resizer {
+                        -ms-transform: translateY(0%); 
+                        transform: translateY(0%);
+                    }
+                }
+
                 </style>
             </div>
         </div>
@@ -184,75 +191,74 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                     | |
                                                     |_|
                           (leadership)-->
-        <div class="section z-depth-3 anchor anchor_title full-height" style="min-height: 945px;">
-            <div id="leadership" class="row container anchor" data-offset="-20">
-                <h2 class="header">Leadership &amp; Work</h2>
-                <!-- <p class="grey-text text-darken-3 lighten-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p> -->
+        <!-- <div class="section z-depth-3 anchor anchor_title full-height" style="padding-left: 25px; padding-right: 25px; min-height: 945px; background-color: rgb(180, 180, 180);"></div> -->
+                <!-- <h2 class="header">Leadership &amp; Work</h2> -->
+                <div class="container-fluid">
+                    <div class="row">
+                    <div class="col">
+            <div class="container" style="margin-left: 0; border-radius: 10px; border-style: solid; min-height: fit-content; background-color: white; font-family: 'Courier New', Courier, monospace;">
+                <div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">
+                <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
+                    <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">
+                        <a class="nav-link active" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>
+                    </li>
+                    <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">
+                        <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>
+                    </li>
+                    <li class="nav-item" style="max-width: 250px; padding-top: 11%; padding-bottom: 11%; font-size: 20px;">
+                        <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>
+                    </li>
+                </ul>
+                </div>
 
-                <!-- <div class="card">
-                    <div class="card-content">
-                        <div class="card-title"><i style="padding-top: 6px; height:30px"><img style="width: 2rem;height: 2rem;" src="http://clipart.usscouts.org/library/BSA_Insignia/BSA_Misc_logos/bsa_logo_clipart_bw.gif"></i> Eagle Scout Award&nbsp;<small style="color:#757575">Boy Scouts of America</small></div>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <div class="tab-content" id="myTabContent" style="padding-bottom: 50px;">
+                    <div class="tab-pane fade in active" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab">
+                            <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Boy Scouts of America</h6>
+                            <h3 class="card-header text-left">Eagle Scout Award</h3>
+                            <hr></hr>
+                            <p class="card-text">Busy Business practically invented the term "Total Quality Management". If you morph iteravely, you may have to
+                            synthesize intra-vertically. What does it really mean to transition "vertically"? If all of this may seem discombobulating to you, that's because it is!
+                            </p>
+                            <div class="card-footer text-center text-muted"> 2 days ago</div>
+                    </div>
+                <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab">
+                        <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Starbucks</h6>
+                        <h3 class="card-header text-left">Barista</h3>
+                        <hr></hr>
+                        <p class="card-text">We here at Busy Business think we know that it is better to syndicate vertically than to enable
+                            perfectly. Without revolutionary platforms, you will lack performance. Our cutting-edge, efficient feature set is unparalleled in the
+                            industry, but our 60/60/24/7/365 web services and simple configuration is often considered a terrific achievement.
                         </p>
-                    </div>
-                </div> -->
-
-                <!-- Eagle Scout -->
-                <div class="card nhoverable" style="background-color: #fbfbfb;">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <i class="david-valign"><img style="width: 30px;filter:brightness(130%) grayscale(100%);height:30px" src="./Resources/668px-Boy_Scouts_of_America_corporate_trademark.svg.png"></i>&nbsp;
-                            Eagle Scout Award&nbsp;
-                            <small style="color:#757575;font-size:60%;" class="right hidden-mobile">Boy Scouts of America</small>
-                        </div>
-                        <hr class="david-hr">
-                        <div class="row" style="font-weight: 300;">
-                            <p>
-                                Busy Business practically invented the term "Total Quality Management". If you morph iteravely, you may have to synthesize intra-vertically. 
-                                What does it really mean to transition "vertically"? If all of this may seem discombobulating to you, that's because it is!
-                            </p>
-                        </div>
-                    </div>
+                        <div class="card-footer text-center text-muted"> 2 days ago</div>
                 </div>
-
-
-                <!-- Barista -->
-                <div class="card nhoverable" style="background-color: #fbfbfb;">
-                    <div class="card-content">
-                        <div class="card-title"><i class="material-icons david-valign">people</i>&nbsp; Barista&nbsp;<small style="color:#757575;font-size:60%;" class="right hidden-mobile">Starbucks</small>
-                        </div>
-                        <hr class="david-hr">
-                        <div class="row" style="font-weight: 300;">
-                            <p>
-                                We here at Busy Business think we know that it is better to syndicate vertically than to enable perfectly. Without revolutionary platforms, you will lack performance. Our cutting-edge, efficient feature set is unparalleled in the industry, but our 60/60/24/7/365 web services and simple configuration is often considered a terrific achievement. 
-                            </p>
-                        </div>
+                <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab">
+                            <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Camp Teko</h6>
+                            <h3 class="card-header text-left">Boating Director</h3>
+                            <hr></hr>
+                            <p class="card-text">Busy Business has revolutionized the idea of ROI metrics. What does it really mean to enhance
+                                "transparently"? If all of
+                                this sounds fabulous to you, that's because it is!
+                                We will grow the capability of all-hands meetings to disintermediate. We will facilitate the capacity of
+                                user-defined
+                                e-services to optimize. Our technology takes the best aspects of XSL and Perl.</p>
+                                <div class="card-footer text-center text-muted"> 2 days ago</div>
+                            </div>
                     </div>
-                </div>
-
-                <!-- Boating Director -->
-                <div class="card nhoverable" style="background-color: #fbfbfb;">
-                    <div class="card-content">
-                        <div class="card-title"><i class="material-icons david-valign">pool</i>&nbsp; Boating Director&nbsp;<small style="color:#757575;font-size:60%;" class="right hidden-mobile">Camp Teko</small>
-                        </div>
-                        <hr class="david-hr">
-                        <div class="row" style="font-weight: 300;">
-                            <p>
-                                Busy Business has revolutionized the idea of ROI metrics. What does it really mean to enhance "transparently"? If all of this sounds fabulous to you, that's because it is! 
-                                We will grow the capability of all-hands meetings to disintermediate. We will facilitate the capacity of user-defined e-services to optimize. Our technology takes the best aspects of XSL and Perl.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <style>
+                        a{color:green;}
+                        .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{background-color:green;}
+                    </style>
             </div>
-        </div>
-
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+            <div class="container" style="max-width:100px; background-color: hotpink;padding-bottom: 25px;">
+                
+            </div>
+            </div>
+            </div>
+</div>
         <!--
         _____           _           _
        |  __ \         (_)         | |

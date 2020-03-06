@@ -111,10 +111,6 @@
     color: #424242;
 }
 
-.card-title {
-  color: #424242;
-}
-
 .pop-border {
     border: none;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
@@ -297,17 +293,6 @@ kbd {
     border-color: #ddd;
 }
 
-.card-content {
-  padding-top: 10px !important;
-}
-
-.david-valign {
-    align-items: center;
-    vertical-align: sub;
-}
-
-
-
 .hoverable {
   transition: box-shadow .25s;
   box-shadow: 0;
@@ -320,10 +305,6 @@ kbd {
 
 .col.s12 {
   padding-top:15px;
-}
-
-.card .card-content p{
-  padding-left:10px
 }
 
 fw100 {
