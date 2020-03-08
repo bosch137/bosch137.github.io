@@ -33,7 +33,7 @@ Materialize.scrollFire([{
         $(".typed-footer").typed({
             //And I love
             strings: [
-                'and thats about it... ^1000<br><br> •&nbsp;<a target="_blank" href="assets/resume.pdf">Resume </a><br> •&nbsp;<a onclick="showEmail();">Email </a><br> •&nbsp;<a target="_blank" href="https://github.com/davidboschwitz">GitHub </a><br> •&nbsp;<a target="_blank" href="https://linkedin.com/in/davidboschwitz">LinkedIn</a>'
+                'and thats about it...^1000<br>•&nbsp;<a target="_blank" href="assets/resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/davidboschwitz">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/davidboschwitz">LinkedIn</a>'
             ],
             loop: false,
             contentType: 'html',
@@ -68,50 +68,50 @@ $(window).on("load", function() {
             string: "And I love Creative Problem Solving.",
             stopNum: 5,
             backDelay: undefined
-        }, {
-            string: "And I love being on Lake Minnetonka, MN.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I'm passionate about Learning.",
-            stopNum: 24,
-            backDelay: undefined
-        }, {
-            string: "And I'm passionate about Technology.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I love doodling.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I like Radiohead.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I like making and playing Games.",
-            stopNum: 5,
-            backDelay: undefined
-        }, {
-            string: "And I enjoy playing Guitar.",
-            stopNum: 19,
-            backDelay: 50
-        }, {
-            string: "And I enjoy playing Piano.",
-            stopNum: 19,
-            backDelay: 50
-        }, {
-            string: "And I enjoy playing Drumset.",
-            stopNum: 19,
-            backDelay: 50
-        }, {
-            string: "And I enjoy playing...",
-            stopNum: 5,
-            backDelay: 50
-        }, {
-            string: "And I LOVE all things Music.",
-            stopNum: 5,
-            backDelay: undefined
+        // }, {
+        //     string: "And I love being on Lake Minnetonka, MN.",
+        //     stopNum: 5,
+        //     backDelay: undefined
+        // }, {
+        //     string: "And I'm passionate about Learning.",
+        //     stopNum: 24,
+        //     backDelay: undefined
+        // }, {
+        //     string: "And I'm passionate about Technology.",
+        //     stopNum: 5,
+        //     backDelay: undefined
+        // }, {
+        //     string: "And I love doodling.",
+        //     stopNum: 5,
+        //     backDelay: undefined
+        // }, {
+        //     string: "And I like Radiohead.",
+        //     stopNum: 5,
+        //     backDelay: undefined
+        // }, {
+        //     string: "And I like making and playing Games.",
+        //     stopNum: 5,
+        //     backDelay: undefined
+        // }, {
+        //     string: "And I enjoy playing Guitar.",
+        //     stopNum: 19,
+        //     backDelay: 50
+        // }, {
+        //     string: "And I enjoy playing Piano.",
+        //     stopNum: 19,
+        //     backDelay: 50
+        // }, {
+        //     string: "And I enjoy playing Drumset.",
+        //     stopNum: 19,
+        //     backDelay: 50
+        // }, {
+        //     string: "And I enjoy playing...",
+        //     stopNum: 5,
+        //     backDelay: 50
+        // }, {
+        //     string: "And I LOVE all things Music.",
+        //     stopNum: 5,
+        //     backDelay: undefined
         }, {
             string: "And I love a Challenge.",
             stopNum: 5,
@@ -138,8 +138,8 @@ $(window).on("load", function() {
                     david: customTypedInput,
                     typeSpeed: 70,
                     backDelay: 700,
-                    loop: false,
                     loopCount: 1,
+                    loop: false
                 });
             });
         }, 1000);

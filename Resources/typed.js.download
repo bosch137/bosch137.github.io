@@ -101,6 +101,9 @@
 
         // All systems go!
         this.build();
+
+        var visText = document.getElementById('typing-starter');
+        visText.style.display = "";
     };
 
     Typed.prototype = {
