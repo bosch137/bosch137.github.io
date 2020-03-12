@@ -111,10 +111,18 @@
         .resizer-col {
             max-width: 100%;
         }
+        .col-hide {
+            display: none;
+            visibility: hidden;
+        }
     }
-        @media (min-width: 1274px) {
+    @media (min-width: 1274px) {
         .resizer-col {
             max-width: 80%;
+        }
+        .col-hide {
+            display: initial;
+            visibility: visible;
         }
     }
     

@@ -271,13 +271,11 @@ function goToID(id) {
         queue: false
     }, 'easeInOutCubic');
 }
-
-function resizeTime(){
-    if (window.outerWidth > 1275) {
-        return('<div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">\
+function divChangerStart(){
+    longForm = String('<div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
-                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
-                            <a class="nav-link active" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
+                        <li class="nav-item active" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
                         </li>\
                         <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
                             <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
@@ -287,9 +285,8 @@ function resizeTime(){
                         </li>\
                     </ul>\
                 </div>');
-    }
-    else {
-        return ('<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
+
+    shortForm = String('<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
                         <li class="nav-item active" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
                             <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
@@ -302,25 +299,95 @@ function resizeTime(){
                         </li>\
                     </ul>\
                 </div>');
+    return([shortForm, longForm]);
+}
+
+function divChangerMiddle(){
+    longForm = String('<div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">\
+                    <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
+                        </li>\
+                        <li class="nav-item active" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
+                        </li>\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; padding-bottom: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>\
+                        </li>\
+                    </ul>\
+                </div>');
+
+    shortForm = String('<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
+                        <li class="nav-item" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                        <li class="nav-item active" style="margin-left: auto; margin-right: auto; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                        <li class="nav-item" style="float: right; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                    </ul>\
+                </div>');
+    return([shortForm, longForm]);
+}
+
+function divChangerEnd(){
+    longForm = String('<div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">\
+                    <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
+                        </li>\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
+                        </li>\
+                        <li class="nav-item active" style="max-width: 250px; padding-top: 11%; padding-bottom: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>\
+                        </li>\
+                    </ul>\
+                </div>');
+
+    shortForm = String('<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
+                        <li class="nav-item" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                        <li class="nav-item" style="margin-left: auto; margin-right: auto; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                        <li class="nav-item active" style="float: right; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                    </ul>\
+                </div>');
+    return([shortForm, longForm]);
+}
+function resizeTime(shortSave, longSave){ 
+    if (window.outerWidth > 1287) {
+        return (longSave);
+    }
+    else {
+        return (shortSave);
     }
 }
 
-function sideImagePicker(s){
-    if(window.outerWidth > 1275){
-        if (s.equals("BSA")) {
-            return ('<div class="container" id="sideImage" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
-            <img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">')
-        } 
-        else if (s.equals("SB")) {
-            return ('<div class="container" id="sideImage" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
-            <img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">')
-        } 
-        else if (s.equals("BD")) {
-            return ('<div class="container" id="sideImage" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
-            <img src="./Resources/boating.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">')
-        }
+function sideImagePicker(str){
+    if (str == "#eagle-scout") {
+        return('<div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+        <img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;"></div>');
+    } 
+    else if (str == "#barista") {
+        return('<div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+        <img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;"></div>');
+    } 
+    else if (str == "#boating-director") {
+        return('<div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+        <img src="./Resources/boating.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;"></div>');
     }
-    else return('<div></div>')
+    else {
+        return('<div></div>');
+    }
 }
 
 $(document).keydown(function(e) {

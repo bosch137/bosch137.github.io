@@ -184,31 +184,42 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <div class="row">
             <div class="col resizer-col">
             <div class="container-fluid" style="float: left; border-radius: 10px; border-style: solid; min-height: fit-content; max-width: 100%; background-color: white; font-family: 'Courier New', Courier, monospace;">
-            <div id="Leadership Top">
-            <script>
-                document.getElementById("Leadership Top").innerHTML = resizeTime();
-                document.getElementsByTagName("BODY")[0].onresize = function () { resizeMe() };
-
+            <div id="Leadership-Top">
+            <script>   
+                var currentForm = divChangerStart();                       
+                $(document).on('shown.bs.tab', function (e) {
+                        var target = $(e.target).attr("href") // activated tab
+                        console.log(target);
+                        if (target == "#eagle-scout") {
+                            currentForm = divChangerStart();
+                        }
+                        else if (target == "#barista") {
+                            currentForm = divChangerMiddle();
+                        }
+                        else if (target == "#boating-director") {
+                            currentForm = divChangerEnd();
+                        }
+                        console.log($("#Leadership-Top").html());
+                    });
+                document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);  
+                document.getElementsByTagName("BODY")[0].onresize = function () { resizeMe() }; 
+                
                 function resizeMe() {
-                    document.getElementById("Leadership Top").innerHTML = resizeTime();
+                    document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);    
                 }
             </script>
             </div>
                 <div class="tab-content" id="myTabContent" style="padding-bottom: 50px; padding-left: 10px;">
                     <div class="tab-pane fade in active" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab">
-                            <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Boy Scouts of America</h6>
-                            <h3 class="card-header text-left">Eagle Scout Award</h3>
-                            <hr></hr>
-                            <p class="card-text">Busy Business practically invented the term "Total Quality Management". If you morph iteravely, you may have to
-                            synthesize intra-vertically. What does it really mean to transition "vertically"? If all of this may seem discombobulating to you, that's because it is!
-                            </p>
-                            <div class="card-footer text-center text-muted"> 2 days ago</div>
-                            <script>
-                                var str = "BSA"
-                                document.getElementById("sideImage").innerHTML = sideImagePicker(str);
-                            </script>
+                        <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Boy Scouts of America</h6>
+                        <h3 class="card-header text-left">Eagle Scout Award</h3>
+                        <hr></hr>
+                        <p class="card-text">Busy Business practically invented the term "Total Quality Management". If you morph iteravely, you may have to
+                        synthesize intra-vertically. What does it really mean to transition "vertically"? If all of this may seem discombobulating to you, that's because it is!
+                        </p>
+                        <div class="card-footer text-center text-muted"> 2 days ago</div>
                     </div>
-                <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab" style="padding-left: 10px;">
+                    <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab" style="padding-left: 10px;">
                         <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Starbucks</h6>
                         <h3 class="card-header text-left">Barista</h3>
                         <hr></hr>
@@ -217,37 +228,38 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             industry, but our 60/60/24/7/365 web services and simple configuration is often considered a terrific achievement.
                         </p>
                         <div class="card-footer text-center text-muted"> 2 days ago</div>
-                        <script>
-                            var str = "SB"
-                            document.getElementById("sideImage").innerHTML = sideImagePicker(str);
-                        </script>
-                </div>
-                <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" style="padding-left: 10px;">
-                            <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Camp Teko</h6>
-                            <h3 class="card-header text-left">Boating Director</h3>
-                            <hr></hr>
-                            <p class="card-text">Busy Business has revolutionized the idea of ROI metrics. What does it really mean to enhance
-                                "transparently"? If all of
-                                this sounds fabulous to you, that's because it is!
-                                We will grow the capability of all-hands meetings to disintermediate. We will facilitate the capacity of
-                                user-defined
-                                e-services to optimize. Our technology takes the best aspects of XSL and Perl.</p>
-                                <div class="card-footer text-center text-muted"> 2 days ago</div>
-                            </div>
-                            <script>
-                                var str = "BD"
-                                document.getElementById("sideImage").innerHTML = sideImagePicker(str);
-                            </script>
                     </div>
+                    <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" style="padding-left: 10px;">
+                        <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Camp Teko</h6>
+                        <h3 class="card-header text-left">Boating Director</h3>
+                        <hr></hr>
+                        <p class="card-text">Busy Business has revolutionized the idea of ROI metrics. What does it really mean to enhance
+                            "transparently"? If all of
+                            this sounds fabulous to you, that's because it is!
+                            We will grow the capability of all-hands meetings to disintermediate. We will facilitate the capacity of
+                            user-defined
+                            e-services to optimize. Our technology takes the best aspects of XSL and Perl.</p>
+                        <div class="card-footer text-center text-muted"> 2 days ago</div>
+                    </div>
+                    <script>
+                        $(document).on('shown.bs.tab', function (e) {
+                            var target = $(e.target).attr("href") // activated tab
+                            document.getElementById("Side Image").innerHTML = sideImagePicker(target);
+                        });
+                    </script>
+                </div>
                     <style>
                         a{color:green;}
                         .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{background-color:green;}
                     </style>
                 </div>
             </div>
-            <div class="col" id="sideImage" style="padding-top: 2%;">
+            <div class="col col-hide" id="Side Image" style="padding-top: 2%;">
+                <div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">
+                    <img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">
+                </div>
             </div>
-            </div>
+        </div>
 </div>
         <!--
         _____           _           _
