@@ -17,6 +17,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="./Resources/materialize.min.css" media="screen,projection">
     <link type="text/css" rel="stylesheet" href="./Resources/loading.css">
+    <script type="text/javascript" src="./Resources/scripts.js.download"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -109,39 +110,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
                         <div class="resizer-head" style="font-weight:100; padding-bottom: 20px; color:#ffffff;">
                             <span class="me_name">Hi, I'm Michael Boschwitz!</span>
                         </div>
-                        <div class= "resizer-sub" style="font-weight:300; color:#ffffff; ">
+                        <div class= "resizer-sub" style="font-weight:300; color:#ffffff;">
                             <span id="typing-starter" class="typed" style="display: none;"></span>
                             <span class="typed-cursor"></span>
                         </div>
                     </div>
                 </div>
-                <style>
-                @media (min-width: 615px) {
-                    .resizer-head {
-                        /* -ms-transform: translateY(-15%); 
-                        transform: translateY(-15%); */
-                        font-size: 35px;
-                    }
-                    .resizer-sub {
-                        /* -ms-transform: translateY(-15%); 
-                        transform: translateY(-15%); */
-                        font-size: 20px;
-                    }
-                }
-                @media (max-width: 614px) {
-                    .resizer-head {
-                        /* -ms-transform: translateY(0%); 
-                        transform: translateY(0%); */
-                        font-size: 19px;
-                    }
-                    .resizer-sub {
-                        /* -ms-transform: translateY(0%); 
-                        transform: translateY(0%); */
-                        font-size: 15px;
-                    }
-                }
-
-                </style>
             </div>
         </div>
 
@@ -203,27 +177,24 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                     | |
                                                     |_|
                           (leadership)-->
-        <!-- <div class="section z-depth-3 anchor anchor_title full-height" style="padding-left: 25px; padding-right: 25px; min-height: 945px; background-color: rgb(180, 180, 180);"></div> -->
-                <!-- <h2 class="header">Leadership &amp; Work</h2> -->
-        <div class="container-fluid" style="padding-top: 50px;">
-            <div class="row">
-            <div class="col">
-            <div class="container" style="margin: auto; border-radius: 10px; border-style: solid; min-height: fit-content; background-color: white; font-family: 'Courier New', Courier, monospace;">
-                <div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">
-                <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
-                    <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">
-                        <a class="nav-link active" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>
-                    </li>
-                    <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">
-                        <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>
-                    </li>
-                    <li class="nav-item" style="max-width: 250px; padding-top: 11%; padding-bottom: 11%; font-size: 20px;">
-                        <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>
-                    </li>
-                </ul>
-                </div>
+        <div class="anchor anchor_title" style="padding-top: 50px;"></div>
+                <h2 class="header resizer-Title" style="color: white;">Leadership &amp; Work</h2>
 
-                <div class="tab-content" id="myTabContent" style="padding-bottom: 50px;">
+        <div class="container-fluid" style="padding-top: 50px; padding-bottom: 50px;">
+            <div class="row">
+            <div class="col resizer-col">
+            <div class="container-fluid" style="float: left; border-radius: 10px; border-style: solid; min-height: fit-content; max-width: 100%; background-color: white; font-family: 'Courier New', Courier, monospace;">
+            <div id="Leadership Top">
+            <script>
+                document.getElementById("Leadership Top").innerHTML = resizeTime();
+                document.getElementsByTagName("BODY")[0].onresize = function () { resizeMe() };
+
+                function resizeMe() {
+                    document.getElementById("Leadership Top").innerHTML = resizeTime();
+                }
+            </script>
+            </div>
+                <div class="tab-content" id="myTabContent" style="padding-bottom: 50px; padding-left: 10px;">
                     <div class="tab-pane fade in active" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab">
                             <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Boy Scouts of America</h6>
                             <h3 class="card-header text-left">Eagle Scout Award</h3>
@@ -232,8 +203,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             synthesize intra-vertically. What does it really mean to transition "vertically"? If all of this may seem discombobulating to you, that's because it is!
                             </p>
                             <div class="card-footer text-center text-muted"> 2 days ago</div>
+                            <script>
+                                var str = "BSA"
+                                document.getElementById("sideImage").innerHTML = sideImagePicker(str);
+                            </script>
                     </div>
-                <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab">
+                <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab" style="padding-left: 10px;">
                         <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Starbucks</h6>
                         <h3 class="card-header text-left">Barista</h3>
                         <hr></hr>
@@ -242,8 +217,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             industry, but our 60/60/24/7/365 web services and simple configuration is often considered a terrific achievement.
                         </p>
                         <div class="card-footer text-center text-muted"> 2 days ago</div>
+                        <script>
+                            var str = "SB"
+                            document.getElementById("sideImage").innerHTML = sideImagePicker(str);
+                        </script>
                 </div>
-                <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab">
+                <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" style="padding-left: 10px;">
                             <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Camp Teko</h6>
                             <h3 class="card-header text-left">Boating Director</h3>
                             <hr></hr>
@@ -255,16 +234,18 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 e-services to optimize. Our technology takes the best aspects of XSL and Perl.</p>
                                 <div class="card-footer text-center text-muted"> 2 days ago</div>
                             </div>
+                            <script>
+                                var str = "BD"
+                                document.getElementById("sideImage").innerHTML = sideImagePicker(str);
+                            </script>
                     </div>
                     <style>
                         a{color:green;}
                         .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{background-color:green;}
                     </style>
+                </div>
             </div>
-            </div>
-            <div class="col">
-            <div class="container" style="position: absolute; max-width:100px; background-color: hotpink; padding-left: 25px; padding-bottom: 25px;">
-                
+            <div class="col" id="sideImage" style="padding-top: 2%;">
             </div>
             </div>
 </div>

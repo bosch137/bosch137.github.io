@@ -81,6 +81,60 @@
     }
 }
 
+
+    @media (max-width: 614px) {
+        .resizer-head {
+        /* -ms-transform: translateY(0%);
+        transform: translateY(0%); */
+        font-size: 19px;
+        }
+        .resizer-sub {
+        /* -ms-transform: translateY(0%);
+        transform: translateY(0%); */
+        font-size: 15px;
+        }
+    }
+    @media (min-width: 615px) {
+        .resizer-head {
+        /* -ms-transform: translateY(-15%);
+        transform: translateY(-15%); */
+        font-size: 35px;
+        }
+        .resizer-sub {
+        /* -ms-transform: translateY(-15%);
+        transform: translateY(-15%); */
+        font-size: 20px;
+        }
+    }
+
+    @media (max-width: 1275px) {
+        .resizer-col {
+            max-width: 100%;
+        }
+    }
+        @media (min-width: 1274px) {
+        .resizer-col {
+            max-width: 80%;
+        }
+    }
+    
+
+
+        @media (max-width: 614px) {
+            .resizer-Title {
+                text-align: center; 
+                font-family: 'Courier New', Courier, monospace; 
+                font-size: 25px;
+            }
+        }
+        @media (min-width: 615px) {
+            .resizer-Title {
+                text-align: center; 
+                font-family: 'Courier New', Courier, monospace;  
+                font-size: 50px;
+            }
+        }
+
 .hero-footer {
     background: url(../img/GOPR6477.JPG) no-repeat center top;
     padding-top: 5px;
@@ -124,13 +178,18 @@
 /* typed.js */
 
 .typed{
+    position: relative;
     font-family: 'Courier New', Courier, monospace;
-    margin-left: 10px;
+    left: 10px;
     line-height: 2;
     display: inline;
     color: rgb(255, 255, 255);
     background: black;
     box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+    -moz-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+    -webkit-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .me_name{
@@ -141,10 +200,15 @@
     color: rgb(255, 255, 255);
     background: black;
     box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+    -moz-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+    -webkit-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .typed-cursor {
     padding-bottom: 5px;
+    margin-left: 10px;
     background-color: black;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;

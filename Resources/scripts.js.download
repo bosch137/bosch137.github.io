@@ -49,7 +49,6 @@ Materialize.scrollFire([{
 //fade in from the preloader with a little delay
 $(window).on("load", function() {
     // $('.preloader-background').delay(1500).fadeOut('slow');
-
     $('#fire1').delay(3000).fadeIn('slow');
     setTimeout(function() {
         if (window.innerWidth < 800)
@@ -68,50 +67,50 @@ $(window).on("load", function() {
             string: "And I love Creative Problem Solving.",
             stopNum: 5,
             backDelay: undefined
-        // }, {
-        //     string: "And I love being on Lake Minnetonka, MN.",
-        //     stopNum: 5,
-        //     backDelay: undefined
-        // }, {
-        //     string: "And I'm passionate about Learning.",
-        //     stopNum: 24,
-        //     backDelay: undefined
-        // }, {
-        //     string: "And I'm passionate about Technology.",
-        //     stopNum: 5,
-        //     backDelay: undefined
-        // }, {
-        //     string: "And I love doodling.",
-        //     stopNum: 5,
-        //     backDelay: undefined
-        // }, {
-        //     string: "And I like Radiohead.",
-        //     stopNum: 5,
-        //     backDelay: undefined
-        // }, {
-        //     string: "And I like making and playing Games.",
-        //     stopNum: 5,
-        //     backDelay: undefined
-        // }, {
-        //     string: "And I enjoy playing Guitar.",
-        //     stopNum: 19,
-        //     backDelay: 50
-        // }, {
-        //     string: "And I enjoy playing Piano.",
-        //     stopNum: 19,
-        //     backDelay: 50
-        // }, {
-        //     string: "And I enjoy playing Drumset.",
-        //     stopNum: 19,
-        //     backDelay: 50
-        // }, {
-        //     string: "And I enjoy playing...",
-        //     stopNum: 5,
-        //     backDelay: 50
-        // }, {
-        //     string: "And I LOVE all things Music.",
-        //     stopNum: 5,
-        //     backDelay: undefined
+        }, {
+            string: "And I love being on Lake Minnetonka, MN.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I'm passionate about Learning.",
+            stopNum: 24,
+            backDelay: undefined
+        }, {
+            string: "And I'm passionate about Technology.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I love doodling.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I like Radiohead.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I like making and playing Games.",
+            stopNum: 5,
+            backDelay: undefined
+        }, {
+            string: "And I enjoy playing Guitar.",
+            stopNum: 19,
+            backDelay: 50
+        }, {
+            string: "And I enjoy playing Piano.",
+            stopNum: 19,
+            backDelay: 50
+        }, {
+            string: "And I enjoy playing Drumset.",
+            stopNum: 19,
+            backDelay: 50
+        }, {
+            string: "And I enjoy playing...",
+            stopNum: 5,
+            backDelay: 50
+        }, {
+            string: "And I LOVE all things Music.",
+            stopNum: 5,
+            backDelay: undefined
         }, {
             string: "And I love a Challenge.",
             stopNum: 5,
@@ -272,14 +271,57 @@ function goToID(id) {
         queue: false
     }, 'easeInOutCubic');
 }
-// function refreshSpeed(){
-//   if(scrollSpeed < 1000){
-//     scrollSpeed += 300;
-//   } else {
-//     scrollSpeed = 1000;
-//   }
-// }
-// setInterval(refreshSpeed, 500);
+
+function resizeTime(){
+    if (window.outerWidth > 1275) {
+        return('<div class="col-md-3" style="padding-right: 10px; padding-left: 0px; min-height: fit-content;">\
+                    <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link active" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
+                        </li>\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
+                        </li>\
+                        <li class="nav-item" style="max-width: 250px; padding-top: 11%; padding-bottom: 11%; font-size: 20px;">\
+                            <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>\
+                        </li>\
+                    </ul>\
+                </div>');
+    }
+    else {
+        return ('<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
+                        <li class="nav-item active" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                        <li class="nav-item" style="margin-left: auto; margin-right: auto; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                        <li class="nav-item" style="float: right; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
+                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                        </li>\
+                    </ul>\
+                </div>');
+    }
+}
+
+function sideImagePicker(s){
+    if(window.outerWidth > 1275){
+        if (s.equals("BSA")) {
+            return ('<div class="container" id="sideImage" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+            <img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">')
+        } 
+        else if (s.equals("SB")) {
+            return ('<div class="container" id="sideImage" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+            <img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">')
+        } 
+        else if (s.equals("BD")) {
+            return ('<div class="container" id="sideImage" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+            <img src="./Resources/boating.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;">')
+        }
+    }
+    else return('<div></div>')
+}
 
 $(document).keydown(function(e) {
     if (keyHandling(e.keyCode))
