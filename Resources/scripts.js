@@ -374,15 +374,15 @@ function resizeTime(shortSave, longSave){
 
 function sideImagePicker(str){
     if (str == "#eagle-scout") {
-        return('<div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+        return (' <div class="container-fluid" id="Image-Container" style="border-radius: 10px; border-style: solid; background-color: white;">\
         <img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;"></div>');
     } 
     else if (str == "#barista") {
-        return('<div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+        return (' <div class="container-fluid" id="Image-Container" style="border-radius: 10px; border-style: solid; background-color: white;">\
         <img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;"></div>');
     } 
     else if (str == "#boating-director") {
-        return('<div class="container" style="border-radius: 10px; border-style: solid; max-width: 225px; height: 225px; background-color: white; float: right; padding-top: 25px; padding-bottom: 25px;">\
+        return (' <div class="container-fluid" id="Image-Container" style="border-radius: 10px; border-style: solid; background-color: white;">\
         <img src="./Resources/boating.png" style="display: block; margin: 0 auto; max-width: 100%; max-height: 100%;"></div>');
     }
     else {
