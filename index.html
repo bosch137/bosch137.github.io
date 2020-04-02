@@ -36,39 +36,14 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <meta property="og:image" src="./Resources/tempPhotoThing.jpg">
     <meta property="og:description" content="Software Engineering and Creative Design Student at the University of Minnesota.
     Passionate about technology, music, games, art, and hungry to learn more.">
-    <meta property="fb:app_id" content="331106837246669">
     <meta name="theme-color" content="#3b496e">
     <title>Meet Michael Boschwitz</title>
-    <style>
-        .load-fade-in {
-            -webkit-animation: fade-in-anim 3.0s;
-            animation: fade-in-anim 3.0s
-        }
-
-        @-webkit-keyframes fade-in-anim {
-            from {
-                opacity: 0
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fade-in-anim {
-            from {
-                opacity: 0
-            }
-            to {
-                opacity: 1
-            }
-        }
-    </style>
 </head>
 
 <body class="anchor loaded" style="background-color:rgb(42, 42, 42)">
     <main> 
-        <div class="container-fluid anchor" data-offset="-20" id="intro" style="max-height: 95vh; height: 95vh; max-height: 95vh; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
-            <div id="carousel" class="carousel slide" data-ride="carousel" style="min-height: 40vw; height: 95vh; max-height: 95vh; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+        <div class="container-fluid anchor" data-offset="-20" id="intro" style="height: 95vh; max-height: 95vh; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
+            <div id="carousel" class="carousel slide" data-ride="carousel" style="height: 95vh; max-height: 95vh; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
@@ -172,10 +147,10 @@ Looks like you're checking out my source code... I suppose that's not surprising
         <div class="anchor" data-offset="-20" id="leadership" style="padding-top: 50px;"></div>
                 <h2 class="header resizer-Title" style="color: white;">Leadership &amp; Work</h2>
 
-        <div class="flex-container" style="padding-top: 50px; padding-bottom: 50px; margin-left: 10px; margin-right: 10px;">
+        <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; display: block; margin: 0 auto; padding-top: 50px; padding-bottom: 50px;">
             <div class="row">
-                <div class="col resizer-col" id="Leadership-Card" >
-                    <div class="container-fluid"style="float: left; border-radius: 10px; border-style: solid; min-height: fit-content; max-width: 100%; background-color: white; font-family: 'Courier New', Courier, monospace;">
+                <div class="col" id="Leadership-Card" >
+                    <div class="container-fluid"style="border-radius: 10px; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
                         <div id="Leadership-Top">
                         <script>   
                             var currentForm = divChangerStart();                       
@@ -198,12 +173,21 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
                                     document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
+                                    document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
+                                    if(window.outerWidth > 1287){
+                                        document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
+                                        document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 15 + "px";
+                                    }
+                                    else{
+                                        document.getElementById("myTabContent").style.marginLeft = 0 + "px";
+                                        document.getElementById("Leadership-Card").style.width = 100 + "%";
+                                    }
                                 }
                             }
                         </script>
                         </div>
-                            <div class="tab-content inner-panel" id="myTabContent" style="padding-left: 10px; padding-right: 10px;">
-                                <div class="tab-pane fade in active" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab">
+                            <div class="tab-content inner-panel" id="myTabContent">
+                                <div class="tab-pane fade in active" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab" style="padding-left: 10px; background: white; padding: 10px; border-radius: 9px;">
                                     <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Boy Scouts of America</h6>
                                     <h3 class="card-header text-left">Eagle Scout Award</h3>
                                     <hr></hr>
@@ -212,7 +196,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                     </p>
                                     <div class="card-footer text-center text-muted"> 2 days ago</div>
                                 </div>
-                                <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab" style="padding-left: 10px;">
+                                <div class="tab-pane fade" id="barista" role="tabpanel" aria-labelledby="barista-tab" style="padding-left: 10px; background: white; padding: 10px; border-radius: 9px;">
                                     <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Starbucks</h6>
                                     <h3 class="card-header text-left">Barista</h3>
                                     <hr></hr>
@@ -222,7 +206,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                     </p>
                                     <div class="card-footer text-center text-muted"> 2 days ago</div>
                                 </div>
-                                <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" style="padding-left: 10px;">
+                                <div class="tab-pane fade" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" style="padding-left: 10px; background: white; padding: 10px; border-radius: 9px;">
                                     <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Camp Teko</h6>
                                     <h3 class="card-header text-left">Boating Director</h3>
                                     <hr></hr>
@@ -240,7 +224,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                         document.getElementById("Side-Image").innerHTML = sideImagePicker(target);
                                         if (document.getElementById("Leadership-Card").offsetHeight != null) {
                                             document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-
+                                            document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
                                         }
                                     });
                                 </script>
@@ -251,8 +235,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 </style>
                             </div>
                         </div>
-                <div class="col col-hide" id="Side-Image" style="width: 20%;">
-                    <div class="container-fluid" id="Image-Container" style="height: 0px; border-radius: 10px; border-style: solid; background-color: white;">          
+                <div class="col col-hide" id="Side-Image">
+                    <div class="container-fluid" id="Image-Container" style="width: 0px; height: 0px; border-radius: 10px; background-color: white;">          
                 </div>
             </div>
         </div>
@@ -440,6 +424,15 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <script>
         document.getElementById("Side-Image").innerHTML = sideImagePicker("#eagle-scout");
         document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
+        document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
+        if(window.outerWidth > 1287){
+            document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
+            document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 15 + "px";
+        }
+        else{
+            document.getElementById("myTabContent").style.marginLeft = 0 + "px";
+            document.getElementById("Leadership-Card").style.width = 100 + "%";
+        }
     </script>
 
 
