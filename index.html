@@ -198,14 +198,13 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
                                     document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-                                    document.getElementById("myTabContent").style.height = document.getElementById("Leadership-Card").offsetHeight + "px"; 
                                 }
                             }
                         </script>
                         </div>
                             <div class="tab-content inner-panel" id="myTabContent" style="padding-left: 10px; padding-right: 10px;">
                                 <div class="tab-pane fade in active" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab">
-                                    <h6 class="card-subtitle text-right mb-2 text-muted" style="padding-top: 1%;float: top right;">Boy Scouts of America</h6>
+                                    <h6 class="card-subtitle text-right mb-2 text-muted" style="float: top right;">Boy Scouts of America</h6>
                                     <h3 class="card-header text-left">Eagle Scout Award</h3>
                                     <hr></hr>
                                     <p class="card-text">Busy Business practically invented the term "Total Quality Management". If you morph iteravely, you may have to
@@ -241,7 +240,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                         document.getElementById("Side-Image").innerHTML = sideImagePicker(target);
                                         if (document.getElementById("Leadership-Card").offsetHeight != null) {
                                             document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-                                            document.getElementById("myTabContent").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
+
                                         }
                                     });
                                 </script>
@@ -441,7 +440,6 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <script>
         document.getElementById("Side-Image").innerHTML = sideImagePicker("#eagle-scout");
         document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-        document.getElementById("myTabContent").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
     </script>
 
 
