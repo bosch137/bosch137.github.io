@@ -150,7 +150,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; display: block; margin: 0 auto; padding-top: 50px; padding-bottom: 50px;">
             <div class="row">
                 <div class="col" id="Leadership-Card" >
-                    <div class="container-fluid"style="border-radius: 10px; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
+                    <div class="container-fluid" style="border-radius: 10px; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
                         <div id="Leadership-Top">
                         <script>   
                             var currentForm = divChangerStart();                       
@@ -175,10 +175,13 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                     document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
                                     document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
                                     if(window.outerWidth > 1287){
+                                        document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
                                         document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
-                                        document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 15 + "px";
+                                        document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 20 + "px";
+
                                     }
                                     else{
+                                        document.getElementById("Leadership-Card").style.backgroundColor = "white";
                                         document.getElementById("myTabContent").style.marginLeft = 0 + "px";
                                         document.getElementById("Leadership-Card").style.width = 100 + "%";
                                     }
@@ -426,10 +429,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
         document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
         document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
         if(window.outerWidth > 1287){
+            document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
             document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
-            document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 15 + "px";
+            document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 20 + "px";
         }
         else{
+            document.getElementById("Leadership-Card").style.backgroundColor = "white";
             document.getElementById("myTabContent").style.marginLeft = 0 + "px";
             document.getElementById("Leadership-Card").style.width = 100 + "%";
         }
