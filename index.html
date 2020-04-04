@@ -18,6 +18,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <link type="text/css" rel="stylesheet" href="./Resources/materialize.min.css" media="screen,projection">
     <link type="text/css" rel="stylesheet" href="./Resources/loading.css">
     <script type="text/javascript" src="./Resources/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/dcebd4d418.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -88,35 +89,32 @@ Looks like you're checking out my source code... I suppose that's not surprising
 
         <!--  Floating Navigation buttons   -->
         <div id="navbuttons">
-            <div class="fixed-action-btn" style="bottom: 70px; right: 24px; z-index:10;">
+            <div class="fixed-action-btn" style="bottom: 110px; right: 25px; z-index:10;">
                 <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(38)" style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Previous Section">
-                    <i class="large material-icons">navigation</i>
+                    <i class="fas fa-caret-up fa-2x"></i>
                 </a>
             </div>
-            <div class="fixed-action-btn" style="bottom: 40px; right: 48px; z-index:20;">
+            <div class="fixed-action-btn" style="bottom: 60px; right: 50px; z-index:20;">
                 <a class="btn-floating waves-effect waves-light button-collapse ntooltipped" data-activates="slide-out" style="background-color: #4285f4;" data-position="left" data-delay="500" data-tooltip="Menu/Navigation">
-                    <i class="large material-icons">menu</i>
+                    <i class="far fa-compass"></i>
                 </a>
             </div>
-            <div class="fixed-action-btn" style="bottom: 10px; right: 24px; z-index:10;">
+            <div class="fixed-action-btn" style="bottom: 10px; right: 25px; z-index:10;">
                 <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(40)" style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Next Section">
-                    <i class="large material-icons" style="transform:rotateX(180deg)">navigation</i>
+                    <i class="fas fa-caret-down fa-2x"></i>
                 </a>
             </div>
         </div>
 
 
-        <ul id="slide-out" class="side-nav right-aligned" style="width: 280px; transform: translateX(100%);">
+        <ul id="slide-out" class="side-nav right-aligned" style="width: 280px; transform: translateX(100%); font-family:'Courier New', Courier, monospace;">
             <li>
                 <div class="userView" style="height:160px">
                     <img class="background" src="./Resources/compass.jpg" style="width:280px;">
-                    <!-- <a href="#!user"><img class="circle" src="assets/img/prof.jpg"></a>
-      <a href="#!name"><span class="white-text name">David Boschwitz</span></a>
-      <a href="#!email"><span class="white-text email">david@boschwitz.me</span></a> -->
                 </div>
             </li>
             <li>
-                <div class="subheader" style="margin-left:30px">Navigation</div>
+                <div class="subheader" style="margin-left:30px; font-size: large; font-weight: bold;">Navigation</div>
             </li>
             <li>
                 <div class="divider"></div>
@@ -128,9 +126,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <li>
                 <div class="divider"></div>
             </li>
-            <li><a class="subheader">Resources</a></li>
-            <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/assets/resume.pdf"><i class="material-icons">description</i>Resume</a></li>
-            <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fa fa-github fa-2x" aria-hidden="true"></i>GitHub</a></li>
+            <li><a class="subheader" style="font-size: large; font-weight: bold;">Resources</a></li>
+            <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/assets/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
+            <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
             <li><a class="waves-effect" target="_blank" href="javascript:UnCryptMailto(&#39;nbjmup;ebwjeAcptdixju{/nf&#39;);"><i class="material-icons">mail</i>Email</a></li>
         </ul>
         
@@ -259,60 +257,91 @@ Looks like you're checking out my source code... I suppose that's not surprising
         <div class="parallax-container full-height" style="min-height: 945px;">
             <div class="parallax"><img src="./Resources/raspi.jpg" style="display: block;"></div>
         </div>
-        <!-- <div class="section z-depth-3 anchor anchor_title full-height" style="min-height: 945px;">
-            <div class="row container anchor" data-offset="-20" id="projects"> -->
-                <h2 class="header">Projects</h2>
-            <!-- </div>
-        </div> -->
-        <div class="container-fluid">
-            <div class="card-deck">
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
-                            cap</text>
-                    </svg>
-            
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card It's a broader card with text below as a natural lead-in to extra
-                            content. This content is a little longer. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class="anchor" data-offset="-20" id="projects"></div>
+
+        <h2 class="header resizer-Title" style="color: white;">Game Projects</h2>
+            <div class="container">
+                <div class="card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
-                            cap</text>
-                    </svg>
-            
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
-                            cap</text>
-                    </svg>
-            
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card It's a broader card with text below as a natural lead-in to extra
-                            content. This content is a little longer. This card has even longer content than the first to show that
-                            equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1041" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        <h2 class="header resizer-Title" style="color: white;">Coding Projects</h2>
+            <div class="container" style="padding-bottom: 2.5vw;">
+                <div class="card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1041" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1039" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1019" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                                content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!--
              _                 _
     /\      | |               | |
@@ -376,7 +405,6 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <script type="text/javascript" src="./Resources/materialize.min.js"></script>
     <script type="text/javascript" src="./Resources/typed.js"></script>
     <link type="text/css" rel="stylesheet" href="./Resources/style.css">
-    <link rel="stylesheet" href="./Resources/font-awesome.min.css">
     <script type="text/javascript" src="./Resources/Chart.bundle.min.js"></script>
     <script>
         if (!window.Chart) {
@@ -406,7 +434,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 ga('send', 'pageview', e.currentTarget.pathname);
         });
 
-        $('a[href*="github.com/davidboschwitz"]').click(function(e) {
+        $('a[href*="github.com/bosch137"]').click(function(e) {
             console.log(e);
             if (window.ga && ga.create)
                 ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));

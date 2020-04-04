@@ -380,6 +380,7 @@ fw800 {
   font-weight: 800;
 }
 
+/* Bootstrap 4 CSS */
 .card {
   position: relative;
   display: -ms-flexbox;
@@ -483,9 +484,15 @@ fw800 {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
+
+body {
+  padding-top: 20px;
+}
+
 .card-deck .card {
   margin-bottom: 15px;
 }
+
 @media (min-width: 576px) {
   .card-deck {
     display: -ms-flexbox;
@@ -494,6 +501,7 @@ fw800 {
     flex-flow: row wrap;
     margin-right: -15px;
     margin-left: -15px;
+
   }
   .card-deck .card {
     -ms-flex: 1 0 0%;
@@ -503,6 +511,42 @@ fw800 {
     margin-left: 15px;
   }
 }
+
+
+/* Credit to Amy Patterson for these responsive Bootstrap 4 Cards https://codepen.io/apatters/pen/ZEGvpyp */
+.card-deck {
+    margin: 0 -15px;
+    justify-content: space-between;
+}
+
+.card-deck .card {
+   margin: 0 0 1rem;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 48.7%;
+    flex: 0 0 48.7%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .card-deck .card {
+    -ms-flex: 0 0 24%;
+    flex: 0 0 24%;
+  }
+}
+
+
+
 .card-group > .card {
   margin-bottom: 15px;
 }
