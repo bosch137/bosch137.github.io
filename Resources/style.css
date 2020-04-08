@@ -140,7 +140,7 @@
   }
 }
 
-@media (max-width: 614px) {
+@media (max-width: 614.98px) {
   .resizer-Title {
     text-align: center;
     font-family: "Courier New", Courier, monospace;
@@ -153,6 +153,73 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 50px;
   }
+}
+
+@media (max-width: 799.98px){
+  .special-header{
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+  }
+  .hide-me{
+    visibility: hidden;
+    width: 0px; 
+    height: 0px;
+    object-fit: cover;
+    overflow: hidden; 
+  }
+  .hide-me-alt{
+    visibility: visible;
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px){
+  .special-header{
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 50px;
+  }
+  .hide-me{
+    max-width: 1900px;
+    display: block; 
+    height: 700px;
+    visibility: visible;
+    object-fit: cover;
+    overflow: hidden; 
+    padding-bottom: 25px;
+  }
+  .hide-me-alt{
+    height: 0px;
+    visibility: hidden;
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
+    text-align: center;
+  }
+}
+
+.image-corrector{
+  object-fit: cover; 
+  overflow: hidden; 
+}
+
+.photo-caption{
+  width: fit-content;
+  font-weight:100;
+  margin: 0 auto;
+  margin-bottom: 7.5vh;  
+  color:#ffffff;
+  font-family: "Courier New", Courier, monospace;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+  background: black;
+  box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  -moz-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  -webkit-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .Img-Picker{
@@ -206,7 +273,7 @@
 
 
 .hero-footer {
-  background: url(../img/GOPR6477.JPG) no-repeat center top;
+  /* background: url(.Resources/GOPR6477.jpg) no-repeat center top; */
   padding-top: 5px;
   padding-left: 10px;
   background-attachment: relative;
@@ -540,6 +607,7 @@ body {
 }
 
 .card-deck .card {
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -563,9 +631,9 @@ body {
 }
 
 
-/* Credit to Amy Patterson for these responsive Bootstrap 4 Cards https://codepen.io/apatters/pen/ZEGvpyp */
+/* Credit to Amy Patterson for these responsive Bootstrap 4 Cards https://codepen.io/apatters/pen/ZEGvpyp , they have been slightly modified though.*/
 .card-deck {
-    margin: 0 -15px;
+    margin: -15px -15px;
     justify-content: space-between;
 }
 
