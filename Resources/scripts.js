@@ -33,7 +33,7 @@ Materialize.scrollFire([
       $(".typed-footer").typed({
         //And I love
         strings: [
-          'and thats about it...^1000<br>•&nbsp;<a target="_blank" href="assets/resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/davidboschwitz">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/davidboschwitz">LinkedIn</a>'
+          '•&nbsp;<a target="_blank" href="http://michael.boschwitz.me/assets/Michael-Boschwitz-Resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/bosch137">GitHub</a><br>...and thats about it!^1000'
         ],
         loop: false,
         contentType: "html",
@@ -335,13 +335,13 @@ function divChangerStart() {
   longForm = String(
     '<div class="col-md-3" id="NavTabs" style="max-width: fit-content; min-height: fit-content; background: white; padding: 10px; margin-right: 25px; border-radius: 9px;">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
-                        <li class="nav-item active" style="max-width: 250px; padding-top: 12%; font-size: 18px;">\
+                        <li class="nav-item active" style="padding-top: 12%; font-size: 20px;">\
                             <a class="nav-link" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
                         </li>\
-                        <li class="nav-item" style="max-width: 250px; padding-top: 12%; padding-bottom: 12%; font-size: 18px;">\
+                        <li class="nav-item" style="padding-top: 12%; padding-bottom: 12%; font-size: 20px;">\
                             <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
                         </li>\
-                        <li class="nav-item" style="max-width: 250px; padding-bottom: 12%; font-size: 18px;">\
+                        <li class="nav-item" style="padding-bottom: 12%; font-size: 20px;">\
                             <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>\
                         </li>\
                     </ul>\
@@ -370,13 +370,13 @@ function divChangerMiddle() {
   longForm = String(
     '<div class="col-md-3" id="NavTabs" style="max-width: fit-content; min-height: fit-content; background: white; padding: 10px; margin-right: 25px; border-radius: 9px;">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
-                        <li class="nav-item" style="max-width: 250px; padding-top: 12%; font-size: 18px;">\
+                        <li class="nav-item" style="padding-top: 12%; font-size: 20px;">\
                             <a class="nav-link" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
                         </li>\
-                        <li class="nav-item active" style="max-width: 250px; padding-top: 12%; padding-bottom: 12%; font-size: 18px;">\
+                        <li class="nav-item active" style="padding-top: 12%; padding-bottom: 12%; font-size: 20px;">\
                             <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
                         </li>\
-                        <li class="nav-item" style="max-width: 250px; padding-bottom: 12%; font-size: 18px;">\
+                        <li class="nav-item" style="padding-bottom: 12%; font-size: 20px;">\
                             <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>\
                         </li>\
                     </ul>\
@@ -405,13 +405,13 @@ function divChangerEnd() {
   longForm = String(
     '<div class="col-md-3" id="NavTabs" style="max-width: fit-content; min-height: fit-content; background: white; padding: 10px; margin-right: 25px; border-radius: 9px;">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">\
-                        <li class="nav-item" style="max-width: 250px; padding-top: 12%; font-size: 18px;">\
+                        <li class="nav-item" style="padding-top: 12%; font-size: 20px;">\
                             <a class="nav-link" id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true">Eagle Scout</a>\
                         </li>\
-                        <li class="nav-item" style="max-width: 250px; padding-top: 12%; padding-bottom: 12%; font-size: 18px;">\
+                        <li class="nav-item" style="padding-top: 12%; padding-bottom: 12%; font-size: 20px;">\
                             <a class="nav-link" id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false">Barista</a>\
                         </li>\
-                        <li class="nav-item active" style="max-width: 250px; padding-bottom: 12%; font-size: 18px;">\
+                        <li class="nav-item active" style="padding-bottom: 12%; font-size: 20px;">\
                             <a class="nav-link" id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false">Boating Director</a>\
                         </li>\
                     </ul>\
@@ -436,7 +436,7 @@ function divChangerEnd() {
   return [shortForm, longForm];
 }
 function resizeTime(shortSave, longSave) {
-  if (window.outerWidth > 1287) {
+  if (window.outerWidth > 1325) {
     return longSave;
   } else {
     return shortSave;
@@ -444,18 +444,171 @@ function resizeTime(shortSave, longSave) {
 }
 
 function sideImagePicker(str) {
-  if (str == "#eagle-scout") {
-    return ' <div class="container-fluid" id="Image-Container" style="border-radius: 10px; border-style: solid; background-color: white;">\
-        <img src="./Resources/BSAImage.png" style="display: block;  margin: 0 auto; max-width: 100%; max-height: 100%;"></div>';
-  } else if (str == "#barista") {
-    return ' <div class="container-fluid" id="Image-Container" style="border-radius: 10px; border-style: solid; background-color: white;">\
-        <img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></div>';
-  } else if (str == "#boating-director") {
-    return ' <div class="container-fluid" id="Image-Container" style="border-radius: 10px; border-style: solid; background-color: white;">\
-        <img src="./Resources/boating.png" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></div>';
-  } else {
-    return "<div></div>";
+  var returnString = '';
+
+  if (str == "#eagle-scout") { var imageChoice = "./Resources/BSAImage.png"; }
+
+  else if (str == "#barista") { var imageChoice = "./Resources/starbucks.png"; }
+
+  else if (str == "#boating-director") { var imageChoice = "./Resources/boating.png"; }
+
+  else { return "<div></div>"; }
+  returnString = '<div class="container-fluid Images-Container" id="Image-Container">\
+                    <img class="Img-Picker" src="'+ imageChoice + '">\
+                  </div>';
+
+  return (returnString);
+}
+
+function extraImagePicker(str) {
+  var returnString = '';
+  
+  if (str == "#eagle-scout") { var imageChoice = ["./Resources/EaglePavers.jpg", "./Resources/EaglePaversManualLabor.jpg", "./Resources/EaglePaversAlignment.jpg"]; }
+
+  else if (str == "#barista") { var imageChoice = ["./Resources/SBPSL.jpg", "./Resources/SBBEANS.jpg", "./Resources/SBGreenApron.jpg", "./Resources/SBCordusio.jpg", "./Resources/SBCoffee.png"]; } 
+      
+  else if (str == "#boating-director") { var imageChoice = ["./Resources/PirateWeek.jpg", "./Resources/TekoROCKS.jpg", "./Resources/WeLoveTeko.jpg", "./Resources/TekoGuards.jpg"]; } 
+  else { return "<div></div>"; }
+
+  for (var i = 0; i < imageChoice.length; i++) {
+    returnString += '<div class="col col-hide Extra-Images" id="Extra-Image' + (i + 1).toString() + '" style="width: ' + 100 / imageChoice.length + '%">\
+                        <div class="container-fluid" id="Extra-Image-Container' + (i + 1).toString() + '" style="height: 100%; padding: 0;">\
+                          <img class="Img-Picker-Alt center-block img-fluid" src="' + imageChoice[i] + '">\
+                        </div>\
+                      </div>';
   }
+
+  return (returnString);
+}
+
+function cardCarouselAdjuster(){
+  var small = 
+  '<div class="item active" style="padding-left: 15%; padding-right: 15%;">\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+    </div>\
+    <div class="item" style="padding-left: 15%; padding-right: 15%;">\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+    </div>\
+    <div class="item" style="padding-left: 15%; padding-right: 15%;">\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+    </div>\
+    <div class="item" style="padding-left: 15%; padding-right: 15%;">\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+    </div>';
+
+  var medium = 
+  '<div class="item active">\
+    <div class="card-deck" style="padding-left: 15%; padding-right: 15%;">\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+        </div>\
+        <div class="card">\
+          <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+            <div class="card-body">\
+              <h5 class="card-title">Card title</h5>\
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+            </div>\
+        </div>\
+      </div>\
+    </div>\
+    <div class="item">\
+      <div class="card-deck" style="padding-left: 15%; padding-right: 15%;">\
+        <div class="card">\
+          <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+            <div class="card-body">\
+              <h5 class="card-title">Card title</h5>\
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+            </div>\
+          </div>\
+        <div class="card">\
+          <img class="card-img-top" src="https://picsum.photos/309/200?image=1041" alt="Card image cap">\
+            <div class="card-body">\
+              <h5 class="card-title">Card title</h5>\
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>\
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+            </div>\
+        </div>\
+      </div>\
+    </div>';
+
+  var normal = 
+  '<div class="item active">\
+    <div class="card-deck" style="padding-left: 10%; padding-right: 10%;">\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+      <div class="card">\
+        <img class="card-img-top" src="https://picsum.photos/309/200?image=1041" alt="Card image cap">\
+          <div class="card-body">\
+            <h5 class="card-title">Card title</h5>\
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>\
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\
+          </div>\
+      </div>\
+    </div>\
+  </div>';
+
+  if (window.outerWidth > 992) { return normal; } 
+  
+  else if (window.outerWidth > 576 && window.outerWidth < 991.98) { return medium; } 
+
+  else{ return small; }
 }
 
 $(document).keydown(function(e) {
@@ -474,7 +627,7 @@ $(".button-collapse").sideNav({
 
 function showEmail() {
   if (window.ga && ga.create) ga("send", "pageview", "assets/email");
-  UnCryptMailto("nbjmup;ebwjeAcptdixju{/nf");
+  UnCryptMailto("nbjmup;cptdi248Avno/fev");
   return false;
 }
 
@@ -488,13 +641,11 @@ function UnCryptMailto(s) {
     }
     r += String.fromCharCode(n - 1);
   }
-  if (prompt('Here it is! Click "Ok" to open in your email.', r.substring(7)));
-  return (window.location.href = r);
-  return false;
-}
+  if (prompt('Here it is! Click "Ok" to open in your email.', r.substring(7))){
+      return (window.location.href = r);
+  }
 
-function linkTo_UnCryptMailto(s) {
-  location.href = UnCryptMailto(s);
+  return false;
 }
 
 // var heroIMGs = [

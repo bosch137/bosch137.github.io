@@ -124,7 +124,7 @@
   }
 }
 
-@media (max-width: 1275px) {
+@media (max-width: 1309px) {
   .inner-panel {
     margin-left: 0;
   }
@@ -133,7 +133,7 @@
     visibility: hidden;
   }
 }
-@media (min-width: 1274px) {
+@media (min-width: 1309.1px) {
   .col-hide {
     display: initial;
     visibility: visible;
@@ -154,6 +154,56 @@
     font-size: 50px;
   }
 }
+
+.Img-Picker{
+  display: block;  
+  margin: 0 auto; 
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+}
+
+.Img-Picker-Alt{
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px; 
+  padding: 0;
+}
+
+.Images-Container{
+  border-radius: 10px; 
+  background-color: white;
+  padding: 0;
+  height: 100%
+}
+
+.Extra-Images{
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  height: 100%;
+}
+
+.Annotation{
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  margin: 0 auto; 
+  width: fit-content;
+  height: fit-content; 
+  background-color: black;
+  text-align: center;
+  color: #ffffff;
+  left: 10px;
+  line-height: 2;
+  box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  -moz-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  -webkit-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 
 .hero-footer {
   background: url(../img/GOPR6477.JPG) no-repeat center top;
@@ -523,17 +573,23 @@ body {
    margin: 0 0 1rem;
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .card-deck .card {
     -ms-flex: 0 0 48.7%;
     flex: 0 0 48.7%;
   }
+  .showtime{
+    visibility: visible;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 576px) and (max-width: 991.98px) {
   .card-deck .card {
-    -ms-flex: 0 0 32%;
-    flex: 0 0 32%;
+    -ms-flex: 0 0 48.7%;
+    flex: 0 0 48.7%;
+  }
+  .showtime{
+    visibility: visible;
   }
 }
 
@@ -542,6 +598,9 @@ body {
   .card-deck .card {
     -ms-flex: 0 0 24%;
     flex: 0 0 24%;
+  }
+  .showtime{
+    visibility: hidden;
   }
 }
 

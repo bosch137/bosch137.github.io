@@ -41,7 +41,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <title>Meet Michael Boschwitz</title>
 </head>
 
-<body class="anchor loaded" style="background-color:rgb(42, 42, 42)">
+<body class="anchor loaded" style="background-color:rgb(42, 42, 42); padding-top: 0;">
     <main> 
         <div class="container-fluid anchor" data-offset="-20" id="intro" style="height: 95vh; max-height: 95vh; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
             <div id="carousel" class="carousel slide" data-ride="carousel" style="height: 95vh; max-height: 95vh; width: 100%; padding-top: 0px; padding-right: 0px; padding-left: 0px;">
@@ -52,6 +52,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                     <li data-target="#carousel" data-slide-to="3"></li>
                     <li data-target="#carousel" data-slide-to="4"></li>
                     <li data-target="#carousel" data-slide-to="5"></li>
+                    <li data-target="#carousel" data-slide-to="6"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
@@ -71,6 +72,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
                     </div>
                     <div class="item">
                         <img class="center-block img-fluid" src="./Resources/Portraits/IMGTuba.jpg" alt="Responsive image" style="object-fit: cover; overflow: hidden; height: 95vh; width: 100%;">
+                    </div>
+                    <div class="item">
+                        <img class="center-block img-fluid" src="./Resources/Portraits/FamilyWinter.jpg" alt="Responsive image" style="object-fit: cover; overflow: hidden; height: 95vh; width: 100%;">
                     </div>
                 </div>
                 <div style="position: absolute; top:10px;">
@@ -129,7 +133,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <li><a class="subheader" style="font-size: large; font-weight: bold;">Resources</a></li>
             <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/assets/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
-            <li><a class="waves-effect" target="_blank" href="javascript:UnCryptMailto(&#39;nbjmup;ebwjeAcptdixju{/nf&#39;);"><i class="material-icons">mail</i>Email</a></li>
+            <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
         </ul>
         
         <!--
@@ -142,10 +146,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                     | |
                                                     |_|
                           (leadership)-->
-        <div class="anchor" data-offset="-20" id="leadership" style="padding-top: 50px;"></div>
+        <div class="anchor" data-offset="0" id="leadership" style="padding-top: 50px;"></div>
                 <h2 class="header resizer-Title" style="color: white;">Leadership &amp; Work</h2>
 
         <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; display: block; margin: 0 auto; padding-top: 50px; padding-bottom: 50px;">
+
             <div class="row">
                 <div class="col" id="Leadership-Card" style="padding-left: 14px;">
                     <div class="container-fluid" style="border-radius: 10px; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
@@ -172,16 +177,21 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
                                     document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
                                     document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
-                                    if(window.outerWidth > 1287){
+                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster();
+                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster();
+
+                                    if(window.outerWidth > 1325){
                                         document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
                                         document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
                                         document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 20 + "px";
+                                        document.getElementById("Extra-Images").style.height = document.getElementById("Leadership-Card").offsetHeight * 1.4 + "px";
 
                                     }
                                     else{
                                         document.getElementById("Leadership-Card").style.backgroundColor = "white";
                                         document.getElementById("myTabContent").style.marginLeft = 0 + "px";
                                         document.getElementById("Leadership-Card").style.width = 100 + "%";
+                                        document.getElementById("Extra-Images").style.height = 0;
                                     }
                                 }
                             }
@@ -224,9 +234,20 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                     $(document).on('shown.bs.tab', function (e) {
                                         var target = $(e.target).attr("href") // activated tab
                                         document.getElementById("Side-Image").innerHTML = sideImagePicker(target);
+
+                                        document.getElementById("Extra-Images").innerHTML = extraImagePicker(target);
+
                                         if (document.getElementById("Leadership-Card").offsetHeight != null) {
                                             document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
                                             document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
+
+                                            var elements = document.getElementsByClassName("Card-Carousel-Switch");
+                                            var small = '';
+                                            var medium = '';
+                                            var normal = '';
+                                            for (var i = 0; i < elements.length; i++) {
+                                               small += elements[i].innerHTML;
+                                            }
                                         }
                                     });
                                 </script>
@@ -242,6 +263,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="container-fluid" id="Extra-Images" style="padding-left: 5px; padding-right: 5px; padding-bottom: 50px; display: block; margin: 0 auto;"></div>
+        </div>
+
     </div>
 =
         <!--
@@ -261,85 +287,42 @@ Looks like you're checking out my source code... I suppose that's not surprising
         <div class="anchor" data-offset="-20" id="projects"></div>
 
         <h2 class="header resizer-Title" style="color: white;">Game Projects</h2>
-            <div class="container">
-                <div class="card-deck">
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1041" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+            <div class="container-fluid" style="max-width: 1920px;">
+                <div id="card-carousel-games" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators hidden">
+                        <li data-target="#card-carousel-games" data-slide-to="0" class="active"></li>
+                        <li data-target="#card-carousel-games" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner" id="Games-Card-Carousel-Inner" style="width: 100%;"></div>
+                            
+                    <a class="left carousel-control showtime" href="#card-carousel" data-slide="prev" style="background: none">
+                        <span class="glyphicon glyphicon-chevron-left">
+                        </span>
+                    </a>
+                    <a class="right carousel-control showtime" href="#card-carousel" data-slide="next" style="background: none">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+
                 </div>
             </div>
 
         <h2 class="header resizer-Title" style="color: white;">Coding Projects</h2>
-            <div class="container" style="padding-bottom: 2.5vw;">
-                <div class="card-deck">
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1050" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1041" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1039" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="https://picsum.photos/309/200?image=1019" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
+            <div class="container-fluid" style="max-width: 1920px; padding-bottom: 2.5vw;"">
+                <div id="card-carousel-code" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators hidden">
+                        <li data-target="#card-carousel-code" data-slide-to="0" class="active"></li>
+                        <li data-target="#card-carousel-code" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner" id="Code-Card-Carousel-Inner" style="width: 100%;"></div>
+            
+                    <a class="left carousel-control showtime" href="#card-carousel" data-slide="prev" style="background: none">
+                        <span class="glyphicon glyphicon-chevron-left">
+                        </span>
+                    </a>
+                    <a class="right carousel-control showtime" href="#card-carousel" data-slide="next" style="background: none">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+
                 </div>
             </div>
         <!--
@@ -440,11 +423,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
         });
 
-        $('a[href*="linkedin.com/in/davidboschwitz"]').click(function(e) {
-            console.log(e);
-            if (window.ga && ga.create)
-                ga('send', 'pageview', 'assets/linkedin');
-        });
+        // $('a[href*="linkedin.com/in/davidboschwitz"]').click(function(e) {
+        //     console.log(e);
+        //     if (window.ga && ga.create)
+        //         ga('send', 'pageview', 'assets/linkedin');
+        // });
 
         if (!window.ga || !ga.create) {
             var s = document.createElement('script');
@@ -456,8 +439,17 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <script>
         document.getElementById("Side-Image").innerHTML = sideImagePicker("#eagle-scout");
         document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-        document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
-        if(window.outerWidth > 1287){
+        document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px"; 
+
+        document.getElementById("Extra-Images").style.height = document.getElementById("Leadership-Card").offsetHeight * 1.4 + "px";
+        document.getElementById("Extra-Images").innerHTML = extraImagePicker("#eagle-scout");
+
+        // var elements = document.getElementsByClassName("Annotation");
+        // for (var i = 0; i < elements.length; i++) {
+        //     elements[i].style.transform = document.getElementById("Leadership-Card").offsetHeight * 1.4 + "px"
+        // }
+        
+        if(window.outerWidth > 1325){
             document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
             document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
             document.getElementById("Leadership-Card").style.width = document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth - 20 + "px";
@@ -467,6 +459,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
             document.getElementById("myTabContent").style.marginLeft = 0 + "px";
             document.getElementById("Leadership-Card").style.width = 100 + "%";
         }
+
+        document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster();
+        document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster();
     </script>
 
 
