@@ -19,13 +19,13 @@ function divChangerStart() {
         '<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
                         <li class="nav-item active" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/Icons/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                         <li class="nav-item" style="margin-left: auto; margin-right: auto; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/Icons/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                         <li class="nav-item" style="float: right; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/Icons/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                     </ul>\
                 </div>'
@@ -54,13 +54,13 @@ function divChangerMiddle() {
         '<div style="margin: 0; padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
                         <li class="nav-item" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/Icons/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                         <li class="nav-item active" style="margin-left: auto; margin-right: auto; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/Icons/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                         <li class="nav-item" style="float: right; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/Icons/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                     </ul>\
                 </div>'
@@ -89,13 +89,13 @@ function divChangerEnd() {
         '<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">\
                         <li class="nav-item" style="float: left; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="eagle-scout-tab" data-toggle="tab" href="#eagle-scout" role="tab" aria-controls="eagle-scout" aria-selected="true"><img src="./Resources/Icons/BSAImage.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                         <li class="nav-item" style="margin-left: auto; margin-right: auto; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="barista-tab" data-toggle="tab" href="#barista" role="tab" aria-controls="barista" aria-selected="false"><img src="./Resources/Icons/starbucks.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                         <li class="nav-item active" style="float: right; min-height: 10vw; min-width: 10vw; max-height: 100%; max-width: fit-content;">\
-                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
+                            <a id="boating-director-tab" data-toggle="tab" href="#boating-director" role="tab" aria-controls="boating-director" aria-selected="false"><img src="./Resources/Icons/Icons/boating.png" style="display: block; margin: 0 auto; min-height: 10vw; min-width: 10vw; max-height: 10vw; max-width: 10vw;"></img></a>\
                         </li>\
                     </ul>\
                 </div>'
@@ -113,11 +113,11 @@ function resizeTime(shortSave, longSave) {
 function sideImagePicker(str) {
     var returnString = '';
 
-    if (str == "#eagle-scout") { var imageChoice = "./Resources/BSAImage.png"; }
+    if (str == "#eagle-scout") { var imageChoice = "./Resources/Icons/BSAImage.png"; }
 
-    else if (str == "#barista") { var imageChoice = "./Resources/starbucks.png"; }
+    else if (str == "#barista") { var imageChoice = "./Resources/Icons/starbucks.png"; }
 
-    else if (str == "#boating-director") { var imageChoice = "./Resources/boating.png"; }
+    else if (str == "#boating-director") { var imageChoice = "./Resources/Icons/boating.png"; }
 
     else { return "<div></div>"; }
     returnString = '<div class="container-fluid Images-Container" id="Image-Container">\
@@ -130,11 +130,11 @@ function sideImagePicker(str) {
 function extraImagePicker(str) {
     var returnString = '';
 
-    if (str == "#eagle-scout") { var imageChoice = ["./Resources/EaglePavers.jpg", "./Resources/EaglePaversManualLabor.jpg", "./Resources/EaglePaversAlignment.jpg"]; }
+    if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EaglePaversManualLabor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
 
-    else if (str == "#barista") { var imageChoice = ["./Resources/SBPSL.jpg", "./Resources/SBBEANS.jpg", "./Resources/SBGreenApron.jpg", "./Resources/SBCordusio.jpg", "./Resources/SBCoffee.png"]; }
+    else if (str == "#barista") { var imageChoice = ["./Resources/Starbucks/SBPSL.jpg", "./Resources/Starbucks/SBBEANS.jpg", "./Resources/Starbucks/SBGreenApron.jpg", "./Resources/Starbucks/SBCordusio.jpg", "./Resources/Starbucks/SBCoffee.png"]; }
 
-    else if (str == "#boating-director") { var imageChoice = ["./Resources/PirateWeek.jpg", "./Resources/TekoROCKS.jpg", "./Resources/WeLoveTeko.jpg", "./Resources/TekoGuards.jpg"]; }
+    else if (str == "#boating-director") { var imageChoice = ["./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/TekoROCKS.jpg", "./Resources/Teko/WeLoveTeko.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
     else { return "<div></div>"; }
 
     for (var i = 0; i < imageChoice.length; i++) {

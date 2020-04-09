@@ -44,7 +44,7 @@
 
 @media (min-width: 601px) {
   .hero {
-    background: url(../Resources/tempPhotoThing.jpg) no-repeat center top;
+    background: url(./Resources/Icons/tempPhotoThing.jpg) no-repeat center top;
     padding-top: 5px;
     padding-left: 10px;
     background-attachment: relative;
