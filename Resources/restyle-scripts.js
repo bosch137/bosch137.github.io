@@ -77,9 +77,9 @@ function extraImagePicker(str) {
 
     else if (str == "#barista") { var imageChoice = ["./Resources/Starbucks/SBPSL.jpg", "./Resources/Starbucks/SBBEANS.jpg", "./Resources/Starbucks/SBGreenApron.jpg", "./Resources/Starbucks/SBCordusio.jpg", "./Resources/Starbucks/SBCoffee.png"]; }
 
-    else if (str == "#boating-director") { var imageChoice = ["./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/TekoROCKS.jpg", "./Resources/Teko/WeLoveTeko.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
+    else if (str == "#boating-director") { var imageChoice = ["./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/TekoTotallyROCKS.jpg", "./Resources/Teko/WeLOVETEKO.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
 
-    else if (str == "#tri-m") { var imageChoice = ["./Resources/Teko/TekoROCKS.jpg", "./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/WeLoveTeko.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
+    else if (str == "#tri-m") { var imageChoice = ["./Resources/Teko/TekoTotallyROCKS.jpg", "./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/WeLOVETEKO.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
 
     else { return "<div></div>"; }
 
