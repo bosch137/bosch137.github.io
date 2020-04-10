@@ -1,162 +1,79 @@
-.gradientEffect {
-  background: linear-gradient(270deg, #00ff8b, #8700ff);
-  background-size: 400% 400%;
-  height: 150px;
-
-  -webkit-animation: gradientEffect 10s ease infinite;
-  -moz-animation: gradientEffect 10s ease infinite;
-  animation: gradientEffect 10s ease infinite;
-}
-
-@-webkit-keyframes gradientEffect {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-moz-keyframes gradientEffect {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes gradientEffect {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@media (min-width: 601px) {
-  .hero {
-    background: url(./Resources/Icons/tempPhotoThing.jpg) no-repeat center top;
-    padding-top: 5px;
-    padding-left: 10px;
-    background-attachment: relative;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: rgb(42, 42, 42);
-    transition: background-image 1s ease-in-out;
-  }
-  .mobile-only {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    background: url(../img/sunset-portfolio.jpg) no-repeat center top;
-    padding-top: 5px;
-    padding-left: 10px;
-    background-attachment: relative;
-    background-position: center center;
-    width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-  }
-  .mobile-only {
-    display: auto;
-  }
-  .mobile-top-padding {
-    padding-top: 25px !important;
-  }
-  .mobile-centered {
-    margin: auto;
-  }
-  .hidden-mobile {
-    display: none;
-  }
-}
-
 @media (max-width: 614px) {
   .resizer-head {
-    /* -ms-transform: translateY(0%);
-        transform: translateY(0%); */
+    font-weight:100; 
+    padding-bottom: 20px; 
+    color:#ffffff;
     font-size: 19px;
   }
   .resizer-sub {
-    /* -ms-transform: translateY(0%);
-        transform: translateY(0%); */
+    font-weight: 300; 
+    color:#ffffff;
     font-size: 15px;
   }
-}
-@media (min-width: 615px) {
-  .resizer-head {
-    /* -ms-transform: translateY(-15%);
-        transform: translateY(-15%); */
-    font-size: 35px;
-  }
-  .resizer-sub {
-    /* -ms-transform: translateY(-15%);
-        transform: translateY(-15%); */
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1309px) {
-  .inner-panel {
-    margin-left: 0;
-  }
-  .col-hide {
-    display: none;
-    visibility: hidden;
-  }
-}
-@media (min-width: 1309.1px) {
-  .col-hide {
-    display: initial;
-    visibility: visible;
-  }
-}
-
-@media (max-width: 614.98px) {
   .resizer-Title {
+    color: white;
+    padding-bottom: 25px;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-size: 25px;
   }
 }
 @media (min-width: 615px) {
+  .resizer-head {
+    font-weight:100; 
+    padding-bottom: 20px; 
+    color:#ffffff;
+    font-size: 35px;
+  }
+  .resizer-sub {
+    font-weight: 300; 
+    color:#ffffff;
+    font-size: 20px;
+  }
   .resizer-Title {
+    color: white;
+    padding-bottom: 25px;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-size: 50px;
   }
 }
 
+@media (max-width: 1309.98px) {
+  .inner-panel {
+    margin-left: 0;
+  }
+  .leadership-span{
+    border-radius: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .col-hide {
+    margin-right: 0px;
+    padding-left: 0px;
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (min-width: 1309px) {
+  .leadership-span{
+    margin-left: 5px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+  }
+  .col-hide {
+    margin-right: 5px;
+    margin-left: 5px;
+    display: block;
+    visibility: visible;
+  }
+}
+
 @media (max-width: 799.98px){
   .special-header{
+    color: white;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-size: 20px;
@@ -175,21 +92,17 @@
     text-align: center;
   }
 }
-
 @media (min-width: 800px){
   .special-header{
+    color: white;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-size: 50px;
   }
   .hide-me{
-    max-width: 1900px;
-    display: block; 
-    height: 700px;
+    display: block;
+    margin: 0 auto;
     visibility: visible;
-    object-fit: cover;
-    overflow: hidden; 
-    padding-bottom: 25px;
   }
   .hide-me-alt{
     height: 0px;
@@ -198,6 +111,26 @@
     color: white;
     text-align: center;
   }
+}
+
+.tab-helper-fella{
+  background: white; 
+  border-radius: 9px;
+}
+
+.subheader{
+  font-family:'Courier New', Courier, monospace;
+  font-size: large; 
+  font-weight: bold;
+}
+
+.custom-image-caro{
+  height: 95vh; 
+  max-height: 95vh; 
+  width: 100%; 
+  padding-top: 0px; 
+  padding-right: 0px; 
+  padding-left: 0px;
 }
 
 .image-corrector{
@@ -222,7 +155,7 @@
   -webkit-box-decoration-break: clone;
 }
 
-.Img-Picker{
+.img-picker{
   display: block;  
   margin: 0 auto; 
   overflow: hidden;
@@ -230,7 +163,7 @@
   max-width: 100%;
 }
 
-.Img-Picker-Alt{
+.img-picker-alt{
   object-fit: cover;
   overflow: hidden;
   height: 100%;
@@ -239,38 +172,18 @@
   padding: 0;
 }
 
-.Images-Container{
+.images-container{
   border-radius: 10px; 
   background-color: white;
   padding: 0;
   height: 100%
 }
 
-.Extra-Images{
+.extra-images{
   padding-left: 2.5%;
   padding-right: 2.5%;
   height: 100%;
 }
-
-.Annotation{
-  display: block;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
-  margin: 0 auto; 
-  width: fit-content;
-  height: fit-content; 
-  background-color: black;
-  text-align: center;
-  color: #ffffff;
-  left: 10px;
-  line-height: 2;
-  box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
-  -moz-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
-  -webkit-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
 
 .hero-footer {
   /* background: url(.Resources/GOPR6477.jpg) no-repeat center top; */
@@ -287,24 +200,10 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   color: white;
   transition: background-image 1s ease-in-out;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-}
-
-.section {
-  background-color: #eee;
-}
-
-.header {
-  font-weight: 100;
-  color: #424242;
-}
-
-.pop-border {
-  border: none;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
 }
 
 .collapsible-body {
@@ -402,10 +301,6 @@
   }
 }
 
-.full-height {
-  min-height: 100%;
-}
-
 #toast-container {
   top: auto !important;
   bottom: 30px;
@@ -413,33 +308,23 @@
   right: 0;
 }
 
-kbd {
-  padding: 0.1em 0.6em;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  font-family: monospace;
-  background-color: #f7f7f7;
-  color: #333;
-  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
-  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  display: inline-block;
-  margin: 0 0.1em;
-  text-shadow: 0 1px 0 #fff;
-  line-height: 1.4;
-  white-space: nowrap;
-}
 .typed-footer {
+  font-weight:300; 
+  font-size: 20px; 
+  position: relative;
   font-family: "Courier New", Courier, monospace;
+  left: 10px;
   line-height: 3;
   display: inline;
   color: rgb(255, 255, 255);
   background: black;
   box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  -moz-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  -webkit-box-shadow: 6px 0 0 5px black, -6px 0 0 5px black;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
+
 .typed-footer > a {
   color: rgb(255, 255, 255);
 }
@@ -450,52 +335,75 @@ kbd {
   cursor: pointer;
 }
 
-.david-hr {
-  margin-top: 2.5px;
-  margin-bottom: 10px;
-  border-width: 0.5px;
-  border-style: solid;
-  border-color: #ddd;
+
+/* Credit to Amy Patterson for these responsive Bootstrap 4 Cards https://codepen.io/apatters/pen/ZEGvpyp , they have been slightly modified though.*/
+body {
+  padding-top: 20px;
 }
 
-.hoverable {
-  transition: box-shadow 0.25s;
-  box-shadow: 0;
+.card-deck .card {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.hoverable:hover {
-  transition: box-shadow 1s;
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+@media (min-width: 576px) {
+  .card-deck {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+  }
+  .card-deck .card {
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+  }
 }
 
-.col.s12 {
-  padding-top: 15px;
+.card-deck {
+    margin: -15px -15px;
+    justify-content: space-between;
 }
 
-fw100 {
-  font-weight: 100;
+.card-deck .card {
+   margin: 0 0 1rem;
 }
-fw200 {
-  font-weight: 200;
+
+@media (max-width: 575.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 48.7%;
+    flex: 0 0 48.7%;
+  }
+  .showtime{
+    visibility: visible;
+  }
 }
-fw300 {
-  font-weight: 300;
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 48.7%;
+    flex: 0 0 48.7%;
+  }
+  .showtime{
+    visibility: visible;
+  }
 }
-fw400 {
-  font-weight: 400;
+
+@media (min-width: 992px){
+  .card-deck .card {
+    -ms-flex: 0 0 24%;
+    flex: 0 0 24%;
+  }
+  .showtime{
+    visibility: hidden;
+  }
 }
-fw500 {
-  font-weight: 500;
-}
-fw600 {
-  font-weight: 600;
-}
-fw700 {
-  font-weight: 700;
-}
-fw800 {
-  font-weight: 800;
-}
+
 
 /* Bootstrap 4 CSS */
 .card {
@@ -511,7 +419,6 @@ fw800 {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -536,6 +443,10 @@ fw800 {
 .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0;
+}
+.card-text{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .card-text:last-child {
   margin-bottom: 0;
@@ -584,96 +495,19 @@ fw800 {
   left: 0;
   padding: 1.25rem;
 }
-.card-img,
-.card-img-bottom,
-.card-img-top {
+.card-img, .card-img-bottom, .card-img-top {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
 }
-.card-img,
-.card-img-top {
+.card-img, .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
-.card-img,
-.card-img-bottom {
+.card-img, .card-img-bottom {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
-
-body {
-  padding-top: 20px;
-}
-
-.card-deck .card {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-@media (min-width: 576px) {
-  .card-deck {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-
-  }
-  .card-deck .card {
-    -ms-flex: 1 0 0%;
-    flex: 1 0 0%;
-    margin-right: 15px;
-    margin-bottom: 0;
-    margin-left: 15px;
-  }
-}
-
-
-/* Credit to Amy Patterson for these responsive Bootstrap 4 Cards https://codepen.io/apatters/pen/ZEGvpyp , they have been slightly modified though.*/
-.card-deck {
-    margin: -15px -15px;
-    justify-content: space-between;
-}
-
-.card-deck .card {
-   margin: 0 0 1rem;
-}
-
-@media (max-width: 575.98px) {
-  .card-deck .card {
-    -ms-flex: 0 0 48.7%;
-    flex: 0 0 48.7%;
-  }
-  .showtime{
-    visibility: visible;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-  .card-deck .card {
-    -ms-flex: 0 0 48.7%;
-    flex: 0 0 48.7%;
-  }
-  .showtime{
-    visibility: visible;
-  }
-}
-
-@media (min-width: 992px)
-{
-  .card-deck .card {
-    -ms-flex: 0 0 24%;
-    flex: 0 0 24%;
-  }
-  .showtime{
-    visibility: hidden;
-  }
-}
-
-
-
 .card-group > .card {
   margin-bottom: 15px;
 }

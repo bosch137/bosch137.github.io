@@ -10,7 +10,13 @@ AmCharts.makeChart("map",{
 	"pathToImages": "http://www.amcharts.com/lib/3/images/",
 	"addClassNames": true,
 	"fontSize": 15,
+
 	"fontFamily": "'Courier New', Courier, monospace",
+	"object-Fit": "cover",
+	"object-Position": '50% 50%',
+	"width": 1920,
+	"height": 800,
+
 	"color": "#FFFFFF",
 	"projection": "miller",
 	"backgroundAlpha": 1,

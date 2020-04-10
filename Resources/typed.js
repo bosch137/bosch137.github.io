@@ -65,10 +65,10 @@
 
         // input strings of text
         this.strings = this.options.strings;
-        if (this.options.david) {
+        if (this.options.michael) {
             this.strings = [];
-            for (var i = 0; i < this.options.david.length; i++) {
-                this.strings.push(this.options.david[i].string);
+            for (var i = 0; i < this.options.michael.length; i++) {
+                this.strings.push(this.options.michael[i].string);
             }
         }
 
@@ -163,8 +163,8 @@
             //  self.backDelay = 50;
             // }
             // else{ self.backDelay = 500; }
-            if (self.options.david)
-                self.backDelay = self.options.david[self.arrayPos].backDelay;
+            if (self.options.michael)
+                self.backDelay = self.options.michael[self.arrayPos].backDelay;
             // if (self.arrayPos == 11 || self.arrayPos == 5)
             //     self.backDelay = 50;
             else
@@ -303,13 +303,13 @@
                 //     self.stopNum = 24;
                 // else if (self.arrayPos == 11)
                 //     self.stopNum = 20;
-                // if (self.options.david[self.arrayPos].stomNum > 0) {
-                //     self.stopNum = self.options.david[self.arrayPos].stomNum;
+                // if (self.options.michael[self.arrayPos].stomNum > 0) {
+                //     self.stopNum = self.options.michael[self.arrayPos].stomNum;
                 // } else
                 //     self.stopNum = 5;
-                if (self.options.david)
-                    self.stopNum = self.options.david[self.arrayPos].stopNum
-                    // console.log(self.stopNum = self.options.david[self.arrayPos].stopNum)
+                if (self.options.michael)
+                    self.stopNum = self.options.michael[self.arrayPos].stopNum
+                    // console.log(self.stopNum = self.options.michael[self.arrayPos].stopNum)
                     // console.log(self.stopNum)
 
                 if (self.contentType === 'html') {

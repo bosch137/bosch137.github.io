@@ -2,19 +2,6 @@ $(document).on('ready', function() {
   $(".parallax").parallax();
 });
 
-//set the height of the hero image to the height of the browser.
-$(".hero").height(window.innerHeight);
-
-$(".full-height").css("min-height", window.innerHeight + 25);
-
-$(window).resize(function() {
-  console.log("window was resized");
-  //set the height of the hero image to the height of the browser.
-  $(".hero").height(window.innerHeight);
-
-  $(".full-height").css("min-height", window.innerHeight + 25);
-});
-
 (function() {
   var arr = $(".anchor_title");
   var len = arr.length;
@@ -51,16 +38,25 @@ Materialize.scrollFire([
   }
 ]);
 
-//fade in from the preloader with a little delay
+//fade in with a little delay
 $(window).on("load", function() {
-  // $('.preloader-background').delay(1500).fadeOut('slow');
   $("#fire1")
     .delay(3000)
     .fadeIn("slow");
   setTimeout(function() {
-    if (window.innerWidth < 800)
+    if (window.innerWidth < 800){
       Materialize.toast(
-        "My site looks better on a maximized desktop browser",
+        "My site does scale down to mobile, but...",
+        5000
+      );
+      Materialize.toast(
+        "It looks way better on a desktop browser!",
+        5000
+      );
+    }
+    else if (window.innerWidth > 2000)
+      Materialize.toast(
+        "Woah! Your monitor must be way nice, but things won't be able to scale to that size and still look nice. Sorry, but could you try shrinking the window or using the inspect element?",
         15000
       );
 
@@ -160,7 +156,7 @@ $(window).on("load", function() {
       $(function() {
         $(".typed").typed({
           //And I love
-          david: customTypedInput,
+          michael: customTypedInput,
           typeSpeed: 70,
           backDelay: 700,
           loopCount: 1,
@@ -169,10 +165,6 @@ $(window).on("load", function() {
       });
     }, 1000);
   }, 1000);
-  //$('body').delay(3000).addClass('loaded');
-  // $('.preloader-wrapper')
-  // 	.delay(1500)
-  // 	.fadeOut();
 });
 
 var anchors = $(".anchor");
@@ -225,7 +217,7 @@ function keyHandling(keyCode) {
   //return false;
   if (keyCode == 40) {
     animating = true;
-    console.log("keydown");
+    // console.log("keydown");
     $("body, html")
       .animate(
         {
@@ -246,7 +238,7 @@ function keyHandling(keyCode) {
   }
   if (keyCode == 38) {
     animating = true;
-    console.log("keyup");
+    // console.log("keyup");
     $("body, html").animate(
       {
         scrollTop: getAnchorOffset("up")
@@ -262,26 +254,12 @@ function keyHandling(keyCode) {
     //   scrollSpeed = 0;
     return true;
   }
-  if (keyCode == 37) {
-    $("body, html").animate(
-      {
-        scrollTop: window.scrollY - 300 > 0 ? window.scrollY - 300 : 0
-      },
-      {
-        duration: scrollSpeed,
-        queue: false
-      },
-      "easeInOutCubic"
-    );
-    return true;
-  }
   if (keyCode == 77) {
     $(".button-collapse").sideNav("show");
     return true;
   }
   return false;
 }
-var shortcuts_modal = false;
 
 function goToID(id) {
   var e = $(id);
@@ -333,60 +311,3 @@ function UnCryptMailto(s) {
 
   return false;
 }
-
-// var heroIMGs = [
-//   'header-sail.jpg',
-//   'GOPR6868.JPG',
-//   'GOPR6477.JPG',
-//   'GOPR6869.JPG'
-// ];
-// var heroCounter = 0;
-// function nextHero(){
-//   heroCounter++;
-//   heroCounter = heroCounter % heroIMGs.length;
-//   $('.hero').css('background', 'url(assets/img/'+heroIMGs[heroCounter]+') no-repeat center top');
-// }
-// setInterval(nextHero,10000)
-
-/*******************************************************************************
- *********************************** Charts ************************************
- ******************************************************************************/
-/*var ctx = document.getElementById('projectsChart');
-var myRadarChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        datasets: [{
-            data: [
-                3,
-                10,
-                4,
-            ],
-            borderColor: '#eeeeee',
-            backgroundColor: [
-                "#FF6384",
-                "#4BC0C0",
-                "#FFCE56",
-                //"#E7E9ED",
-                //"#36A2EB"
-            ],
-            label: 'My dataset' // for legend
-        }],
-        labels: [
-            "Hackathons", //red
-            "Personal Projects", //green
-            "Side Projects", //yellow
-            //"Grey",//grey
-            //"Blue"//blue
-        ]
-    },
-    options: {
-        scale: {
-            reverse: false,
-            ticks: {
-                beginAtZero: true
-            },
-            height: 200,
-            width: 200
-        }
-    }
-});*/
