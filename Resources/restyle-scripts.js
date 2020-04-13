@@ -3,14 +3,14 @@ function divChanger(selected) {
     var tabWords = ['Eagle Scout', 'Boating Director', 'Tri-M', 'Barista',];
     var tabImages = ['BSAImage', 'boating', 'TriM-LogoBW', 'starbucks',];
     longForm = String(
-        '<div class="col-md-3" id="NavTabs" style="max-width: fit-content; min-height: fit-content; background: white; padding: 10px; margin-right: 25px; border-radius: 9px;">\
+        '<div class="col-md-3 nav-tab-helper" id="NavTabs">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">');
         for(var i = 0; i< tabNames.length; i++){
 
             if (i == selected) { longForm += '<li class="nav-item active" '; }
             else { longForm += '<li class="nav-item" '; }
 
-            longForm += 'style="padding-top: 6%; padding-bottom: 6%; font-size: 20px;">\
+            longForm += 'style="padding-top: 6%; padding-bottom: 6%; font-size: 1.25rem;">\
                         <a class="nav-link" id="' + tabNames[i] + '-tab" data-toggle="tab" href="#' + tabNames[i] + '" role="tab" aria-controls="' + tabNames[i] + '-tab" ';
 
             if (i == selected) { longForm += 'aria-selected="true">'; }
@@ -79,7 +79,7 @@ function extraImagePicker(str) {
 
     else if (str == "#boating-director") { var imageChoice = ["./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/TekoTotallyROCKS.jpg", "./Resources/Teko/WeLOVETEKO.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
 
-    else if (str == "#tri-m") { var imageChoice = ["./Resources/Teko/TekoTotallyROCKS.jpg", "./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/WeLOVETEKO.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
+    else if (str == "#tri-m") { var imageChoice = ["./Resources/Tri-M/ChicagoPic.jpg", "./Resources/Tri-M/SheetMusic.jpg", "./Resources/Tri-M/MarchingPhoto.jpg"]; }
 
     else { return "<div></div>"; }
 
@@ -94,8 +94,7 @@ function extraImagePicker(str) {
     return (returnString);
 }
 
-function cardCarouselAdjuster(version,) {
-    var cardData = ["https://picsum.photos/309/200?image=1041", "https://picsum.photos/309/200?image=1050", "https://picsum.photos/309/200?image=1050", "https://picsum.photos/309/200?image=1041"];
+function cardCarouselAdjuster(version, cardData) {
     var cardText = [
     ['Card title', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Last updated 3 mins ago'], 
     ['Card title', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Last updated 3 mins ago'],
@@ -111,28 +110,28 @@ function cardCarouselAdjuster(version,) {
     for(i = 0; i < cardData.length; i++){
         if(i == 0){
             small[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="0" class="active"></li>';
-            small[1] += '<div class="item active" style="padding-left: 15%; padding-right: 15%;">';
+            small[1] += '<div class="item active" style="padding-left: 15%; padding-right: 15%; padding-top: 1%;">';
 
             medium[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="0" class="active"></li>';
-            medium[1] += '<div class="item active"><div class="card-deck" style="padding-left: 10%; padding-right: 10%;">';
+            medium[1] += '<div class="item active"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
 
             normal[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="0" class="active"></li>';
-            normal[1] += '<div class="item active"><div class="card-deck" style="padding-left: 10%; padding-right: 10%;">';
+            normal[1] += '<div class="item active"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
         }
 
         else {
             small[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="' + i + '"></li>';
-            small[1] += '<div class="item" style="padding-left: 15%; padding-right: 15%;">';
+            small[1] += '<div class="item" style="padding-left: 15%; padding-right: 15%; padding-top: 1%;">';
         }
 
         if (i % 2 == 0 && i != 0) {
             medium[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="' + i + '"></li>';
-            medium[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%;">';
+            medium[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
         }
 
         if (i % 4 == 0 && i != 0) {
             normal[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="' + i + '"></li>';
-            normal[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%;">';
+            normal[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
         }
 
         small[1] += '<div class="card"><img class="card-img-top" src="'+ cardData[i] +'" alt="Card image cap"><div class="card-body">';

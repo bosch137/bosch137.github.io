@@ -54,15 +54,7 @@ $(window).on("load", function() {
         5000
       );
     }
-    else if (window.innerWidth > 2000)
-      Materialize.toast(
-        "Woah! Your monitor must be way nice, but things won't be able to scale to that size and still look nice. Sorry, but could you try shrinking the window or using the inspect element?",
-        15000
-      );
-
-    $(".collapsible-body").css("display", "block");
-    $("body").addClass("loaded");
-
+    
     var customTypedInput = [
       {
         string: "And I love Programming.",
