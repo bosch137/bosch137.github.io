@@ -27,20 +27,20 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <script src="./Resources/bootstrap.min.js"></script>
 
     <!-- for FF, Chrome, Opera -->
-    <link rel="icon" class="icon-generator" type="image/png" href="./Resources/Icons/MBoschIcon" + iconNumber + ".png" sizes="16x16">
-    <link rel="icon" class="icon-generator" type="image/png" href="./Resources/Icons/MBoschIcon.png" sizes="32x32">
+    <link rel="icon" class="icon-generator" type="image/png" sizes="16x16">
+    <link rel="icon" class="icon-generator" type="image/png"  sizes="32x32">
     
     <!-- for IE -->
-    <link rel="icon" class="icon-generator" type="image/x-icon" href="./Resources/Icons/MBoschIcon.png">
-    <link rel="shortcut icon" class="icon-generator" type="image/x-icon" href="./Resources/Icons/MBoschIcon.png">
+    <link rel="icon" class="icon-generator" type="image/x-icon">
+    <link rel="shortcut icon" class="icon-generator" type="image/x-icon">
 
-    <script>
-     var iconNumber = Math.floor(Math.random() * 7); 
-     var icons = document.getElementsByClassName("icon-generator");
-     for(var i = 0; i < icons.length; i++){
-         icons[i].href = "./Resources/Icons/MBoschIcon" + iconNumber +".png";
-     }
-     </script>
+        <script>
+            var iconNumber = Math.floor(Math.random() * 7);
+            var icons = document.getElementsByClassName("icon-generator");
+            for (var i = 0; i < icons.length; i++) {
+                icons[i].href = "./Resources/Icons/MBoschIcon" + iconNumber + ".png";
+            }
+        </script>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -98,7 +98,6 @@ Looks like you're checking out my source code... I suppose that's not surprising
                         </div>
                         <div class= "resizer-sub">
                             <span id="typing-starter" class="typed" style="display: none;"></span>
-                            <span class="typed-cursor"></span>
                         </div>
                     </div>
                 </div>
@@ -135,16 +134,16 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <div class="subheader" style="margin-left:1.875rem;">Navigation</div>
             </li>
             <li>
-                <div class="divider"></div>
+                <div class="divider" style="margin-bottom: 8px;"></div>
             </li>
             <li><a class="waves-effect" onclick="goToID(intro)">Intro</a></li>
             <li><a class="waves-effect" onclick="goToID(leadership)">Leadership &amp; Work</a></li>
             <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li>
             <li><a class="waves-effect" onclick="goToID(adventures)">Adventure</a></li>
             <li>
-                <div class="divider"></div>
+                <div class="divider" style="margin-bottom: 8px;"></div>
             </li>
-            <li><a class="subheader">Resources</a></li>
+            <li><a class="subheader" style="margin-bottom: 8px;">Resources</a></li>
             <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/assets/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
             <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
@@ -452,7 +451,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         </div>
 
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 2.18rem;">
-                <h2 class="special-header">Oh, the Places I've Gone!</h2>
+                <h2 class="special-header">Oh, the Places I've Been!</h2>
                 <div id="map" class="hide-me"></div>
                 <p class="hide-me-alt">Check out this section on a maximized desktop, the pictures look much better.<br><br> Plus it has an interactive map here!</p>
         </div>
@@ -463,9 +462,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <span class="me_name">I'm Michael Boschwitz,</span>
             </div>
 
-            <div>
+            <div class="resizer-sub">
                 <span id="typing-ending" class="typed-footer"></span>
-                <span class="typed-cursor"></span>
             </div>
             
             <!--<div class="copyright">Made from scratch with a little ❤, and some fancy web stuff</div>-->

@@ -17,7 +17,7 @@ Materialize.scrollFire([
     offset: 400,
     callback: function(el) {
       if (window.ga && ga.create) ga("send", "pageview", "assets/footer");
-      $(".typed-footer").typed({
+      $('.typed-footer').typed({
         //And I love
         strings: [
           '•&nbsp;<a target="_blank" href="http://michael.boschwitz.me/assets/Michael-Boschwitz-Resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/bosch137">GitHub</a><br>...and thats about it!^1000'
@@ -27,11 +27,7 @@ Materialize.scrollFire([
         typeSpeed: 60,
         // call when done callback function
         callback: function() {
-          $(".typed-footer")
-            .parent()
-            .children(".typed-cursor")
-            .delay(1500)
-            .fadeOut("slow");
+          $(".typed-footer").parent().children(".typed-cursor").delay(1500).fadeOut("slow");
         }
       });
     }
@@ -140,7 +136,7 @@ $(window).on("load", function() {
         string:
           "And I am a Sophomore at the University of Minnesota, studying Software Engineering and Creative Design.",
         stopNum: 5,
-        backDelay: 0
+        backDelay: undefined,
       }
     ];
 
@@ -149,10 +145,12 @@ $(window).on("load", function() {
         $(".typed").typed({
           //And I love
           michael: customTypedInput,
-          typeSpeed: 70,
+          typeSpeed: 60,
           backDelay: 700,
-          loopCount: 1,
-          loop: false
+          loop: false,
+          callback: function () {
+            $(".typed").parent().children(".typed-cursor").delay(1500).fadeOut("slow");
+          }
         });
       });
     }, 1000);
