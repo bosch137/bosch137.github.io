@@ -16,8 +16,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <link href="./Resources/icon.css" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="./Resources/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/brands.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/solid.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/regular.css">
     <script type="text/javascript" src="./Resources/restyle-scripts.js"></script>
-    <script src="https://kit.fontawesome.com/dcebd4d418.js" crossorigin="anonymous"></script>
 
     <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
     <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js" type="text/javascript"></script>
@@ -191,19 +194,30 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             function resizeMe() {
                                 document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
-                                    document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-                                    document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
-                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('games', ["./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "https://picsum.photos/309/200?image=1050", "https://picsum.photos/309/200?image=1041"]);
-                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('code', ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "https://picsum.photos/309/200?image=1050", "https://picsum.photos/309/200?image=1041"]);
+                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('games', ["./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", "https://picsum.photos/309/200?image=1041"]);
+                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('code', ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/CCode.jpeg"]);
 
-                                    if(window.outerWidth > 1325){
+                                    if(window.outerWidth > 1380){
+                                        document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
+                                        document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
+                                        
+                                        document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
+                                        document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
+
+                                        document.getElementById("Image-Container").style.marginTop = document.getElementById("Leadership-Container").offsetHeight - document.getElementById("Image-Container").style.height + "px";
                                         document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
                                         document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
                                         document.getElementById("Leadership-Card").style.width = ((document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4)) + "px";
-                                        document.getElementById("Extra-Images").style.height = document.getElementById("Leadership-Card").offsetHeight * 1.25 + "px";
+                                        document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
 
                                     }
                                     else{
+                                        document.getElementById("Image-Container").style.width = 0;
+                                        document.getElementById("Image-Container").style.height = 0;
+
+                                        document.getElementById("Image-Container").style.marginTop = 0;
+                                        document.getElementById("NavTabs").style.marginTop = 0;
+
                                         document.getElementById("Leadership-Card").style.backgroundColor = "white";
                                         document.getElementById("myTabContent").style.marginLeft = 0 + "px";
                                         document.getElementById("Leadership-Card").style.width = 100 + "%";
@@ -219,47 +233,55 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                     <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Boy Scouts of America</h6>
                                     <h3 class="card-header text-center card-head-colorer">Eagle Scout Award</h3>
                                     <hr></hr>
-                                    <p class="card-text">Busy Business practically invented the term "Total Quality Management". If you morph iteravely, you may have to
-                                    synthesize intra-vertically. What does it really mean to transition "vertically"? If all of this may seem discombobulating to you, that's because it is!
-                                    If all of this may seem discombobulating to you, that's because it is!
+                                    <p class="card-text">For my Eagle Scout Project: <br> 
+                                        - I created three paver patios in my Highschool's Nature Center, providing dedicated places for picnic benches near a scenic view.<br>
+                                        - With my extensive preplanning and leadership experience the project was finished over a single weekend.<br>
+                                        - I motivated, managed, and provided leadership to a dynamic team of around 30+ people for the duration of construction.<br>
                                     </p>
-                                    <div class="card-footer text-center text-muted"> 2 days ago</div>
+                                    <p class="card-text">As a member of Troop 206: <br> 
+                                        - I frequently served as Head Quartermaster, A role which required proper organization and management of the troops gear.<br>
+                                        - As an upper level position in my troop, it required learning more effective leadership and communication skills.<br>
+                                        - Engaged with a multitude of people in the wonderful community, with people both inside and outside of scouting.
+                                    </p>
+                                    <hr></hr>
+                                    <div class="card-footer text-center text-muted">Court of Honor: May 2018</div>
                                 </div>
                                 <div class="tab-pane fade tab-helper-fella" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" >
                                     <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Camp Teko</h6>
                                     <h3 class="card-header text-center card-head-colorer">Boating Director</h3>
                                     <hr></hr>
-                                    <p class="card-text">Busy Business has revolutionized the idea of ROI metrics. What does it really mean to enhance
-                                        "transparently"? If all of
-                                        this sounds fabulous to you, that's because it is!
-                                        We will grow the capability of all-hands meetings to disintermediate. We will facilitate the capacity of
-                                        user-defined
-                                        e-services to optimize.</p>
-                                    <div class="card-footer text-center text-muted"> 2 days ago</div>
+                                    <p class="card-text"> - Being prepared to perform emergency rescues at the waterfront, and maintaining the safety of both campers and counselors.</p>
+                                    <p class="card-text"> - Directing and coordinating boating specialist and lifeguards during rotations, while being engaged and welcoming to campers.</p>
+                                    <p class="card-text"> - Identifying potential hazards, handling them to maintain the safety of the campers during, and between boating rotations.</p>
+                                    <p class="card-text"> - Provide leadership and maintain the boating beach, boats, equipment.</p>
+                                    <p class="card-text"> - Providing a positive role model for the campers, especially younger campers.</p>
+                                    <hr></hr>
+                                    <div class="card-footer text-center text-muted">Summers of 2017, 2018, and 2019</div>
                                 </div>
                                 <div class="tab-pane fade tab-helper-fella" id="tri-m" role="tabpanel" aria-labelledby="tri-m-tab">
                                     <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Music Honor Society</h6>
                                     <h3 class="card-header text-center card-head-colorer">Tri-M</h3>
                                     <hr></hr>
-                                    <p class="card-text">We here at Busy Business think we know that it is better to syndicate vertically than to enable
-                                        perfectly. Without revolutionary platforms, you will lack performance. Our cutting-edge, efficient feature set
-                                        is unparalleled in the
-                                        industry, but our 60/60/24/7/365 web services and simple configuration is often considered a terrific
-                                        achievement.
-                                    </p>
-                                    <div class="card-footer text-center text-muted"> 2 days ago</div>
+                                    <p class="card-text">I have thousands of stories about band. I'd love to talk about them all, but this is the leadership section! <br> Here's the highlights of my roles in regard to Band Leadership and Tri-M:</p>
+                                    <p class="card-text"> - Participated in and helped foster musical growth in the community.</p>
+                                    <p class="card-text"> - Provided support for events aimed at the combination of music and community engagement.</p>
+                                    <p class="card-text"> - Lead or provided leadership for community events, pops concerts, and other events the band hosted.</p>
+                                    <p class="card-text"> - Supported and encouraged interest in music and the pursuit of learning and growing as a musician.</p>
+                                    <hr></hr>
+                                    <div class="card-footer text-center text-muted">Academic Years of 2017 and 2018</div>
                                 </div>
                                 <div class="tab-pane fade tab-helper-fella" id="barista" role="tabpanel" aria-labelledby="barista-tab">
                                     <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Starbucks</h6>
                                     <h3 class="card-header text-center card-head-colorer">Barista</h3>
                                     <hr></hr>
-                                    <p class="card-text">We here at Busy Business think we know that it is better to syndicate vertically than to enable
-                                        perfectly. Without revolutionary platforms, you will lack performance. Our cutting-edge, efficient feature set
-                                        is unparalleled in the
-                                        industry, but our 60/60/24/7/365 web services and simple configuration is often considered a terrific
-                                        achievement.
-                                    </p>
-                                    <div class="card-footer text-center text-muted"> 2 days ago</div>
+                                    <p class="card-text"> - Greeted each customer with a warm smile and positive attitude, even at early hours of the day.</p>
+                                    <p class="card-text"> - Maintained café cleanliness at all times, including cleaning tables, maintaining condiment bar, and removing trash.</p>
+                                    <p class="card-text"> - Prepared and served drinks and food in accordance with health codes and café standards.</p>
+                                    <p class="card-text"> - Offered courteous and friendly customer service to even the most difficult patrons.</p>
+                                    <p class="card-text"> - Maintained a strong understanding of company values and customer needs, responding quickly in a fast-paced environment</p>
+                                    <p class="card-text"> - Proactively worked side by side with multiple levels of upper management to ensure consistent, high quality customer service.</p>
+                                    <hr></hr>
+                                    <div class="card-footer text-center text-muted">September 2017 - October 2018</div>
                                 </div>
                                 <script>
                                     $(document).on('shown.bs.tab', function (e) {
@@ -268,16 +290,17 @@ Looks like you're checking out my source code... I suppose that's not surprising
 
                                         document.getElementById("Extra-Images").innerHTML = extraImagePicker(target);
 
-                                        if (document.getElementById("Leadership-Card").offsetHeight != null) {
-                                            document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-                                            document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px";
+                                        if (document.getElementById("NavTabs").offsetHeight != null) {
+                                            document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
+                                            document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
 
-                                            var elements = document.getElementsByClassName("Card-Carousel-Switch");
-                                            var small = '';
-                                            var medium = '';
-                                            var normal = '';
-                                            for (var i = 0; i < elements.length; i++) {
-                                               small += elements[i].innerHTML;
+                                            if (window.outerWidth > 1380 && document.getElementById("NavTabs").offsetHeight < document.getElementById("myTabContent").offsetHeight) {
+                                                document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
+                                                document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
+                                            }
+                                            else {
+                                                document.getElementById("Image-Container").style.marginTop = 0;
+                                                document.getElementById("NavTabs").style.marginTop = 0;
                                             }
                                         }
                                     });
@@ -466,7 +489,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <span id="typing-ending" class="typed-footer"></span>
             </div>
             
-            <!--<div class="copyright">Made from scratch with a little ❤, and some fancy web stuff</div>-->
+            <!--<div class="copyright">Made from scratch with a little ❤, some googling, and some fancy web stuff</div>-->
         </div>
     </footer>
 
@@ -532,19 +555,22 @@ Looks like you're checking out my source code... I suppose that's not surprising
     
     <script>
         document.getElementById("Side-Image").innerHTML = sideImagePicker("#eagle-scout");
-        document.getElementById("Image-Container").style.height = document.getElementById("Leadership-Card").offsetHeight + "px";
-        document.getElementById("Image-Container").style.width = document.getElementById("Leadership-Card").offsetHeight + "px"; 
+        document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
+        document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px"; 
 
-        document.getElementById("Extra-Images").style.height = document.getElementById("Leadership-Card").offsetHeight * 1.25 + "px";
+        document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
         document.getElementById("Extra-Images").innerHTML = extraImagePicker("#eagle-scout");
         
-        if(window.outerWidth > 1325){
+        if(window.outerWidth > 1380){
             document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
             document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
             document.getElementById("Leadership-Card").style.width = (document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4) + "px";
-            document.getElementById("Extra-Images").style.height = document.getElementById("Leadership-Card").offsetHeight * 1.25 + "px";
+            document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
         }
         else{
+            document.getElementById("Image-Container").style.marginTop = 0;
+            document.getElementById("NavTabs").style.marginTop = 0;
+
             document.getElementById("Leadership-Card").style.backgroundColor = "white";
             document.getElementById("myTabContent").style.marginLeft = 0 + "px";
             document.getElementById("Leadership-Card").style.width = 100 + "%";
@@ -552,8 +578,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
             document.getElementById("Extra-Images").style.height = 0;
         }
 
-        var gamesCardsAdjuster = cardCarouselAdjuster('games', ["./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "https://picsum.photos/309/200?image=1050", "https://picsum.photos/309/200?image=1041"]);
-        var codeCardsAdjuster = cardCarouselAdjuster('code', ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "https://picsum.photos/309/200?image=1050", "https://picsum.photos/309/200?image=1041"]);
+        var gamesCardsAdjuster = cardCarouselAdjuster('games', ["./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", "https://picsum.photos/309/200?image=1041"]);
+        var codeCardsAdjuster = cardCarouselAdjuster('code', ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/CCode.jpeg"]);
         document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
         document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
         document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;

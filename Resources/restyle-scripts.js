@@ -20,7 +20,7 @@ function divChanger(selected) {
     longForm += '</ul></div>';
 
     shortForm = String(
-        '<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%">\
+        '<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%" id="NavTabs">\
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">');
         for (var j = 0; j < tabNames.length; j++) {
             if (j == selected) { shortForm += '<li class="nav-item active" '; }
@@ -44,7 +44,7 @@ function divChanger(selected) {
 }
 
 function resizeTime(shortSave, longSave) {
-    if (window.outerWidth > 1325) {
+    if (window.outerWidth > 1380) {
         return longSave;
     } else {
         return shortSave;
@@ -73,7 +73,7 @@ function sideImagePicker(str) {
 function extraImagePicker(str) {
     var returnString = '';
 
-    if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EaglePaversManualLabor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
+    if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EagleCourtOfHonor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
 
     else if (str == "#barista") { var imageChoice = ["./Resources/Starbucks/SBPSL.jpg", "./Resources/Starbucks/SBBEANS.jpg", "./Resources/Starbucks/SBGreenApron.jpg", "./Resources/Starbucks/SBCordusio.jpg", "./Resources/Starbucks/SBCoffee.png"]; }
 
@@ -94,12 +94,26 @@ function extraImagePicker(str) {
     return (returnString);
 }
 
-function cardCarouselAdjuster(version, cardData) {
-    var cardText = [
-    ['Card title', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Last updated 3 mins ago'], 
-    ['Card title', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Last updated 3 mins ago'],
-    ['Card title', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Last updated 3 mins ago'],
-    ['Card title', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Last updated 3 mins ago']];
+function cardCarouselAdjuster(version, cardImages) {
+    var gameText = [
+        ['Untitled Rhythm Shooter (Unity)', '- Inspired by My Friend Pedro, and the main character in Guns Akimbo.<br> - Part Platformer, part rhythm game. Each note is linked to an action<br> - Heavily focused on understanding proper 2D physics utilization and importance of consistent movement and timing in the rhythm section', 'Video Game Development Club'],
+        ['"SpaceBar" (Unity)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Video Game Development Club'],
+        ['"Potion Man" (Unity)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Video Game Development Club'],
+        ['"Murderous Mishap" (Unity)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Personal']];
+
+    var codeText = [
+        ['Fractal Generator (Java)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'CSCI 1933'],
+        ['Bus Simulation (Java)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'CSCI 1933'],
+        ['Data Structure Projects (Java, C)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'CSCI 1933, CSCI 2021'],
+        ['File Interpreter (C)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'CSCI 2021']];
+
+    var cardText;
+    if(version == "games"){
+        cardText = gameText;
+    }
+    if(version == "code"){
+        cardText = codeText;
+    }
 
     var small = ['<ol class="carousel-indicators hidden">',''];
 
@@ -107,7 +121,7 @@ function cardCarouselAdjuster(version, cardData) {
 
     var normal = ['<ol class="carousel-indicators hidden">',''];
 
-    for(i = 0; i < cardData.length; i++){
+    for(i = 0; i < cardImages.length; i++){
         if(i == 0){
             small[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="0" class="active"></li>';
             small[1] += '<div class="item active" style="padding-left: 15%; padding-right: 15%; padding-top: 1%;">';
@@ -134,13 +148,13 @@ function cardCarouselAdjuster(version, cardData) {
             normal[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
         }
 
-        small[1] += '<div class="card"><img class="card-img-top" src="'+ cardData[i] +'" alt="Card image cap"><div class="card-body">';
+        small[1] += '<div class="card"><img class="card-img-top" src="'+ cardImages[i] +'" alt="Card image cap"><div class="card-body">';
         small[1] += '<h5 class="card-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2]+'</small></p></div></div></div>';
 
-        medium[1] += '<div class="card"><img class="card-img-top" src="' + cardData[i] +'" alt="Card image cap"><div class="card-body">';
+        medium[1] += '<div class="card"><img class="card-img-top" src="' + cardImages[i] +'" alt="Card image cap"><div class="card-body">';
         medium[1] += '<h5 class="card-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2] + '</small></p></div></div>';
 
-        normal[1] += '<div class="card"><img class="card-img-top" src="' + cardData[i] +'" alt="Card image cap"><div class="card-body">';
+        normal[1] += '<div class="card"><img class="card-img-top" src="' + cardImages[i] +'" alt="Card image cap"><div class="card-body">';
         normal[1] += '<h5 class="card-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2] + '</small></p></div></div>';
 
 
