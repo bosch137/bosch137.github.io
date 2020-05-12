@@ -86,7 +86,7 @@ function extraImagePicker(str) {
     for (var i = 0; i < imageChoice.length; i++) {
         returnString += '<div class="col extra-images" id="Extra-Image' + (i + 1).toString() + '" style="width: ' + 100 / imageChoice.length + '%">\
                         <div class="container-fluid" id="Extra-Image-Container' + (i + 1).toString() + '" style="height: 100%; padding: 0;">\
-                          <img class="img-picker-alt center-block img-fluid" src="' + imageChoice[i] + '">\
+                          <img class="img-picker-alt center-block img-fluid" loading="lazy" src="' + imageChoice[i] + '">\
                         </div>\
                       </div>';
     }
@@ -94,11 +94,21 @@ function extraImagePicker(str) {
     return (returnString);
 }
 
-function cardCarouselAdjuster(version, cardImages) {
-    var gameText = [
-        ['Untitled Rhythm Shooter (Unity)', '- Inspired by My Friend Pedro, and the main character in Guns Akimbo.<br> - Part Platformer, part rhythm game. Each note is linked to an action<br> - Heavily focused on understanding proper 2D physics utilization and importance of consistent movement and timing in the rhythm section', 'Video Game Development Club'],
-        ['"SpaceBar" (Unity)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Video Game Development Club'],
-        ['"Potion Man" (Unity)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Video Game Development Club'],
+function cardCarouselAdjuster(version) {
+    var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", "https://picsum.photos/309/200?image=1041"];
+    var codeImages = ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/CCode.jpeg"];
+
+    var gameText = [['What is Video Game Development Club?','"VGDC" is a club at the University of Minnesota all about making games!<br><br>Each month we get a new theme and make a prototype game based off our interpretation.\
+     <br><br>My role for most projects was as "lead". In short I lead the group, and worked on everything. <br><br>Art, Music, Programming, Managing Pushes, etc. I was either working on it or helping the people who were.','https://vgdc.umn.edu/'],
+        ['Untitled Rhythm Shooter (Unity)', 'This was inspired by Guns Akimbo, which was an upcoming movie at the time. A some people in my group really like rhythm games, so we came up with the idea of making a pseudo-rhythm game. \
+        However, the twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype!', 'Video Game Development Club'],
+        
+        ['"SpaceBar" (Unity)', 'If I\'m being honest this game started as a joke. My group was joking around and the idea for a "Freddy Fish"/point and click game came up.\
+        Weirdly enough we all loved this idea, and this game was the result. What really made the project interesting was learning ways to handle a TON of interactions. Creating those systems was what made this project such a fun and rewarding learning experience.', 'Video Game Development Club'],
+        
+        ['"Potion Man" (Unity)', 'The concept was a game about making potions to help based on symptoms. However, this game was severely hindered by a lack of leadership.\
+        By the end of the project the only people left were myself and one artist. In the remaining week we only finished dialogue, interaction, and event systems for a prototype. After this I started to use my fluid skills to lead and engage with each part of projects better.', 'Video Game Development Club'],
+        
         ['"Murderous Mishap" (Unity)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'Personal']];
 
     var codeText = [
@@ -108,11 +118,14 @@ function cardCarouselAdjuster(version, cardImages) {
         ['File Interpreter (C)', 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', 'CSCI 2021']];
 
     var cardText;
+    var cardImages
     if(version == "games"){
         cardText = gameText;
+        cardImages = gameImages;
     }
     if(version == "code"){
         cardText = codeText;
+        cardImages = codeImages;
     }
 
     var small = ['<ol class="carousel-indicators hidden">',''];
@@ -127,10 +140,10 @@ function cardCarouselAdjuster(version, cardImages) {
             small[1] += '<div class="item active" style="padding-left: 15%; padding-right: 15%; padding-top: 1%;">';
 
             medium[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="0" class="active"></li>';
-            medium[1] += '<div class="item active"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
+            medium[1] += '<div class="item active"><div class="card-deck" style="padding-left: 5%; padding-right: 5%; padding-top: 1%;">';
 
             normal[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="0" class="active"></li>';
-            normal[1] += '<div class="item active"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
+            normal[1] += '<div class="item active"><div class="card-deck" style="padding-left: 5%; padding-right: 5%; padding-top: 1%;">';
         }
 
         else {
@@ -140,22 +153,22 @@ function cardCarouselAdjuster(version, cardImages) {
 
         if (i % 2 == 0 && i != 0) {
             medium[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="' + i + '"></li>';
-            medium[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
+            medium[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 5%; padding-right: 5%; padding-top: 1%;">';
         }
 
         if (i % 4 == 0 && i != 0) {
             normal[0] += '<li data-target="#card-carousel-' + version + '" data-slide-to="' + i + '"></li>';
-            normal[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 10%; padding-right: 10%; padding-top: 1%;">';
+            normal[1] += '</div></div><div class="item"><div class="card-deck" style="padding-left: 5%; padding-right: 5%; padding-top: 1%;">';
         }
 
-        small[1] += '<div class="card"><img class="card-img-top" src="'+ cardImages[i] +'" alt="Card image cap"><div class="card-body">';
-        small[1] += '<h5 class="card-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2]+'</small></p></div></div></div>';
+        small[1] += '<div class="card"><img class="card-img-top fourByThree" src="'+ cardImages[i] +'" alt="Card image cap"><div class="card-body">';
+        small[1] += '<h5 class="text-center card-custom-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2]+'</small></p></div></div></div>';
 
-        medium[1] += '<div class="card"><img class="card-img-top" src="' + cardImages[i] +'" alt="Card image cap"><div class="card-body">';
-        medium[1] += '<h5 class="card-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2] + '</small></p></div></div>';
+        medium[1] += '<div class="card"><img class="card-img-top fourByThree" src="' + cardImages[i] +'" alt="Card image cap"><div class="card-body">';
+        medium[1] += '<h5 class="text-center card-custom-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2] + '</small></p></div></div>';
 
-        normal[1] += '<div class="card"><img class="card-img-top" src="' + cardImages[i] +'" alt="Card image cap"><div class="card-body">';
-        normal[1] += '<h5 class="card-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2] + '</small></p></div></div>';
+        normal[1] += '<div class="card"><img class="card-img-top fourByThree" src="' + cardImages[i] +'" alt="Card image cap"><div class="card-body">';
+        normal[1] += '<h5 class="text-center card-custom-title">' + cardText[i][0] + '</h5> <p class="card-text">' + cardText[i][1] + '</p><p class="card-text"><small class="text-muted">' + cardText[i][2] + '</small></p></div></div>';
 
 
         if (i + 1 % 2 == 0 && i != 0) {
@@ -171,9 +184,19 @@ function cardCarouselAdjuster(version, cardImages) {
     medium[0] += '</ol>';
     normal[0] += '</ol>';
 
-    if (window.outerWidth > 992) { return normal; }
+    if (window.outerWidth > 1100) { 
+        if (cardText.length > 4) {
+            var all = document.getElementsByClassName('showtime');
+            for (var i = 0; i < all.length; i++) {
+                if (all[i].getAttribute("href") == "#card-carousel-" + version) {
+                    all[i].style.visibility = "visible";
+                }
+            }
+        }
+        return normal; 
+    }
 
-    else if (window.outerWidth > 576 && window.outerWidth < 991.98) { return medium; }
+    else if (window.outerWidth > 576 && window.outerWidth < 1099.98) { return medium; }
 
     else { return small; }
 }

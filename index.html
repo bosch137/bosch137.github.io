@@ -76,22 +76,22 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/NZLifeguard.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
+                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/NZLifeguard.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/ParisThumbsUp.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
+                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/ParisThumbsUp.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/tempPhotoThing.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
+                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/tempPhotoThing.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/NZDavid.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
+                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/NZDavid.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/IMGDrumset.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
+                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/IMGDrumset.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
                     </div>
                     <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/FamilyWinter.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
+                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/FamilyWinter.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
                     </div>
                 </div>
                 <div style="position: absolute; top: 0.625rem;">
@@ -194,8 +194,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             function resizeMe() {
                                 document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
-                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('games', ["./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", "https://picsum.photos/309/200?image=1041"]);
-                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('code', ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/CCode.jpeg"]);
+                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('games');
+                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('code');
 
                                     if(window.outerWidth > 1380){
                                         document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
@@ -323,7 +323,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         </div>
 
     </div>
-=
+
 <!--
  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
 | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
@@ -351,38 +351,36 @@ Looks like you're checking out my source code... I suppose that's not surprising
         </div>
 
       
-        <div class="container-fluid" style="max-width: 1920px;">
+        <div class="container-fluid" style="max-width: 1920px; padding-bottom: 0px;">
             <h2 class="resizer-title">Game Projects</h2>
-            <div id="card-carousel-games" class="carousel slide" data-ride="carousel" style="height: fit-content;">
+            <div id="card-carousel-games" class="carousel slide" data-ride="carousel" data-interval="false"  style="height: fit-content">
 
                 <div class="carousel-inner" id="Games-Card-Carousel-Inner"></div>
                         
-                <a class="left carousel-control showtime" href="#card-carousel-games" data-slide="prev" style="background: none">
-                    <span class="glyphicon glyphicon-chevron-left" style="transform: translate(-15px,0);">
-                    </span>
+                <a class="left carousel-control showtime" href="#card-carousel-games" data-slide="prev" style="background: none; width: fit-content;">
+                    <span class="glyphicon glyphicon-chevron-left" style="transform: translate(15px,0); color: white;"></span>
                 </a>
-                <a class="right carousel-control showtime" href="#card-carousel-games" data-slide="next" style="background: none">
-                    <span class="glyphicon glyphicon-chevron-right" style="transform: translate(15px,0);"></span>
+                <a class="right carousel-control showtime" href="#card-carousel-games" data-slide="next" style="background: none; width: fit-content;">
+                    <span class="glyphicon glyphicon-chevron-right" style="transform: translate(-15px,0); color: white;"></span>
                 </a>
-
             </div>
         </div>
 
     
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 3.125rem;">
-        <h2 class="resizer-title">Coding Projects</h2>
-            <div id="card-carousel-code" class="carousel slide" data-ride="carousel" style="height: fit-content;">
+            <h2 class="resizer-title">Coding Projects</h2>
+                <div id="card-carousel-code" class="carousel slide" data-ride="carousel" data-interval="false" style="height: fit-content;">
 
-                <div class="carousel-inner" id="Code-Card-Carousel-Inner"></div>
-        
-                <a class="left carousel-control showtime" href="#card-carousel-code" data-slide="prev" style="background: none">
-                    <span class="glyphicon glyphicon-chevron-left" style="transform: translate(-15px,0);"></span>
-                </a>
-                <a class="right carousel-control showtime" href="#card-carousel-code" data-slide="next" style="background: none">
-                    <span class="glyphicon glyphicon-chevron-right" style="transform: translate(15px,0);"></span>
-                </a>
+                    <div class="carousel-inner" id="Code-Card-Carousel-Inner"></div>
+            
+                    <a class="left carousel-control showtime" href="#card-carousel-code" data-slide="prev" style="background: none; width: fit-content;">
+                        <span class="glyphicon glyphicon-chevron-left" style="transform: translate(15px,0); color: white;"></span>
+                    </a>
+                    <a class="right carousel-control showtime" href="#card-carousel-code" data-slide="next" style="background: none; width: fit-content;">
+                        <span class="glyphicon glyphicon-chevron-right" style="transform: translate(-15px,0); color: white;"></span>
+                    </a>
 
-            </div>
+                </div>
         </div>
 
 <!-- (some photos are on an old camera, some a more modern, and others on a professional camera)
@@ -457,7 +455,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </div>
                 <div class="item">
                     <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/ParisMom.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">My Mom and I near The Louvre, France</h3></div>
+                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Near The Louvre, France</h3></div>
                 </div>
                 <div class="item">
                     <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/ParisArch.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
@@ -578,8 +576,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
             document.getElementById("Extra-Images").style.height = 0;
         }
 
-        var gamesCardsAdjuster = cardCarouselAdjuster('games', ["./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", "https://picsum.photos/309/200?image=1041"]);
-        var codeCardsAdjuster = cardCarouselAdjuster('code', ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/CCode.jpeg"]);
+        var gamesCardsAdjuster = cardCarouselAdjuster('games');
+        var codeCardsAdjuster = cardCarouselAdjuster('code');
         document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
         document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
         document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
