@@ -161,7 +161,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <div class="divider" style="margin-bottom: 8px;"></div>
             </li>
             <li><a class="subheader" style="margin-bottom: 8px;">Resources</a></li>
-            <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/Resources/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
+            <li><a class="waves-effect" target="_blank" href="./Resources/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
             <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/michaelboschwitz"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a></li>
             <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
@@ -363,7 +363,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <div style="position: absolute; top:0.635rem;">
                 <div class="col-md-12">
                     <div class="resizer-head">
-                        <span class="me_name">Projects</span>
+                        <span class="me_name Projects">Projects</span>
                     </div>
                 </div>
             </div>
@@ -373,7 +373,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
 
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 0px;">
             <h2 class="resizer-title">Game Projects</h2>
-            <div id="card-carousel-games" class="carousel slide" data-ride="carousel" data-interval="false"  style="height: fit-content">
+            <div id="card-carousel-games" class="carousel slide card-carousel-games" data-ride="carousel" data-interval="false"  style="height: fit-content">
 
                 <div class="carousel-inner" id="Games-Card-Carousel-Inner"></div>
                         
@@ -390,7 +390,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
 
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 3.125rem;">
             <h2 class="resizer-title">Coding Projects</h2>
-                <div id="card-carousel-code" class="carousel slide" data-ride="carousel" data-interval="false" style="height: fit-content;">
+                <div id="card-carousel-code" class="carousel slide card-carousel-code" data-ride="carousel" data-interval="false" style="height: fit-content;">
 
                     <div class="carousel-inner" id="Code-Card-Carousel-Inner"></div>
             
@@ -413,7 +413,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
 /__/     \__\ |_______/     \__/     |_______||__| \__|     |__|      \______/  | _| `._____||_______|_______/    
                                                                                                    (adventures)-->
     <div class="anchor" data-offset="0" id="adventures"></div>
-        <div id="adventure-carousel" class="carousel slide custom-image-caro" data-ride="carousel" style="height: 90vh;">
+        <div id="adventure-carousel" class="carousel slide custom-image-caro adventure-carousel" data-ride="carousel" style="height: 90vh;">
             <ol class="carousel-indicators">
                 <li data-target="#adventure-carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#adventure-carousel" data-slide-to="1"></li>
@@ -524,22 +524,19 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <link type="text/css" rel="stylesheet" href="./Resources/style.css">
     <script type="text/javascript" src="./Resources/scripts.js"></script><div class="drag-target" style="right: 0; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
     <script>
-        $('a[href*="assets"]').click(function(e) {
-            console.log(e);
-            if (window.ga && ga.create)
-                ga('send', 'pageview', e.currentTarget.pathname);
-        });
+        // $('a[href*="assets"]').click(function(e) {
+        //     if (window.ga && ga.create)
+        //         ga('send', 'pageview', e.currentTarget.pathname);
+        // });
 
         $('a[href*="github.com/bosch137"]').click(function(e) {
-            console.log(e);
             if (window.ga && ga.create)
-                ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
+                ga('send', 'pageview', 'github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
         });
 
         $('a[href*="linkedin.com/in/michaelboschwitz"]').click(function(e) {
-            console.log(e);
             if (window.ga && ga.create)
-                ga('send', 'pageview', 'assets/linkedin');
+                ga('send', 'pageview', 'linkedin');
         });
     </script>
     

@@ -127,7 +127,7 @@ function cardCarouselAdjuster(version) {
         <br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks on such a rudimentary game engine.', 'Personal/Orono HS Game Dev Class']];
 
     var codeText = [
-        ['Fractal Generator<br>(Java)', 'This project involved implementing several shape classes in Java to draw some fractals based on inputted shapes. There were three possible shapes that the program would accept, Triangles, Rectangles, and Circles.\
+        ['Fractal Generator (Java)', 'This project involved implementing several shape classes in Java to draw some fractals based on inputted shapes. There were three possible shapes that the program would accept, Triangles, Rectangles, and Circles.\
         <br><br>The Java program needed to draw a fractal recursively, and each of the drawing methods would draw the shape passed in at the specified location and in the specified color. Once it had finished drawing it would compute the total area of any shapes that form your fractal, and print the results.', 'CSCI 1933'],
         
         ['Bus Simulation<br>(Java)', 'For this project we were "tasked" to create a simulation and return a report to a hypothetical bus company.\
@@ -136,16 +136,16 @@ function cardCarouselAdjuster(version) {
         ['Battle Boats<br>(Java)', 'This project involved us making "Battle Boats"... The battleship project consisted of 4 major parts that had to be built from scratch. The board, the boats, a turn system, and a debug mode.\
         <br><br>For the board, The program simulated a rectangular X×Y board using a 2-dimensional array. Boats were represented by a line of X\'s on the board (Array), For turns, the user inputs a location (x, y) to attack and if they want to use an item. Lastly for the debug it would display both boards so we could properly debug and test the game.', 'CSCI 1933'],
         
-        ['Data Structure<br>Projects (Java, C)', 'I\'ve done several projects that relate to Data Structures, so for this card I will just list a few.<br><br>-HashMap (Java)<br><br>-ArrayLists (Java)<br><br>-Linked Lists (Java, C)<br><br>-Binary Trees(Java, C)\
+        ['Data Structures (Java, C)', 'I\'ve done several projects that relate to Data Structures, so for this card I will just list a few.<br><br>-HashMap (Java)<br><br>-ArrayLists (Java)<br><br>-Linked Lists (Java, C)<br><br>-Binary Trees(Java, C)\
         <br><br>These projects all either involved making and/or using these data structures for problems such as sorting, benchmarking, aggregating data, converting, etc.', 'CSCI 1933, CSCI 2021'],
 
         ['Optimization & Benchmarking (C)', 'The first half of this project revolved around optimizing memory access of a matrix. We were provided with algorithms to search through an matrix and calculate the diagonal sums, and the task was optimizing the algorithm to improve performance as much as possible. \
         <br><br>The other half of the project centered on timing several other algorithms and measuring their performance. We measured the performance of 4 search functions which determined whether an integer query was present in an associated data structure.', 'CSCI 2021'],
     
-        ['Clocks &<br>Puzzle Box(C)', 'For this project we were tasked with writing code which would be run by a microcontroller in a digital clock. It could only use integer operations. No floating point operations.\
+        ['Clocks &<br>Puzzle Box (C)', 'For this project we were tasked with writing code which would be run by a microcontroller in a digital clock. It could only use integer operations. No floating point operations.\
         My solution used bit shifting along with bitwise operations to construct the correct bit pattern for the clock display.<br><br> The other half of the project revolved around a Puzzle Box, which contained source code that reads inputs from a file. If the inputs are correct, points are awarded. If inputs are incorrect, error messages were printed.', 'CSCI 2021'],
         
-        ['File Interpreter &<br>Graph Generator (C)', 'This project centered around a simple task: read integers from a file into a dynamically allocated array. The caveat to this is that the integers in the file are stored in a special format: an initial value followed by deltas or changes from the previous element.\
+        ['File Interpreter & Graph Generator (C)', 'This project centered around a simple task: read integers from a file into a dynamically allocated array. The caveat to this is that the integers in the file are stored in a special format: an initial value followed by deltas or changes from the previous element.\
         This project required multiple formats to be usable, Text Integers, Binary Integers, and 4-Bit Signed Integers.<br><br>After interpretation we needed to create a simple plotting routine for the text terminal. The function displayed an array of numbers on the screen in a graph-like fashion.', 'CSCI 2021'],
 
         ['ELF64 Project<br>(C)', 'This project explored the file format of ELF in order to print out the binary bytes associated with functions in a file. The goal of the project was to construct a program which was able to print out the binary bytes associated with a named function, and run the function.\
@@ -230,7 +230,7 @@ function cardCarouselAdjuster(version) {
     medium[0] += '</ol>';
     normal[0] += '</ol>';
 
-    if (window.outerWidth > 1100) { 
+    if (window.outerWidth > 1550) { 
         if (cardText.length > 4) {
             var all = document.getElementsByClassName('showtime');
             for (var i = 0; i < all.length; i++) {
@@ -242,7 +242,7 @@ function cardCarouselAdjuster(version) {
         return normal; 
     }
 
-    else if (window.outerWidth > 576 && window.outerWidth < 1099.98) { return medium; }
+    else if (window.outerWidth > 576 && window.outerWidth < 1550) { return medium; }
 
     else { return small; }
 }

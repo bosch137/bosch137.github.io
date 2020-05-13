@@ -2,25 +2,16 @@ $(document).on('ready', function() {
   $(".parallax").parallax();
 });
 
-(function() {
-  var arr = $(".anchor_title");
-  var len = arr.length;
-  for (var i = 0; i < len; i++) {
-    var e = $(arr[i]);
-    e.data("offset", "title");
-  }
-})();
-
 Materialize.scrollFire([
   {
     selector: ".hero-footer",
     offset: 400,
     callback: function(el) {
-      if (window.ga && ga.create) ga("send", "pageview", "assets/footer");
+      if (window.ga && ga.create) ga("send", "pageview", "footer");
       $('.typed-footer').typed({
         //And I love
         strings: [
-          '•&nbsp;<a target="_blank" href="http://michael.boschwitz.me/Resources/Michael-Boschwitz-Resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/bosch137">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/michaelboschwitz">LinkedIn</a><br>...and thats about it!^1000'
+          '•&nbsp;<a target="_blank" href="./Resources/Michael-Boschwitz-Resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/bosch137">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/michaelboschwitz">LinkedIn</a><br>...and thats about it!^1000'
         ],
         loop: false,
         contentType: "html",
@@ -31,7 +22,11 @@ Materialize.scrollFire([
         }
       });
     }
-  }
+  },
+{ selector: '.leadership-span', offset: 200, callback: function() { if (window.ga && ga.create) ga("send", "pageview", "Leadership")}},
+{ selector: '.card-carousel-games', offset: 200, callback: function() { if (window.ga && ga.create) ga("send", "pageview", "Games")}},
+{ selector: '.card-carousel-code', offset: 200, callback: function() { if (window.ga && ga.create) ga("send", "pageview", "Coding")}},
+{ selector: '.adventure-carousel', offset: 200, callback: function () { if (window.ga && ga.create) ga("send", "pageview", "Adventures")}},
 ]);
 
 //fade in with a little delay
@@ -274,13 +269,8 @@ $(".button-collapse").sideNav({
   closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
 });
 
-// $(window).resize(function() {
-//   console.log('window was resized!');
-//   location.reload();
-// });
-
 function showEmail() {
-  if (window.ga && ga.create) ga("send", "pageview", "assets/email");
+  if (window.ga && ga.create) ga("send", "pageview", "email");
   UnCryptMailto("nbjmup;cptdi248Avno/fev");
   return false;
 }
