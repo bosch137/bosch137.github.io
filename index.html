@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html style="font-size: unset;"><!--
+<html style="font-size: 16px;">
 
+<!--
 
-.------..------..------..------..------..------..------.     .------..------..------..------..------..------..------..------..------.
+    .------..------..------..------..------..------..------.     .------..------..------..------..------..------..------..------..------.
 |M.--. ||I.--. ||C.--. ||H.--. ||A.--. ||E.--. ||L.--. |     |B.--. ||O.--. ||S.--. ||C.--. ||H.--. ||W.--. ||I.--. ||T.--. ||Z.--. |
 |      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
 |      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
@@ -11,15 +12,26 @@
 (Michael)                                                    (Boschwitz)
 Looks like you're checking out my source code... I suppose that's not surprising when you think about it.
 
---><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+-->
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-166325986-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
     <!--Import Google Icon Font-->
     <link href="./Resources/icon.css" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="./Resources/materialize.min.css" media="screen,projection">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/fontawesome.css">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/brands.css">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/solid.css">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/regular.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/brands.min.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/solid.min.css">
+    <link rel="stylesheet" href="./Resources/FontAwesome/css/regular.min.css">
     <script type="text/javascript" src="./Resources/restyle-scripts.js"></script>
 
     <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
@@ -141,14 +153,17 @@ Looks like you're checking out my source code... I suppose that's not surprising
             </li>
             <li><a class="waves-effect" onclick="goToID(intro)">Intro</a></li>
             <li><a class="waves-effect" onclick="goToID(leadership)">Leadership &amp; Work</a></li>
-            <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li>
+            <!-- <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li> -->
+            <li><a class="waves-effect" onclick="goToID(gameProjects)">Game Projects</a></li>
+            <li><a class="waves-effect" onclick="goToID(codeProjects)">Coding Projects</a></li>
             <li><a class="waves-effect" onclick="goToID(adventures)">Adventure</a></li>
             <li>
                 <div class="divider" style="margin-bottom: 8px;"></div>
             </li>
             <li><a class="subheader" style="margin-bottom: 8px;">Resources</a></li>
-            <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/assets/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
+            <li><a class="waves-effect" target="_blank" href="http://michael.boschwitz.me/Resources/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
+            <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/michaelboschwitz"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a></li>
             <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
         </ul>
         
@@ -194,8 +209,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             function resizeMe() {
                                 document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
-                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('games');
-                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = cardCarouselAdjuster('code');
+                                    var gamesCardsAdjuster = cardCarouselAdjuster('games');
+                                    var codeCardsAdjuster = cardCarouselAdjuster('code');
+                                    document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
+                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
+                                    document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
+                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1]; 
 
                                     if(window.outerWidth > 1380){
                                         document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
@@ -350,7 +369,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
             </div>
         </div>
 
-      
+        <div class="anchor" data-offset="0" id="gameProjects"></div>
+
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 0px;">
             <h2 class="resizer-title">Game Projects</h2>
             <div id="card-carousel-games" class="carousel slide" data-ride="carousel" data-interval="false"  style="height: fit-content">
@@ -366,7 +386,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
             </div>
         </div>
 
-    
+        <div class="anchor" data-offset="0" id="codeProjects"></div>
+
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 3.125rem;">
             <h2 class="resizer-title">Coding Projects</h2>
                 <div id="card-carousel-code" class="carousel slide" data-ride="carousel" data-interval="false" style="height: fit-content;">
@@ -486,13 +507,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <div class="resizer-sub">
                 <span id="typing-ending" class="typed-footer"></span>
             </div>
-            
-            <!--<div class="copyright">Made from scratch with a little ❤, some googling, and some fancy web stuff</div>-->
         </div>
     </footer>
 
     <!--Import jQuery before materialize.js-->
-    <script async="" src="./Resources/analytics.js"></script><script type="text/javascript" src="./Resources/jquery.min.js"></script>
+    <script type="text/javascript" src="./Resources/jquery.min.js"></script>
     <script>
         if (!window.jQuery) {
             var s = document.createElement('script');
@@ -503,29 +522,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <script type="text/javascript" src="./Resources/materialize.min.js"></script>
     <script type="text/javascript" src="./Resources/typed.js"></script>
     <link type="text/css" rel="stylesheet" href="./Resources/style.css">
-    <script type="text/javascript" src="./Resources/Chart.bundle.min.js"></script>
-    <script>
-        if (!window.Chart) {
-            var s = document.createElement('script');
-            s.setAttribute('src', 'assets/js/Chart.bundle.min.js');
-            document.body.appendChild(s);
-        }
-    </script>
     <script type="text/javascript" src="./Resources/scripts.js"></script><div class="drag-target" style="right: 0; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-19092222-6', 'auto');
-        ga('send', 'pageview');
-
         $('a[href*="assets"]').click(function(e) {
             console.log(e);
             if (window.ga && ga.create)
@@ -538,18 +536,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
         });
 
-        // $('a[href*="linkedin.com/in/michaelboschwitz"]').click(function(e) {
-        //     console.log(e);
-        //     if (window.ga && ga.create)
-        //         ga('send', 'pageview', 'assets/linkedin');
-        // });
-
-        if (!window.ga || !ga.create) {
-            var s = document.createElement('script');
-            s.setAttribute('src', 'assets/js/analytics.js');
-            document.body.appendChild(s);
-        } 
-    </script><script src="./Resources/analytics.js(1)"></script>
+        $('a[href*="linkedin.com/in/michaelboschwitz"]').click(function(e) {
+            console.log(e);
+            if (window.ga && ga.create)
+                ga('send', 'pageview', 'assets/linkedin');
+        });
+    </script>
     
     <script>
         document.getElementById("Side-Image").innerHTML = sideImagePicker("#eagle-scout");
@@ -584,4 +576,5 @@ Looks like you're checking out my source code... I suppose that's not surprising
         document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1]; 
     </script>
 
-<div class="hiddendiv common"></div><div id="toast-container"></div></body></html>
+<!--Made from scratch with a little ❤, some googling, and some fancy web stuff-->
+</body></html>
