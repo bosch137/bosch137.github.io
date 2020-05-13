@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
+<html style="font-size: unset;">
 
 <!--
 
@@ -208,13 +208,15 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             
                             function resizeMe() {
                                 document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
+
+                                var gamesCardsAdjuster = cardCarouselAdjuster('games');
+                                var codeCardsAdjuster = cardCarouselAdjuster('code');
+                                document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
+                                document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
+                                document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
+                                document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1];
+
                                 if (document.getElementById("Leadership-Card").offsetHeight != null) {
-                                    var gamesCardsAdjuster = cardCarouselAdjuster('games');
-                                    var codeCardsAdjuster = cardCarouselAdjuster('code');
-                                    document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
-                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
-                                    document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
-                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1]; 
 
                                     if(window.outerWidth > 1380){
                                         document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
@@ -524,19 +526,19 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <link type="text/css" rel="stylesheet" href="./Resources/style.css">
     <script type="text/javascript" src="./Resources/scripts.js"></script><div class="drag-target" style="right: 0; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
     <script>
-        // $('a[href*="assets"]').click(function(e) {
-        //     if (window.ga && ga.create)
-        //         ga('send', 'pageview', e.currentTarget.pathname);
-        // });
+        $('a[href*="./Resources/Michael-Boschwitz-Resume.pdf"]').click(function(e) {
+            if (window.ga && ga.create)
+                ga('send', 'pageview', "assets/resume");
+        });
 
         $('a[href*="github.com/bosch137"]').click(function(e) {
             if (window.ga && ga.create)
-                ga('send', 'pageview', 'github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
+                ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
         });
 
         $('a[href*="linkedin.com/in/michaelboschwitz"]').click(function(e) {
             if (window.ga && ga.create)
-                ga('send', 'pageview', 'linkedin');
+                ga('send', 'pageview', 'assets/linkedin');
         });
     </script>
     

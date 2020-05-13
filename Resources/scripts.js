@@ -270,7 +270,7 @@ $(".button-collapse").sideNav({
 });
 
 function showEmail() {
-  if (window.ga && ga.create) ga("send", "pageview", "email");
+  if (window.ga && ga.create) ga("send", "pageview", "assets/email");
   UnCryptMailto("nbjmup;cptdi248Avno/fev");
   return false;
 }
