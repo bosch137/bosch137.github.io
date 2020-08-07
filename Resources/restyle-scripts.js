@@ -95,7 +95,7 @@ function extraImagePicker(str) {
 }
 
 function cardCarouselAdjuster(version) {
-    var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", document.getElementsByClassName("icon-generator")[0].href, "./Resources/Project Data/MurderousMishapEARLY.jpg", "./Resources/Project Data/SodaPopSmashEARLYPROTOTYPE.jpg", "./Resources/Project Data/SonicDrillLAST.jpg"];
+    var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", document.getElementsByClassName("icon-generator")[0].href, "./Resources/Project Data/MelodyMagicalDreamCourse.jpg", "./Resources/Project Data/SonicDrillLAST.jpg", "./Resources/Project Data/MurderousMishapEARLY.jpg"];
     var codeImages = ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png"];
 
     var gameText = [
@@ -103,28 +103,28 @@ function cardCarouselAdjuster(version) {
         <br><br>My role for most projects was as "lead". In short I lead the group, and worked on everything. <br><br>Art, Music, Programming, Managing Pushes, etc. I was either working on it or helping the people who were.','https://vgdc.umn.edu/'],
         
         ['Untitled Rhythm<br>Shooter (Unity)', 'This was inspired by Guns Akimbo, which was an upcoming movie at the time. Some people in my group really like rhythm games, so we came up with the idea of making a pseudo-rhythm game. \
-        <br><br>The twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype, and I feel this one shows some of my potential!', 'Video Game Development Club'],
+        <br><br>The twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype, and I feel this one shows some of my potential!', 'Video Game Development Club (Playable)'],
         
         ['"SpaceBar"<br>(Unity)', 'If I\'m being honest this game started as a joke. My group was joking around and the idea for a "Freddy Fish"/point and click game came up.\
-        Weirdly enough we all loved this idea, and this game was the result. <br><br>What really made the project interesting was learning ways to handle a TON of interactions. Creating those systems was what made this project such a fun and rewarding learning experience.', 'Video Game Development Club'],
+        Weirdly enough we all loved this idea, and this game was the result. <br><br>What really made the project interesting was learning ways to handle a TON of interactions. Creating those systems was what made this project such a fun and rewarding learning experience.', 'Video Game Development Club (Prototype)'],
         
         ['"Potion Man"<br>(Unity)', 'The concept was a game about making potions to help based on symptoms. However, this game was severely hindered by a lack of leadership.\
-        By the end of the project the only people left were myself and one artist. <br><br>In the remaining week we only finished dialogue, interaction, and event systems for a prototype. After this I started to use my fluid skills to lead and engage with each part of projects better.', 'Video Game Development Club'],
+        By the end of the project the only people left were myself and one artist. <br><br>In the remaining week we only finished dialogue, interaction, and event systems for a prototype. After this I started to use my fluid skills to lead and engage with each part of projects better.', 'Video Game Development Club (Prototype)'],
         
         // ['"Super Sidekick"<br>(Unity)', 'It might not seem like it, but this project was really interesting. It let the artists go wild, and I got to work/learn about making a robust dialogue system with multiple choices.\
         // Although the premise of a Dating Sim/Visual Novel about a Sidekick helping Super-heroes solve personal issues was novel, but it was a good way to learn some useful fundamentals that can apply to future projects', 'Video Game Development Club'],
         
         ['Do you have any Personal Projects?', 'I love working on my own projects too! I work on these alone, and unlike VGDC these games don\'t have to be a playable prototype or proof of concept within a month.\
-        <br><br>I\'m a student first and foremost, but I\'m also a writer, musician, artist, and more. I get busy!<br><br>I\'ve been working on and off on some of these for years. Most of these are incredibly bare-bones, and are mostly done to challenge myself.', 'Current Project: Murderous Mishap'],
-
-        ['"Murderous Mishap"<br>(Unity)', 'Inspired by retro horror games and whodunit movies, the project is a 3D Mystery/Puzzle game where you play as an ace detective. Your latest case is a mansion party gone wrong.<br><br>\
-        It features three different camera styles First Person, Third Person, and a Static Camera style. Everyone might be "innocent" until proven guilty, but your job is to prove who\'s guilty. Gather clues, talk to party-goers, and crack the case to find who the true culprit(s) is...', 'Personal'],
+        <br><br>I\'m a student first and foremost, but I\'m also a writer, musician, artist, and more. I get busy!<br><br>The games here are either at a high level of playability or are have enough pre-production work and planning that I want to share them!', 'Current Project: Melody\'s Collision Course'],
     
-        ['"Soda Pop Smash"<br>(Unity)', 'This project is less a focused concept, more of a demo of ideas. It started out as a "Super Smash Bros"-style brawler, but after a while it turned into a testing project.<br><br>\
-        Full Disclosure: The project did start by customizing and editing free assets to better understand where to start. After getting the fundamentals of a brawler, it evolved to test more 3D Beat \'Em Up style gameplay. Currently it\'s more for general experimenting.', 'Personal'],
+        ['"Melody\'s Collision Course" (Unity)', 'My goal was to create a 3D game inspired by Kirby\'s Dream Course. This project was a great deep dive into complex physic simulation and gaining more 3D experience.<br><br>\
+        On the surface this game is just a golf game, however there is actually incredibly unique dynamic of this gameplay. Levels DO NOT have static hole locations, instead the last enemy turns into the hole. This creates a super unique strategy element to get the fewest strokes.', 'Personal (Playable)'],
 
-        ['"Sonic Drill"<br>(Construct 2)', 'This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the most playable. It was inspired by "Motherload", and "Factorio"\
-        <br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks on such a rudimentary game engine.', 'Personal/Orono HS Game Dev Class']];
+        ['"Sonic Drill"<br>(Construct 2)', 'This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the least interesting. It was inspired by "Motherload", and "Factorio"\
+        <br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks on such a rudimentary game engine.', 'Personal/Orono HS Final Project (Playable)'],
+        
+        ['"Murderous Mishap"<br>(Unity)', 'Inspired by retro horror games and whodunit movies, the project is a 3D Mystery/Puzzle game where you play as an ace detective. Your latest case is a mansion party gone wrong.<br><br>\
+        It features three different camera styles First Person, Third Person, and a Static Camera style. Everyone might be "innocent" until proven guilty, but your job is to prove who\'s guilty. Gather clues, talk to party-goers, and crack the case to find who the true culprit(s) is...', 'Personal (Prototype/Planning)']];
 
     var codeText = [
         ['Fractal Generator<br>(Java)', 'This project involved implementing several shape classes in Java to draw some fractals based on inputted shapes. There were three possible shapes that the program would accept, Triangles, Rectangles, and Circles.\
