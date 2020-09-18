@@ -48,6 +48,11 @@ $(window).on("load", function() {
     
     var customTypedInput = [
       {
+        string: "..!",
+        stopNum: 0,
+        backDelay: undefined
+      },
+      {
         string: "And I love Programming.",
         stopNum: 5,
         backDelay: undefined
