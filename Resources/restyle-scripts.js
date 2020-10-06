@@ -96,7 +96,7 @@ function extraImagePicker(str) {
 
 function cardCarouselAdjuster(version) {
     var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", document.getElementsByClassName("icon-generator")[0].href, "./Resources/Project Data/MelodyMagicalDreamCourse.jpg", "./Resources/Project Data/SonicDrillLAST.jpg", "./Resources/Project Data/MurderousMishapEARLY.jpg"];
-    var codeImages = ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png"];
+    var codeImages = ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png", "./Resources/Project Data/TextRain.jpg", "./Resources/Project Data/CarSoccer.jpg"];
 
     var gameText = [
         ['What is Video Game Development Club?','"VGDC" is a club at the University of Minnesota all about making games!<br><br>Each month we get a new theme and make a prototype game based off our interpretation.\
@@ -149,7 +149,13 @@ function cardCarouselAdjuster(version) {
         This project required multiple formats to be usable, Text Integers, Binary Integers, and 4-Bit Signed Integers.<br><br>After interpretation we needed to create a simple plotting routine for the text terminal. The function displayed an array of numbers on the screen in a graph-like fashion.', 'CSCI 2021'],
 
         ['ELF64 Project<br>(C)', 'This project explored the file format of ELF in order to print out the binary bytes associated with functions in a file. The goal of the project was to construct a program which was able to print out the binary bytes associated with a named function, and run the function.\
-        <br><br>The project required a couple of steps to do this. It had to parse the File Header to identify the positions of the Section Header Array and String Table, then search that to find .symtab , .strtab, and .text. Once we had that we stored some data and ran the function.', 'CSCI 2021']];
+        <br><br>The project required a couple of steps to do this. It had to parse the File Header to identify the positions of the Section Header Array and String Table, then search that to find .symtab , .strtab, and .text. Once we had that we stored some data and ran the function.', 'CSCI 2021'],
+
+        ['Text Rain<br>(Java, Processing)', 'For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall from like rain, and simulating interactions between the video feed and the text rain.\
+        <br><br>Implementing the video and webcam feeds were not exactly difficult to do, however, making the text react was the real challenge. My solution to this design challenge was to create a faux-physics system for the falling text. All in all it was definitely a unique project.', 'CSCI 4611'],
+
+        ['Car Soccer<br>(C++)', 'Car Soccer was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.\
+        <br><br>The biggest part of the project was making a simple, but consistent enough physics simulation for the ball. Likewise, creating a system for the collisions was integral for the project to even be playable. Balancing these systems to allow a minimalistic, simple arcade game was a really fun class project.', 'CSCI 4611']];
 
     var cardText;
     var cardImages
@@ -224,11 +230,34 @@ function cardCarouselAdjuster(version) {
         if (i + 1 % 4 == 0 && i != 0) {
             normal[1] += '</div></div>';
         }
+
+        //Adjusts the Normal size to add hidden cards to space out the deck incase there is only 1, 2, or 3 cards in the deck
+        if (i + 1 >= cardText.length && cardText.length % 4 != 0) {
+            if (cardText.length % 4 == 1) {
+                normal[1] += '<div class="card" style="visibility: hidden"><img class="card-img-top" alt="Card image cap"><div class="card-body">';
+                normal[1] += '<h5 class="text-center card-custom-title"></h5> <p class="card-text"></p><p class="card-text"><small class="text-muted"></small></p></div></div>';
+                normal[1] += '<div class="card" style="visibility: hidden"><img class="card-img-top" alt="Card image cap"><div class="card-body">';
+                normal[1] += '<h5 class="text-center card-custom-title"></h5> <p class="card-text"></p><p class="card-text"><small class="text-muted"></small></p></div></div>';
+                normal[1] += '<div class="card" style="visibility: hidden"><img class="card-img-top" alt="Card image cap"><div class="card-body">';
+                normal[1] += '<h5 class="text-center card-custom-title"></h5> <p class="card-text"></p><p class="card-text"><small class="text-muted"></small></p></div></div>';
+            }
+            if (cardText.length % 4 == 2) {
+                normal[1] += '<div class="card" style="visibility: hidden"><img class="card-img-top" alt="Card image cap"><div class="card-body">';
+                normal[1] += '<h5 class="text-center card-custom-title"></h5> <p class="card-text"></p><p class="card-text"><small class="text-muted"></small></p></div></div>';
+                normal[1] += '<div class="card" style="visibility: hidden"><img class="card-img-top" alt="Card image cap"><div class="card-body">';
+                normal[1] += '<h5 class="text-center card-custom-title"></h5> <p class="card-text"></p><p class="card-text"><small class="text-muted"></small></p></div></div>';
+            }
+            if(cardText.length % 4 == 3){
+                normal[1] += '<div class="card" style="visibility: hidden"><img class="card-img-top" alt="Card image cap"><div class="card-body">';
+                normal[1] += '<h5 class="text-center card-custom-title"></h5> <p class="card-text"></p><p class="card-text"><small class="text-muted"></small></p></div></div>';
+            }
+        }
     }
 
     small[0] += '</ol>';
     medium[0] += '</ol>';
     normal[0] += '</ol>';
+
 
     if (window.outerWidth > 1550) { 
         if (cardText.length > 4) {
@@ -239,7 +268,8 @@ function cardCarouselAdjuster(version) {
                 }
             }
         }
-        return normal; 
+        return normal;
+
     }
 
     else if (window.outerWidth > 576 && window.outerWidth < 1549.98) { return medium; }
