@@ -3,7 +3,7 @@
 
 <!--
 
-    .------..------..------..------..------..------..------.     .------..------..------..------..------..------..------..------..------.
+.------..------..------..------..------..------..------.     .------..------..------..------..------..------..------..------..------.
 |M.--. ||I.--. ||C.--. ||H.--. ||A.--. ||E.--. ||L.--. |     |B.--. ||O.--. ||S.--. ||C.--. ||H.--. ||W.--. ||I.--. ||T.--. ||Z.--. |
 |      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
 |      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
@@ -400,7 +400,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 </style>
                             </div>
                         </div>
-                <div class="col col-hide" id="Side-Image" style="padding-left: 0">
+                <div class="col col-hide" id="Side-Image" style="padding-left: 0;">
                     <div class="container-fluid" id="Image-Container" style="width: 0px; height: 0px;">          
                 </div>
             </div>
@@ -561,6 +561,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
             document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
             document.getElementById("Leadership-Card").style.width = (document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4) + "px";
             document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
+
+            document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
+            document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
         }
         else{
             document.getElementById("Image-Container").style.marginTop = 0;

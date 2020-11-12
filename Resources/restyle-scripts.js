@@ -20,7 +20,7 @@ function divChanger(selected) {
     longForm += '</ul></div>';
 
     shortForm = String(
-        '<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%" id="NavTabs">\
+        '<div style="padding-right: 5vw; padding-left: 5vw; min-width: 100%;" id="NavTabs">\
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="display: flex; align-items: center; justify-content: center;">');
         for (var j = 0; j < tabNames.length; j++) {
             if (j == selected) { shortForm += '<li class="nav-item active" '; }
@@ -96,7 +96,7 @@ function extraImagePicker(str) {
 
 function cardCarouselAdjuster(version) {
     var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", document.getElementsByClassName("icon-generator")[0].href, "./Resources/Project Data/MelodyMagicalDreamCourse.jpg", "./Resources/Project Data/SonicDrillLAST.jpg", "./Resources/Project Data/MurderousMishapEARLY.jpg"];
-    var codeImages = ["./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png", "./Resources/Project Data/TextRain.jpg", "./Resources/Project Data/CarSoccer.jpg"];
+    var codeImages = ["./Resources/Project Data/TextRain.jpg", "./Resources/Project Data/CarSoccer.jpg", "./Resources/Project Data/SoYouThinkAntsCanDance.jpg", "./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png"];
 
     var gameText = [
         ['What is Video Game Development Club?','"VGDC" is a club at the University of Minnesota all about making games!<br><br>Each month we get a new theme and make a prototype game based off our interpretation.\
@@ -127,6 +127,15 @@ function cardCarouselAdjuster(version) {
         It features three different camera styles First Person, Third Person, and a Static Camera style. Everyone might be "innocent" until proven guilty, but your job is to prove who\'s guilty. Gather clues, talk to party-goers, and crack the case to find who the true culprit(s) is...', 'Personal (Prototype/Planning)']];
 
     var codeText = [
+        ['Text Rain<br>(Java, Processing)', 'For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall from like rain, and simulating interactions between the video feed and the text rain.\
+        <br><br>Implementing the video and webcam feeds were not exactly difficult to do, however, making the text react was the real challenge. My solution to this design challenge was to create a faux-physics system for the falling text. All in all it was definitely a unique project.', 'CSCI 4611'],
+
+        ['Car Soccer<br>(C++)', 'Car Soccer was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.\
+        <br><br>The biggest part of the project was making a simple, but consistent enough physics simulation for the ball. Likewise, creating a system for the collisions was integral for the project to even be playable. Balancing these systems to allow a minimalistic, simple arcade game was a really fun class project.', 'CSCI 4611'],
+
+        ['Dancing Ants<br>(C++)', 'So You Think Ants Can Dance? Yes. Well... with the help of motion captured dancers they can. Dancing Ants was a very unique project. The goal of the project was to interpret Motion Captured Data of dancers, and map it onto simple 3D characters.\
+        <br><br>While a bit minimalist, the project was still a great learning experience. It focused mostly on how to properly interpret the data, creating bones and joints for the characters, and properly keeping track of local vs global spaces. The ants may look fairly simple, but they will bust out some moves!', 'CSCI 4611'],
+
         ['Fractal Generator<br>(Java)', 'This project involved implementing several shape classes in Java to draw some fractals based on inputted shapes. There were three possible shapes that the program would accept, Triangles, Rectangles, and Circles.\
         <br><br>The Java program needed to draw a fractal recursively, and each of the drawing methods would draw the shape passed in at the specified location and in the specified color. Once it had finished drawing it would compute the total area of any shapes that form your fractal, and print the results.', 'CSCI 1933'],
         
@@ -149,13 +158,7 @@ function cardCarouselAdjuster(version) {
         This project required multiple formats to be usable, Text Integers, Binary Integers, and 4-Bit Signed Integers.<br><br>After interpretation we needed to create a simple plotting routine for the text terminal. The function displayed an array of numbers on the screen in a graph-like fashion.', 'CSCI 2021'],
 
         ['ELF64 Project<br>(C)', 'This project explored the file format of ELF in order to print out the binary bytes associated with functions in a file. The goal of the project was to construct a program which was able to print out the binary bytes associated with a named function, and run the function.\
-        <br><br>The project required a couple of steps to do this. It had to parse the File Header to identify the positions of the Section Header Array and String Table, then search that to find .symtab , .strtab, and .text. Once we had that we stored some data and ran the function.', 'CSCI 2021'],
-
-        ['Text Rain<br>(Java, Processing)', 'For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall from like rain, and simulating interactions between the video feed and the text rain.\
-        <br><br>Implementing the video and webcam feeds were not exactly difficult to do, however, making the text react was the real challenge. My solution to this design challenge was to create a faux-physics system for the falling text. All in all it was definitely a unique project.', 'CSCI 4611'],
-
-        ['Car Soccer<br>(C++)', 'Car Soccer was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.\
-        <br><br>The biggest part of the project was making a simple, but consistent enough physics simulation for the ball. Likewise, creating a system for the collisions was integral for the project to even be playable. Balancing these systems to allow a minimalistic, simple arcade game was a really fun class project.', 'CSCI 4611']];
+        <br><br>The project required a couple of steps to do this. It had to parse the File Header to identify the positions of the Section Header Array and String Table, then search that to find .symtab , .strtab, and .text. Once we had that we stored some data and ran the function.', 'CSCI 2021']];
 
     var cardText;
     var cardImages
