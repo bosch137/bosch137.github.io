@@ -1,7 +1,10 @@
 function divChanger(selected) {
-    var tabNames = ['eagle-scout', 'boating-director', 'tri-m', 'barista',];
-    var tabWords = ['Eagle Scout', 'Boating Director', 'Tri-M', 'Barista',];
-    var tabImages = ['BSAImage', 'boating', 'TriM-LogoBW', 'starbucks',];
+    // var tabNames = ['eagle-scout', 'boating-director', 'tri-m', 'barista',];
+    // var tabWords = ['Eagle Scout', 'Boating Director', 'Tri-M', 'Barista',];
+    // var tabImages = ['BSAImage', 'boating', 'TriM-LogoBW', 'starbucks',];
+    var tabNames = ['hangar-13', 'eagle-scout', 'boating-director', 'tri-m',];
+    var tabWords = ['Hangar 13', 'Eagle Scout', 'Boating Director', 'Tri-M',];
+    var tabImages = ['H13Logo', 'BSAImage', 'boating', 'TriM-Logo',];
     longForm = String(
         '<div class="col-md-3 nav-tab-helper" id="NavTabs">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">');
@@ -54,9 +57,11 @@ function resizeTime(shortSave, longSave) {
 function sideImagePicker(str) {
     var returnString = '';
 
-    if (str == "#eagle-scout") { var imageChoice = "./Resources/Icons/BSAImage.png"; }
+    if (str == "#hangar-13") { var imageChoice = "./Resources/Icons/H13Logo.png"; }
 
-    else if (str == "#barista") { var imageChoice = "./Resources/Icons/starbucks.png"; }
+    else if (str == "#eagle-scout") { var imageChoice = "./Resources/Icons/BSAImage.png"; }
+
+    // else if (str == "#barista") { var imageChoice = "./Resources/Icons/starbucks.png"; }
 
     else if (str == "#boating-director") { var imageChoice = "./Resources/Icons/boating.png"; }
 
@@ -73,9 +78,11 @@ function sideImagePicker(str) {
 function extraImagePicker(str) {
     var returnString = '';
 
-    if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EagleCourtOfHonor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
+    if (str == "#hangar-13") { var imageChoice = ["./Resources/Hangar13/Mafia.jpg", "./Resources/Hangar13/Confidential.png", "./Resources/Hangar13/TFTBL.jpg"]; }
 
-    else if (str == "#barista") { var imageChoice = ["./Resources/Starbucks/SBPSL.jpg", "./Resources/Starbucks/SBBEANS.jpg", "./Resources/Starbucks/SBGreenApron.jpg", "./Resources/Starbucks/SBCordusio.jpg", "./Resources/Starbucks/SBCoffee.png"]; }
+    else if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EagleCourtOfHonor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
+
+    // else if (str == "#barista") { var imageChoice = ["./Resources/Starbucks/SBPSL.jpg", "./Resources/Starbucks/SBBEANS.jpg", "./Resources/Starbucks/SBGreenApron.jpg", "./Resources/Starbucks/SBCordusio.jpg", "./Resources/Starbucks/SBCoffee.png"]; }
 
     else if (str == "#boating-director") { var imageChoice = ["./Resources/Teko/PirateWeek.jpg", "./Resources/Teko/TekoTotallyROCKS.jpg", "./Resources/Teko/WeLOVETEKO.jpg", "./Resources/Teko/TekoGuards.jpg"]; }
 
@@ -123,17 +130,17 @@ function cardCarouselAdjuster(version) {
         ['"Sonic Drill"<br>(Construct 2)', 'This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the least interesting. It was inspired by "Motherload", and "Factorio"\
         <br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks on such a rudimentary game engine.', 'Personal/Orono HS Final Project (Playable)'],
         
-        ['"Murderous Mishap"<br>(Unity)', 'Inspired by retro horror games and whodunit movies, the project is a 3D Mystery/Puzzle game where you play as an ace detective. Your latest case is a mansion party gone wrong.<br><br>\
+        ['"Murderous Mishap"<br>(Unreal)', 'Inspired by retro horror games and whodunit movies, the project is a 3D Mystery/Puzzle game where you play as an ace detective. Your latest case is a mansion party gone wrong.<br><br>\
         It features three different camera styles First Person, Third Person, and a Static Camera style. Everyone might be "innocent" until proven guilty, but your job is to prove who\'s guilty. Gather clues, talk to party-goers, and crack the case to find who the true culprit(s) is...', 'Personal (Prototype/Planning)']];
 
     var codeText = [
-        ['Text Rain<br>(Java, Processing)', 'For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall from like rain, and simulating interactions between the video feed and the text rain.\
+        ['Text Rain<br>(Java/Processing)', 'For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall from like rain, and simulating interactions between the video feed and the text rain.\
         <br><br>Implementing the video and webcam feeds were not exactly difficult to do, however, making the text react was the real challenge. My solution to this design challenge was to create a faux-physics system for the falling text. All in all it was definitely a unique project.', 'CSCI 4611'],
 
-        ['Car Soccer<br>(C++)', 'Car Soccer was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.\
+        ['Car Soccer<br>(OpenGL/C++)', 'Car Soccer was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.\
         <br><br>The biggest part of the project was making a simple, but consistent enough physics simulation for the ball. Likewise, creating a system for the collisions was integral for the project to even be playable. Balancing these systems to allow a minimalistic, simple arcade game was a really fun class project.', 'CSCI 4611'],
 
-        ['Dancing Ants<br>(C++)', 'So You Think Ants Can Dance? Yes. Well... with the help of motion captured dancers they can. Dancing Ants was a very unique project. The goal of the project was to interpret Motion Captured Data of dancers, and map it onto simple 3D characters.\
+        ['Dancing Ants<br>(OpenGL/C++)', 'So You Think Ants Can Dance? Yes. Well... with the help of motion captured dancers they can. Dancing Ants was a very unique project. The goal of the project was to interpret Motion Captured Data of dancers, and map it onto simple 3D characters.\
         <br><br>While a bit minimalist, the project was still a great learning experience. It focused mostly on how to properly interpret the data, creating bones and joints for the characters, and properly keeping track of local vs global spaces. The ants may look fairly simple, but they will bust out some moves!', 'CSCI 4611'],
 
         ['Fractal Generator<br>(Java)', 'This project involved implementing several shape classes in Java to draw some fractals based on inputted shapes. There were three possible shapes that the program would accept, Triangles, Rectangles, and Circles.\

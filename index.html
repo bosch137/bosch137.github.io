@@ -60,7 +60,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Development and Creative Design Student at the University of Minnesota.
+    <meta name="description" content="Software Engineering and Creative Design Student at the University of Minnesota.
     Passionate about technology, music, games, art, and eager to learn more.">
     <!-- Open Graph data -->
     <meta property="og:title" content="Meet Michael Boschwitz">
@@ -68,7 +68,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
     <meta property="og:site_name" content="michael.boschwitz.me">
     <meta property="og:url" content="https://michael.boschwitz.me/">
     <meta property="og:image" src="https://michael.boschwitz.me/Resources/Portraits/NZLifeguard.jpg">
-    <meta property="og:description" content="Software Development and Creative Design Student at the University of Minnesota.
+    <meta property="og:description" content="Software Engineering and Creative Design Student at the University of Minnesota.
     Passionate about technology, music, games, art, and eager to learn more.">
     <meta name="theme-color" content="#3b496e">
     <title>Meet Michael Boschwitz</title>
@@ -152,9 +152,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <div class="divider" style="margin-bottom: 8px;"></div>
             </li>
             <li><a class="waves-effect" onclick="goToID(intro)">Intro</a></li>
+            <li><a class="waves-effect" onclick="goToID(leadership)">Leadership &amp; Work</a></li>
             <li><a class="waves-effect" onclick="goToID(gameProjects)">Game Projects</a></li>
             <li><a class="waves-effect" onclick="goToID(codeProjects)">Coding Projects</a></li>
-            <li><a class="waves-effect" onclick="goToID(leadership)">Leadership &amp; Work</a></li>
             <!-- <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li> -->
             <li><a class="waves-effect" onclick="goToID(adventures)">Adventure</a></li>
             <li>
@@ -166,6 +166,254 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/michaelboschwitz"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a></li>
             <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
         </ul>
+
+        <!--
+                _                    _               _     _
+                | |                  | |             | |   (_)
+                | |     ___  __ _  __| | ___ _ __ ___| |__  _ _ __
+                | |    / _ \/ _` |/ _` |/ _ \ '__/ __| '_ \| | '_ \
+                | |___|  __/ (_| | (_| |  __/ |  \__ \ | | | | |_) |
+                |______\___|\__,_|\__,_|\___|_|  |___/_| |_|_| .__/
+                                                            | |
+                                                            |_|
+                                    (leadership)-->
+        <div class="anchor" data-offset="50" id="leadership"></div>
+        <h2 class="resizer-title" style="padding-top: 3.125rem; padding-bottom: 3.125rem;">Leadership &amp; Work</h2>
+        
+        <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;">
+        
+            <div class="row">
+                <div class="leadership-span" id="Leadership-Card">
+                    <div class="container-fluid"
+                        style="border-radius: 0.635rem; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
+                        <div id="Leadership-Top">
+                            <script>
+                                var currentForm = divChanger(0);
+                                $(document).on('shown.bs.tab', function (e) {
+                                    var target = $(e.target).attr("href") // activated tab
+                                    if (target == "#hangar-13") {
+                                        currentForm = divChanger(0);
+                                    }
+                                    else if (target == "#eagle-scout") {
+                                        currentForm = divChanger(1);
+                                    }
+                                    else if (target == "#boating-director") {
+                                        currentForm = divChanger(2);
+                                    }
+                                    else if (target == "#tri-m") {
+                                        currentForm = divChanger(3);
+                                    }
+                                    // else if (target == "#barista") {
+                                    //     currentForm = divChanger(3);
+                                    // }
+                                });
+                                document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
+                                document.getElementsByTagName("BODY")[0].onresize = function () { resizeMe() };
+
+                                function resizeMe() {
+                                    document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
+
+                                    var gamesCardsAdjuster = cardCarouselAdjuster('games');
+                                    var codeCardsAdjuster = cardCarouselAdjuster('code');
+                                    document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
+                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
+                                    document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
+                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1];
+
+                                    if (document.getElementById("Leadership-Card").offsetHeight != null) {
+
+                                        if (window.outerWidth > 1380) {
+                                            document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
+                                            document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
+
+                                            document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
+                                            document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
+
+                                            document.getElementById("Image-Container").style.marginTop = document.getElementById("Leadership-Container").offsetHeight - document.getElementById("Image-Container").style.height + "px";
+                                            document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
+                                            document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
+                                            document.getElementById("Leadership-Card").style.width = ((document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4)) + "px";
+                                            document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
+
+                                        }
+                                        else {
+                                            document.getElementById("Image-Container").style.width = 0;
+                                            document.getElementById("Image-Container").style.height = 0;
+
+                                            document.getElementById("Image-Container").style.marginTop = 0;
+                                            document.getElementById("NavTabs").style.marginTop = 0;
+
+                                            document.getElementById("Leadership-Card").style.backgroundColor = "white";
+                                            document.getElementById("myTabContent").style.marginLeft = 0 + "px";
+                                            document.getElementById("Leadership-Card").style.width = 100 + "%";
+                                            document.getElementById("Side-Image").style.height = 0;
+                                            document.getElementById("Extra-Images").style.height = 0;
+                                        }
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <div class="tab-content inner-panel" id="myTabContent" style="padding-top: 0.313rem;">
+                            <div class="tab-pane fade in active tab-helper-fella" id="hangar-13" role="tabpanel"
+                                aria-labelledby="hangar-13-tab">
+                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">2K Games</h6>
+                                <h3 class="card-header text-center card-head-colorer">Hangar 13</h3>
+                                <hr>
+                                </hr>
+                                <p class="card-text">The project I worked on at Hangar 13 has yet to be announced. As such, I cannot disclose much about the game itself.<br></p>
+                                <p class="card-text"> - Used a powerful proprietary toolset and game engine to work on a breathtaking unannounced upcoming AAA game.</p>
+                                <p class="card-text"> - Drafted new abilities while enhancing existing attacks, locomotion, group behaviors, reactions, and combat roles.</p>
+                                <p class="card-text"> - Maintained and thrived with an extremely high level of quality in a fluid and fast paced setting.</p>
+                                <p class="card-text"> - Evolved classic 2D game mechanics and concepts to construct a groundbreaking new style of 3D gameplay.</p>
+                                <p class="card-text"> - Helps to overhaul the design of multiple enemies to create a more unique and consistent player experience.</p>
+                                <hr>
+                                </hr>
+                                <div class="card-footer text-center text-muted">Summer 2021</div>
+                            </div>
+                            <div class="tab-pane fade tab-helper-fella" id="eagle-scout" role="tabpanel"
+                                aria-labelledby="eagle-scout-tab">
+                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Boy Scouts of America</h6>
+                                <h3 class="card-header text-center card-head-colorer">Eagle Scout Award</h3>
+                                <hr>
+                                </hr>
+                                <p class="card-text">For my Eagle Scout Project: <br>
+                                    - I created three paver patios in my Highschool's Nature Center, providing dedicated homes
+                                    for picnic benches by a scenic view.<br>
+                                    - With my extensive preplanning and leadership experience the project was finished over a
+                                    single weekend.<br>
+                                    - Motivated, managed, and provided leadership to a dynamic team of around 30+ people for
+                                    the duration of construction.<br>
+                                </p>
+                                <p class="card-text">As a member of Troop 206: <br>
+                                    - I frequently served as Head Quartermaster, A role which required proper organization and
+                                    management of the troops gear.<br>
+                                    - As an upper level position in my troop, it required learning more effective leadership and
+                                    communication skills.<br>
+                                    - Engaged with a multitude of people in the wonderful community, with people both inside and
+                                    outside of scouting.
+                                </p>
+                                <hr>
+                                </hr>
+                                <div class="card-footer text-center text-muted">Court of Honor: May 2018</div>
+                            </div>
+                            <div class="tab-pane fade tab-helper-fella" id="boating-director" role="tabpanel"
+                                aria-labelledby="boating-director-tab">
+                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Camp Teko</h6>
+                                <h3 class="card-header text-center card-head-colorer">Boating Director</h3>
+                                <hr>
+                                </hr>
+                                <p class="card-text"> - Being prepared to perform emergency rescues at the waterfront, and
+                                    maintaining the safety of both campers and counselors.</p>
+                                <p class="card-text"> - Directing and coordinating boating specialist and lifeguards during
+                                    rotations, while being engaged and welcoming to campers.</p>
+                                <p class="card-text"> - Identifying potential hazards, handling them to maintain the safety of
+                                    the campers during, and between boating rotations.</p>
+                                <p class="card-text"> - Provide leadership and maintain the boating beach, boats, equipment.</p>
+                                <p class="card-text"> - Providing a positive role model for the campers, especially younger
+                                    campers.</p>
+                                <hr>
+                                </hr>
+                                <div class="card-footer text-center text-muted">Summers of 2017, 2018, and 2019</div>
+                            </div>
+                            <div class="tab-pane fade tab-helper-fella" id="tri-m" role="tabpanel" aria-labelledby="tri-m-tab">
+                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Music Honor Society</h6>
+                                <h3 class="card-header text-center card-head-colorer">Tri-M</h3>
+                                <hr>
+                                </hr>
+                                <p class="card-text">I have thousands of stories about band. I'd love to talk about them all,
+                                    but this is the leadership section! <br> Here's the highlights of my roles in regard to Band
+                                    Leadership and Tri-M:</p>
+                                <p class="card-text"> - Participated in and helped foster musical growth in the community.</p>
+                                <p class="card-text"> - Provided support for events aimed at the combination of music and
+                                    community engagement.</p>
+                                <p class="card-text"> - Lead or provided leadership for community events, pops concerts, and
+                                    other events the band hosted.</p>
+                                <p class="card-text"> - Supported and encouraged interest in music and the pursuit of learning
+                                    and growing as a musician.</p>
+                                <hr>
+                                </hr>
+                                <div class="card-footer text-center text-muted">Academic Years of 2017 and 2018</div>
+                            </div>
+                            <!-- <div class="tab-pane fade tab-helper-fella" id="barista" role="tabpanel"
+                                aria-labelledby="barista-tab">
+                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Starbucks</h6>
+                                <h3 class="card-header text-center card-head-colorer">Barista</h3>
+                                <hr>
+                                </hr>
+                                <p class="card-text"> - Greeted each customer with a warm smile and positive attitude, even at
+                                    early hours of the day.</p>
+                                <p class="card-text"> - Maintained café cleanliness at all times, including cleaning tables,
+                                    maintaining condiment bar, and removing trash.</p>
+                                <p class="card-text"> - Prepared and served drinks and food in accordance with health codes and
+                                    café standards.</p>
+                                <p class="card-text"> - Offered courteous and friendly customer service to even the most
+                                    difficult patrons.</p>
+                                <p class="card-text"> - Maintained a strong understanding of company values and customer needs,
+                                    responding quickly in a fast-paced environment.</p>
+                                <p class="card-text"> - Proactively worked side by side with multiple levels of upper management
+                                    to ensure consistent, high quality customer service.</p>
+                                <hr>
+                                </hr>
+                                <div class="card-footer text-center text-muted">September 2017 - October 2018</div>
+                            </div> -->
+                            <script>
+                                $(document).on('shown.bs.tab', function (e) {
+                                    var target = $(e.target).attr("href") // activated tab
+                                    document.getElementById("Side-Image").innerHTML = sideImagePicker(target);
+
+                                    document.getElementById("Extra-Images").innerHTML = extraImagePicker(target);
+
+                                    if (document.getElementById("NavTabs").offsetHeight != null) {
+                                        document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
+                                        document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
+
+                                        if (window.outerWidth > 1380 && document.getElementById("NavTabs").offsetHeight < document.getElementById("myTabContent").offsetHeight) {
+                                            document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
+                                            document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
+                                        }
+                                        else {
+                                            document.getElementById("Image-Container").style.marginTop = 0;
+                                            document.getElementById("NavTabs").style.marginTop = 0;
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <style>
+                            a {
+                                color: green;
+                            }
+        
+                            .nav-pills>li.active>a,
+                            .nav-pills>li.active>a:hover,
+                            .nav-pills>li.active>a:focus {
+                                background-color: green;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col col-hide" id="Side-Image" style="padding-left: 0;">
+                    <div class="container-fluid" id="Image-Container" style="width: 0px; height: 0px;">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="container-fluid col-hide" id="Extra-Images"
+                    style="padding-left: 0.313rem; padding-right: 0.313rem; margin: 0 auto;"></div>
+            </div>  
+        </div>
+        
+        <div class="parallax-container" style="height: 55vh;">
+            <div class="parallax"><img src="./Resources/Icons/raspi.jpg" style="display: block;"></div>
+            <!-- <div style="position: absolute; top:0.635rem;">
+                        <div class="col-md-12">
+                            <div class="resizer-head">
+                                <span class="me_name Projects"><a>itch.io for Projects</a></span>
+                            </div>
+                        </div>
+                    </div> -->
+        </div>
 
         <!--
          .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
@@ -222,195 +470,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         
             </div>
         </div>
-
-        <div class="parallax-container" style="height: 55vh;">
-            <div class="parallax"><img src="./Resources/Icons/raspi.jpg" style="display: block;"></div>
-            <!-- <div style="position: absolute; top:0.635rem;">
-                <div class="col-md-12">
-                    <div class="resizer-head">
-                        <span class="me_name Projects"><a>itch.io for Projects</a></span>
-                    </div>
-                </div>
-            </div> -->
-        </div>
         
-        <!--
-        _                    _               _     _
-       | |                  | |             | |   (_)
-       | |     ___  __ _  __| | ___ _ __ ___| |__  _ _ __
-       | |    / _ \/ _` |/ _` |/ _ \ '__/ __| '_ \| | '_ \
-       | |___|  __/ (_| | (_| |  __/ |  \__ \ | | | | |_) |
-       |______\___|\__,_|\__,_|\___|_|  |___/_| |_|_| .__/
-                                                    | |
-                                                    |_|
-                          (leadership)-->
-        <div class="anchor" data-offset="50" id="leadership"></div>
-                <h2 class="resizer-title" style="padding-top: 3.125rem; padding-bottom: 3.125rem;">Leadership &amp; Work</h2>
-
-        <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;">
-
-            <div class="row">
-                <div class="leadership-span" id="Leadership-Card">
-                    <div class="container-fluid" style="border-radius: 0.635rem; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
-                        <div id="Leadership-Top">
-                        <script>   
-                            var currentForm = divChanger(0);                       
-                            $(document).on('shown.bs.tab', function (e) {
-                                    var target = $(e.target).attr("href") // activated tab
-                                    if (target == "#eagle-scout") {
-                                        currentForm = divChanger(0);
-                                    }
-                                    else if (target == "#boating-director") {
-                                        currentForm = divChanger(1);
-                                    }
-                                    else if (target == "#tri-m") {
-                                        currentForm = divChanger(2);
-                                    }
-                                    else if (target == "#barista") {
-                                        currentForm = divChanger(3);
-                                    }
-                                });
-                            document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);  
-                            document.getElementsByTagName("BODY")[0].onresize = function () { resizeMe() }; 
-                            
-                            function resizeMe() {
-                                document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
-
-                                var gamesCardsAdjuster = cardCarouselAdjuster('games');
-                                var codeCardsAdjuster = cardCarouselAdjuster('code');
-                                document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
-                                document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
-                                document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
-                                document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1];
-
-                                if (document.getElementById("Leadership-Card").offsetHeight != null) {
-
-                                    if(window.outerWidth > 1380){
-                                        document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
-                                        document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
-                                        
-                                        document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
-                                        document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
-
-                                        document.getElementById("Image-Container").style.marginTop = document.getElementById("Leadership-Container").offsetHeight - document.getElementById("Image-Container").style.height + "px";
-                                        document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
-                                        document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
-                                        document.getElementById("Leadership-Card").style.width = ((document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4)) + "px";
-                                        document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
-
-                                    }
-                                    else{
-                                        document.getElementById("Image-Container").style.width = 0;
-                                        document.getElementById("Image-Container").style.height = 0;
-
-                                        document.getElementById("Image-Container").style.marginTop = 0;
-                                        document.getElementById("NavTabs").style.marginTop = 0;
-
-                                        document.getElementById("Leadership-Card").style.backgroundColor = "white";
-                                        document.getElementById("myTabContent").style.marginLeft = 0 + "px";
-                                        document.getElementById("Leadership-Card").style.width = 100 + "%";
-                                        document.getElementById("Side-Image").style.height = 0;
-                                        document.getElementById("Extra-Images").style.height = 0;
-                                    }
-                                }
-                            }
-                        </script>
-                        </div>
-                            <div class="tab-content inner-panel" id="myTabContent" style="padding-top: 0.313rem;">
-                                <div class="tab-pane fade in active tab-helper-fella" id="eagle-scout" role="tabpanel" aria-labelledby="eagle-scout-tab">
-                                    <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Boy Scouts of America</h6>
-                                    <h3 class="card-header text-center card-head-colorer">Eagle Scout Award</h3>
-                                    <hr></hr>
-                                    <p class="card-text">For my Eagle Scout Project: <br> 
-                                        - I created three paver patios in my Highschool's Nature Center, providing dedicated places for picnic benches near a scenic view.<br>
-                                        - With my extensive preplanning and leadership experience the project was finished over a single weekend.<br>
-                                        - I motivated, managed, and provided leadership to a dynamic team of around 30+ people for the duration of construction.<br>
-                                    </p>
-                                    <p class="card-text">As a member of Troop 206: <br> 
-                                        - I frequently served as Head Quartermaster, A role which required proper organization and management of the troops gear.<br>
-                                        - As an upper level position in my troop, it required learning more effective leadership and communication skills.<br>
-                                        - Engaged with a multitude of people in the wonderful community, with people both inside and outside of scouting.
-                                    </p>
-                                    <hr></hr>
-                                    <div class="card-footer text-center text-muted">Court of Honor: May 2018</div>
-                                </div>
-                                <div class="tab-pane fade tab-helper-fella" id="boating-director" role="tabpanel" aria-labelledby="boating-director-tab" >
-                                    <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Camp Teko</h6>
-                                    <h3 class="card-header text-center card-head-colorer">Boating Director</h3>
-                                    <hr></hr>
-                                    <p class="card-text"> - Being prepared to perform emergency rescues at the waterfront, and maintaining the safety of both campers and counselors.</p>
-                                    <p class="card-text"> - Directing and coordinating boating specialist and lifeguards during rotations, while being engaged and welcoming to campers.</p>
-                                    <p class="card-text"> - Identifying potential hazards, handling them to maintain the safety of the campers during, and between boating rotations.</p>
-                                    <p class="card-text"> - Provide leadership and maintain the boating beach, boats, equipment.</p>
-                                    <p class="card-text"> - Providing a positive role model for the campers, especially younger campers.</p>
-                                    <hr></hr>
-                                    <div class="card-footer text-center text-muted">Summers of 2017, 2018, and 2019</div>
-                                </div>
-                                <div class="tab-pane fade tab-helper-fella" id="tri-m" role="tabpanel" aria-labelledby="tri-m-tab">
-                                    <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Music Honor Society</h6>
-                                    <h3 class="card-header text-center card-head-colorer">Tri-M</h3>
-                                    <hr></hr>
-                                    <p class="card-text">I have thousands of stories about band. I'd love to talk about them all, but this is the leadership section! <br> Here's the highlights of my roles in regard to Band Leadership and Tri-M:</p>
-                                    <p class="card-text"> - Participated in and helped foster musical growth in the community.</p>
-                                    <p class="card-text"> - Provided support for events aimed at the combination of music and community engagement.</p>
-                                    <p class="card-text"> - Lead or provided leadership for community events, pops concerts, and other events the band hosted.</p>
-                                    <p class="card-text"> - Supported and encouraged interest in music and the pursuit of learning and growing as a musician.</p>
-                                    <hr></hr>
-                                    <div class="card-footer text-center text-muted">Academic Years of 2017 and 2018</div>
-                                </div>
-                                <div class="tab-pane fade tab-helper-fella" id="barista" role="tabpanel" aria-labelledby="barista-tab">
-                                    <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Starbucks</h6>
-                                    <h3 class="card-header text-center card-head-colorer">Barista</h3>
-                                    <hr></hr>
-                                    <p class="card-text"> - Greeted each customer with a warm smile and positive attitude, even at early hours of the day.</p>
-                                    <p class="card-text"> - Maintained café cleanliness at all times, including cleaning tables, maintaining condiment bar, and removing trash.</p>
-                                    <p class="card-text"> - Prepared and served drinks and food in accordance with health codes and café standards.</p>
-                                    <p class="card-text"> - Offered courteous and friendly customer service to even the most difficult patrons.</p>
-                                    <p class="card-text"> - Maintained a strong understanding of company values and customer needs, responding quickly in a fast-paced environment.</p>
-                                    <p class="card-text"> - Proactively worked side by side with multiple levels of upper management to ensure consistent, high quality customer service.</p>
-                                    <hr></hr>
-                                    <div class="card-footer text-center text-muted">September 2017 - October 2018</div>
-                                </div>
-                                <script>
-                                    $(document).on('shown.bs.tab', function (e) {
-                                        var target = $(e.target).attr("href") // activated tab
-                                        document.getElementById("Side-Image").innerHTML = sideImagePicker(target);
-
-                                        document.getElementById("Extra-Images").innerHTML = extraImagePicker(target);
-
-                                        if (document.getElementById("NavTabs").offsetHeight != null) {
-                                            document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
-                                            document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
-
-                                            if (window.outerWidth > 1380 && document.getElementById("NavTabs").offsetHeight < document.getElementById("myTabContent").offsetHeight) {
-                                                document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
-                                                document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
-                                            }
-                                            else {
-                                                document.getElementById("Image-Container").style.marginTop = 0;
-                                                document.getElementById("NavTabs").style.marginTop = 0;
-                                            }
-                                        }
-                                    });
-                                </script>
-                            </div>
-                                <style>
-                                    a{color:green;}
-                                    .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{background-color:green;}
-                                </style>
-                            </div>
-                        </div>
-                <div class="col col-hide" id="Side-Image" style="padding-left: 0;">
-                    <div class="container-fluid" id="Image-Container" style="width: 0px; height: 0px;">          
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="container-fluid col-hide" id="Extra-Images" style="padding-left: 0.313rem; padding-right: 0.313rem; margin: 0 auto;"></div>
-        </div>
-
-    </div>
 
 <!-- (some photos are on an old camera, some a more modern, and others on a professional camera)
      ___       _______  ____    ____  _______ .__   __. .___________. __    __  .______       _______     _______.
@@ -549,12 +609,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
     </script>
     
     <script>
-        document.getElementById("Side-Image").innerHTML = sideImagePicker("#eagle-scout");
+        document.getElementById("Side-Image").innerHTML = sideImagePicker("#hangar-13");
         document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
         document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px"; 
 
         document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
-        document.getElementById("Extra-Images").innerHTML = extraImagePicker("#eagle-scout");
+        document.getElementById("Extra-Images").innerHTML = extraImagePicker("#hangar-13");
         
         if(window.outerWidth > 1380){
             document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
