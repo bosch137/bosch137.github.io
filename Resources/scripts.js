@@ -52,86 +52,86 @@ $(window).on("load", function() {
         stopNum: 0,
         backDelay: undefined
       },
-      // {
-      //   string: "And I love Programming.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I love Creative Problem Solving.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I love being on Lake Minnetonka, MN.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I'm passionate about Learning.",
-      //   stopNum: 24,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I'm passionate about Technology.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I love doodling.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I like Radiohead.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I like making and playing Games.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I enjoy playing Guitar.",
-      //   stopNum: 19,
-      //   backDelay: 50
-      // },
-      // {
-      //   string: "And I enjoy playing Piano.",
-      //   stopNum: 19,
-      //   backDelay: 50
-      // },
-      // {
-      //   string: "And I enjoy playing Drumset.",
-      //   stopNum: 19,
-      //   backDelay: 50
-      // },
-      // {
-      //   string: "And I enjoy playing...",
-      //   stopNum: 5,
-      //   backDelay: 50
-      // },
-      // {
-      //   string: "And I LOVE all things Music.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I love a Challenge.",
-      //   stopNum: 5,
-      //   backDelay: undefined
-      // },
-      // {
-      //   string: "And I never make a mestake.",
-      //   stopNum: 20,
-      //   backDelay: 50
-      // },
-      // {
-      //   string: "And I never make a mistake.",
-      //   stopNum: 0,
-      //   backDelay: undefined
-      // },
+      {
+        string: "And I love Programming.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I love Creative Problem Solving.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I love being on Lake Minnetonka, MN.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I'm passionate about Learning.",
+        stopNum: 24,
+        backDelay: undefined
+      },
+      {
+        string: "And I'm passionate about Technology.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I love doodling.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I like Radiohead.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I like making and playing Games.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I enjoy playing Guitar.",
+        stopNum: 19,
+        backDelay: 50
+      },
+      {
+        string: "And I enjoy playing Piano.",
+        stopNum: 19,
+        backDelay: 50
+      },
+      {
+        string: "And I enjoy playing Drumset.",
+        stopNum: 19,
+        backDelay: 50
+      },
+      {
+        string: "And I enjoy playing...",
+        stopNum: 5,
+        backDelay: 50
+      },
+      {
+        string: "And I LOVE all things Music.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I love a Challenge.",
+        stopNum: 5,
+        backDelay: undefined
+      },
+      {
+        string: "And I never make a mestake.",
+        stopNum: 20,
+        backDelay: 50
+      },
+      {
+        string: "And I never make a mistake.",
+        stopNum: 0,
+        backDelay: undefined
+      },
       {
         string:
           "And I am a Student at the University of Minnesota, studying Software Engineering and Creative Design<br>with a Minor in Asian and Middle Eastern Studies.",
