@@ -134,7 +134,7 @@ $(window).on("load", function() {
       },
       {
         string:
-          "And I am a Student at the University of Minnesota, studying Software Engineering and Creative Design<br>with a Minor in Asian and Middle Eastern Studies.",
+          "And I am a Student at the University of Minnesota, studying Software Engineering and Creative Design<br>with a Minor in Japanese Studies.",
         stopNum: 5,
         backDelay: undefined,
       }
