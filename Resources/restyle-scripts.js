@@ -2,9 +2,9 @@ function divChanger(selected) {
     // var tabNames = ['eagle-scout', 'boating-director', 'tri-m', 'barista',];
     // var tabWords = ['Eagle Scout', 'Boating Director', 'Tri-M', 'Barista',];
     // var tabImages = ['BSAImage', 'boating', 'TriM-LogoBW', 'starbucks',];
-    var tabNames = ['hangar-13', 'eagle-scout', 'boating-director', 'tri-m',];
-    var tabWords = ['Hangar 13', 'Eagle Scout', 'Boating Director', 'Tri-M',];
-    var tabImages = ['H13Logo', 'BSAImage', 'boating', 'TriM-Logo',];
+    var tabNames = ['hangar-13', 'rubyshark', 'eagle-scout', 'boating-director', 'tri-m',];
+    var tabWords = ['Hangar 13', 'Rubyshark Games', 'Eagle Scout', 'Boating Director', 'Tri-M',];
+    var tabImages = ['H13Logo', 'RSLogo','BSAImage', 'boating', 'TriM-Logo',];
     longForm = String(
         '<div class="col-md-3 nav-tab-helper" id="NavTabs">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">');
@@ -59,6 +59,8 @@ function sideImagePicker(str) {
 
     if (str == "#hangar-13") { var imageChoice = "./Resources/Icons/H13Logo.png"; }
 
+    else if (str == "#rubyshark") { var imageChoice = "./Resources/Icons/RSLogo.png"; }
+
     else if (str == "#eagle-scout") { var imageChoice = "./Resources/Icons/BSAImage.png"; }
 
     // else if (str == "#barista") { var imageChoice = "./Resources/Icons/starbucks.png"; }
@@ -79,6 +81,8 @@ function extraImagePicker(str) {
     var returnString = '';
 
     if (str == "#hangar-13") { var imageChoice = ["./Resources/Hangar13/Mafia.jpg", "./Resources/Hangar13/Confidential.png", "./Resources/Hangar13/TFTBL.jpg"]; }
+
+    else if (str == "#rubyshark") { var imageChoice = ["./Resources/Rubyshark/OrvilleShooting.jpg", "./Resources/Rubyshark/CheckaLook.jpg", "./Resources/Rubyshark/LevelConcept.png"]; }
 
     else if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EagleCourtOfHonor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
 
@@ -102,39 +106,57 @@ function extraImagePicker(str) {
 }
 
 function cardCarouselAdjuster(version) {
-    var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/DanielRadcliffe.jpg", "./Resources/Project Data/SpaceBar.jpg", "./Resources/Project Data/PotionMan.jpg", document.getElementsByClassName("icon-generator")[0].href, "./Resources/Project Data/MelodyMagicalDreamCourse.jpg", "./Resources/Project Data/SonicDrillLAST.jpg", "./Resources/Project Data/MurderousMishapEARLY.jpg"];
-    var codeImages = ["./Resources/Project Data/VRInteractions.jpg", "./Resources/Project Data/ClothSim.jpg", "./Resources/Project Data/Seafaring.jpg", "./Resources/Project Data/SoYouThinkAntsCanDance.jpg", "./Resources/Project Data/CarSoccer.jpg", "./Resources/Project Data/TextRain.jpg", "./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png"];
+    var gameImages = ["./Resources/Project Data/vgdc.jpg", "./Resources/Project Data/Remnants.png", "./Resources/Project Data/DystopianDefiers.png", "./Resources/Project Data/DanielRadcliffe.jpg", document.getElementsByClassName("icon-generator")[0].href, "./Resources/Project Data/ShmoovementProto.jpg", "./Resources/Project Data/MelodyMagicalDreamCourse.jpg", "./Resources/Project Data/SonicDrillLAST.jpg"];
+    var codeImages = ["./Resources/Project Data/ImpossibleInc.jpg", "./Resources/Project Data/PlatformingUnderPressure.jpg", "./Resources/Project Data/ShopkeepSim.jpg", "./Resources/Project Data/VRInteractions.jpg", "./Resources/Project Data/ClothSim.jpg", "./Resources/Project Data/Seafaring.jpg", "./Resources/Project Data/SoYouThinkAntsCanDance.jpg", "./Resources/Project Data/CarSoccer.jpg", "./Resources/Project Data/TextRain.jpg", "./Resources/Project Data/Fractals.jpg", "./Resources/Project Data/BusSim.jpg", "./Resources/Project Data/BattleBoats.png", "./Resources/Project Data/JavaDataStructure.png", "./Resources/Project Data/diagonalMatrixProject.jpg", "./Resources/Project Data/clocksProject.jpg", "./Resources/Project Data/GraphInterpretProject.jpg", "./Resources/Project Data/ELFProject.png"];
 
     var gameText = [
-        ['What is Video Game Development Club?','"VGDC" is a club at the University of Minnesota all about making games!<br><br>Each month we get a new theme and make a prototype game based off our interpretation.\
-        <br><br>My role for most projects was as "lead". In short I lead the group, and worked on everything. <br><br>Art, Music, Programming, Managing Pushes, etc. I was either working on it or helping the people who were.','https://vgdc.umn.edu/'],
+        ['What is Video Game Development Club?','"VGDC" is a club at the University of Minnesota all about making games!<br><br>Each semester we get 3 new themes and have to try to make release a game based off our interpretation.\
+        <br><br>For most projects was the Lead. I lead the group, worked on anything, and supported everyone.<br><br>Art, Music, Programming, Managing Pushes, etc. I was either working on it or helping the people who were.', '<u><a href=https://vgdc.umn.edu/games/ target="_blank">VGDC Website</a></u>'],
+
+        ['Remnants (Unity)', 'Probably one of the most complete VGDC projects to date. The themes for this game were \"Unconventional Weapons, Copy, and Can\'t Stop/No Stopping\". Inspired by everything from Mega man to Bloodborne, this was a challenging project!\
+        <br><br>While I could explain all the mechanics like the Rally system, boss items, and the Remnant mechanic, why not give the game a shot and discover it all yourself!', '<a class="btn btn-lg btn-success btn-block" style="font-size:1.5em; text-align: center; padding-top: 0.313rem; font-weight: bold;" href="https://boschybee.itch.io/remnants" role="button" target="_blank">Play Remnants</a><br>Video Game Development Club (Released)'],
+
+        ['Dystopian Defiers<br> (Unity)', 'One of the more recent 3D VGDC projects, this is an incredibly unique 3D Bullet Hell with a special twist on money and health mechanics. Your Life is Currency, so how you spend on upgrades matters.\
+        <br><br> I ended up in a fairly managerial role, but still created systems related to difficulty scaling, and the player/time progression.', '<a class="btn btn-lg btn-success btn-block" style="font-size:1.5em; margin-top: 20px; padding-top: 0.313rem; font-weight: bold;" href="https://boschybee.itch.io/dystopian-defiers" role="button" target="_blank">Play Dystopian Defiers</a><br>Video Game Development Club (Released)'],
         
         ['Untitled Rhythm<br>Shooter (Unity)', 'This was inspired by Guns Akimbo, which was an upcoming movie at the time. Some people in my group really like rhythm games, so we came up with the idea of making a pseudo-rhythm game. \
-        <br><br>The twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype, and I feel this one shows some of my potential!', 'Video Game Development Club (Playable)'],
+        <br><br>The twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype, but since it was made in a month it is a bit to janky to release.', 'Video Game Development Club (Playable)'],
         
-        ['"SpaceBar"<br>(Unity)', 'If I\'m being honest this game started as a joke. My group was joking around and the idea for a "Freddy Fish"/point and click game came up.\
-        Weirdly enough we all loved this idea, and this game was the result. <br><br>What really made the project interesting was learning ways to handle a TON of interactions. Creating those systems was what made this project such a fun and rewarding learning experience.', 'Video Game Development Club (Prototype)'],
+        // ['"SpaceBar"<br>(Unity)', 'If I\'m being honest this game started as a joke. My group was joking around and the idea for a "Freddy Fish"/point and click game came up.\
+        // Weirdly enough we all loved this idea, and this game was the result. <br><br>What really made the project interesting was learning ways to handle a TON of interactions. Creating those systems was what made this project such a fun and rewarding learning experience.', 'Video Game Development Club (Prototype)'],
         
-        ['"Potion Man"<br>(Unity)', 'The concept was a game about making potions to help based on symptoms. However, this game was severely hindered by a lack of leadership.\
-        By the end of the project the only people left were myself and one artist. <br><br>In the remaining week we only finished dialogue, interaction, and event systems for a prototype. After this I started to use my fluid skills to lead and engage with each part of projects better.', 'Video Game Development Club (Prototype)'],
+        // ['"Potion Man"<br>(Unity)', 'The concept was a game about making potions to help based on symptoms. However, this game was severely hindered by a lack of leadership.\
+        // By the end of the project the only people left were myself and one artist. <br><br>In the remaining week we only finished dialogue, interaction, and event systems for a prototype. After this I started to use my fluid skills to lead and engage with each part of projects better.', 'Video Game Development Club (Prototype)'],
         
         // ['"Super Sidekick"<br>(Unity)', 'It might not seem like it, but this project was really interesting. It let the artists go wild, and I got to work/learn about making a robust dialogue system with multiple choices.\
         // Although the premise of a Dating Sim/Visual Novel about a Sidekick helping Super-heroes solve personal issues was novel, but it was a good way to learn some useful fundamentals that can apply to future projects', 'Video Game Development Club'],
         
-        ['Do you have any Personal Projects?', 'I love working on my own projects too! I work on these alone, and unlike VGDC these games don\'t have to be a playable prototype or proof of concept within a month.\
-        <br><br>I\'m a student first and foremost, but I\'m also a writer, musician, artist, and more. I get busy!<br><br>The games here are either at a high level of playability or are have enough pre-production work and planning that I want to share them!', 'Current Project: Melody\'s Collision Course'],
+        ['Do you have any Personal Projects?', 'I love working on my own projects too! I work on these alone, and unlike VGDC these games don\'t have to be a playable by the end of the semester.\
+        <br><br>I\'m a student first and foremost, but I\'m also a writer, musician, artist, and more. I get busy!<br><br>The games here are either at a high level of playability or are have enough pre-production work and planning that I want to share them!', 'Current Project: Shmoovement Shooter'],
     
-        ['"Melody\'s Collision Course" (Unity)', 'My goal was to create a 3D game inspired by Kirby\'s Dream Course. This project was a great deep dive into complex physic simulation and gaining more 3D experience.<br><br>\
+        ['Shmoovement Shooter<br> (Unity)', 'After playing the Titanfall 2 gauntlet a few too many times, I started work on a multiplayer "Shmoovement" game.<br><br>\
+         I wanted to have a mechanically deep and robust physics-based movement system with great game-feel, so the physics calculations were modeled after the Source Engine\'s Physics. Mechanics such as wallrunning, b-hopping, sliding, and so on were added to increase the depth further. Plus some other <i>secret</i> mechanics.', 'Personal (Prototype)'],
+
+        ['Melody\'s Collision Course (Unity)', 'My goal was to create a 3D game inspired by Kirby\'s Dream Course. This project was a great deep dive into complex physic simulation and gaining more 3D experience.<br><br>\
         On the surface this game is just a golf game, however there is actually incredibly unique dynamic of this gameplay. Levels DO NOT have static hole locations, instead the last enemy turns into the hole. This creates a super unique strategy element to get the fewest strokes.', 'Personal (Playable)'],
 
-        ['"Sonic Drill"<br>(Construct 2)', 'This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the least interesting. It was inspired by "Motherload", and "Factorio"\
-        <br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks on such a rudimentary game engine.', 'Personal/Orono HS Final Project (Playable)'],
+        ['Sonic Drill<br>(Construct 2)', 'This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the least interesting. It was inspired by "Motherload", and "Factorio"\
+        <br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks on such a rudimentary game engine.', 'Personal/Orono HS Final Project (Playable)']];
         
-        ['"Murderous Mishap"<br>(Unreal)', 'Inspired by retro horror games and whodunit movies, the project is a 3D Mystery/Puzzle game where you play as an ace detective. Your latest case is a mansion party gone wrong.<br><br>\
-        It features three different camera styles First Person, Third Person, and a Static Camera style. Everyone might be "innocent" until proven guilty, but your job is to prove who\'s guilty. Gather clues, talk to party-goers, and crack the case to find who the true culprit(s) is...', 'Personal (Prototype/Planning)']];
+        // ['"Murderous Mishap"<br>(Unreal)', 'Inspired by retro horror games and whodunit movies, the project is a 3D Mystery/Puzzle game where you play as an ace detective. Your latest case is a mansion party gone wrong.<br><br>\
+        // It features three different camera styles First Person, Third Person, and a Static Camera style. Everyone might be "innocent" until proven guilty, but your job is to prove who\'s guilty. Gather clues, talk to party-goers, and crack the case to find who the true culprit(s) is...', 'Personal (Prototype/Planning)']
 
     var codeText = [
-        ['VR Interactions<br>(Unity/Android)', 'Although this project looks pretty game like on the surface, the majority of the project revolved around proper implementation of a multitude of interaction techniques. From basic controller and pointer-based grabbing techniques, to more unique and uncommon methods.\
+        ['"Impossible Inc."<br>(UnityVR/Android)', 'Our goal was to create a demo where each level becomes more and more overt that rooms are physically impossible sizes. Using Stencil buffering, we made a demo from scratch that is seamless to explore.\
+        <br><br>However, one of the main issues is that a 6mx6m play area is required. That being said, we were fortunate enough to have that amount of space, and I even showed it to some of my friends. When not primed, most did not even realize!', '<a class="btn btn-lg btn-success btn-block" style="font-size:1.5em; margin-top: 22px; margin-bottom: 20px; padding-top: 0.313rem; font-weight: bold;" href="https://drive.google.com/file/d/1IFCxx1gKcMkrqRqrD5Q7BpPmvSToRTD-/preview" role="button" target="_blank">Watch the Demo</a>CSCI 5619'],
+
+        ['"Platforming<br>Under Pressure"<br>(Unity/WebGL)', 'Platforming Under Pressure is an auto-platformer, where you help design the level. The character that moves automatically, but you have to get help cross the gap! \
+        <br><br>We used an SPH fluid simulation to power the core of the gameplay. There are four levels inspired by the seasons, each with their own unique challenges. Help the lil fella cross the gap using the power of water pressure, and physics!', '<a class="btn btn-lg btn-success btn-block" style="font-size:1.5em; margin-bottom: 20px; padding-top: 0.313rem; font-weight: bold;" href="https://theshoes.itch.io/platforming-under-pressure" role="button" target="_blank">Platform Under Pressure</a>CSCI 5611'],
+
+        ['IK Solver<br>(C#/Octane)', 'Our goal was to make a simulation using an IK (inverse kinematic) motion solver. We implemented this project as a robot shopkeep simulator,  by using IK, euler angles, quaternions, and a few models, we created our demonstration.\
+        <br><br>To make our character more lifelike, we used a recursive method to loop through all the bones in the skeleton, then moved the bones bit by bit to the desired location. Finally, we added some reactions based on if the object could be reached or not.', 'CSCI 5611'],
+
+        ['VR Interactions<br>(UnityVR/Android)', 'Although this project looks pretty game like on the surface, the majority of the project revolved around proper implementation of a multitude of interaction techniques. From basic controller and pointer-based grabbing techniques, to more unique and uncommon methods.\
         <br><br>These were implementations such as Go-Go grasping, Spindle, and Fishing Reel. These techniques helped create a better common understanding how creative you can get with numerous interaction techniques, as well as how they impact your control and influence in a virtual world.', 'CSCI 5619'],
 
         ['Cloth Simulation<br>(Processing/Java)', 'To create the cloth simulation, we first generated a mesh composed of multiple ropes. Each rope had subsequent nodes attached to it. Then ropes were connected horizontally via their nodes to form the mesh. Soon after we added a collision system for interactiblity.\
