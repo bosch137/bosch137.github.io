@@ -184,7 +184,7 @@ function cardCarouselAdjuster(version) {
         <br><br>For the board, The program simulated a rectangular X×Y board using a 2-dimensional array. Boats were represented by a line of X\'s on the board (Array), For turns, the user inputs a location (x, y) to attack and if they want to use an item. Lastly for the debug it would display both boards so we could properly debug and test the game.', 'CSCI 1933'],
         
         ['Data Structure<br>Projects (Java, C)', 'I\'ve done several projects that relate to Data Structures, so for this card I will just list a few.<br><br>-HashMap (Java)<br><br>-ArrayLists (Java)<br><br>-Linked Lists (Java, C)<br><br>-Binary Trees(Java, C)\
-        <br><br>These projects all either involved making and/or using these data structures for problems such as sorting, benchmarking, aggregating data, converting, etc.', 'CSCI 1933, CSCI 2021'],
+        <br><br>These projects all either involved making and/or using data structures for problems such as sorting, benchmarking, aggregating data, converting, etc.', 'CSCI 1933, CSCI 2021'],
 
         ['Optimization & Benchmarking (C)', 'The first half of this project revolved around optimizing memory access of a matrix. We were provided with algorithms to search through an matrix and calculate the diagonal sums, and the task was optimizing the algorithm to improve performance as much as possible. \
         <br><br>The other half of the project centered on timing several other algorithms and measuring their performance. We measured the performance of 4 search functions which determined whether an integer query was present in an associated data structure.', 'CSCI 2021'],
