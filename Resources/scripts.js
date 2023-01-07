@@ -76,7 +76,7 @@ $(window).on("load", function() {
         backDelay: undefined
       },
       {
-        string: "And I love Creative Problem Solving.",
+        string: "And I like making and playing Games.",
         stopNum: 5,
         backDelay: undefined
       },
@@ -86,27 +86,12 @@ $(window).on("load", function() {
         backDelay: undefined
       },
       {
-        string: "And I'm passionate about Learning.",
-        stopNum: 24,
-        backDelay: undefined
-      },
-      {
-        string: "And I'm passionate about Technology.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
         string: "And I love doodling.",
         stopNum: 5,
         backDelay: undefined
       },
       {
-        string: "And I like Radiohead.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I like making and playing Games.",
+        string: "And I like playing Volleyball.",
         stopNum: 5,
         backDelay: undefined
       },
