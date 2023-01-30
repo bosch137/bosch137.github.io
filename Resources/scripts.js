@@ -29,7 +29,7 @@ Materialize.scrollFire([
       $('.typed-footer').typed({
         //And I love
         strings: [
-          '•&nbsp;<a target="_blank" href="./Resources/Michael-Boschwitz-Resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://github.com/bosch137">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/michaelboschwitz">LinkedIn</a><br>...and thats about it!^1000'
+          '•&nbsp;<a target="_blank" href="./Resources/Michael-Boschwitz-Resume.pdf">Resume</a><br>•&nbsp;<a onclick="showEmail();">Email</a><br>•&nbsp;<a target="_blank" href="https://boschybee.itch.io">Itch.io</a><br>•&nbsp;<a target="_blank" href="https://github.com/bosch137">GitHub</a><br>•&nbsp;<a target="_blank" href="https://linkedin.com/in/michaelboschwitz">LinkedIn</a><br>...and thats about it!^1000'
         ],
         loop: false,
         contentType: "html",

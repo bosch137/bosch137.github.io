@@ -164,6 +164,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             </li>
             <li><a class="subheader" style="margin-bottom: 8px;">Resources</a></li>
             <li><a class="waves-effect" target="_blank" href="./Resources/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
+            <li><a class="waves-effect" target="_blank" href="https://boschybee.itch.io"><i class="fab fa-itch-io fa-2x"></i>Itch.io</a></li>
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
             <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/michaelboschwitz"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a></li>
             <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
@@ -622,6 +623,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
         $('a[href*="github.com/bosch137"]').click(function(e) {
             if (window.ga && ga.create)
                 ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
+        });
+               
+        $('a[href*="https://boschybee.itch.io"]').click(function(e) {
+            if (window.ga && ga.create)
+                ga('send', 'pageview', 'assets/itch-io' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('itch.io') + 10));
         });
 
         $('a[href*="linkedin.com/in/michaelboschwitz"]').click(function(e) {
