@@ -5,9 +5,11 @@
 // If you would like to use this map without any attribution, you can acquire a commercial license for the JavaScript Maps - a tool that was used to produce this map.
 // To do so, visit amCharts Online Store: https://www.amcharts.com/online-store/
 
+// In order to change parts of the map just find the country and change color to "rgba(255,255,140,0.5)" 
+
 AmCharts.makeChart("map",{
 	"type": "map",
-	"pathToImages": "http://www.amcharts.com/lib/3/images/",
+	"pathToImages": "./Resources/Adventures/",
 	"addClassNames": true,
 	"fontSize": 15,
 
@@ -16,6 +18,11 @@ AmCharts.makeChart("map",{
 	"object-Position": '50% 50%',
 	"width": 1920,
 	"height": 800,
+	"panEventsEnabled": false,
+	"dragMap": false,
+	"hideBalloonTime": 0,
+	"forceNormalize": true,
+	"zoomOnDoubleClick": false,
 
 	"color": "#FFFFFF",
 	"projection": "miller",
@@ -33,7 +40,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 81.9403,
@@ -46,7 +53,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 81.9403,
@@ -59,7 +66,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 81.9403,
@@ -72,7 +79,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 81.9403,
@@ -85,7 +92,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 81.9403,
@@ -98,7 +105,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -66.8825,
 				"latitude": 81.9403,
@@ -111,7 +118,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -57.9742,
 				"latitude": 81.9403,
@@ -124,7 +131,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -53.52,
 				"latitude": 81.9403,
@@ -137,7 +144,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 81.9403,
@@ -150,7 +157,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 81.9403,
@@ -163,7 +170,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 81.9403,
@@ -176,7 +183,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 81.9403,
@@ -189,7 +196,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 81.9403,
@@ -202,7 +209,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 81.9403,
@@ -215,7 +222,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -22.3408,
 				"latitude": 81.9403,
@@ -228,7 +235,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 80.0377,
@@ -241,7 +248,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 80.0377,
@@ -254,7 +261,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 80.0377,
@@ -267,7 +274,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 80.0377,
@@ -280,7 +287,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 80.0377,
@@ -293,7 +300,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 80.0377,
@@ -306,7 +313,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -66.8825,
 				"latitude": 80.0377,
@@ -319,7 +326,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -62.4283,
 				"latitude": 80.0377,
@@ -332,7 +339,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -57.9742,
 				"latitude": 80.0377,
@@ -345,7 +352,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -53.52,
 				"latitude": 80.0377,
@@ -358,7 +365,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 80.0377,
@@ -371,7 +378,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 80.0377,
@@ -384,7 +391,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 80.0377,
@@ -397,7 +404,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 80.0377,
@@ -410,7 +417,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 80.0377,
@@ -423,7 +430,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 80.0377,
@@ -436,7 +443,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -22.3408,
 				"latitude": 80.0377,
@@ -449,7 +456,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -17.8866,
 				"latitude": 80.0377,
@@ -462,7 +469,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Svalbard and Jan Mayen",
 				"longitude": 13.2927,
 				"latitude": 80.0377,
@@ -475,7 +482,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Svalbard and Jan Mayen",
 				"longitude": 22.201,
 				"latitude": 80.0377,
@@ -488,7 +495,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Svalbard and Jan Mayen",
 				"longitude": 26.6552,
 				"latitude": 80.0377,
@@ -501,7 +508,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 80.0377,
@@ -514,7 +521,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 80.0377,
@@ -527,7 +534,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 78.0254,
@@ -540,7 +547,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 78.0254,
@@ -553,7 +560,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 78.0254,
@@ -566,7 +573,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 78.0254,
@@ -579,7 +586,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -71.3367,
 				"latitude": 78.0254,
@@ -592,7 +599,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -66.8825,
 				"latitude": 78.0254,
@@ -605,7 +612,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -62.4283,
 				"latitude": 78.0254,
@@ -618,7 +625,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -57.9742,
 				"latitude": 78.0254,
@@ -631,7 +638,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -53.52,
 				"latitude": 78.0254,
@@ -644,7 +651,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 78.0254,
@@ -657,7 +664,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 78.0254,
@@ -670,7 +677,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 78.0254,
@@ -683,7 +690,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 78.0254,
@@ -696,7 +703,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 78.0254,
@@ -709,7 +716,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 78.0254,
@@ -722,7 +729,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -22.3408,
 				"latitude": 78.0254,
@@ -735,7 +742,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Svalbard and Jan Mayen",
 				"longitude": 13.2927,
 				"latitude": 78.0254,
@@ -748,7 +755,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Svalbard and Jan Mayen",
 				"longitude": 17.7468,
 				"latitude": 78.0254,
@@ -761,7 +768,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Svalbard and Jan Mayen",
 				"longitude": 22.201,
 				"latitude": 78.0254,
@@ -774,7 +781,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 75.8986,
@@ -787,7 +794,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 75.8986,
@@ -800,7 +807,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 75.8986,
@@ -813,7 +820,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 75.8986,
@@ -826,7 +833,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -57.9742,
 				"latitude": 75.8986,
@@ -839,7 +846,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -53.52,
 				"latitude": 75.8986,
@@ -852,7 +859,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 75.8986,
@@ -865,7 +872,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 75.8986,
@@ -878,7 +885,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 75.8986,
@@ -891,7 +898,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 75.8986,
@@ -904,7 +911,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 75.8986,
@@ -917,7 +924,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 75.8986,
@@ -930,7 +937,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -22.3408,
 				"latitude": 75.8986,
@@ -943,7 +950,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 75.8986,
@@ -956,7 +963,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 75.8986,
@@ -969,7 +976,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 75.8986,
@@ -982,7 +989,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 75.8986,
@@ -995,7 +1002,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 75.8986,
@@ -1008,7 +1015,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 75.8986,
@@ -1021,7 +1028,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 75.8986,
@@ -1034,7 +1041,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 75.8986,
@@ -1047,7 +1054,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 73.6529,
@@ -1060,7 +1067,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 73.6529,
@@ -1073,7 +1080,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 73.6529,
@@ -1086,7 +1093,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 73.6529,
@@ -1099,7 +1106,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 73.6529,
@@ -1112,7 +1119,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -53.52,
 				"latitude": 73.6529,
@@ -1125,7 +1132,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 73.6529,
@@ -1138,7 +1145,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 73.6529,
@@ -1151,7 +1158,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 73.6529,
@@ -1164,7 +1171,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 73.6529,
@@ -1177,7 +1184,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 73.6529,
@@ -1190,7 +1197,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 73.6529,
@@ -1203,7 +1210,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -22.3408,
 				"latitude": 73.6529,
@@ -1216,7 +1223,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 73.6529,
@@ -1229,7 +1236,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 73.6529,
@@ -1242,7 +1249,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 73.6529,
@@ -1255,7 +1262,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 73.6529,
@@ -1268,7 +1275,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 73.6529,
@@ -1281,7 +1288,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 73.6529,
@@ -1294,7 +1301,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 73.6529,
@@ -1307,7 +1314,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 73.6529,
@@ -1320,7 +1327,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 73.6529,
@@ -1333,7 +1340,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 73.6529,
@@ -1346,7 +1353,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 71.284,
@@ -1359,7 +1366,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 71.284,
@@ -1372,7 +1379,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 71.284,
@@ -1385,7 +1392,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 71.284,
@@ -1398,7 +1405,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 71.284,
@@ -1411,7 +1418,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 71.284,
@@ -1424,7 +1431,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 71.284,
@@ -1437,7 +1444,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 71.284,
@@ -1450,7 +1457,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 71.284,
@@ -1463,7 +1470,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 71.284,
@@ -1476,7 +1483,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 71.284,
@@ -1489,7 +1496,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 71.284,
@@ -1502,7 +1509,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 71.284,
@@ -1515,7 +1522,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 71.284,
@@ -1528,7 +1535,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 71.284,
@@ -1541,7 +1548,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -22.3408,
 				"latitude": 71.284,
@@ -1554,7 +1561,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 71.284,
@@ -1567,7 +1574,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 71.284,
@@ -1580,7 +1587,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 71.284,
@@ -1593,7 +1600,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 71.284,
@@ -1606,7 +1613,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 71.284,
@@ -1619,7 +1626,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 71.284,
@@ -1632,7 +1639,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 71.284,
@@ -1645,7 +1652,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 71.284,
@@ -1658,7 +1665,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 71.284,
@@ -1671,7 +1678,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 71.284,
@@ -1684,7 +1691,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 71.284,
@@ -1697,7 +1704,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 71.284,
@@ -1710,7 +1717,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 71.284,
@@ -1723,7 +1730,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 71.284,
@@ -1736,7 +1743,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 71.284,
@@ -1749,7 +1756,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 71.284,
@@ -1762,7 +1769,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 71.284,
@@ -1775,7 +1782,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 71.284,
@@ -1788,7 +1795,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 146.918,
 				"latitude": 71.284,
@@ -1801,7 +1808,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 151.3722,
 				"latitude": 71.284,
@@ -1814,7 +1821,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 182.5514,
 				"latitude": 71.284,
@@ -1827,7 +1834,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -164.8744,
 				"latitude": 68.7879,
@@ -1840,7 +1847,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -160.4202,
 				"latitude": 68.7879,
@@ -1853,7 +1860,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 68.7879,
@@ -1866,7 +1873,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -151.5119,
 				"latitude": 68.7879,
@@ -1879,7 +1886,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -147.0577,
 				"latitude": 68.7879,
@@ -1892,7 +1899,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -142.6035,
 				"latitude": 68.7879,
@@ -1905,7 +1912,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -138.1494,
 				"latitude": 68.7879,
@@ -1918,7 +1925,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -133.6952,
 				"latitude": 68.7879,
@@ -1931,7 +1938,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -129.241,
 				"latitude": 68.7879,
@@ -1944,7 +1951,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 68.7879,
@@ -1957,7 +1964,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 68.7879,
@@ -1970,7 +1977,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 68.7879,
@@ -1983,7 +1990,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 68.7879,
@@ -1996,7 +2003,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 68.7879,
@@ -2009,7 +2016,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 68.7879,
@@ -2022,7 +2029,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 68.7879,
@@ -2035,7 +2042,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 68.7879,
@@ -2048,7 +2055,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 68.7879,
@@ -2061,7 +2068,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 68.7879,
@@ -2074,7 +2081,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 68.7879,
@@ -2087,7 +2094,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 68.7879,
@@ -2100,7 +2107,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 68.7879,
@@ -2113,7 +2120,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 68.7879,
@@ -2126,7 +2133,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 68.7879,
@@ -2139,7 +2146,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -31.2491,
 				"latitude": 68.7879,
@@ -2152,7 +2159,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -26.7949,
 				"latitude": 68.7879,
@@ -2165,7 +2172,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Norway",
 				"longitude": 17.7468,
 				"latitude": 68.7879,
@@ -2178,7 +2185,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 22.201,
 				"latitude": 68.7879,
@@ -2191,7 +2198,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 26.6552,
 				"latitude": 68.7879,
@@ -2204,7 +2211,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 31.1094,
 				"latitude": 68.7879,
@@ -2217,7 +2224,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 35.5635,
 				"latitude": 68.7879,
@@ -2230,7 +2237,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 68.7879,
@@ -2243,7 +2250,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 68.7879,
@@ -2256,7 +2263,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 68.7879,
@@ -2269,7 +2276,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 68.7879,
@@ -2282,7 +2289,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 68.7879,
@@ -2295,7 +2302,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 68.7879,
@@ -2308,7 +2315,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 68.7879,
@@ -2321,7 +2328,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 68.7879,
@@ -2334,7 +2341,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 68.7879,
@@ -2347,7 +2354,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 68.7879,
@@ -2360,7 +2367,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 68.7879,
@@ -2373,7 +2380,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 68.7879,
@@ -2386,7 +2393,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 68.7879,
@@ -2399,7 +2406,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 68.7879,
@@ -2412,7 +2419,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 68.7879,
@@ -2425,7 +2432,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 68.7879,
@@ -2438,7 +2445,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 68.7879,
@@ -2451,7 +2458,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 68.7879,
@@ -2464,7 +2471,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 68.7879,
@@ -2477,7 +2484,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 146.918,
 				"latitude": 68.7879,
@@ -2490,7 +2497,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 151.3722,
 				"latitude": 68.7879,
@@ -2503,7 +2510,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 155.8263,
 				"latitude": 68.7879,
@@ -2516,7 +2523,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 160.2805,
 				"latitude": 68.7879,
@@ -2529,7 +2536,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 164.7347,
 				"latitude": 68.7879,
@@ -2542,7 +2549,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 169.1889,
 				"latitude": 68.7879,
@@ -2555,7 +2562,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 173.643,
 				"latitude": 68.7879,
@@ -2568,7 +2575,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 178.0972,
 				"latitude": 68.7879,
@@ -2581,7 +2588,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -164.8744,
 				"latitude": 66.1608,
@@ -2594,7 +2601,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -160.4202,
 				"latitude": 66.1608,
@@ -2607,7 +2614,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 66.1608,
@@ -2620,7 +2627,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -151.5119,
 				"latitude": 66.1608,
@@ -2633,7 +2640,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -147.0577,
 				"latitude": 66.1608,
@@ -2646,7 +2653,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -142.6035,
 				"latitude": 66.1608,
@@ -2659,7 +2666,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -138.1494,
 				"latitude": 66.1608,
@@ -2672,7 +2679,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -133.6952,
 				"latitude": 66.1608,
@@ -2685,7 +2692,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -129.241,
 				"latitude": 66.1608,
@@ -2698,7 +2705,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 66.1608,
@@ -2711,7 +2718,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 66.1608,
@@ -2724,7 +2731,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 66.1608,
@@ -2737,7 +2744,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 66.1608,
@@ -2750,7 +2757,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 66.1608,
@@ -2763,7 +2770,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 66.1608,
@@ -2776,7 +2783,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 66.1608,
@@ -2789,7 +2796,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 66.1608,
@@ -2802,7 +2809,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 66.1608,
@@ -2815,7 +2822,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 66.1608,
@@ -2828,7 +2835,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -62.4283,
 				"latitude": 66.1608,
@@ -2841,7 +2848,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -53.52,
 				"latitude": 66.1608,
@@ -2854,7 +2861,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 66.1608,
@@ -2867,7 +2874,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 66.1608,
@@ -2880,7 +2887,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -40.1575,
 				"latitude": 66.1608,
@@ -2893,7 +2900,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -35.7033,
 				"latitude": 66.1608,
@@ -2906,7 +2913,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IS",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iceland",
 				"longitude": -22.3408,
 				"latitude": 66.1608,
@@ -2919,7 +2926,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Norway",
 				"longitude": 13.2927,
 				"latitude": 66.1608,
@@ -2932,7 +2939,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 17.7468,
 				"latitude": 66.1608,
@@ -2945,7 +2952,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 22.201,
 				"latitude": 66.1608,
@@ -2958,7 +2965,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 26.6552,
 				"latitude": 66.1608,
@@ -2971,7 +2978,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 31.1094,
 				"latitude": 66.1608,
@@ -2984,7 +2991,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 66.1608,
@@ -2997,7 +3004,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 48.9261,
 				"latitude": 66.1608,
@@ -3010,7 +3017,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 66.1608,
@@ -3023,7 +3030,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 57.8344,
 				"latitude": 66.1608,
@@ -3036,7 +3043,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 66.1608,
@@ -3049,7 +3056,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 66.7428,
 				"latitude": 66.1608,
@@ -3062,7 +3069,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 66.1608,
@@ -3075,7 +3082,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 66.1608,
@@ -3088,7 +3095,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 66.1608,
@@ -3101,7 +3108,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 66.1608,
@@ -3114,7 +3121,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 66.1608,
@@ -3127,7 +3134,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 66.1608,
@@ -3140,7 +3147,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 66.1608,
@@ -3153,7 +3160,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 66.1608,
@@ -3166,7 +3173,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 66.1608,
@@ -3179,7 +3186,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 66.1608,
@@ -3192,7 +3199,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 66.1608,
@@ -3205,7 +3212,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 66.1608,
@@ -3218,7 +3225,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 66.1608,
@@ -3231,7 +3238,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 66.1608,
@@ -3244,7 +3251,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 66.1608,
@@ -3257,7 +3264,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 66.1608,
@@ -3270,7 +3277,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 66.1608,
@@ -3283,7 +3290,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 146.918,
 				"latitude": 66.1608,
@@ -3296,7 +3303,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 151.3722,
 				"latitude": 66.1608,
@@ -3309,7 +3316,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 155.8263,
 				"latitude": 66.1608,
@@ -3322,7 +3329,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 160.2805,
 				"latitude": 66.1608,
@@ -3335,7 +3342,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 164.7347,
 				"latitude": 66.1608,
@@ -3348,7 +3355,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 169.1889,
 				"latitude": 66.1608,
@@ -3361,7 +3368,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 173.643,
 				"latitude": 66.1608,
@@ -3374,7 +3381,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 178.0972,
 				"latitude": 66.1608,
@@ -3387,7 +3394,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 182.5514,
 				"latitude": 66.1608,
@@ -3400,7 +3407,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 187.0056,
 				"latitude": 66.1608,
@@ -3413,7 +3420,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -169.3286,
 				"latitude": 63.3997,
@@ -3426,7 +3433,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -160.4202,
 				"latitude": 63.3997,
@@ -3439,7 +3446,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 63.3997,
@@ -3452,7 +3459,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -151.5119,
 				"latitude": 63.3997,
@@ -3465,7 +3472,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -147.0577,
 				"latitude": 63.3997,
@@ -3478,7 +3485,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -142.6035,
 				"latitude": 63.3997,
@@ -3491,7 +3498,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -138.1494,
 				"latitude": 63.3997,
@@ -3504,7 +3511,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -133.6952,
 				"latitude": 63.3997,
@@ -3517,7 +3524,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -129.241,
 				"latitude": 63.3997,
@@ -3530,7 +3537,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 63.3997,
@@ -3543,7 +3550,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 63.3997,
@@ -3556,7 +3563,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 63.3997,
@@ -3569,7 +3576,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 63.3997,
@@ -3582,7 +3589,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 63.3997,
@@ -3595,7 +3602,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 63.3997,
@@ -3608,7 +3615,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 63.3997,
@@ -3621,7 +3628,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 63.3997,
@@ -3634,7 +3641,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 63.3997,
@@ -3647,7 +3654,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 63.3997,
@@ -3660,7 +3667,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -66.8825,
 				"latitude": 63.3997,
@@ -3673,7 +3680,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -49.0658,
 				"latitude": 63.3997,
@@ -3686,7 +3693,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 63.3997,
@@ -3699,7 +3706,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Norway",
 				"longitude": 8.8385,
 				"latitude": 63.3997,
@@ -3712,7 +3719,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 13.2927,
 				"latitude": 63.3997,
@@ -3725,7 +3732,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 17.7468,
 				"latitude": 63.3997,
@@ -3738,7 +3745,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 22.201,
 				"latitude": 63.3997,
@@ -3751,7 +3758,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 26.6552,
 				"latitude": 63.3997,
@@ -3764,7 +3771,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 31.1094,
 				"latitude": 63.3997,
@@ -3777,7 +3784,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 35.5635,
 				"latitude": 63.3997,
@@ -3790,7 +3797,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 63.3997,
@@ -3803,7 +3810,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 63.3997,
@@ -3816,7 +3823,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 48.9261,
 				"latitude": 63.3997,
@@ -3829,7 +3836,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 63.3997,
@@ -3842,7 +3849,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 57.8344,
 				"latitude": 63.3997,
@@ -3855,7 +3862,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 63.3997,
@@ -3868,7 +3875,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 66.7428,
 				"latitude": 63.3997,
@@ -3881,7 +3888,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 63.3997,
@@ -3894,7 +3901,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 63.3997,
@@ -3907,7 +3914,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 63.3997,
@@ -3920,7 +3927,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 63.3997,
@@ -3933,7 +3940,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 63.3997,
@@ -3946,7 +3953,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 63.3997,
@@ -3959,7 +3966,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 63.3997,
@@ -3972,7 +3979,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 63.3997,
@@ -3985,7 +3992,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 63.3997,
@@ -3998,7 +4005,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 63.3997,
@@ -4011,7 +4018,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 63.3997,
@@ -4024,7 +4031,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 63.3997,
@@ -4037,7 +4044,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 63.3997,
@@ -4050,7 +4057,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 63.3997,
@@ -4063,7 +4070,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 63.3997,
@@ -4076,7 +4083,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 63.3997,
@@ -4089,7 +4096,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 63.3997,
@@ -4102,7 +4109,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 146.918,
 				"latitude": 63.3997,
@@ -4115,7 +4122,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 151.3722,
 				"latitude": 63.3997,
@@ -4128,7 +4135,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 155.8263,
 				"latitude": 63.3997,
@@ -4141,7 +4148,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 160.2805,
 				"latitude": 63.3997,
@@ -4154,7 +4161,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 164.7347,
 				"latitude": 63.3997,
@@ -4167,7 +4174,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 169.1889,
 				"latitude": 63.3997,
@@ -4180,7 +4187,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 173.643,
 				"latitude": 63.3997,
@@ -4193,7 +4200,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 178.0972,
 				"latitude": 63.3997,
@@ -4206,7 +4213,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -164.8744,
 				"latitude": 60.502,
@@ -4219,7 +4226,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -160.4202,
 				"latitude": 60.502,
@@ -4232,7 +4239,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 60.502,
@@ -4245,7 +4252,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -151.5119,
 				"latitude": 60.502,
@@ -4258,7 +4265,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -142.6035,
 				"latitude": 60.502,
@@ -4271,7 +4278,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -138.1494,
 				"latitude": 60.502,
@@ -4284,7 +4291,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -133.6952,
 				"latitude": 60.502,
@@ -4297,7 +4304,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -129.241,
 				"latitude": 60.502,
@@ -4310,7 +4317,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 60.502,
@@ -4323,7 +4330,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 60.502,
@@ -4336,7 +4343,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 60.502,
@@ -4349,7 +4356,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 60.502,
@@ -4362,7 +4369,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 60.502,
@@ -4375,7 +4382,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 60.502,
@@ -4388,7 +4395,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 60.502,
@@ -4401,7 +4408,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 60.502,
@@ -4414,7 +4421,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 60.502,
@@ -4427,7 +4434,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greenland",
 				"longitude": -44.6116,
 				"latitude": 60.502,
@@ -4440,7 +4447,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Norway",
 				"longitude": 8.8385,
 				"latitude": 60.502,
@@ -4453,7 +4460,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 13.2927,
 				"latitude": 60.502,
@@ -4466,7 +4473,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 17.7468,
 				"latitude": 60.502,
@@ -4479,7 +4486,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 22.201,
 				"latitude": 60.502,
@@ -4492,7 +4499,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Finland",
 				"longitude": 26.6552,
 				"latitude": 60.502,
@@ -4505,7 +4512,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 31.1094,
 				"latitude": 60.502,
@@ -4518,7 +4525,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 35.5635,
 				"latitude": 60.502,
@@ -4531,7 +4538,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 60.502,
@@ -4544,7 +4551,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 60.502,
@@ -4557,7 +4564,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 48.9261,
 				"latitude": 60.502,
@@ -4570,7 +4577,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 60.502,
@@ -4583,7 +4590,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 57.8344,
 				"latitude": 60.502,
@@ -4596,7 +4603,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 60.502,
@@ -4609,7 +4616,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 66.7428,
 				"latitude": 60.502,
@@ -4622,7 +4629,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 60.502,
@@ -4635,7 +4642,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 60.502,
@@ -4648,7 +4655,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 60.502,
@@ -4661,7 +4668,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 60.502,
@@ -4674,7 +4681,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 60.502,
@@ -4687,7 +4694,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 60.502,
@@ -4700,7 +4707,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 60.502,
@@ -4713,7 +4720,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 60.502,
@@ -4726,7 +4733,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 60.502,
@@ -4739,7 +4746,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 60.502,
@@ -4752,7 +4759,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 60.502,
@@ -4765,7 +4772,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 60.502,
@@ -4778,7 +4785,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 60.502,
@@ -4791,7 +4798,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 60.502,
@@ -4804,7 +4811,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 60.502,
@@ -4817,7 +4824,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 60.502,
@@ -4830,7 +4837,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 60.502,
@@ -4843,7 +4850,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 146.918,
 				"latitude": 60.502,
@@ -4856,7 +4863,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 151.3722,
 				"latitude": 60.502,
@@ -4869,7 +4876,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 160.2805,
 				"latitude": 60.502,
@@ -4882,7 +4889,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 164.7347,
 				"latitude": 60.502,
@@ -4895,7 +4902,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 169.1889,
 				"latitude": 60.502,
@@ -4908,7 +4915,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 57.466,
@@ -4921,7 +4928,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -133.6952,
 				"latitude": 57.466,
@@ -4934,7 +4941,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -129.241,
 				"latitude": 57.466,
@@ -4947,7 +4954,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 57.466,
@@ -4960,7 +4967,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 57.466,
@@ -4973,7 +4980,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 57.466,
@@ -4986,7 +4993,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 57.466,
@@ -4999,7 +5006,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 57.466,
@@ -5012,7 +5019,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 57.466,
@@ -5025,7 +5032,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 57.466,
@@ -5038,7 +5045,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 57.466,
@@ -5051,7 +5058,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 57.466,
@@ -5064,7 +5071,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 57.466,
@@ -5077,7 +5084,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -66.8825,
 				"latitude": 57.466,
@@ -5090,7 +5097,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -62.4283,
 				"latitude": 57.466,
@@ -5103,7 +5110,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GB",
-				"selectable": true,
+				"selectable": false,
 				"title": "United Kingdom",
 				"longitude": -4.524,
 				"latitude": 57.466,
@@ -5116,7 +5123,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sweden",
 				"longitude": 13.2927,
 				"latitude": 57.466,
@@ -5129,7 +5136,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LV",
-				"selectable": true,
+				"selectable": false,
 				"title": "Latvia",
 				"longitude": 22.201,
 				"latitude": 57.466,
@@ -5142,7 +5149,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LV",
-				"selectable": true,
+				"selectable": false,
 				"title": "Latvia",
 				"longitude": 26.6552,
 				"latitude": 57.466,
@@ -5155,7 +5162,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 31.1094,
 				"latitude": 57.466,
@@ -5168,7 +5175,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 35.5635,
 				"latitude": 57.466,
@@ -5181,7 +5188,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 57.466,
@@ -5194,7 +5201,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 57.466,
@@ -5207,7 +5214,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 48.9261,
 				"latitude": 57.466,
@@ -5220,7 +5227,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 57.466,
@@ -5233,7 +5240,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 57.8344,
 				"latitude": 57.466,
@@ -5246,7 +5253,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 57.466,
@@ -5259,7 +5266,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 66.7428,
 				"latitude": 57.466,
@@ -5272,7 +5279,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 57.466,
@@ -5285,7 +5292,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 57.466,
@@ -5298,7 +5305,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 57.466,
@@ -5311,7 +5318,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 57.466,
@@ -5324,7 +5331,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 57.466,
@@ -5337,7 +5344,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 57.466,
@@ -5350,7 +5357,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 57.466,
@@ -5363,7 +5370,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 57.466,
@@ -5376,7 +5383,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 57.466,
@@ -5389,7 +5396,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 57.466,
@@ -5402,7 +5409,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 57.466,
@@ -5415,7 +5422,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 57.466,
@@ -5428,7 +5435,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 57.466,
@@ -5441,7 +5448,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 57.466,
@@ -5454,7 +5461,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 57.466,
@@ -5467,7 +5474,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 57.466,
@@ -5480,7 +5487,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 160.2805,
 				"latitude": 57.466,
@@ -5493,7 +5500,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -129.241,
 				"latitude": 54.2908,
@@ -5506,7 +5513,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 54.2908,
@@ -5519,7 +5526,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 54.2908,
@@ -5532,7 +5539,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 54.2908,
@@ -5545,7 +5552,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 54.2908,
@@ -5558,7 +5565,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 54.2908,
@@ -5571,7 +5578,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 54.2908,
@@ -5584,7 +5591,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 54.2908,
@@ -5597,7 +5604,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 54.2908,
@@ -5610,7 +5617,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 54.2908,
@@ -5623,7 +5630,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 54.2908,
@@ -5636,7 +5643,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 54.2908,
@@ -5649,7 +5656,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 54.2908,
@@ -5662,7 +5669,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -66.8825,
 				"latitude": 54.2908,
@@ -5675,7 +5682,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -62.4283,
 				"latitude": 54.2908,
@@ -5688,7 +5695,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -57.9742,
 				"latitude": 54.2908,
@@ -5701,7 +5708,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ireland",
 				"longitude": -8.9782,
 				"latitude": 54.2908,
@@ -5714,7 +5721,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Germany",
 				"longitude": 8.8385,
 				"latitude": 54.2908,
@@ -5727,7 +5734,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Germany",
 				"longitude": 13.2927,
 				"latitude": 54.2908,
@@ -5740,7 +5747,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Poland",
 				"longitude": 17.7468,
 				"latitude": 54.2908,
@@ -5753,7 +5760,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 22.201,
 				"latitude": 54.2908,
@@ -5766,7 +5773,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Belarus",
 				"longitude": 26.6552,
 				"latitude": 54.2908,
@@ -5779,7 +5786,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Belarus",
 				"longitude": 31.1094,
 				"latitude": 54.2908,
@@ -5792,7 +5799,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 35.5635,
 				"latitude": 54.2908,
@@ -5805,7 +5812,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 54.2908,
@@ -5818,7 +5825,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 54.2908,
@@ -5831,7 +5838,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 48.9261,
 				"latitude": 54.2908,
@@ -5844,7 +5851,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 53.3803,
 				"latitude": 54.2908,
@@ -5857,7 +5864,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 57.8344,
 				"latitude": 54.2908,
@@ -5870,7 +5877,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 62.2886,
 				"latitude": 54.2908,
@@ -5883,7 +5890,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 66.7428,
 				"latitude": 54.2908,
@@ -5896,7 +5903,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 71.197,
 				"latitude": 54.2908,
@@ -5909,7 +5916,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 75.6511,
 				"latitude": 54.2908,
@@ -5922,7 +5929,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 54.2908,
@@ -5935,7 +5942,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 54.2908,
@@ -5948,7 +5955,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 54.2908,
@@ -5961,7 +5968,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 54.2908,
@@ -5974,7 +5981,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 54.2908,
@@ -5987,7 +5994,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 54.2908,
@@ -6000,7 +6007,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 54.2908,
@@ -6013,7 +6020,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 54.2908,
@@ -6026,7 +6033,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 54.2908,
@@ -6039,7 +6046,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 120.1929,
 				"latitude": 54.2908,
@@ -6052,7 +6059,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 124.6471,
 				"latitude": 54.2908,
@@ -6065,7 +6072,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 54.2908,
@@ -6078,7 +6085,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 54.2908,
@@ -6091,7 +6098,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 54.2908,
@@ -6104,7 +6111,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 155.8263,
 				"latitude": 54.2908,
@@ -6117,7 +6124,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 160.2805,
 				"latitude": 54.2908,
@@ -6130,7 +6137,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -124.7868,
 				"latitude": 50.9765,
@@ -6143,7 +6150,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -120.3327,
 				"latitude": 50.9765,
@@ -6156,7 +6163,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -115.8785,
 				"latitude": 50.9765,
@@ -6169,7 +6176,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -111.4243,
 				"latitude": 50.9765,
@@ -6182,7 +6189,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -106.9701,
 				"latitude": 50.9765,
@@ -6195,7 +6202,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -102.5159,
 				"latitude": 50.9765,
@@ -6208,7 +6215,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -98.0618,
 				"latitude": 50.9765,
@@ -6221,7 +6228,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -93.6076,
 				"latitude": 50.9765,
@@ -6234,7 +6241,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -89.1534,
 				"latitude": 50.9765,
@@ -6247,7 +6254,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 50.9765,
@@ -6260,7 +6267,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 50.9765,
@@ -6273,7 +6280,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 50.9765,
@@ -6286,7 +6293,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 50.9765,
@@ -6299,7 +6306,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -66.8825,
 				"latitude": 50.9765,
@@ -6312,7 +6319,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -62.4283,
 				"latitude": 50.9765,
@@ -6325,7 +6332,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GB",
-				"selectable": true,
+				"selectable": false,
 				"title": "United Kingdom",
 				"longitude": -4.524,
 				"latitude": 50.9765,
@@ -6338,7 +6345,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GB",
-				"selectable": true,
+				"selectable": false,
 				"title": "United Kingdom",
 				"longitude": -0.0699,
 				"latitude": 50.9765,
@@ -6351,7 +6358,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Belgium",
 				"longitude": 4.3843,
 				"latitude": 50.9765,
@@ -6364,7 +6371,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Germany",
 				"longitude": 8.8385,
 				"latitude": 50.9765,
@@ -6377,7 +6384,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Germany",
 				"longitude": 13.2927,
 				"latitude": 50.9765,
@@ -6390,7 +6397,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Poland",
 				"longitude": 17.7468,
 				"latitude": 50.9765,
@@ -6403,7 +6410,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Poland",
 				"longitude": 22.201,
 				"latitude": 50.9765,
@@ -6416,7 +6423,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ukraine",
 				"longitude": 26.6552,
 				"latitude": 50.9765,
@@ -6429,7 +6436,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ukraine",
 				"longitude": 31.1094,
 				"latitude": 50.9765,
@@ -6442,7 +6449,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 35.5635,
 				"latitude": 50.9765,
@@ -6455,7 +6462,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 50.9765,
@@ -6468,7 +6475,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 50.9765,
@@ -6481,7 +6488,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 48.9261,
 				"latitude": 50.9765,
@@ -6494,7 +6501,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 53.3803,
 				"latitude": 50.9765,
@@ -6507,7 +6514,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 57.8344,
 				"latitude": 50.9765,
@@ -6520,7 +6527,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 62.2886,
 				"latitude": 50.9765,
@@ -6533,7 +6540,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 66.7428,
 				"latitude": 50.9765,
@@ -6546,7 +6553,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 71.197,
 				"latitude": 50.9765,
@@ -6559,7 +6566,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 75.6511,
 				"latitude": 50.9765,
@@ -6572,7 +6579,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 80.1053,
 				"latitude": 50.9765,
@@ -6585,7 +6592,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 84.5595,
 				"latitude": 50.9765,
@@ -6598,7 +6605,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 89.0137,
 				"latitude": 50.9765,
@@ -6611,7 +6618,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 93.4679,
 				"latitude": 50.9765,
@@ -6624,7 +6631,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 97.922,
 				"latitude": 50.9765,
@@ -6637,7 +6644,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 102.3762,
 				"latitude": 50.9765,
@@ -6650,7 +6657,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 106.8304,
 				"latitude": 50.9765,
@@ -6663,7 +6670,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 111.2846,
 				"latitude": 50.9765,
@@ -6676,7 +6683,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 115.7387,
 				"latitude": 50.9765,
@@ -6689,7 +6696,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 50.9765,
@@ -6702,7 +6709,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 124.6471,
 				"latitude": 50.9765,
@@ -6715,7 +6722,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 129.1013,
 				"latitude": 50.9765,
@@ -6728,7 +6735,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 50.9765,
@@ -6741,7 +6748,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 50.9765,
@@ -6754,7 +6761,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 50.9765,
@@ -6767,7 +6774,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -120.3327,
 				"latitude": 47.5244,
@@ -6780,7 +6787,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -115.8785,
 				"latitude": 47.5244,
@@ -6793,7 +6800,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -111.4243,
 				"latitude": 47.5244,
@@ -6806,7 +6813,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -106.9701,
 				"latitude": 47.5244,
@@ -6819,7 +6826,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -102.5159,
 				"latitude": 47.5244,
@@ -6832,7 +6839,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -98.0618,
 				"latitude": 47.5244,
@@ -6845,7 +6852,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -93.6076,
 				"latitude": 47.5244,
@@ -6858,7 +6865,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -84.6992,
 				"latitude": 47.5244,
@@ -6871,7 +6878,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 47.5244,
@@ -6884,7 +6891,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -75.7909,
 				"latitude": 47.5244,
@@ -6897,7 +6904,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -71.3367,
 				"latitude": 47.5244,
@@ -6910,7 +6917,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -66.8825,
 				"latitude": 47.5244,
@@ -6923,7 +6930,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -57.9742,
 				"latitude": 47.5244,
@@ -6936,7 +6943,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -53.52,
 				"latitude": 47.5244,
@@ -6949,7 +6956,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FR",
-				"selectable": true,
+				"selectable": false,
 				"title": "France",
 				"longitude": -0.0699,
 				"latitude": 47.5244,
@@ -6962,7 +6969,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FR",
-				"selectable": true,
+				"selectable": false,
 				"title": "France",
 				"longitude": 4.3843,
 				"latitude": 47.5244,
@@ -6975,7 +6982,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Switzerland",
 				"longitude": 8.8385,
 				"latitude": 47.5244,
@@ -6988,7 +6995,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AT",
-				"selectable": true,
+				"selectable": false,
 				"title": "Austria",
 				"longitude": 13.2927,
 				"latitude": 47.5244,
@@ -7001,7 +7008,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "HU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Hungary",
 				"longitude": 17.7468,
 				"latitude": 47.5244,
@@ -7014,7 +7021,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Romania",
 				"longitude": 22.201,
 				"latitude": 47.5244,
@@ -7027,7 +7034,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Romania",
 				"longitude": 26.6552,
 				"latitude": 47.5244,
@@ -7040,7 +7047,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ukraine",
 				"longitude": 31.1094,
 				"latitude": 47.5244,
@@ -7053,7 +7060,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ukraine",
 				"longitude": 35.5635,
 				"latitude": 47.5244,
@@ -7066,7 +7073,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 47.5244,
@@ -7079,7 +7086,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 47.5244,
@@ -7092,7 +7099,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 48.9261,
 				"latitude": 47.5244,
@@ -7105,7 +7112,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 53.3803,
 				"latitude": 47.5244,
@@ -7118,7 +7125,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 57.8344,
 				"latitude": 47.5244,
@@ -7131,7 +7138,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 62.2886,
 				"latitude": 47.5244,
@@ -7144,7 +7151,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 66.7428,
 				"latitude": 47.5244,
@@ -7157,7 +7164,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 71.197,
 				"latitude": 47.5244,
@@ -7170,7 +7177,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 75.6511,
 				"latitude": 47.5244,
@@ -7183,7 +7190,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 80.1053,
 				"latitude": 47.5244,
@@ -7196,7 +7203,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 84.5595,
 				"latitude": 47.5244,
@@ -7209,7 +7216,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 89.0137,
 				"latitude": 47.5244,
@@ -7222,7 +7229,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 93.4679,
 				"latitude": 47.5244,
@@ -7235,7 +7242,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 97.922,
 				"latitude": 47.5244,
@@ -7248,7 +7255,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 102.3762,
 				"latitude": 47.5244,
@@ -7261,7 +7268,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 106.8304,
 				"latitude": 47.5244,
@@ -7274,7 +7281,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 111.2846,
 				"latitude": 47.5244,
@@ -7287,7 +7294,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 115.7387,
 				"latitude": 47.5244,
@@ -7300,7 +7307,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 47.5244,
@@ -7313,7 +7320,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 124.6471,
 				"latitude": 47.5244,
@@ -7326,7 +7333,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 129.1013,
 				"latitude": 47.5244,
@@ -7339,7 +7346,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 133.5554,
 				"latitude": 47.5244,
@@ -7352,7 +7359,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 138.0096,
 				"latitude": 47.5244,
@@ -7365,7 +7372,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 142.4638,
 				"latitude": 47.5244,
@@ -7378,7 +7385,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -120.3327,
 				"latitude": 43.9371,
@@ -7391,7 +7398,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -115.8785,
 				"latitude": 43.9371,
@@ -7404,7 +7411,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -111.4243,
 				"latitude": 43.9371,
@@ -7417,7 +7424,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -106.9701,
 				"latitude": 43.9371,
@@ -7430,7 +7437,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -102.5159,
 				"latitude": 43.9371,
@@ -7443,7 +7450,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -98.0618,
 				"latitude": 43.9371,
@@ -7456,7 +7463,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -93.6076,
 				"latitude": 43.9371,
@@ -7469,7 +7476,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -89.1534,
 				"latitude": 43.9371,
@@ -7482,7 +7489,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -84.6992,
 				"latitude": 43.9371,
@@ -7495,7 +7502,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Canada",
 				"longitude": -80.2451,
 				"latitude": 43.9371,
@@ -7508,7 +7515,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -75.7909,
 				"latitude": 43.9371,
@@ -7521,7 +7528,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -71.3367,
 				"latitude": 43.9371,
@@ -7534,7 +7541,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FR",
-				"selectable": true,
+				"selectable": false,
 				"title": "France",
 				"longitude": -0.0699,
 				"latitude": 43.9371,
@@ -7547,7 +7554,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "FR",
-				"selectable": true,
+				"selectable": false,
 				"title": "France",
 				"longitude": 4.3843,
 				"latitude": 43.9371,
@@ -7560,7 +7567,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bosnia and Herzegovina",
 				"longitude": 17.7468,
 				"latitude": 43.9371,
@@ -7573,7 +7580,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RS",
-				"selectable": true,
+				"selectable": false,
 				"title": "Serbia",
 				"longitude": 22.201,
 				"latitude": 43.9371,
@@ -7586,7 +7593,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Romania",
 				"longitude": 26.6552,
 				"latitude": 43.9371,
@@ -7599,7 +7606,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 40.0177,
 				"latitude": 43.9371,
@@ -7612,7 +7619,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 44.4719,
 				"latitude": 43.9371,
@@ -7625,7 +7632,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 53.3803,
 				"latitude": 43.9371,
@@ -7638,7 +7645,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Uzbekistan",
 				"longitude": 57.8344,
 				"latitude": 43.9371,
@@ -7651,7 +7658,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 62.2886,
 				"latitude": 43.9371,
@@ -7664,7 +7671,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 66.7428,
 				"latitude": 43.9371,
@@ -7677,7 +7684,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 71.197,
 				"latitude": 43.9371,
@@ -7690,7 +7697,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 75.6511,
 				"latitude": 43.9371,
@@ -7703,7 +7710,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kazakhstan",
 				"longitude": 80.1053,
 				"latitude": 43.9371,
@@ -7716,7 +7723,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 84.5595,
 				"latitude": 43.9371,
@@ -7729,7 +7736,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 89.0137,
 				"latitude": 43.9371,
@@ -7742,7 +7749,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 93.4679,
 				"latitude": 43.9371,
@@ -7755,7 +7762,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 97.922,
 				"latitude": 43.9371,
@@ -7768,7 +7775,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 102.3762,
 				"latitude": 43.9371,
@@ -7781,7 +7788,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 106.8304,
 				"latitude": 43.9371,
@@ -7794,7 +7801,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mongolia",
 				"longitude": 111.2846,
 				"latitude": 43.9371,
@@ -7807,7 +7814,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 115.7387,
 				"latitude": 43.9371,
@@ -7820,7 +7827,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 43.9371,
@@ -7833,7 +7840,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 124.6471,
 				"latitude": 43.9371,
@@ -7846,7 +7853,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 129.1013,
 				"latitude": 43.9371,
@@ -7859,7 +7866,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "RU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Russia",
 				"longitude": 133.5554,
 				"latitude": 43.9371,
@@ -7872,20 +7879,21 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "JP",
-				"selectable": true,
+				"selectable": false,
 				"title": "Japan",
 				"longitude": 142.4638,
 				"latitude": 43.9371,
 				"type": "circle",
-				"color": "rgba(255,255,255,1)",
+				"color": "rgba(255,255,140,0.5)",
 				"width": 15,
 				"height": 15,
 				"scale": 1,
-				"fixedSize": false
+				"fixedSize": false,
+				"src": "JapanStoneGarden.jpg"
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -120.3327,
 				"latitude": 40.2188,
@@ -7898,7 +7906,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -115.8785,
 				"latitude": 40.2188,
@@ -7911,7 +7919,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -111.4243,
 				"latitude": 40.2188,
@@ -7924,7 +7932,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -106.9701,
 				"latitude": 40.2188,
@@ -7937,7 +7945,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -102.5159,
 				"latitude": 40.2188,
@@ -7950,7 +7958,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -98.0618,
 				"latitude": 40.2188,
@@ -7963,7 +7971,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -93.6076,
 				"latitude": 40.2188,
@@ -7976,7 +7984,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -89.1534,
 				"latitude": 40.2188,
@@ -7989,7 +7997,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -84.6992,
 				"latitude": 40.2188,
@@ -8002,7 +8010,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -80.2451,
 				"latitude": 40.2188,
@@ -8015,7 +8023,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -75.7909,
 				"latitude": 40.2188,
@@ -8028,7 +8036,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PT",
-				"selectable": true,
+				"selectable": false,
 				"title": "Portugal",
 				"longitude": -8.9782,
 				"latitude": 40.2188,
@@ -8041,7 +8049,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ES",
-				"selectable": true,
+				"selectable": false,
 				"title": "Spain",
 				"longitude": -4.524,
 				"latitude": 40.2188,
@@ -8054,7 +8062,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ES",
-				"selectable": true,
+				"selectable": false,
 				"title": "Spain",
 				"longitude": -0.0699,
 				"latitude": 40.2188,
@@ -8067,7 +8075,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IT",
-				"selectable": true,
+				"selectable": false,
 				"title": "Italy",
 				"longitude": 8.8385,
 				"latitude": 40.2188,
@@ -8080,7 +8088,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IT",
-				"selectable": true,
+				"selectable": false,
 				"title": "Italy",
 				"longitude": 17.7468,
 				"latitude": 40.2188,
@@ -8093,7 +8101,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Greece",
 				"longitude": 22.201,
 				"latitude": 40.2188,
@@ -8106,7 +8114,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkey",
 				"longitude": 26.6552,
 				"latitude": 40.2188,
@@ -8119,7 +8127,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkey",
 				"longitude": 31.1094,
 				"latitude": 40.2188,
@@ -8132,7 +8140,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkey",
 				"longitude": 35.5635,
 				"latitude": 40.2188,
@@ -8145,7 +8153,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkey",
 				"longitude": 40.0177,
 				"latitude": 40.2188,
@@ -8158,7 +8166,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Armenia",
 				"longitude": 44.4719,
 				"latitude": 40.2188,
@@ -8171,7 +8179,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Azerbaijan",
 				"longitude": 48.9261,
 				"latitude": 40.2188,
@@ -8184,7 +8192,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkmenistan",
 				"longitude": 53.3803,
 				"latitude": 40.2188,
@@ -8197,7 +8205,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkmenistan",
 				"longitude": 57.8344,
 				"latitude": 40.2188,
@@ -8210,7 +8218,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Uzbekistan",
 				"longitude": 62.2886,
 				"latitude": 40.2188,
@@ -8223,7 +8231,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Uzbekistan",
 				"longitude": 66.7428,
 				"latitude": 40.2188,
@@ -8236,7 +8244,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TJ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tajikistan",
 				"longitude": 71.197,
 				"latitude": 40.2188,
@@ -8249,7 +8257,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 75.6511,
 				"latitude": 40.2188,
@@ -8262,7 +8270,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 80.1053,
 				"latitude": 40.2188,
@@ -8275,7 +8283,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 84.5595,
 				"latitude": 40.2188,
@@ -8288,7 +8296,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 89.0137,
 				"latitude": 40.2188,
@@ -8301,7 +8309,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 93.4679,
 				"latitude": 40.2188,
@@ -8314,7 +8322,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 97.922,
 				"latitude": 40.2188,
@@ -8327,7 +8335,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 102.3762,
 				"latitude": 40.2188,
@@ -8340,7 +8348,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 106.8304,
 				"latitude": 40.2188,
@@ -8353,7 +8361,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 111.2846,
 				"latitude": 40.2188,
@@ -8366,7 +8374,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 115.7387,
 				"latitude": 40.2188,
@@ -8379,7 +8387,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 40.2188,
@@ -8392,7 +8400,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KP",
-				"selectable": true,
+				"selectable": false,
 				"title": "North Korea",
 				"longitude": 124.6471,
 				"latitude": 40.2188,
@@ -8405,7 +8413,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -120.3327,
 				"latitude": 36.3749,
@@ -8418,7 +8426,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -115.8785,
 				"latitude": 36.3749,
@@ -8431,7 +8439,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -111.4243,
 				"latitude": 36.3749,
@@ -8444,7 +8452,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -106.9701,
 				"latitude": 36.3749,
@@ -8457,7 +8465,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -102.5159,
 				"latitude": 36.3749,
@@ -8470,7 +8478,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -98.0618,
 				"latitude": 36.3749,
@@ -8483,7 +8491,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -93.6076,
 				"latitude": 36.3749,
@@ -8496,7 +8504,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -89.1534,
 				"latitude": 36.3749,
@@ -8509,7 +8517,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -84.6992,
 				"latitude": 36.3749,
@@ -8522,7 +8530,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -80.2451,
 				"latitude": 36.3749,
@@ -8535,7 +8543,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -75.7909,
 				"latitude": 36.3749,
@@ -8548,7 +8556,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 4.3843,
 				"latitude": 36.3749,
@@ -8561,7 +8569,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tunisia",
 				"longitude": 8.8385,
 				"latitude": 36.3749,
@@ -8574,7 +8582,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Syria",
 				"longitude": 40.0177,
 				"latitude": 36.3749,
@@ -8587,7 +8595,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IQ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iraq",
 				"longitude": 44.4719,
 				"latitude": 36.3749,
@@ -8600,7 +8608,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 48.9261,
 				"latitude": 36.3749,
@@ -8613,7 +8621,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 53.3803,
 				"latitude": 36.3749,
@@ -8626,7 +8634,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 57.8344,
 				"latitude": 36.3749,
@@ -8639,7 +8647,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Turkmenistan",
 				"longitude": 62.2886,
 				"latitude": 36.3749,
@@ -8652,7 +8660,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Afghanistan",
 				"longitude": 66.7428,
 				"latitude": 36.3749,
@@ -8665,7 +8673,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Afghanistan",
 				"longitude": 71.197,
 				"latitude": 36.3749,
@@ -8678,7 +8686,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PK",
-				"selectable": true,
+				"selectable": false,
 				"title": "Pakistan",
 				"longitude": 75.6511,
 				"latitude": 36.3749,
@@ -8691,7 +8699,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 80.1053,
 				"latitude": 36.3749,
@@ -8704,7 +8712,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 84.5595,
 				"latitude": 36.3749,
@@ -8717,7 +8725,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 89.0137,
 				"latitude": 36.3749,
@@ -8730,7 +8738,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 93.4679,
 				"latitude": 36.3749,
@@ -8743,7 +8751,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 97.922,
 				"latitude": 36.3749,
@@ -8756,7 +8764,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 102.3762,
 				"latitude": 36.3749,
@@ -8769,7 +8777,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 106.8304,
 				"latitude": 36.3749,
@@ -8782,7 +8790,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 111.2846,
 				"latitude": 36.3749,
@@ -8795,7 +8803,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 115.7387,
 				"latitude": 36.3749,
@@ -8808,7 +8816,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 36.3749,
@@ -8821,7 +8829,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KR",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Korea",
 				"longitude": 129.1013,
 				"latitude": 36.3749,
@@ -8834,12 +8842,12 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "JP",
-				"selectable": true,
+				"selectable": false,
 				"title": "Japan",
 				"longitude": 138.0096,
 				"latitude": 36.3749,
 				"type": "circle",
-				"color": "rgba(255,255,255,1)",
+				"color": "rgba(255,255,140,0.5)",
 				"width": 15,
 				"height": 15,
 				"scale": 1,
@@ -8847,7 +8855,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -115.8785,
 				"latitude": 32.4127,
@@ -8860,7 +8868,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -111.4243,
 				"latitude": 32.4127,
@@ -8873,7 +8881,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -106.9701,
 				"latitude": 32.4127,
@@ -8886,7 +8894,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -102.5159,
 				"latitude": 32.4127,
@@ -8899,7 +8907,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -98.0618,
 				"latitude": 32.4127,
@@ -8912,7 +8920,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -93.6076,
 				"latitude": 32.4127,
@@ -8925,7 +8933,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -89.1534,
 				"latitude": 32.4127,
@@ -8938,7 +8946,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -84.6992,
 				"latitude": 32.4127,
@@ -8951,7 +8959,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Morocco",
 				"longitude": -8.9782,
 				"latitude": 32.4127,
@@ -8964,7 +8972,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Morocco",
 				"longitude": -4.524,
 				"latitude": 32.4127,
@@ -8977,7 +8985,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": -0.0699,
 				"latitude": 32.4127,
@@ -8990,7 +8998,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 4.3843,
 				"latitude": 32.4127,
@@ -9003,7 +9011,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tunisia",
 				"longitude": 8.8385,
 				"latitude": 32.4127,
@@ -9016,7 +9024,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 13.2927,
 				"latitude": 32.4127,
@@ -9029,7 +9037,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 22.201,
 				"latitude": 32.4127,
@@ -9042,7 +9050,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PS",
-				"selectable": true,
+				"selectable": false,
 				"title": "Palestinian Territories",
 				"longitude": 35.5635,
 				"latitude": 32.4127,
@@ -9055,7 +9063,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IQ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iraq",
 				"longitude": 40.0177,
 				"latitude": 32.4127,
@@ -9068,7 +9076,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IQ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iraq",
 				"longitude": 44.4719,
 				"latitude": 32.4127,
@@ -9081,7 +9089,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 48.9261,
 				"latitude": 32.4127,
@@ -9094,7 +9102,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 53.3803,
 				"latitude": 32.4127,
@@ -9107,7 +9115,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 57.8344,
 				"latitude": 32.4127,
@@ -9120,7 +9128,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Afghanistan",
 				"longitude": 62.2886,
 				"latitude": 32.4127,
@@ -9133,7 +9141,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Afghanistan",
 				"longitude": 66.7428,
 				"latitude": 32.4127,
@@ -9146,7 +9154,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PK",
-				"selectable": true,
+				"selectable": false,
 				"title": "Pakistan",
 				"longitude": 71.197,
 				"latitude": 32.4127,
@@ -9159,7 +9167,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 75.6511,
 				"latitude": 32.4127,
@@ -9172,7 +9180,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 80.1053,
 				"latitude": 32.4127,
@@ -9185,7 +9193,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 84.5595,
 				"latitude": 32.4127,
@@ -9198,7 +9206,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 89.0137,
 				"latitude": 32.4127,
@@ -9211,7 +9219,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 93.4679,
 				"latitude": 32.4127,
@@ -9224,7 +9232,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 97.922,
 				"latitude": 32.4127,
@@ -9237,7 +9245,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 102.3762,
 				"latitude": 32.4127,
@@ -9250,7 +9258,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 106.8304,
 				"latitude": 32.4127,
@@ -9263,7 +9271,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 111.2846,
 				"latitude": 32.4127,
@@ -9276,7 +9284,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 115.7387,
 				"latitude": 32.4127,
@@ -9289,7 +9297,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 32.4127,
@@ -9302,7 +9310,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -111.4243,
 				"latitude": 28.341,
@@ -9315,7 +9323,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -106.9701,
 				"latitude": 28.341,
@@ -9328,7 +9336,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -102.5159,
 				"latitude": 28.341,
@@ -9341,7 +9349,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -98.0618,
 				"latitude": 28.341,
@@ -9354,7 +9362,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Morocco",
 				"longitude": -8.9782,
 				"latitude": 28.341,
@@ -9367,7 +9375,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": -4.524,
 				"latitude": 28.341,
@@ -9380,7 +9388,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": -0.0699,
 				"latitude": 28.341,
@@ -9393,7 +9401,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 4.3843,
 				"latitude": 28.341,
@@ -9406,7 +9414,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 8.8385,
 				"latitude": 28.341,
@@ -9419,7 +9427,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 13.2927,
 				"latitude": 28.341,
@@ -9432,7 +9440,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 17.7468,
 				"latitude": 28.341,
@@ -9445,7 +9453,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 22.201,
 				"latitude": 28.341,
@@ -9458,7 +9466,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Egypt",
 				"longitude": 26.6552,
 				"latitude": 28.341,
@@ -9471,7 +9479,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Egypt",
 				"longitude": 31.1094,
 				"latitude": 28.341,
@@ -9484,7 +9492,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 35.5635,
 				"latitude": 28.341,
@@ -9497,7 +9505,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 40.0177,
 				"latitude": 28.341,
@@ -9510,7 +9518,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 44.4719,
 				"latitude": 28.341,
@@ -9523,7 +9531,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 53.3803,
 				"latitude": 28.341,
@@ -9536,7 +9544,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 57.8344,
 				"latitude": 28.341,
@@ -9549,7 +9557,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Iran",
 				"longitude": 62.2886,
 				"latitude": 28.341,
@@ -9562,7 +9570,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PK",
-				"selectable": true,
+				"selectable": false,
 				"title": "Pakistan",
 				"longitude": 66.7428,
 				"latitude": 28.341,
@@ -9575,7 +9583,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PK",
-				"selectable": true,
+				"selectable": false,
 				"title": "Pakistan",
 				"longitude": 71.197,
 				"latitude": 28.341,
@@ -9588,7 +9596,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 75.6511,
 				"latitude": 28.341,
@@ -9601,7 +9609,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 80.1053,
 				"latitude": 28.341,
@@ -9614,7 +9622,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NP",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nepal",
 				"longitude": 84.5595,
 				"latitude": 28.341,
@@ -9627,7 +9635,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 89.0137,
 				"latitude": 28.341,
@@ -9640,7 +9648,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 93.4679,
 				"latitude": 28.341,
@@ -9653,7 +9661,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Myanmar",
 				"longitude": 97.922,
 				"latitude": 28.341,
@@ -9666,7 +9674,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 102.3762,
 				"latitude": 28.341,
@@ -9679,7 +9687,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 106.8304,
 				"latitude": 28.341,
@@ -9692,7 +9700,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 111.2846,
 				"latitude": 28.341,
@@ -9705,7 +9713,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 115.7387,
 				"latitude": 28.341,
@@ -9718,7 +9726,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 120.1929,
 				"latitude": 28.341,
@@ -9731,7 +9739,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -111.4243,
 				"latitude": 24.1703,
@@ -9744,7 +9752,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -106.9701,
 				"latitude": 24.1703,
@@ -9757,7 +9765,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -102.5159,
 				"latitude": 24.1703,
@@ -9770,7 +9778,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -98.0618,
 				"latitude": 24.1703,
@@ -9783,7 +9791,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Western Sahara",
 				"longitude": -13.4324,
 				"latitude": 24.1703,
@@ -9796,7 +9804,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mauritania",
 				"longitude": -8.9782,
 				"latitude": 24.1703,
@@ -9809,7 +9817,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ML",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mali",
 				"longitude": -4.524,
 				"latitude": 24.1703,
@@ -9822,7 +9830,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": -0.0699,
 				"latitude": 24.1703,
@@ -9835,7 +9843,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 4.3843,
 				"latitude": 24.1703,
@@ -9848,7 +9856,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 8.8385,
 				"latitude": 24.1703,
@@ -9861,7 +9869,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 13.2927,
 				"latitude": 24.1703,
@@ -9874,7 +9882,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 17.7468,
 				"latitude": 24.1703,
@@ -9887,7 +9895,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Libya",
 				"longitude": 22.201,
 				"latitude": 24.1703,
@@ -9900,7 +9908,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Egypt",
 				"longitude": 26.6552,
 				"latitude": 24.1703,
@@ -9913,7 +9921,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Egypt",
 				"longitude": 31.1094,
 				"latitude": 24.1703,
@@ -9926,7 +9934,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Egypt",
 				"longitude": 35.5635,
 				"latitude": 24.1703,
@@ -9939,7 +9947,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 40.0177,
 				"latitude": 24.1703,
@@ -9952,7 +9960,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 44.4719,
 				"latitude": 24.1703,
@@ -9965,7 +9973,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 48.9261,
 				"latitude": 24.1703,
@@ -9978,7 +9986,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AE",
-				"selectable": true,
+				"selectable": false,
 				"title": "United Arab Emirates",
 				"longitude": 53.3803,
 				"latitude": 24.1703,
@@ -9991,7 +9999,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 71.197,
 				"latitude": 24.1703,
@@ -10004,7 +10012,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 75.6511,
 				"latitude": 24.1703,
@@ -10017,7 +10025,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 80.1053,
 				"latitude": 24.1703,
@@ -10030,7 +10038,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 84.5595,
 				"latitude": 24.1703,
@@ -10043,7 +10051,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bangladesh",
 				"longitude": 89.0137,
 				"latitude": 24.1703,
@@ -10056,7 +10064,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 93.4679,
 				"latitude": 24.1703,
@@ -10069,7 +10077,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 97.922,
 				"latitude": 24.1703,
@@ -10082,7 +10090,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 102.3762,
 				"latitude": 24.1703,
@@ -10095,7 +10103,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 106.8304,
 				"latitude": 24.1703,
@@ -10108,7 +10116,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 111.2846,
 				"latitude": 24.1703,
@@ -10121,7 +10129,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CN",
-				"selectable": true,
+				"selectable": false,
 				"title": "China",
 				"longitude": 115.7387,
 				"latitude": 24.1703,
@@ -10134,7 +10142,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "US",
-				"selectable": true,
+				"selectable": false,
 				"title": "United States",
 				"longitude": -155.9661,
 				"latitude": 19.9125,
@@ -10147,7 +10155,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -102.5159,
 				"latitude": 19.9125,
@@ -10160,7 +10168,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -98.0618,
 				"latitude": 19.9125,
@@ -10173,7 +10181,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MX",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mexico",
 				"longitude": -89.1534,
 				"latitude": 19.9125,
@@ -10186,7 +10194,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Cuba",
 				"longitude": -75.7909,
 				"latitude": 19.9125,
@@ -10199,7 +10207,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Dominican Republic",
 				"longitude": -71.3367,
 				"latitude": 19.9125,
@@ -10212,7 +10220,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mauritania",
 				"longitude": -13.4324,
 				"latitude": 19.9125,
@@ -10225,7 +10233,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mauritania",
 				"longitude": -8.9782,
 				"latitude": 19.9125,
@@ -10238,7 +10246,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ML",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mali",
 				"longitude": -4.524,
 				"latitude": 19.9125,
@@ -10251,7 +10259,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ML",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mali",
 				"longitude": -0.0699,
 				"latitude": 19.9125,
@@ -10264,7 +10272,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "DZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Algeria",
 				"longitude": 4.3843,
 				"latitude": 19.9125,
@@ -10277,7 +10285,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Niger",
 				"longitude": 8.8385,
 				"latitude": 19.9125,
@@ -10290,7 +10298,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Niger",
 				"longitude": 13.2927,
 				"latitude": 19.9125,
@@ -10303,7 +10311,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chad",
 				"longitude": 17.7468,
 				"latitude": 19.9125,
@@ -10316,7 +10324,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chad",
 				"longitude": 22.201,
 				"latitude": 19.9125,
@@ -10329,7 +10337,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 26.6552,
 				"latitude": 19.9125,
@@ -10342,7 +10350,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 31.1094,
 				"latitude": 19.9125,
@@ -10355,7 +10363,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 35.5635,
 				"latitude": 19.9125,
@@ -10368,7 +10376,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 44.4719,
 				"latitude": 19.9125,
@@ -10381,7 +10389,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 48.9261,
 				"latitude": 19.9125,
@@ -10394,7 +10402,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Saudi Arabia",
 				"longitude": 53.3803,
 				"latitude": 19.9125,
@@ -10407,7 +10415,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "OM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Oman",
 				"longitude": 57.8344,
 				"latitude": 19.9125,
@@ -10420,7 +10428,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 75.6511,
 				"latitude": 19.9125,
@@ -10433,7 +10441,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 80.1053,
 				"latitude": 19.9125,
@@ -10446,7 +10454,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 84.5595,
 				"latitude": 19.9125,
@@ -10459,7 +10467,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Myanmar",
 				"longitude": 93.4679,
 				"latitude": 19.9125,
@@ -10472,7 +10480,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Myanmar",
 				"longitude": 97.922,
 				"latitude": 19.9125,
@@ -10485,7 +10493,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Lao People's Democratic Republic",
 				"longitude": 102.3762,
 				"latitude": 19.9125,
@@ -10498,7 +10506,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GT",
-				"selectable": true,
+				"selectable": false,
 				"title": "Guatemala",
 				"longitude": -89.1534,
 				"latitude": 15.5813,
@@ -10511,7 +10519,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "HN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Honduras",
 				"longitude": -84.6992,
 				"latitude": 15.5813,
@@ -10524,7 +10532,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Senegal",
 				"longitude": -13.4324,
 				"latitude": 15.5813,
@@ -10537,7 +10545,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mauritania",
 				"longitude": -8.9782,
 				"latitude": 15.5813,
@@ -10550,7 +10558,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ML",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mali",
 				"longitude": -4.524,
 				"latitude": 15.5813,
@@ -10563,7 +10571,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ML",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mali",
 				"longitude": -0.0699,
 				"latitude": 15.5813,
@@ -10576,7 +10584,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Niger",
 				"longitude": 4.3843,
 				"latitude": 15.5813,
@@ -10589,7 +10597,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Niger",
 				"longitude": 8.8385,
 				"latitude": 15.5813,
@@ -10602,7 +10610,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Niger",
 				"longitude": 13.2927,
 				"latitude": 15.5813,
@@ -10615,7 +10623,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chad",
 				"longitude": 17.7468,
 				"latitude": 15.5813,
@@ -10628,7 +10636,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chad",
 				"longitude": 22.201,
 				"latitude": 15.5813,
@@ -10641,7 +10649,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 26.6552,
 				"latitude": 15.5813,
@@ -10654,7 +10662,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 31.1094,
 				"latitude": 15.5813,
@@ -10667,7 +10675,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 35.5635,
 				"latitude": 15.5813,
@@ -10680,7 +10688,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "YE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Yemen",
 				"longitude": 44.4719,
 				"latitude": 15.5813,
@@ -10693,7 +10701,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "YE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Yemen",
 				"longitude": 48.9261,
 				"latitude": 15.5813,
@@ -10706,7 +10714,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 75.6511,
 				"latitude": 15.5813,
@@ -10719,7 +10727,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "IN",
-				"selectable": true,
+				"selectable": false,
 				"title": "India",
 				"longitude": 80.1053,
 				"latitude": 15.5813,
@@ -10732,7 +10740,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Myanmar",
 				"longitude": 97.922,
 				"latitude": 15.5813,
@@ -10745,7 +10753,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Thailand",
 				"longitude": 102.3762,
 				"latitude": 15.5813,
@@ -10758,7 +10766,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Lao People's Democratic Republic",
 				"longitude": 106.8304,
 				"latitude": 15.5813,
@@ -10771,7 +10779,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Philippines",
 				"longitude": 120.1929,
 				"latitude": 15.5813,
@@ -10784,7 +10792,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nicaragua",
 				"longitude": -84.6992,
 				"latitude": 11.1915,
@@ -10797,7 +10805,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Guinea",
 				"longitude": -13.4324,
 				"latitude": 11.1915,
@@ -10810,7 +10818,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Guinea",
 				"longitude": -8.9782,
 				"latitude": 11.1915,
@@ -10823,7 +10831,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Burkina Faso",
 				"longitude": -4.524,
 				"latitude": 11.1915,
@@ -10836,7 +10844,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Burkina Faso",
 				"longitude": -0.0699,
 				"latitude": 11.1915,
@@ -10849,7 +10857,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nigeria",
 				"longitude": 4.3843,
 				"latitude": 11.1915,
@@ -10862,7 +10870,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nigeria",
 				"longitude": 8.8385,
 				"latitude": 11.1915,
@@ -10875,7 +10883,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nigeria",
 				"longitude": 13.2927,
 				"latitude": 11.1915,
@@ -10888,7 +10896,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chad",
 				"longitude": 17.7468,
 				"latitude": 11.1915,
@@ -10901,7 +10909,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chad",
 				"longitude": 22.201,
 				"latitude": 11.1915,
@@ -10914,7 +10922,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 26.6552,
 				"latitude": 11.1915,
@@ -10927,7 +10935,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sudan",
 				"longitude": 31.1094,
 				"latitude": 11.1915,
@@ -10940,7 +10948,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ET",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ethiopia",
 				"longitude": 35.5635,
 				"latitude": 11.1915,
@@ -10953,7 +10961,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ET",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ethiopia",
 				"longitude": 40.0177,
 				"latitude": 11.1915,
@@ -10966,7 +10974,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Somalia",
 				"longitude": 48.9261,
 				"latitude": 11.1915,
@@ -10979,7 +10987,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "VN",
-				"selectable": true,
+				"selectable": false,
 				"title": "Vietnam",
 				"longitude": 106.8304,
 				"latitude": 11.1915,
@@ -10992,7 +11000,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Philippines",
 				"longitude": 124.6471,
 				"latitude": 11.1915,
@@ -11005,7 +11013,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Colombia",
 				"longitude": -75.7909,
 				"latitude": 6.7588,
@@ -11018,7 +11026,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Colombia",
 				"longitude": -71.3367,
 				"latitude": 6.7588,
@@ -11031,7 +11039,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "VE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Venezuela",
 				"longitude": -66.8825,
 				"latitude": 6.7588,
@@ -11044,7 +11052,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "VE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Venezuela",
 				"longitude": -62.4283,
 				"latitude": 6.7588,
@@ -11057,7 +11065,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Guyana",
 				"longitude": -57.9742,
 				"latitude": 6.7588,
@@ -11070,7 +11078,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Liberia",
 				"longitude": -8.9782,
 				"latitude": 6.7588,
@@ -11083,7 +11091,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CI",
-				"selectable": true,
+				"selectable": false,
 				"title": "Côte d'Ivoire",
 				"longitude": -4.524,
 				"latitude": 6.7588,
@@ -11096,7 +11104,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ghana",
 				"longitude": -0.0699,
 				"latitude": 6.7588,
@@ -11109,7 +11117,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nigeria",
 				"longitude": 4.3843,
 				"latitude": 6.7588,
@@ -11122,7 +11130,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Nigeria",
 				"longitude": 8.8385,
 				"latitude": 6.7588,
@@ -11135,7 +11143,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Cameroon",
 				"longitude": 13.2927,
 				"latitude": 6.7588,
@@ -11148,7 +11156,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Central African Republic",
 				"longitude": 17.7468,
 				"latitude": 6.7588,
@@ -11161,7 +11169,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CF",
-				"selectable": true,
+				"selectable": false,
 				"title": "Central African Republic",
 				"longitude": 22.201,
 				"latitude": 6.7588,
@@ -11174,7 +11182,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SS",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Sudan",
 				"longitude": 26.6552,
 				"latitude": 6.7588,
@@ -11187,7 +11195,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SS",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Sudan",
 				"longitude": 31.1094,
 				"latitude": 6.7588,
@@ -11200,7 +11208,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ET",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ethiopia",
 				"longitude": 35.5635,
 				"latitude": 6.7588,
@@ -11213,7 +11221,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ET",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ethiopia",
 				"longitude": 40.0177,
 				"latitude": 6.7588,
@@ -11226,7 +11234,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ET",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ethiopia",
 				"longitude": 44.4719,
 				"latitude": 6.7588,
@@ -11239,7 +11247,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Somalia",
 				"longitude": 48.9261,
 				"latitude": 6.7588,
@@ -11252,7 +11260,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "LK",
-				"selectable": true,
+				"selectable": false,
 				"title": "Sri Lanka",
 				"longitude": 80.1053,
 				"latitude": 6.7588,
@@ -11265,7 +11273,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PH",
-				"selectable": true,
+				"selectable": false,
 				"title": "Philippines",
 				"longitude": 124.6471,
 				"latitude": 6.7588,
@@ -11278,7 +11286,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Colombia",
 				"longitude": -75.7909,
 				"latitude": 2.3001,
@@ -11291,7 +11299,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Colombia",
 				"longitude": -71.3367,
 				"latitude": 2.3001,
@@ -11304,7 +11312,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "VE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Venezuela",
 				"longitude": -66.8825,
 				"latitude": 2.3001,
@@ -11317,7 +11325,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -62.4283,
 				"latitude": 2.3001,
@@ -11330,7 +11338,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Guyana",
 				"longitude": -57.9742,
 				"latitude": 2.3001,
@@ -11343,7 +11351,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GF",
-				"selectable": true,
+				"selectable": false,
 				"title": "French Guiana",
 				"longitude": -53.52,
 				"latitude": 2.3001,
@@ -11356,7 +11364,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Cameroon",
 				"longitude": 13.2927,
 				"latitude": 2.3001,
@@ -11369,7 +11377,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Republic of Congo",
 				"longitude": 17.7468,
 				"latitude": 2.3001,
@@ -11382,7 +11390,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 22.201,
 				"latitude": 2.3001,
@@ -11395,7 +11403,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 26.6552,
 				"latitude": 2.3001,
@@ -11408,7 +11416,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Uganda",
 				"longitude": 31.1094,
 				"latitude": 2.3001,
@@ -11421,7 +11429,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kenya",
 				"longitude": 35.5635,
 				"latitude": 2.3001,
@@ -11434,7 +11442,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kenya",
 				"longitude": 40.0177,
 				"latitude": 2.3001,
@@ -11447,7 +11455,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "SO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Somalia",
 				"longitude": 44.4719,
 				"latitude": 2.3001,
@@ -11460,7 +11468,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 97.922,
 				"latitude": 2.3001,
@@ -11473,7 +11481,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Malaysia",
 				"longitude": 102.3762,
 				"latitude": 2.3001,
@@ -11486,7 +11494,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Malaysia",
 				"longitude": 111.2846,
 				"latitude": 2.3001,
@@ -11499,7 +11507,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 115.7387,
 				"latitude": 2.3001,
@@ -11512,7 +11520,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "EC",
-				"selectable": true,
+				"selectable": false,
 				"title": "Ecuador",
 				"longitude": -80.2451,
 				"latitude": -2.1676,
@@ -11525,7 +11533,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -75.7909,
 				"latitude": -2.1676,
@@ -11538,7 +11546,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -71.3367,
 				"latitude": -2.1676,
@@ -11551,7 +11559,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -66.8825,
 				"latitude": -2.1676,
@@ -11564,7 +11572,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -62.4283,
 				"latitude": -2.1676,
@@ -11577,7 +11585,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -57.9742,
 				"latitude": -2.1676,
@@ -11590,7 +11598,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -2.1676,
@@ -11603,7 +11611,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -2.1676,
@@ -11616,7 +11624,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -44.6116,
 				"latitude": -2.1676,
@@ -11629,7 +11637,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "GA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Gabon",
 				"longitude": 13.2927,
 				"latitude": -2.1676,
@@ -11642,7 +11650,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 17.7468,
 				"latitude": -2.1676,
@@ -11655,7 +11663,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 22.201,
 				"latitude": -2.1676,
@@ -11668,7 +11676,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 26.6552,
 				"latitude": -2.1676,
@@ -11681,7 +11689,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tanzania",
 				"longitude": 31.1094,
 				"latitude": -2.1676,
@@ -11694,7 +11702,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tanzania",
 				"longitude": 35.5635,
 				"latitude": -2.1676,
@@ -11707,7 +11715,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "KE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Kenya",
 				"longitude": 40.0177,
 				"latitude": -2.1676,
@@ -11720,7 +11728,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 102.3762,
 				"latitude": -2.1676,
@@ -11733,7 +11741,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 111.2846,
 				"latitude": -2.1676,
@@ -11746,7 +11754,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 115.7387,
 				"latitude": -2.1676,
@@ -11759,7 +11767,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 120.1929,
 				"latitude": -2.1676,
@@ -11772,7 +11780,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 133.5554,
 				"latitude": -2.1676,
@@ -11785,7 +11793,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 138.0096,
 				"latitude": -2.1676,
@@ -11798,7 +11806,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -80.2451,
 				"latitude": -6.6269,
@@ -11811,7 +11819,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -75.7909,
 				"latitude": -6.6269,
@@ -11824,7 +11832,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -71.3367,
 				"latitude": -6.6269,
@@ -11837,7 +11845,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -66.8825,
 				"latitude": -6.6269,
@@ -11850,7 +11858,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -62.4283,
 				"latitude": -6.6269,
@@ -11863,7 +11871,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -57.9742,
 				"latitude": -6.6269,
@@ -11876,7 +11884,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -6.6269,
@@ -11889,7 +11897,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -6.6269,
@@ -11902,7 +11910,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -44.6116,
 				"latitude": -6.6269,
@@ -11915,7 +11923,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -40.1575,
 				"latitude": -6.6269,
@@ -11928,7 +11936,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -35.7033,
 				"latitude": -6.6269,
@@ -11941,7 +11949,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Angola",
 				"longitude": 13.2927,
 				"latitude": -6.6269,
@@ -11954,7 +11962,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 17.7468,
 				"latitude": -6.6269,
@@ -11967,7 +11975,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 22.201,
 				"latitude": -6.6269,
@@ -11980,7 +11988,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 26.6552,
 				"latitude": -6.6269,
@@ -11993,7 +12001,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tanzania",
 				"longitude": 31.1094,
 				"latitude": -6.6269,
@@ -12006,7 +12014,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tanzania",
 				"longitude": 35.5635,
 				"latitude": -6.6269,
@@ -12019,7 +12027,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 106.8304,
 				"latitude": -6.6269,
@@ -12032,7 +12040,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ID",
-				"selectable": true,
+				"selectable": false,
 				"title": "Indonesia",
 				"longitude": 111.2846,
 				"latitude": -6.6269,
@@ -12045,7 +12053,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Papua New Guinea",
 				"longitude": 142.4638,
 				"latitude": -6.6269,
@@ -12058,7 +12066,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Papua New Guinea",
 				"longitude": 146.918,
 				"latitude": -6.6269,
@@ -12071,7 +12079,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Papua New Guinea",
 				"longitude": 155.8263,
 				"latitude": -6.6269,
@@ -12084,7 +12092,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -75.7909,
 				"latitude": -11.0605,
@@ -12097,7 +12105,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -71.3367,
 				"latitude": -11.0605,
@@ -12110,7 +12118,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bolivia",
 				"longitude": -66.8825,
 				"latitude": -11.0605,
@@ -12123,7 +12131,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -62.4283,
 				"latitude": -11.0605,
@@ -12136,7 +12144,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -57.9742,
 				"latitude": -11.0605,
@@ -12149,7 +12157,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -11.0605,
@@ -12162,7 +12170,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -11.0605,
@@ -12175,7 +12183,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -44.6116,
 				"latitude": -11.0605,
@@ -12188,7 +12196,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -40.1575,
 				"latitude": -11.0605,
@@ -12201,7 +12209,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Angola",
 				"longitude": 17.7468,
 				"latitude": -11.0605,
@@ -12214,7 +12222,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 22.201,
 				"latitude": -11.0605,
@@ -12227,7 +12235,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CD",
-				"selectable": true,
+				"selectable": false,
 				"title": "Democratic Republic of Congo",
 				"longitude": 26.6552,
 				"latitude": -11.0605,
@@ -12240,7 +12248,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Zambia",
 				"longitude": 31.1094,
 				"latitude": -11.0605,
@@ -12253,7 +12261,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "TZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Tanzania",
 				"longitude": 35.5635,
 				"latitude": -11.0605,
@@ -12266,7 +12274,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mozambique",
 				"longitude": 40.0177,
 				"latitude": -11.0605,
@@ -12279,7 +12287,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -11.0605,
@@ -12292,7 +12300,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PE",
-				"selectable": true,
+				"selectable": false,
 				"title": "Peru",
 				"longitude": -71.3367,
 				"latitude": -15.4519,
@@ -12305,7 +12313,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bolivia",
 				"longitude": -66.8825,
 				"latitude": -15.4519,
@@ -12318,7 +12326,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bolivia",
 				"longitude": -62.4283,
 				"latitude": -15.4519,
@@ -12331,7 +12339,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -57.9742,
 				"latitude": -15.4519,
@@ -12344,7 +12352,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -15.4519,
@@ -12357,7 +12365,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -15.4519,
@@ -12370,7 +12378,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -44.6116,
 				"latitude": -15.4519,
@@ -12383,7 +12391,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -40.1575,
 				"latitude": -15.4519,
@@ -12396,7 +12404,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Angola",
 				"longitude": 13.2927,
 				"latitude": -15.4519,
@@ -12409,7 +12417,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Angola",
 				"longitude": 17.7468,
 				"latitude": -15.4519,
@@ -12422,7 +12430,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Zambia",
 				"longitude": 22.201,
 				"latitude": -15.4519,
@@ -12435,7 +12443,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZM",
-				"selectable": true,
+				"selectable": false,
 				"title": "Zambia",
 				"longitude": 26.6552,
 				"latitude": -15.4519,
@@ -12448,7 +12456,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mozambique",
 				"longitude": 31.1094,
 				"latitude": -15.4519,
@@ -12461,7 +12469,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MW",
-				"selectable": true,
+				"selectable": false,
 				"title": "Malawi",
 				"longitude": 35.5635,
 				"latitude": -15.4519,
@@ -12474,7 +12482,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mozambique",
 				"longitude": 40.0177,
 				"latitude": -15.4519,
@@ -12487,7 +12495,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Madagascar",
 				"longitude": 48.9261,
 				"latitude": -15.4519,
@@ -12500,7 +12508,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 124.6471,
 				"latitude": -15.4519,
@@ -12513,7 +12521,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 129.1013,
 				"latitude": -15.4519,
@@ -12526,7 +12534,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 133.5554,
 				"latitude": -15.4519,
@@ -12539,7 +12547,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -15.4519,
@@ -12552,7 +12560,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bolivia",
 				"longitude": -66.8825,
 				"latitude": -19.785,
@@ -12565,7 +12573,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BO",
-				"selectable": true,
+				"selectable": false,
 				"title": "Bolivia",
 				"longitude": -62.4283,
 				"latitude": -19.785,
@@ -12578,7 +12586,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -57.9742,
 				"latitude": -19.785,
@@ -12591,7 +12599,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -19.785,
@@ -12604,7 +12612,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -19.785,
@@ -12617,7 +12625,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -44.6116,
 				"latitude": -19.785,
@@ -12630,7 +12638,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -40.1575,
 				"latitude": -19.785,
@@ -12643,7 +12651,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Namibia",
 				"longitude": 13.2927,
 				"latitude": -19.785,
@@ -12656,7 +12664,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Namibia",
 				"longitude": 17.7468,
 				"latitude": -19.785,
@@ -12669,7 +12677,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BW",
-				"selectable": true,
+				"selectable": false,
 				"title": "Botswana",
 				"longitude": 22.201,
 				"latitude": -19.785,
@@ -12682,7 +12690,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZW",
-				"selectable": true,
+				"selectable": false,
 				"title": "Zimbabwe",
 				"longitude": 26.6552,
 				"latitude": -19.785,
@@ -12695,7 +12703,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZW",
-				"selectable": true,
+				"selectable": false,
 				"title": "Zimbabwe",
 				"longitude": 31.1094,
 				"latitude": -19.785,
@@ -12708,7 +12716,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Madagascar",
 				"longitude": 44.4719,
 				"latitude": -19.785,
@@ -12721,7 +12729,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Madagascar",
 				"longitude": 48.9261,
 				"latitude": -19.785,
@@ -12734,7 +12742,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 120.1929,
 				"latitude": -19.785,
@@ -12747,7 +12755,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 124.6471,
 				"latitude": -19.785,
@@ -12760,7 +12768,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 129.1013,
 				"latitude": -19.785,
@@ -12773,7 +12781,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 133.5554,
 				"latitude": -19.785,
@@ -12786,7 +12794,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 138.0096,
 				"latitude": -19.785,
@@ -12799,7 +12807,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -19.785,
@@ -12812,7 +12820,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 146.918,
 				"latitude": -19.785,
@@ -12825,7 +12833,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -24.0451,
@@ -12838,7 +12846,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -62.4283,
 				"latitude": -24.0451,
@@ -12851,7 +12859,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "PY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Paraguay",
 				"longitude": -57.9742,
 				"latitude": -24.0451,
@@ -12864,7 +12872,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -24.0451,
@@ -12877,7 +12885,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -24.0451,
@@ -12890,7 +12898,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Namibia",
 				"longitude": 17.7468,
 				"latitude": -24.0451,
@@ -12903,7 +12911,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BW",
-				"selectable": true,
+				"selectable": false,
 				"title": "Botswana",
 				"longitude": 22.201,
 				"latitude": -24.0451,
@@ -12916,7 +12924,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BW",
-				"selectable": true,
+				"selectable": false,
 				"title": "Botswana",
 				"longitude": 26.6552,
 				"latitude": -24.0451,
@@ -12929,7 +12937,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZA",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Africa",
 				"longitude": 31.1094,
 				"latitude": -24.0451,
@@ -12942,7 +12950,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "Mozambique",
 				"longitude": 35.5635,
 				"latitude": -24.0451,
@@ -12955,7 +12963,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "MG",
-				"selectable": true,
+				"selectable": false,
 				"title": "Madagascar",
 				"longitude": 44.4719,
 				"latitude": -24.0451,
@@ -12968,7 +12976,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 115.7387,
 				"latitude": -24.0451,
@@ -12981,7 +12989,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 120.1929,
 				"latitude": -24.0451,
@@ -12994,7 +13002,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 124.6471,
 				"latitude": -24.0451,
@@ -13007,7 +13015,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 129.1013,
 				"latitude": -24.0451,
@@ -13020,7 +13028,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 133.5554,
 				"latitude": -24.0451,
@@ -13033,7 +13041,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 138.0096,
 				"latitude": -24.0451,
@@ -13046,7 +13054,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -24.0451,
@@ -13059,7 +13067,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 146.918,
 				"latitude": -24.0451,
@@ -13072,7 +13080,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 151.3722,
 				"latitude": -24.0451,
@@ -13085,7 +13093,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chile",
 				"longitude": -71.3367,
 				"latitude": -28.2186,
@@ -13098,7 +13106,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -28.2186,
@@ -13111,7 +13119,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -62.4283,
 				"latitude": -28.2186,
@@ -13124,7 +13132,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -57.9742,
 				"latitude": -28.2186,
@@ -13137,7 +13145,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -53.52,
 				"latitude": -28.2186,
@@ -13150,7 +13158,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "BR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Brazil",
 				"longitude": -49.0658,
 				"latitude": -28.2186,
@@ -13163,7 +13171,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NA",
-				"selectable": true,
+				"selectable": false,
 				"title": "Namibia",
 				"longitude": 17.7468,
 				"latitude": -28.2186,
@@ -13176,7 +13184,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZA",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Africa",
 				"longitude": 22.201,
 				"latitude": -28.2186,
@@ -13189,7 +13197,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZA",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Africa",
 				"longitude": 26.6552,
 				"latitude": -28.2186,
@@ -13202,7 +13210,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZA",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Africa",
 				"longitude": 31.1094,
 				"latitude": -28.2186,
@@ -13215,7 +13223,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 115.7387,
 				"latitude": -28.2186,
@@ -13228,7 +13236,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 120.1929,
 				"latitude": -28.2186,
@@ -13241,7 +13249,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 124.6471,
 				"latitude": -28.2186,
@@ -13254,7 +13262,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 129.1013,
 				"latitude": -28.2186,
@@ -13267,7 +13275,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 133.5554,
 				"latitude": -28.2186,
@@ -13280,7 +13288,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 138.0096,
 				"latitude": -28.2186,
@@ -13293,7 +13301,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -28.2186,
@@ -13306,7 +13314,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 146.918,
 				"latitude": -28.2186,
@@ -13319,7 +13327,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 151.3722,
 				"latitude": -28.2186,
@@ -13332,7 +13340,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chile",
 				"longitude": -71.3367,
 				"latitude": -32.2934,
@@ -13345,7 +13353,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -32.2934,
@@ -13358,7 +13366,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -62.4283,
 				"latitude": -32.2934,
@@ -13371,7 +13379,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Uruguay",
 				"longitude": -57.9742,
 				"latitude": -32.2934,
@@ -13384,7 +13392,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "UY",
-				"selectable": true,
+				"selectable": false,
 				"title": "Uruguay",
 				"longitude": -53.52,
 				"latitude": -32.2934,
@@ -13397,7 +13405,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZA",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Africa",
 				"longitude": 22.201,
 				"latitude": -32.2934,
@@ -13410,7 +13418,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "ZA",
-				"selectable": true,
+				"selectable": false,
 				"title": "South Africa",
 				"longitude": 26.6552,
 				"latitude": -32.2934,
@@ -13423,7 +13431,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 115.7387,
 				"latitude": -32.2934,
@@ -13436,7 +13444,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 120.1929,
 				"latitude": -32.2934,
@@ -13449,7 +13457,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 124.6471,
 				"latitude": -32.2934,
@@ -13462,7 +13470,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 138.0096,
 				"latitude": -32.2934,
@@ -13475,7 +13483,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -32.2934,
@@ -13488,7 +13496,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 146.918,
 				"latitude": -32.2934,
@@ -13501,7 +13509,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 151.3722,
 				"latitude": -32.2934,
@@ -13514,7 +13522,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chile",
 				"longitude": -71.3367,
 				"latitude": -36.259,
@@ -13527,7 +13535,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -36.259,
@@ -13540,7 +13548,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -62.4283,
 				"latitude": -36.259,
@@ -13553,7 +13561,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -57.9742,
 				"latitude": -36.259,
@@ -13566,7 +13574,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 142.4638,
 				"latitude": -36.259,
@@ -13579,7 +13587,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AU",
-				"selectable": true,
+				"selectable": false,
 				"title": "Australia",
 				"longitude": 146.918,
 				"latitude": -36.259,
@@ -13592,7 +13600,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -71.3367,
 				"latitude": -40.1065,
@@ -13605,7 +13613,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -40.1065,
@@ -13618,7 +13626,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -62.4283,
 				"latitude": -40.1065,
@@ -13631,7 +13639,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -71.3367,
 				"latitude": -43.8287,
@@ -13644,7 +13652,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -43.8287,
@@ -13657,7 +13665,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "NZ",
-				"selectable": true,
+				"selectable": false,
 				"title": "New Zealand",
 				"longitude": 169.1889,
 				"latitude": -43.8287,
@@ -13670,7 +13678,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -71.3367,
 				"latitude": -47.4199,
@@ -13683,7 +13691,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -47.4199,
@@ -13696,7 +13704,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -71.3367,
 				"latitude": -50.8761,
@@ -13709,7 +13717,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "CL",
-				"selectable": true,
+				"selectable": false,
 				"title": "Chile",
 				"longitude": -71.3367,
 				"latitude": -54.1945,
@@ -13722,7 +13730,7 @@ AmCharts.makeChart("map",{
 			},
 			{
 	"groupId": "AR",
-				"selectable": true,
+				"selectable": false,
 				"title": "Argentina",
 				"longitude": -66.8825,
 				"latitude": -54.1945,
@@ -13734,7 +13742,7 @@ AmCharts.makeChart("map",{
 				"fixedSize": false
 			},
 			{
-	"selectable": true,
+	"selectable": false,
 				"title": "",
 				"longitude": 172.066,
 				"latitude": -38.5046,
@@ -13745,41 +13753,42 @@ AmCharts.makeChart("map",{
 		]
 	},
 	"balloon": {
-	"horizontalPadding": 15,
+		"horizontalPadding": 15,
 		"borderAlpha": 0,
 		"borderThickness": 1,
-		"verticalPadding": 15
+		"verticalPadding": 15,
 	},
 	"areasSettings": {
-	"color": "rgba(255,255,255,1)",
+		"color": "rgba(255,255,255,1)",
 		"outlineColor": "rgba(42,42,42,1)",
 		"rollOverOutlineColor": "rgba(42,42,42,1)",
 		"rollOverBrightness": 20,
-		"selectedBrightness": 20,
-		"selectable": true,
+		"selectedBrightness": 0,
+		"selectable": false,
 		"unlistedAreasAlpha": 0,
 		"unlistedAreasOutlineAlpha": 0,
 		"alpha": 0,
-		"outlineAlpha": 0
+		"outlineAlpha": 0,
 	},
 	"imagesSettings": {
-	"alpha": 1,
+		"alpha": 1,
 		"color": "rgba(255,255,255,1)",
 		"outlineAlpha": 0,
 		"rollOverOutlineAlpha": 0,
+		"rollOverOutlineThickness": 15,
 		"outlineColor": "rgba(42,42,42,1)",
 		"rollOverBrightness": 20,
-		"selectedBrightness": 20,
-		"selectable": true
+		"selectedBrightness": 0,
+		"selectable": false
 	},
 	"linesSettings": {
-	"color": "rgba(255,255,255,1)",
-		"selectable": true,
+		"color": "rgba(255,255,255,1)",
+		"selectable": false,
 		"rollOverBrightness": 20,
 		"selectedBrightness": 20
 	},
 	"zoomControl": {
-	"zoomControlEnabled": true,
+		"zoomControlEnabled": true,
 		"homeButtonEnabled": true,
 		"panControlEnabled": false,
 		"left": 38,

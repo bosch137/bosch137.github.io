@@ -153,8 +153,17 @@
 
             // varying values for setTimeout during typing
             // can't be global since number changes each time loop is executed
-            var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
             var self = this;
+            if (self.options.michael)
+                self.typeSpeed = self.options.michael[self.arrayPos].typeSpeed;
+            else
+                self.typeSpeed = self.options.typeSpeed;
+
+            if (!self.typeSpeed)
+                self.typeSpeed = self.options.typeSpeed;
+
+            var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
+
 
             // ------------- optional ------------- //
             // backpaces a certain string faster

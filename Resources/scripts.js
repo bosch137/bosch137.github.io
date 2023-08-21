@@ -82,6 +82,7 @@ $(window).on("load", function() {
       },
       {
         string: "And I love being on Lake Minnetonka, MN.",
+        typeSpeed: 15,
         stopNum: 5,
         backDelay: undefined
       },
@@ -137,7 +138,8 @@ $(window).on("load", function() {
       },
       {
         string:
-          "And I am a Student at the University of Minnesota, studying Software Engineering and Creative Design<br>with a Minor in Japanese Studies.",
+          "And I am a Graduate of the University of Minnesota, with a degree in Software Engineering and Creative Design<br>and a Minor in Japanese Studies.",
+        typeSpeed: 10,
         stopNum: 5,
         backDelay: undefined,
       }
@@ -148,7 +150,7 @@ $(window).on("load", function() {
         $(".typed").typed({
           //And I love
           michael: customTypedInput,
-          typeSpeed: 60,
+          typeSpeed: 20,
           backDelay: 700,
           loop: false,
           callback: function () {

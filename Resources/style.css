@@ -170,6 +170,14 @@
   object-fit: cover; 
   overflow: hidden; 
 }
+.carousel-button-helper {
+  background: black;
+  box-shadow: 0 0 0.313rem black, 0 0 0.313rem black;
+  -moz-box-shadow: 0 0 0.013rem black, 0 0 0 0.313rem black;
+  -webkit-box-shadow: 0 0 0.313rem black, 0 0 0.313rem black;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
 
 .photo-caption{
   width: fit-content;
