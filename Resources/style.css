@@ -744,13 +744,11 @@ fieldset[disabled] .btn-custom.active {
 }
 
 .navbuttons {
-  --side-nav-gap: 75px;
-  padding: 0.25rem;
+  --side-nav-gap: 5vh;
+  padding: 0.25em;
   position: fixed;
   margin-left: 50%;
-  top: 25%;
-  width: 25em;
-  height: 41em;
+  top: 20vh;
   background-color: rgba(0, 0, 0, 0);
   outline-color: rgba(0, 0, 0, 0);
   display: inline;
@@ -762,10 +760,10 @@ fieldset[disabled] .btn-custom.active {
 .side-nav-label {
   margin-bottom: var(--side-nav-gap);
   font-family: "Courier New", Courier, monospace;
-  font-size: 1.5rem; 
+  font-size: 1.6vh; 
   margin-left: auto;
-  margin-right: 4.5rem;
-  margin-top: -2.5rem;
+  margin-right: 5.5vh;
+  margin-top: -2.9vh;
   white-space: nowrap;
   width: fit-content;
   line-height: normal;
@@ -787,15 +785,15 @@ fieldset[disabled] .btn-custom.active {
   transition: opacity 3.0s;
 }
 .side-nav-button:active~.side-nav-label {
-  transition: 1;
+  opacity: 1;
 }
 
 .side-nav-button {
   pointer-events:all;
   margin-left: auto;
   margin-right: 0;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.9vh;
+  height: 3.9vh;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.734);
   color: none;
@@ -803,7 +801,7 @@ fieldset[disabled] .btn-custom.active {
   display: inline-block;
   align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2vh;
   vertical-align: bottom;
 }
 
