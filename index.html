@@ -73,11 +73,11 @@ Looks like you're checking out my source code... I suppose that's not surprising
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Engineering and Creative Design Student at the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
     <!-- Open Graph data -->
     <meta property="og:title" content="Meet Michael Boschwitz">
     <meta property="og:image" content="https://michael.boschwitz.me/Resources/Portraits/NZLifeguard.jpg">
-    <meta property="og:description" content="Software Engineering and Creative Design Student at the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <meta property="og:description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
     <meta property="og:url" content="https://michael.boschwitz.me/">
     <meta property="og:type" content="Portfolio">
     <meta property="og:image:width" content="1200" />
@@ -93,8 +93,54 @@ Looks like you're checking out my source code... I suppose that's not surprising
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSG3VPG" height="0" width="0"
         style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<body class="anchor" style="background-color:rgb(42, 42, 42); padding-top: 0; font-family:'Courier New', Courier, monospace;">
+<body style="background-color:rgb(42, 42, 42); padding-top: 0; font-family:'Courier New', Courier, monospace;">
     <main> 
+        
+        <!--  Floating Navigation buttons   -->
+        <div class="navbuttons fixed-action-btn " id="navbuttons">
+            <!-- <svg class="arrows" style="left: 40%;">
+                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                    <path class="a3" d="M0 40 L30 72 L60 40"></path> 
+                    </svg> -->
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect " style="background: #2ab7a9;" onclick="goToID(intro)">
+                    <i class="fas fa-heart icon-fixer"></i>
+                </button>
+                <p class="side-nav-button-special">About Me</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(leadership)">
+                    <i class="fas fa-briefcase icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Leadership &amp; Work</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(gameProjects)">
+                    <i class="fas fa-gamepad icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Game Projects</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(codeProjects)">
+                    <i class="fas fa-code icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Code Projects</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(adventures)">
+                    <i class="fas fa-globe-asia icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Adventures</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(contact)">
+                    <i class="far fa-id-card icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Contact</p>
+            </div>
+        </div>
+
         <div class="container-fluid anchor custom-image-caro" data-offset="0" id="intro" data-label="Intro">
             <div id="carousel" class="carousel slide custom-image-caro" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -137,7 +183,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <div style="position: absolute; top: 0.625rem;">
                     <div class="col-md-12">
                         <div class="resizer-head">
-                            <span class="me_name">Hi, I'm Michael Boschwitz!</span>
+                            <span class="me_name ">Hi, I'm Michael Boschwitz!</span>
                         </div>
                         <div class= "resizer-sub">
                             <span id="typing-starter" class="typed">...</span>
@@ -146,50 +192,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </div>
             </div>
         </div>
-        <!--  Floating Navigation buttons   -->
-         <div class="navbuttons fixed-action-btn " id="navbuttons">
-            <!-- <svg class="arrows" style="left: 40%;">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path> -->
-        </svg>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(intro)" autofocus>
-                    <i class="fas fa-heart icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">About Me</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(leadership)">
-                    <i class="fas fa-briefcase icon-fixer"></i>
-                </button>
-            <p class="side-nav-label">Leadership &amp; Work</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(gameProjects)">
-                    <i class="fas fa-gamepad icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Game Projects</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(codeProjects)">
-                    <i class="fas fa-code icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Code Projects</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(adventures)">
-                    <i class="fas fa-globe-asia icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Adventures</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(contact)">
-                    <i class="far fa-id-card icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Contact</p>
-            </div>
-        </div>
+        
 
         <!-- <div id="navbuttons">
             <div class="fixed-action-btn" style="bottom: 6.875rem; right: 1.563 rem; z-index:10;">
@@ -252,18 +255,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                             | |
                                                             |_|
                                     (leadership)-->
-        <div class="anchor" data-offset="50" id="leadership" data-label="Leadership">
-            <!-- <svg class="arrows" style="left: 40%;">
-                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                <path class="a3" d="M0 40 L30 72 L60 40"></path>
-            </svg>
-            <svg class="arrows" style="left: 60%;">
-                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                <path class="a3" d="M0 40 L30 72 L60 40"></path>
-            </svg> -->
-        </div>
+    <div class="anchor" data-offset="50" id="leadership" data-label="Leadership">
         <h2 class="resizer-title" style="padding-top: 3.125rem; padding-bottom: 3.125rem;">Leadership &amp; Work</h2>
         
         <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;">
@@ -509,7 +501,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
                     style="padding-left: 0.313rem; padding-right: 0.313rem; margin: 0 auto;"></div>
             </div>  
         </div>
-        
+    </div>
+
         <div class="parallax-container" style="height: 55vh;">
             <div class="parallax"><img src="./Resources/Icons/raspi.jpg" style="display: block;"></div>
             <!-- <div style="position: absolute; top:0.635rem;">
@@ -536,7 +529,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                                                                                                                            (projects)-->
         <!--<div class="anchor" data-offset="0" id="projects"></div>-->
         
-        <div class="anchor" data-offset="5" id="gameProjects" data-label="Game Projects"></div>
+    <div class="anchor" data-offset="5" id="gameProjects" data-label="Game Projects">
         
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 0px;">
             <h2 class="resizer-title">Game Projects</h2>
@@ -555,8 +548,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </a>
             </div>
         </div>
-        
-        <div class="anchor" data-offset="5" id="codeProjects" data-label="Code Projects"></div>
+    </div>
+
+    <div class="anchor" data-offset="5" id="codeProjects" data-label="Code Projects">
         
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 3.125rem;">
             <h2 class="resizer-title">Coding Projects</h2>
@@ -576,7 +570,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         
             </div>
         </div>
-        
+    </div>
 
 <!-- (some photos are on an old camera, some a more modern, and others on a professional camera)
      ___       _______  ____    ____  _______ .__   __. .___________. __    __  .______       _______     _______.
@@ -586,7 +580,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
  /  _____  \  |  '--'  |   \    /    |  |____ |  |\   |     |  |     |  `--'  | |  |\  \----.|  |____.----)   |   
 /__/     \__\ |_______/     \__/     |_______||__| \__|     |__|      \______/  | _| `._____||_______|_______/    
                                                                                                    (adventures)-->
-    <div class="anchor" data-offset="0" id="adventures" data-label="Adventures"></div>
+    <div class="anchor" data-offset="0" id="adventures" data-label="Adventures">
         <div id="adventure-carousel" class="carousel slide custom-image-caro adventure-carousel" data-ride="carousel" style="height: 90vh;">
             <ol class="carousel-indicators">
                 <li data-target="#adventure-carousel" data-slide-to="0" class="carousel-button-helper active"></li>
@@ -691,17 +685,20 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 <div id="map" class="hide-me"></div>
                 <p class="hide-me-alt">Check out this section on a maximized desktop, the pictures look much better.<br><br> Plus it has an interactive map here!</p>
         </div>
+    </div>
     </main>
     <footer>
-        <div class="hero-footer anchor" data-offset="0" id="contact" data-label="Contact">
-            <div class="resizer-head">
-                <span class="me_name">I'm Michael Boschwitz,</span>
-            </div>
+        <div class="anchor" data-offset="0" id="contact" data-label="Contact">
+            <div class="hero-footer">
+                <div class="resizer-head">
+                    <span class="me_name">I'm Michael Boschwitz,</span>
+                </div>
 
-            <div class="resizer-sub">
-                <span id="typing-ending" class="typed-footer"></span>
+                <div class="resizer-sub">
+                    <span id="typing-ending" class="typed-footer"></span>
+                </div>
             </div>
-        </div>
+        </div>  
     </footer>
 
     <!--Import jQuery before materialize.js-->

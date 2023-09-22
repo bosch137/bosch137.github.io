@@ -755,6 +755,19 @@ fieldset[disabled] .btn-custom.active {
   text-align: right;
   z-index: 999;
   pointer-events: none;
+  animation: fadeInAnimation ease-in 3.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .side-nav-label {
@@ -775,16 +788,40 @@ fieldset[disabled] .btn-custom.active {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   opacity: 0;
-  transition: opacity 0.1s;
+  transition: opacity 1s;
 }
 
 .side-nav-button:hover~ .side-nav-label {
   opacity: 1;
-}
-.side-nav-button:focus~.side-nav-label {
-  transition: opacity 3.0s;
+  transition: 0s;
 }
 .side-nav-button:active~.side-nav-label {
+  opacity: 1;
+}
+
+.side-nav-button-visible ~.side-nav-label{
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.side-nav-button-special {
+  margin-bottom: var(--side-nav-gap);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.6vh;
+  margin-left: auto;
+  margin-right: 5.5vh;
+  margin-top: -2.9vh;
+  white-space: nowrap;
+  width: fit-content;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+  background: black;
+  box-shadow: 0.375rem 0 0 0.313rem black, -0.375rem 0 0 0.313rem black;
+  -moz-box-shadow: 0.375rem 0 0 0.313rem black, -0.375rem 0 0 0.313rem black;
+  -webkit-box-shadow: 0.375rem 0 0 0.313rem black, -0.375rem 0 0 0.313rem black;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: opacity 5s;
   opacity: 1;
 }
 

@@ -50,8 +50,105 @@ Materialize.scrollFire([
 //fade in with a little delay
 $(window).on("load", function() {
   $("#fire1")
-    .delay(3000)
+    .delay(10000000000)
     .fadeIn("slow");
+
+  var customTypedInput = [
+    {
+      string: "..!",
+      stopNum: 0,
+      backDelay: undefined
+    },
+    {
+      string: "And I love Programming.",
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I like making and playing Games.",
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I love being on Lake Minnetonka, MN.",
+      typeSpeed: 15,
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I love doodling.",
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I like playing Volleyball.",
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I enjoy playing Guitar.",
+      stopNum: 19,
+      backDelay: 50
+    },
+    {
+      string: "And I enjoy playing Piano.",
+      stopNum: 19,
+      backDelay: 50
+    },
+    {
+      string: "And I enjoy playing Drumset.",
+      stopNum: 19,
+      backDelay: 50
+    },
+    {
+      string: "And I enjoy playing...",
+      stopNum: 5,
+      backDelay: 50
+    },
+    {
+      string: "And I LOVE all things Music.",
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I love a Challenge.",
+      stopNum: 5,
+      backDelay: undefined
+    },
+    {
+      string: "And I never make a mestake.",
+      stopNum: 20,
+      backDelay: 50
+    },
+    {
+      string: "And I never make a mistake.",
+      stopNum: 0,
+      backDelay: undefined
+    },
+    {
+      string:
+        "And I am a Graduate of the University of Minnesota, with a degree in Software Engineering and Creative Design<br>and a Minor in Japanese Studies.",
+      typeSpeed: 10,
+      stopNum: 5,
+      backDelay: undefined,
+    }
+  ];
+
+  setTimeout(function () {
+    $(function () {
+      $(".typed").typed({
+        //And I love
+        michael: customTypedInput,
+        typeSpeed: 20,
+        backDelay: 700,
+        loop: false,
+        callback: function () {
+          $(".typed").parent().children(".typed-cursor").delay(1500).fadeOut("slow");
+        }
+      });
+    });
+  }, 0);//typing delay
+  
   setTimeout(function() {
     if (window.innerWidth < 800){
       Materialize.toast(
@@ -63,103 +160,8 @@ $(window).on("load", function() {
         5000
       );
     }
-    
-    var customTypedInput = [
-      {
-        string: "..!",
-        stopNum: 0,
-        backDelay: undefined
-      },
-      {
-        string: "And I love Programming.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I like making and playing Games.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I love being on Lake Minnetonka, MN.",
-        typeSpeed: 15,
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I love doodling.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I like playing Volleyball.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I enjoy playing Guitar.",
-        stopNum: 19,
-        backDelay: 50
-      },
-      {
-        string: "And I enjoy playing Piano.",
-        stopNum: 19,
-        backDelay: 50
-      },
-      {
-        string: "And I enjoy playing Drumset.",
-        stopNum: 19,
-        backDelay: 50
-      },
-      {
-        string: "And I enjoy playing...",
-        stopNum: 5,
-        backDelay: 50
-      },
-      {
-        string: "And I LOVE all things Music.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I love a Challenge.",
-        stopNum: 5,
-        backDelay: undefined
-      },
-      {
-        string: "And I never make a mestake.",
-        stopNum: 20,
-        backDelay: 50
-      },
-      {
-        string: "And I never make a mistake.",
-        stopNum: 0,
-        backDelay: undefined
-      },
-      {
-        string:
-          "And I am a Graduate of the University of Minnesota, with a degree in Software Engineering and Creative Design<br>and a Minor in Japanese Studies.",
-        typeSpeed: 10,
-        stopNum: 5,
-        backDelay: undefined,
-      }
-    ];
 
-    setTimeout(function() {
-      $(function() {
-        $(".typed").typed({
-          //And I love
-          michael: customTypedInput,
-          typeSpeed: 20,
-          backDelay: 700,
-          loop: false,
-          callback: function () {
-            $(".typed").parent().children(".typed-cursor").delay(1500).fadeOut("slow");
-          }
-        });
-      });
-    }, 1000);
-  }, 1000);
+  }, 1000);//please use desktop delay
 });
 
 var anchors = $(".anchor");
@@ -256,8 +258,10 @@ function keyHandling(keyCode) {
   return false;
 }
 
+var buttonClicked = '';
 function goToID(id) {
   var e = $(id);
+  buttonClicked = id.id;
   $("body, html").animate(
     {
       scrollTop: e.offset().top + (e.data("offset") || 0)
@@ -302,38 +306,51 @@ function UnCryptMailto(s) {
   return false;
 }
 
-// function activateNavigation() {
-//   const anchors = document.querySelectorAll(".anchor");
-//   const navContainer = document.getElementsByClassName("side-nav");
-//   const navItems = Array.from(anchors).map((anchor) => {
-//     return `
-//                     <div class="side-nav-item" data-for-anchor="${anchor.id}">
-//                         <a href="#${anchor.id}" class="side-nav-link"></a>
-//                         <span class="side-nav-label">${anchor.dataset.label}</span>
-//                     </div>
-//                 `;
-//   });
+var didFirstScroll = false;
+//get current anchor section
+$(window).scroll(function (e) {
+  let checkIDs = ['intro', 'leadership', 'gameProjects', 'codeProjects', 'adventures', 'contact'];
+  let navButtons = document.getElementsByClassName('navbuttons')[0];
 
-//   navContainer.innerHTML = navItems.join("");
+  if(!didFirstScroll)
+  {
+    var specialStart = document.getElementsByClassName("side-nav-button-special");
+    if (specialStart.length > 0) 
+    {
+      specialStart[0].classList.add("side-nav-label");
+      specialStart[0].classList.remove("side-nav-button-special");
+      didFirstScroll = true;
+    }
+  }
 
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       document.querySelectorAll(".side-nav-link").forEach((navLink) => {
-//         navLink.classList.remove("side-nav-link-selected");
-//       });
 
-//       const visibleAnchor = entries.filter((entry) => entry.isIntersecting)[0];
+  if (buttonClicked != '') {
+    var curButton = navButtons.getElementsByClassName('side-nav-button')[checkIDs.indexOf(buttonClicked)];
+    curButton.style.background = "#2ab7a9";
+    curButton.classList.add("side-nav-button-visible")
+    
+  }
 
-//       document
-//         .querySelector(
-//           `.side-nav-item[data-for-anchor="${visibleAnchor.target.id}"] .side-nav-link`
-//         )
-//         .classList.add("side-nav-link-selected");
-//     },
-//     { threshold: 0.5 }
-//   );
+  let scrollTop = document.documentElement.scrollTop;
+  for (var anchorID of checkIDs) 
+  {
 
-//   anchors.forEach((anchor) => observer.observe(anchor));
-// }
-
-// activateNavigation();
+    let el = document.getElementById(anchorID);
+    var sectionButton = navButtons.getElementsByClassName('side-nav-button')[checkIDs.indexOf(el.id)];
+    if (scrollTop > el.offsetTop - 300 && scrollTop < el.offsetTop - 300 + el.clientHeight) 
+    {
+      if (el.id == buttonClicked){
+        buttonClicked = '';
+        sectionButton.style.background = "rgba(255, 255, 255, 0.733)"; 
+        sectionButton.classList.remove("side-nav-button-visible")
+      }
+      sectionButton.style.background = "#2ab7a9";
+      sectionButton.classList.remove("side-nav-button-visible")
+    }
+    else if (buttonClicked == '') 
+    {
+      sectionButton.style.background = "rgba(255, 255, 255, 0.733)"; 
+      sectionButton.classList.remove("side-nav-button-visible")
+    }
+  }
+});
