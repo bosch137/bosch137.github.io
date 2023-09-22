@@ -93,10 +93,9 @@ Looks like you're checking out my source code... I suppose that's not surprising
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSG3VPG" height="0" width="0"
         style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <body class="anchor" style="background-color:rgb(42, 42, 42); padding-top: 0; font-family:'Courier New', Courier, monospace;">
     <main> 
-        <div class="container-fluid anchor custom-image-caro" data-offset="0" id="intro">
+        <div class="container-fluid anchor custom-image-caro" data-offset="0" id="intro" data-label="Intro">
             <div id="carousel" class="carousel slide custom-image-caro" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="carousel-button-helper active"></li>
@@ -147,21 +146,62 @@ Looks like you're checking out my source code... I suppose that's not surprising
                 </div>
             </div>
         </div>
-
         <!--  Floating Navigation buttons   -->
-        <div id="navbuttons">
+         <div class="navbuttons fixed-action-btn " id="navbuttons">
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(intro)" autofocus>
+                    <i class="fas fa-heart icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">About Me</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(leadership)">
+                    <i class="fas fa-briefcase icon-fixer"></i>
+                </button>
+            <p class="side-nav-label">Leadership &amp; Work</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(gameProjects)">
+                    <i class="fas fa-gamepad icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Game Projects</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(codeProjects)">
+                    <i class="fas fa-code icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Code Projects</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(adventures)">
+                    <i class="fas fa-globe-asia icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Adventures</p>
+            </div>
+            <div class="side-nav-item">
+                <button class="side-nav-button waves-effect" onclick="goToID(contact)">
+                    <i class="far fa-id-card icon-fixer"></i>
+                </button>
+                <p class="side-nav-label">Contact</p>
+            </div>
+        </div>
+
+        <!-- <div id="navbuttons">
             <div class="fixed-action-btn" style="bottom: 6.875rem; right: 1.563 rem; z-index:10;">
-                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(38)" style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Previous Section">
+                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(38)"
+                    style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Previous Section">
                     <i class="fas fa-caret-up fa-2x"></i>
                 </a>
             </div>
             <div class="fixed-action-btn" style="bottom: 3.75rem; right: 3.125rem; z-index:20;">
-                <a class="btn-floating waves-effect waves-light button-collapse ntooltipped" data-activates="slide-out" style="background-color: #4285f4;" data-position="left" data-delay="500" data-tooltip="Menu/Navigation">
+                <a class="btn-floating waves-effect waves-light button-collapse ntooltipped" data-activates="slide-out"
+                    style="background-color: #4285f4;" data-position="left" data-delay="500" data-tooltip="Menu/Navigation">
                     <i class="far fa-compass"></i>
                 </a>
             </div>
             <div class="fixed-action-btn" style="bottom: 0.635rem; right: 1.563rem; z-index:10;">
-                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(40)" style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Next Section">
+                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(40)"
+                    style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Next Section">
                     <i class="fas fa-caret-down fa-2x"></i>
                 </a>
             </div>
@@ -183,8 +223,8 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <li><a class="waves-effect" onclick="goToID(intro)">Intro</a></li>
             <li><a class="waves-effect" onclick="goToID(leadership)">Leadership &amp; Work</a></li>
             <li><a class="waves-effect" onclick="goToID(gameProjects)">Game Projects</a></li>
-            <li><a class="waves-effect" onclick="goToID(codeProjects)">Coding Projects</a></li>
-            <!-- <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li> -->
+            <li><a class="waves-effect" onclick="goToID(codeProjects)">Coding Projects</a></li> 
+            // <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li>
             <li><a class="waves-effect" onclick="goToID(adventures)">Adventure</a></li>
             <li>
                 <div class="divider" style="margin-bottom: 8px;"></div>
@@ -195,7 +235,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
             <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/michaelboschwitz"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a></li>
             <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
-        </ul>
+        </ul>-->
 
         <!--
                 _                    _               _     _
@@ -207,7 +247,18 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                             | |
                                                             |_|
                                     (leadership)-->
-        <div class="anchor" data-offset="50" id="leadership"></div>
+        <div class="anchor" data-offset="50" id="leadership" data-label="Leadership">
+            <!-- <svg class="arrows" style="left: 40%;">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+            <svg class="arrows" style="left: 60%;">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg> -->
+        </div>
         <h2 class="resizer-title" style="padding-top: 3.125rem; padding-bottom: 3.125rem;">Leadership &amp; Work</h2>
         
         <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;">
@@ -480,7 +531,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                                                                                                                            (projects)-->
         <!--<div class="anchor" data-offset="0" id="projects"></div>-->
         
-        <div class="anchor" data-offset="5" id="gameProjects"></div>
+        <div class="anchor" data-offset="5" id="gameProjects" data-label="Game Projects"></div>
         
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 0px;">
             <h2 class="resizer-title">Game Projects</h2>
@@ -500,7 +551,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
             </div>
         </div>
         
-        <div class="anchor" data-offset="5" id="codeProjects"></div>
+        <div class="anchor" data-offset="5" id="codeProjects" data-label="Code Projects"></div>
         
         <div class="container-fluid" style="max-width: 1920px; padding-bottom: 3.125rem;">
             <h2 class="resizer-title">Coding Projects</h2>
@@ -530,7 +581,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
  /  _____  \  |  '--'  |   \    /    |  |____ |  |\   |     |  |     |  `--'  | |  |\  \----.|  |____.----)   |   
 /__/     \__\ |_______/     \__/     |_______||__| \__|     |__|      \______/  | _| `._____||_______|_______/    
                                                                                                    (adventures)-->
-    <div class="anchor" data-offset="0" id="adventures"></div>
+    <div class="anchor" data-offset="0" id="adventures" data-label="Adventures"></div>
         <div id="adventure-carousel" class="carousel slide custom-image-caro adventure-carousel" data-ride="carousel" style="height: 90vh;">
             <ol class="carousel-indicators">
                 <li data-target="#adventure-carousel" data-slide-to="0" class="carousel-button-helper active"></li>
@@ -637,7 +688,7 @@ Looks like you're checking out my source code... I suppose that's not surprising
         </div>
     </main>
     <footer>
-        <div class="hero-footer anchor" data-offset="0">
+        <div class="hero-footer anchor" data-offset="0" id="contact" data-label="Contact">
             <div class="resizer-head">
                 <span class="me_name">I'm Michael Boschwitz,</span>
             </div>

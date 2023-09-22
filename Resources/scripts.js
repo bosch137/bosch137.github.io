@@ -301,3 +301,39 @@ function UnCryptMailto(s) {
 
   return false;
 }
+
+// function activateNavigation() {
+//   const anchors = document.querySelectorAll(".anchor");
+//   const navContainer = document.getElementsByClassName("side-nav");
+//   const navItems = Array.from(anchors).map((anchor) => {
+//     return `
+//                     <div class="side-nav-item" data-for-anchor="${anchor.id}">
+//                         <a href="#${anchor.id}" class="side-nav-link"></a>
+//                         <span class="side-nav-label">${anchor.dataset.label}</span>
+//                     </div>
+//                 `;
+//   });
+
+//   navContainer.innerHTML = navItems.join("");
+
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       document.querySelectorAll(".side-nav-link").forEach((navLink) => {
+//         navLink.classList.remove("side-nav-link-selected");
+//       });
+
+//       const visibleAnchor = entries.filter((entry) => entry.isIntersecting)[0];
+
+//       document
+//         .querySelector(
+//           `.side-nav-item[data-for-anchor="${visibleAnchor.target.id}"] .side-nav-link`
+//         )
+//         .classList.add("side-nav-link-selected");
+//     },
+//     { threshold: 0.5 }
+//   );
+
+//   anchors.forEach((anchor) => observer.observe(anchor));
+// }
+
+// activateNavigation();
