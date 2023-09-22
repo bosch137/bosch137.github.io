@@ -748,7 +748,7 @@ fieldset[disabled] .btn-custom.active {
   padding: 0.25em;
   position: fixed;
   margin-left: 50%;
-  top: 20vh;
+  top: 25vh;
   background-color: rgba(0, 0, 0, 0);
   outline-color: rgba(0, 0, 0, 0);
   display: inline;

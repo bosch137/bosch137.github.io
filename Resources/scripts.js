@@ -33,7 +33,7 @@ Materialize.scrollFire([
         ],
         loop: false,
         contentType: "html",
-        typeSpeed: 60,
+        typeSpeed: 25,
         // call when done callback function
         callback: function() {
           $(".typed-footer").parent().children(".typed-cursor").delay(1500).fadeOut("slow");
