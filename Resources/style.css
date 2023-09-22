@@ -70,6 +70,10 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .leadership-container{
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
   .col-hide {
     margin-right: 0;
     padding-left: 0;
