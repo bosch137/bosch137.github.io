@@ -285,7 +285,7 @@ $(".button-collapse").sideNav({
 
 function showEmail() {
   if (window.ga && ga.create) ga("send", "pageview", "assets/email");
-  UnCryptMailto("l`hksn9lanrbgvhhsy?fl`hk-bnl");
+  UnCryptMailto("nbjmup;ncptdixjju{Ahnbjm/dpn");
   return false;
 }
 
