@@ -2,9 +2,9 @@ function divChanger(selected) {
     // var tabNames = ['eagle-scout', 'boating-director', 'tri-m', 'barista',];
     // var tabWords = ['Eagle Scout', 'Boating Director', 'Tri-M', 'Barista',];
     // var tabImages = ['BSAImage', 'boating', 'TriM-LogoBW', 'starbucks',];
-    var tabNames = ['hangar-13', 'rubyshark', 'eagle-scout', 'boating-director', 'tri-m',];
-    var tabWords = ['Hangar 13', 'Rubyshark Games', 'Eagle Scout', 'Boating Director', 'Tri-M',];
-    var tabImages = ['H13Logo', 'RSLogo','BSAImage', 'boating', 'TriM-Logo',];
+    var tabNames = ['rubyshark', 'hangar-13',  'eagle-scout', 'boating-director', 'tri-m',];
+    var tabWords = ['Rubyshark Games', 'Hangar 13', 'Eagle Scout', 'Boating Director', 'Tri-M',];
+    var tabImages = ['RSLogo', 'H13Logo', 'BSAImage', 'boating', 'TriM-Logo',];
     longForm = String(
         '<div class="col-md-3 nav-tab-helper" id="NavTabs">\
                     <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">');
@@ -57,9 +57,9 @@ function resizeTime(shortSave, longSave) {
 function sideImagePicker(str) {
     var returnString = '';
 
-    if (str == "#hangar-13") { var imageChoice = "./Resources/Icons/H13Logo.png"; }
+    if (str == "#rubyshark") { var imageChoice = "./Resources/Icons/RSLogo.png"; }
 
-    else if (str == "#rubyshark") { var imageChoice = "./Resources/Icons/RSLogo.png"; }
+    else if (str == "#hangar-13") { var imageChoice = "./Resources/Icons/H13Logo.png"; }
 
     else if (str == "#eagle-scout") { var imageChoice = "./Resources/Icons/BSAImage.png"; }
 
@@ -80,9 +80,9 @@ function sideImagePicker(str) {
 function extraImagePicker(str) {
     var returnString = '';
 
-    if (str == "#hangar-13") { var imageChoice = ["./Resources/Hangar13/Mafia.jpg", "./Resources/Hangar13/Confidential.png", "./Resources/Hangar13/TFTBL.jpg"]; }
+    if (str == "#rubyshark") { var imageChoice = ["./Resources/Rubyshark/OrvilleShooting.jpg", "./Resources/Rubyshark/CheckaLook.jpg", "./Resources/Rubyshark/LevelConcept.png"]; }
 
-    else if (str == "#rubyshark") { var imageChoice = ["./Resources/Rubyshark/OrvilleShooting.jpg", "./Resources/Rubyshark/CheckaLook.jpg", "./Resources/Rubyshark/LevelConcept.png"]; }
+    else if (str == "#hangar-13") { var imageChoice = ["./Resources/Hangar13/Mafia.jpg", "./Resources/Hangar13/Confidential.png", "./Resources/Hangar13/TFTBL.jpg"]; }
 
     else if (str == "#eagle-scout") { var imageChoice = ["./Resources/EagleScout/EaglePavers.jpg", "./Resources/EagleScout/EagleCourtOfHonor.jpg", "./Resources/EagleScout/EaglePaversAlignment.jpg"]; }
 

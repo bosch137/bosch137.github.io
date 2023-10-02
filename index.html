@@ -255,10 +255,10 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                                             | |
                                                             |_|
                                     (leadership)-->
-    <div class="anchor" data-offset="0" id="leadership" data-label="Leadership">
+    <div class="anchor" data-offset="50" id="leadership" data-label="Leadership">
         <h2 class="resizer-title" style="padding-top: 3.125rem; padding-bottom: 3.125rem;">Leadership &amp; Work</h2>
         
-        <div class="container-fluid leadership-container" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;">
+        <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;3vw 3vw">
         
             <div class="row">
                 <div class="leadership-span" id="Leadership-Card">
@@ -269,10 +269,10 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 var currentForm = divChanger(0);
                                 $(document).on('shown.bs.tab', function (e) {
                                     var target = $(e.target).attr("href") // activated tab
-                                    if (target == "#hangar-13") {
+                                    if (target == "#rubyshark") {
                                         currentForm = divChanger(0);
                                     }
-                                    else if (target == "#rubyshark") {
+                                    else if (target == "#hangar-13") {
                                         currentForm = divChanger(1);
                                     }
                                     else if (target == "#eagle-scout") {
@@ -335,8 +335,27 @@ Looks like you're checking out my source code... I suppose that's not surprising
                             </script>
                         </div>
                         <div class="tab-content inner-panel" id="myTabContent" style="padding-top: 0.313rem;">
-                            <div class="tab-pane fade in active tab-helper-fella" id="hangar-13" role="tabpanel"
-                                aria-labelledby="hangar-13-tab">
+                        <div class="tab-pane fade in tab-helper-fella active" id="rubyshark" role="tabpanel" aria-labelledby="rubyshark-tab">
+                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Rubyshark Games</h6>
+                                <h3 class="card-header text-center card-head-colorer">Mantra</h3>
+
+                                <p class="card-text"><br><b>Mantra</b> is a fast paced, high mobility, first person shooter made in <b>Unreal Engine</b>. With design inspiration from games like
+                                <i>Halo</i>, <i>DOOM</i>, and <i>Titanfall 2</i>, Our core design pillars are fast paced combat, puzzle solving, and exploration.</p>
+                                <hr>
+                                </hr>
+                                <p class="card-text">Many of my major deliverables on this project have been related to combat, AI, enemies, and boss design. Lately, I've been focused on designing enemies that 
+                                require the player to keep mobile, while also pushing the conventions of FPS games with new twists on mechanics such as bullet-hell and evolving boss encounters!<br></p>
+
+                                <p class="card-text"> - Lead a small team in enemy creation, from concept to implementation.</p>
+                                <p class="card-text"> - Upgraded existing AI, such as improving pathfinding and awareness.</p>
+                                <p class="card-text"> - Refined combat flow to improve overall player experience and game feel.</p>
+                                <p class="card-text"> - Developed multiple intersystem assets with a high standard for quality.<br></p>
+                                <hr>
+                                 <p class="card-text"><i>Feel free to check a look or wishlist the game on <u><a href="https://store.steampowered.com/app/1994700/Mantra/"target="_blank">Steam</a></u>. (It'll be free)<br></i></p>
+                                </hr>
+                                <div class="card-footer text-center text-muted">May 2022 - Current</div>
+                            </div>
+                            <div class="tab-pane fade in tab-helper-fella" id="hangar-13" role="tabpanel" aria-labelledby="hangar-13-tab">
                                 <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">2K Games</h6>
                                 <h3 class="card-header text-center card-head-colorer">Hangar 13</h3>
                                 <hr>
@@ -350,23 +369,6 @@ Looks like you're checking out my source code... I suppose that's not surprising
                                 <hr>
                                 </hr>
                                 <div class="card-footer text-center text-muted">Summer 2021</div>
-                            </div>
-                            <div class="tab-pane fade tab-helper-fella" id="rubyshark" role="tabpanel"
-                                aria-labelledby="rubyshark-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Rubyshark Games</h6>
-                                <h3 class="card-header text-center card-head-colorer">Mantra</h3>
-                                <hr>
-                                </hr>
-                                <p class="card-text">I am working on the upcoming game, Mantra! Feel free to check a look or wishlist the game on <u><a href="https://store.steampowered.com/app/1994700/Mantra/" target="_blank">Steam</a></u>. (It'll be free)<br></p>
-                                <p class="card-text"> - Lead a small team in enemy creation, from concept to implementation.</p>
-                                <p class="card-text"> - Upgraded existing AI, such as improving pathfinding and awareness.</p>
-                                <p class="card-text"> - Prepared and served drinks and food in accordance with health codes and</p>
-                                <p class="card-text"> - Refined combat flow to improve overall player experience and game feel.</p>
-                                <p class="card-text"> - Developed multiple intersystem assets with a high standard for quality.<br></p>
-                                <p class="card-text"><i>As we get closer to the release of our public demo, this section will be updated.</i></p>
-                                <hr>
-                                </hr>
-                                <div class="card-footer text-center text-muted">May 2022 - Current</div>
                             </div>
                             <div class="tab-pane fade tab-helper-fella" id="eagle-scout" role="tabpanel"
                                 aria-labelledby="eagle-scout-tab">
@@ -737,12 +739,12 @@ Looks like you're checking out my source code... I suppose that's not surprising
     </script>
     
     <script>
-        document.getElementById("Side-Image").innerHTML = sideImagePicker("#hangar-13");
+        document.getElementById("Side-Image").innerHTML = sideImagePicker("#rubyshark");
         document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
         document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px"; 
 
         document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
-        document.getElementById("Extra-Images").innerHTML = extraImagePicker("#hangar-13");
+        document.getElementById("Extra-Images").innerHTML = extraImagePicker("#rubyshark");
         
         if(window.outerWidth > 1380){
             document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
