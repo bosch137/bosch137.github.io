@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- for FF, Chrome, Opera -->
+    <link rel="icon" class="icon-generator" type="image/png" sizes="16x16">
+    <link rel="icon" class="icon-generator" type="image/png"  sizes="32x32">
+    
+    <!-- for IE -->
+    <link rel="icon" class="icon-generator" type="image/x-icon">
+    <link rel="shortcut icon" class="icon-generator" type="image/x-icon">
+
+        <script>
+            var iconNumber = Math.floor(Math.random() * 7);
+            var icons = document.getElementsByClassName("icon-generator");
+            for (var i = 0; i < icons.length; i++) {
+                icons[i].href = "/Icons/MBoschIcon" + iconNumber + ".png";
+            }
+        </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meet Michael Boschwitz!</title>
+    <meta property="og:type" content="Portfolio">
+    <meta property="og:image" content="Photos/NZLifeguard.png">
+    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-color">
+        <div class="container-fluid"><a class="d-flex justify-content-center align-items-center justify-content-xxl-start align-items-xxl-end nav-shrink" href="index.html"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png">
+                <p class="navbarText" href="index.html">Michael Boschwitz - Game Designer</p>
+            </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-center" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="about-me.html">About Me</a></li>
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="projects.html">Projects</a></li>
+                    <li class="nav-item d-xxl-flex align-items-xxl-center m-1"><button class="btn btn-outline-warning ms-md-2 nav-grow hireme" type="button" onclick="showEmail()">Hire Me!</button></li>
+                    <li class="theme-switcher nav-item dropdown nav-grow m-1"><a class="dropdown-toggle nav-link m-auto text-white" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg></a>
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                                </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                                </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                                </svg>Auto</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page cv-page">
+        <section>
+            <div class="swiper" style="height: 75vh;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/MiscJapan.png&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/WeLOVETEKO.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/Psychiatrist.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/IMGDrumset.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Code%20Projects/EagleCutie.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/USJ.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/headshotjapan.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/Banana.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/Testament6P.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/frens-halloween.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/FamilyWinter.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/NaganoMonke.jpg&quot;) center center / cover no-repeat;"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="text-primary swiper-button-prev"></div>
+                <div class="text-primary swiper-button-next"></div>
+                <div class="container-fluid text-start container-overlay">
+                    <div class="row g-0 mb-4">
+                        <div class="col-md-12">
+                            <p class="subtitle-header">Hi, I'm Michael Boschwitz!</p>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col"><span id="typing-starter" class="resizer-sub typed">...</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block block-intro pt-0 pb-0">
+            <section class="py-4 py-xl-5">
+                <div class="container d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+                    <div class="row d-flex flex-row">
+                        <div class="col align-self-center pb-0 mt-4">
+                            <div class="text-white">
+                                <h2 class="text-start text-white mb-1">About Me:</h2>
+                                <p class="text-start text-muted mb-4 card-overview" style="font-family: 'Courier Prime', monospace;">I'm a persistent, highly creative, and passionate Game Developer from Minnesota, U.S.A! I've been making games since high school and playing them for as long as I can remember. I'm currently pursuing professional opportunities in the industry, either domestically or expanding my horizons abroad! Thanks for stopping by! 🙂</p>
+                                <div class="my-3"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex align-items-center align-content-center align-items-md-center"><img class="rounded-circle img-fluid align-items-lg-end fit-cover w-100" src="assets/img/Photos/headshotcandy.jpg"></div>
+                    </div>
+                </div>
+                <div class="pt-1">
+                    <div class="container education group">
+                        <h1 class="display-5 text-start m-2">Education:</h1>
+                        <div class="row gx-0 gy-3 gx-sm-0 gy-sm-3 gx-md-0 gy-md-0 gx-lg-0 gy-lg-0 gx-xl-0 gy-xl-0 gx-xxl-0 gy-xxl-0 d-flex d-sm-flex flex-row justify-content-center justify-content-sm-start justify-content-md-evenly justify-content-xxl-between">
+                            <div class="col-auto col-sm-auto col-md-auto col-lg-6 col-xl-7 text-start align-self-center bg-secondary rounded-5 p-4">
+                                <h3 class="mb-0">University of Minnesota</h3><span class="text-muted align-middle p-2 mb-2">May 2023</span>
+                                <hr class="mt-2 mb-2 w-100">
+                                <p class="pb-0 mb-0 fs-5" style="font-family: Lato, sans-serif;">Software Engineering and Creative Design</p>
+                                <p class="mb-0 pb-1 fs-5" style="font-family: Lato, sans-serif;">+ Japanese Studies (Minor)</p>
+                            </div>
+                            <div class="col-auto col-sm-auto col-md-auto col-lg-5 col-xl-4 text-start align-items-sm-end align-self-md-stretch bg-secondary rounded-5 p-4">
+                                <h3 class="mb-0">Orono H.S</h3><span class="text-muted align-middle pb-2">June 2018</span>
+                                <hr class="m-1 mt-1 mb-2 w-100">
+                                <p class="mb-0 fs-5" style="font-family: Lato, sans-serif;">High School Diploma</p>
+                            </div>
+                        </div>
+                        <div class="item"></div>
+                    </div>
+                    <div class="container mb-3 mt-5 pt-4 scroll-container">
+                        <div class="row g-0 justify-content-around visible w-100 gap-3" id="awards-container1">
+                            <div class="col-auto">
+                                <div>
+                                    <div class="d-flex"><img class="flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/Tri-M-Logo.png">
+                                        <div>
+                                            <p class="fw-bold text-primary mb-0 award-title">Tri-M Musical Honor Society</p>
+                                            <p class="text-center text-muted mb-0 award-sub">Orono H.S. 2016-2018</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div>
+                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/logo_tsukuba.webp">
+                                        <div>
+                                            <p class="fw-bold text-primary mb-0 award-title">立命館大学 SKP Award</p>
+                                            <p class="text-muted mb-0 award-sub">Spring 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div>
+                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                                        <div>
+                                            <p class="fw-bold text-primary mb-0 award-title">Other</p>
+                                            <p class="text-muted mb-0 award-sub">Erat netus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 d-xxl-flex justify-content-evenly align-content-center invisible w-100 gap-3 mt-3" id="awards-container2">
+                            <div class="col-auto">
+                                <div>
+                                    <div class="d-flex"><img class="flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/BSAImage.png">
+                                        <div>
+                                            <p class="fw-bold text-primary mb-0 award-title">Eagle Scout Award</p>
+                                            <p class="text-muted mb-0 award-sub">Boy Scouts of America, May 2018</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div>
+                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/1-bit-jam.png">
+                                        <div>
+                                            <p class="fw-bold text-primary mb-0 award-title">1-Bit Jam 2023 Winner</p>
+                                            <p class="text-muted mb-0 award-sub">MYLine Media, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div>
+                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/umn.jpg">
+                                        <div>
+                                            <p class="fw-bold text-primary mb-0 award-title">UMN Deans' List</p>
+                                            <p class="text-muted mb-0 award-sub">(Several Years)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="pt-5 mt-5 bg-secondary pb-5">
+            <h1 class="display-5 text-center">— Leadership &amp; Work —</h1>
+            <div class="container align-items-center scroll-container">
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/Asset_24xcool__1_-removebg-preview.png" height=""></div>
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="text-start subtitle-header-small-alt">- Vice President -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">"VGDC" is a club at the University of Minnesota all about making games! Each semester, we get 3 new themes and have to try to make a game based on our interpretation. I was 'Lead' for several projects. I led the group, worked on anything, and supported everyone. Art, Music, Programming, Managing Pushes, etc. I was either working on it or helping the people who were. The VGDC Vice President's job is mainly to handle aspects of club at a similar level to the president of club. This includes things such as reserving rooms for club meetings, planning events, et cetera.<br><br>Another important role is being in charge of handling public presence of club. This was done by promoting the club on campus, outreaching to other clubs, and communication with gaming related people/companies. Some examples of this from the past are getting guest speakers who've worked in the industry to come to a meeting and chat; or our group having a field trip to the organization Glitch - a company in Minneapolis that offers services to upcoming indie devs.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Video Game Development Club at the University of Minnesota</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="subtitle-header-small-alt">- Technical / Combat Designer -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;margin-bottom: 7px;font-family: Lato, sans-serif;">Mantra is a fast paced, high mobility, first person shooter made in Unreal Engine. Many of my major deliverables on this project have been related to combat, AI, enemies, and boss design. Lately, I've been focused on designing enemies that require the player to keep mobile, while also pushing the conventions of FPS games with new twists on mechanics such as bullet-hell and evolving boss encounters!<br><br>- Lead a small team in enemy creation, from concept to implementation.<br>- Upgraded existing AI, such as improving pathfinding and awareness.<br>- Refined combat flow to improve overall player experience and game feel.<br>- Developed multiple intersystem assets with a high standard for quality.<br><br>Feel free to check a look or wishlist the game on Steam. (It'll be free)</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Rubyshark Games</p>
+                        </div>
+                    </div>
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/RSLogo.png" height=""></div>
+                </div>
+                <hr>
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/H13Logo.png" width=""></div>
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="text-start subtitle-header-small-alt">- AI/Enemy Design Intern -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">The project I worked on at Hangar 13 has yet to be announced. As such, I cannot disclose much about the game itself.<br><br>- Used a powerful proprietary toolset and game engine to work on a unannounced Open World Multiplayer AAA game.<br>- Drafted new abilities while enhancing existing attacks, locomotion, group behaviors, reactions, and combat roles.<br>- Maintained and thrived with an extremely high level of quality in an international, fluid, and fast paced setting.<br>- Evolved classic 2D game mechanics and concepts to construct a ground-breaking new style of 3D gameplay.<br>- Aided overhaul the design of multiple enemies to create a more unique and consistent player experience.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Hangar 13</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
+                    <div class="col w-75">
+                        <div class="text-start" style="font-family: Lato, sans-serif;">
+                            <h1 class="subtitle-header-small-alt">- Boating Director -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;margin-bottom: 7px;">I have thousands of stories about Camp Teko, and I'd love to talk about them all but I only have so much space! Here's an overview of my job at least.<br><br>- Being prepared to perform emergency rescues at the waterfront, and maintaining the safety of both campers and counselors.<br>- Directing and coordinating boating specialist and lifeguards during rotations, while being engaged and welcoming to campers.<br>- Identifying potential hazards, handling them to maintain the safety of the campers during, and between boating rotations.<br>- Provide leadership and maintain the boating beach, boats, and equipment.<br>- Providing a positive role model for the campers, especially younger campers.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);margin-right: -7px;">Camp Teko</p>
+                        </div>
+                    </div>
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/boating.png"></div>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section>
+            <div class="swiper" style="height: 88vh;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/Gion.jpg">
+                        <h3 class="photo-caption">Gion, Kyoto</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/EvoJapan.jpg">
+                        <h3 class="photo-caption">Evo Japan 2023, Tokyo</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/Osaka.jpg">
+                        <h3 class="photo-caption">Gilco Running Man, Osaka</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/HennaHotel.jpg">
+                        <h3 class="photo-caption">Henna Hotel, Osaka</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/JapanStoneGarden.jpg">
+                        <h3 class="photo-caption">Stone Garden Near Campus, Kyoto</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/ACEphoto.jpg">
+                        <h3 class="photo-caption">Ritsumeikan Ace Volleyball Club, Kyoto</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NY1.jpg">
+                        <h3 class="photo-caption">Westfield World Trade Center, NYC</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NY2.jpg">
+                        <h3 class="photo-caption">August Wilson Theatre, NYC</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NY3.jpg">
+                        <h3 class="photo-caption">Brooklyn Bridge, NYC</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/IMGVail.jpg">
+                        <h3 class="photo-caption">Game Creek in Vail, Colorado</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/Vail1.jpg">
+                        <h3 class="photo-caption">Top of Born Free in Vail, Colorado</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NZNight.jpg">
+                        <h3 class="photo-caption">Off a Road on the South Island, New Zealand</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NZMillfordSound.jpg">
+                        <h3 class="photo-caption">Milford Sound, New Zealand</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NZCar.jpg">
+                        <h3 class="photo-caption">Mid-Roadtrip to Dunedin, New Zealand</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/NZMountain.jpg">
+                        <h3 class="photo-caption">Near Picton, New Zealand</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/SpainSevilla.jpg">
+                        <h3 class="photo-caption resizer-sub resizer-sub">The Plaza de España, Spain</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/SpainSwordShop.jpg">
+                        <h3 class="photo-caption">A Cliff Near Toledo, Spain</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/ParisMom.jpg">
+                        <h3 class="photo-caption">Near the Louvre with my Mom, Paris</h3>
+                    </div>
+                    <div class="swiper-slide"><img class="w-100 h-100 fit-cover" src="assets/img/Photos/ParisArch.jpg">
+                        <h3 class="photo-caption">Top of the Arc de Triomphe, France</h3>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="text-primary swiper-button-prev"></div>
+                <div class="text-primary swiper-button-next"></div>
+                <div class="container-fluid text-start container-overlay">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <p class="subtitle-header">Adventures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer py-3 border-top pb-0 pt-5">
+        <section class="portfolio-block border-top call-to-action border-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content">
+                    <h3>Like what you see?</h3>
+                </div>
+                <div class="d-flex justify-content-evenly align-items-center w-50 m-auto gap-2"><button class="btn btn-outline-warning text-nowrap hireme" type="button" onclick="showEmail()">Hire Me</button><button class="btn btn-outline-success" type="button">Resume/CV</button><button class="btn btn-outline-info" type="button">Projects</button></div>
+            </div>
+        </section>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

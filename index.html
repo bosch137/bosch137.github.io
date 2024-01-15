@@ -1,60 +1,9 @@
 <!DOCTYPE html>
-<html style="font-size: unset;">
+<html data-bs-theme="dark" lang="en">
 
-<!--
-
-.------..------..------..------..------..------..------.     .------..------..------..------..------..------..------..------..------.
-|M.--. ||I.--. ||C.--. ||H.--. ||A.--. ||E.--. ||L.--. |     |B.--. ||O.--. ||S.--. ||C.--. ||H.--. ||W.--. ||I.--. ||T.--. ||Z.--. |
-|      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
-|      ||      ||      ||      ||      ||      ||      |     |      ||      ||      ||      ||      ||      ||      ||      ||      |
-| '--'M|| '--'I|| '--'C|| '--'H|| '--'A|| '--'E|| '--'L|     | '--'B|| '--'O|| '--'S|| '--'C|| '--'H|| '--'W|| '--'I|| '--'T|| '--'Z|
-`------'`------'`------'`------'`------'`------'`------'     `------'`------'`------'`------'`------'`------'`------'`------'`------'
-(Michael)                                                    (Boschwitz)
-Looks like you're checking out my source code... I suppose that's not surprising when you think about it.
-
--->
-
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZG29ET8S2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-RZG29ET8S2');
-    </script>
-    <!-- End Google Analytics -->
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-        w[l] = w[l] || []; 
-        w[l].push({'gtm.start':new Date().getTime(), event: 'gtm.js'}); 
-        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; 
-        j.async = true; 
-        j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl; 
-        f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-TQSG3VPG');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!--Import Google Icon Font-->
-    <link href="./Resources/icon.css" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="./Resources/materialize.min.css" media="screen,projection">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/brands.min.css">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/solid.min.css">
-    <link rel="stylesheet" href="./Resources/FontAwesome/css/regular.min.css">
-    <script type="text/javascript" src="./Resources/restyle-scripts.js"></script>
-
-    <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
-    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js" type="text/javascript"></script>
-    <script type="text/javascript" src="./Resources/amCharts-pixelMap.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="./Resources/jquery-3.4.1.min.js"></script>
-    <script src="./Resources/bootstrap.min.js"></script>
-
-    <!-- for FF, Chrome, Opera -->
+<head>
+    <meta charset="utf-8">
+<!-- for FF, Chrome, Opera -->
     <link rel="icon" class="icon-generator" type="image/png" sizes="16x16">
     <link rel="icon" class="icon-generator" type="image/png"  sizes="32x32">
     
@@ -66,713 +15,905 @@ Looks like you're checking out my source code... I suppose that's not surprising
             var iconNumber = Math.floor(Math.random() * 7);
             var icons = document.getElementsByClassName("icon-generator");
             for (var i = 0; i < icons.length; i++) {
-                icons[i].href = "./Resources/Icons/MBoschIcon" + iconNumber + ".png";
+                icons[i].href = "/Icons/MBoschIcon" + iconNumber + ".png";
             }
         </script>
-
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meet Michael Boschwitz!</title>
     <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Meet Michael Boschwitz">
-    <meta property="og:image" content="https://michael.boschwitz.me/Resources/Portraits/NZLifeguard.jpg">
-    <meta property="og:description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
-    <meta property="og:url" content="https://michael.boschwitz.me/">
+    <meta property="og:image" content="assets/img/Photos/NZLifeguard.jpg">
     <meta property="og:type" content="Portfolio">
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="620" />
-    <meta property="og:site_name" content="michael.boschwitz.me">
+    <script>
+        (function() {
 
+            // JavaScript snippet handling Dark/Light mode switching
 
-    <meta name="theme-color" content="#3b496e">
-    <title>Meet Michael Boschwitz</title>
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSG3VPG" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<body style="background-color:rgb(42, 42, 42); padding-top: 0; font-family:'Courier New', Courier, monospace;">
-    <main> 
-        
-        <!--  Floating Navigation buttons   -->
-        <div class="navbuttons fixed-action-btn " id="navbuttons">
-            <!-- <svg class="arrows" style="left: 40%;">
-                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                    <path class="a3" d="M0 40 L30 72 L60 40"></path> 
-                    </svg> -->
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect " style="background: #2ab7a9;" onclick="goToID(intro)">
-                    <i class="fas fa-heart icon-fixer"></i>
-                </button>
-                <p class="side-nav-button-special">About Me</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(leadership)">
-                    <i class="fas fa-briefcase icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Leadership &amp; Work</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(gameProjects)">
-                    <i class="fas fa-gamepad icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Game Projects</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(codeProjects)">
-                    <i class="fas fa-code icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Code Projects</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(adventures)">
-                    <i class="fas fa-globe-asia icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Adventures</p>
-            </div>
-            <div class="side-nav-item">
-                <button class="side-nav-button waves-effect" onclick="goToID(contact)">
-                    <i class="far fa-id-card icon-fixer"></i>
-                </button>
-                <p class="side-nav-label">Contact</p>
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-color">
+        <div class="container-fluid"><a class="d-flex justify-content-center align-items-center justify-content-xxl-start align-items-xxl-end nav-shrink" href="index.html"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png">
+                <p class="navbarText" href="index.html">Michael Boschwitz - Game Designer</p>
+            </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-center" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="about-me.html">About Me</a></li>
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="projects.html">Projects</a></li>
+                    <li class="nav-item d-xxl-flex align-items-xxl-center m-1"><button class="btn btn-outline-warning ms-md-2 nav-grow hireme" type="button" onclick="showEmail()">Hire Me!</button></li>
+                    <li class="theme-switcher nav-item dropdown nav-grow m-1"><a class="dropdown-toggle nav-link m-auto text-white" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg></a>
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                                </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                                </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                                </svg>Auto</a></div>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <div class="container-fluid anchor custom-image-caro" data-offset="0" id="intro" data-label="Intro">
-            <div id="carousel" class="carousel slide custom-image-caro" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="carousel-button-helper active"></li>
-                    <li data-target="#carousel" data-slide-to="1" class="carousel-button-helper"></li>
-                    <li data-target="#carousel" data-slide-to="2" class="carousel-button-helper"></li>
-                    <li data-target="#carousel" data-slide-to="3" class="carousel-button-helper"></li>
-                    <li data-target="#carousel" data-slide-to="4" class="carousel-button-helper"></li>
-                    <li data-target="#carousel" data-slide-to="5" class="carousel-button-helper"></li>
-                    <li data-target="#carousel" data-slide-to="6" class="carousel-button-helper"></li>
-                    <li data-target="#carousel" data-slide-to="7" class="carousel-button-helper"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/NZLifeguard.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/VGDC_Fall_2022_Showcase.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/Banana.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/ParisThumbsUp.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/IMGDrumset.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/NZDavid.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/tempPhotoThing.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-                    <div class="item">
-                        <img class="center-block img-fluid image-corrector" src="./Resources/Portraits/FamilyWinter.jpg" alt="Responsive image" loading="lazy" style="height: 95vh; width: 100%;">
-                    </div>
-
+    </nav>
+    <main class="page lanidng-page">
+        <section>
+            <div class="swiper" style="height: 88vh;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/NZLifeguard.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/VGDC_Fall_2022_Showcase.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/Banana.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/ParisThumbsUp.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/IMGDrumset.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/NZDavid.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/tempPhotoThing.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/FamilyWinter.jpg&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/Photos/NaganoMonke.jpg&quot;) center center / cover no-repeat;"></div>
                 </div>
-                <div style="position: absolute; top: 0.625rem;">
-                    <div class="col-md-12">
-                        <div class="resizer-head">
-                            <span class="me_name ">Hi, I'm Michael Boschwitz!</span>
-                        </div>
-                        <div class= "resizer-sub">
-                            <span id="typing-starter" class="typed">...</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <!-- <div id="navbuttons">
-            <div class="fixed-action-btn" style="bottom: 6.875rem; right: 1.563 rem; z-index:10;">
-                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(38)"
-                    style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Previous Section">
-                    <i class="fas fa-caret-up fa-2x"></i>
-                </a>
-            </div>
-            <div class="fixed-action-btn" style="bottom: 3.75rem; right: 3.125rem; z-index:20;">
-                <a class="btn-floating waves-effect waves-light button-collapse ntooltipped" data-activates="slide-out"
-                    style="background-color: #4285f4;" data-position="left" data-delay="500" data-tooltip="Menu/Navigation">
-                    <i class="far fa-compass"></i>
-                </a>
-            </div>
-            <div class="fixed-action-btn" style="bottom: 0.635rem; right: 1.563rem; z-index:10;">
-                <a class="btn-floating waves-effect waves-light ntooltipped" onclick="keyHandling(40)"
-                    style="background-color:#ea4335" data-position="left" data-delay="500" data-tooltip="Next Section">
-                    <i class="fas fa-caret-down fa-2x"></i>
-                </a>
-            </div>
-        </div>
-
-
-        <ul id="slide-out" class="side-nav right-aligned" style="width: 17.5rem; transform: translateX(100%);">
-            <li>
-                <div class="userView" style="height:10rem">
-                    <img class="background" src="./Resources/Icons/compass.jpg" style="width:17.5rem;">
-                </div>
-            </li>
-            <li>
-                <div class="subheader" style="margin-left:1.875rem;">Navigation</div>
-            </li>
-            <li>
-                <div class="divider" style="margin-bottom: 8px;"></div>
-            </li>
-            <li><a class="waves-effect" onclick="goToID(intro)">Intro</a></li>
-            <li><a class="waves-effect" onclick="goToID(leadership)">Leadership &amp; Work</a></li>
-            <li><a class="waves-effect" onclick="goToID(gameProjects)">Game Projects</a></li>
-            <li><a class="waves-effect" onclick="goToID(codeProjects)">Coding Projects</a></li> 
-            // <li><a class="waves-effect" onclick="goToID(projects)">Projects</a></li>
-            <li><a class="waves-effect" onclick="goToID(adventures)">Adventure</a></li>
-            <li>
-                <div class="divider" style="margin-bottom: 8px;"></div>
-            </li>
-            <li><a class="subheader" style="margin-bottom: 8px;">Resources</a></li>
-            <li><a class="waves-effect" target="_blank" href="./Resources/Michael-Boschwitz-Resume.pdf"><i class="far fa-id-card fa-2x"></i>Resume</a></li>
-            <li><a class="waves-effect" target="_blank" href="https://boschybee.itch.io"><i class="fab fa-itch-io fa-2x"></i>Itch.io</a></li>
-            <li><a class="waves-effect" target="_blank" href="https://github.com/bosch137"><i class="fab fa-github fa-2x"></i>GitHub</a></li>
-            <li><a class="waves-effect" target="_blank" href="https://linkedin.com/in/michaelboschwitz"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a></li>
-            <li><a class="waves-effect" target="_blank" href="#" onclick="UnCryptMailto('nbjmup;cptdi248Avno/fev'); return false;"><i class="material-icons">mail</i>Email</a></li>
-        </ul>-->
-
-        <!--
-                _                    _               _     _
-                | |                  | |             | |   (_)
-                | |     ___  __ _  __| | ___ _ __ ___| |__  _ _ __
-                | |    / _ \/ _` |/ _` |/ _ \ '__/ __| '_ \| | '_ \
-                | |___|  __/ (_| | (_| |  __/ |  \__ \ | | | | |_) |
-                |______\___|\__,_|\__,_|\___|_|  |___/_| |_|_| .__/
-                                                            | |
-                                                            |_|
-                                    (leadership)-->
-    <div class="anchor" data-offset="50" id="leadership" data-label="Leadership">
-        <h2 class="resizer-title" style="padding-top: 3.125rem; padding-bottom: 3.125rem;">Leadership &amp; Work</h2>
-        
-        <div class="container-fluid" id="Leadership-Container" style="max-width: 1920px; padding-bottom: 5.75rem;3vw 3vw">
-        
-            <div class="row">
-                <div class="leadership-span" id="Leadership-Card">
-                    <div class="container-fluid"
-                        style="border-radius: 0.635rem; padding: 0; min-height: fit-content; max-width: 100%; font-family: 'Courier New', Courier, monospace;">
-                        <div id="Leadership-Top">
-                            <script>
-                                var currentForm = divChanger(0);
-                                $(document).on('shown.bs.tab', function (e) {
-                                    var target = $(e.target).attr("href") // activated tab
-                                    if (target == "#rubyshark") {
-                                        currentForm = divChanger(0);
-                                    }
-                                    else if (target == "#hangar-13") {
-                                        currentForm = divChanger(1);
-                                    }
-                                    else if (target == "#eagle-scout") {
-                                        currentForm = divChanger(2);
-                                    }
-                                    else if (target == "#boating-director") {
-                                        currentForm = divChanger(3);
-                                    }
-                                    else if (target == "#tri-m") {
-                                        currentForm = divChanger(4);
-                                    }
-                                    // else if (target == "#barista") {
-                                    //     currentForm = divChanger(3);
-                                    // }
-                                });
-                                document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
-                                document.getElementsByTagName("BODY")[0].onresize = function () { resizeMe() };
-
-                                function resizeMe() {
-                                    document.getElementById("Leadership-Top").innerHTML = resizeTime(currentForm[0], currentForm[1]);
-
-                                    var gamesCardsAdjuster = cardCarouselAdjuster('games');
-                                    var codeCardsAdjuster = cardCarouselAdjuster('code');
-                                    document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
-                                    document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
-                                    document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
-                                    document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1];
-
-                                    if (document.getElementById("Leadership-Card").offsetHeight != null) {
-
-                                        if (window.outerWidth > 1380) {
-                                            document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
-                                            document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
-
-                                            document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
-                                            document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
-
-                                            document.getElementById("Image-Container").style.marginTop = document.getElementById("Leadership-Container").offsetHeight - document.getElementById("Image-Container").style.height + "px";
-                                            document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
-                                            document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
-                                            document.getElementById("Leadership-Card").style.width = ((document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4)) + "px";
-                                            document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
-
-                                        }
-                                        else {
-                                            document.getElementById("Image-Container").style.width = 0;
-                                            document.getElementById("Image-Container").style.height = 0;
-
-                                            document.getElementById("Image-Container").style.marginTop = 0;
-                                            document.getElementById("NavTabs").style.marginTop = 0;
-
-                                            document.getElementById("Leadership-Card").style.backgroundColor = "white";
-                                            document.getElementById("myTabContent").style.marginLeft = 0 + "px";
-                                            document.getElementById("Leadership-Card").style.width = 100 + "%";
-                                            document.getElementById("Side-Image").style.height = 0;
-                                            document.getElementById("Extra-Images").style.height = 0;
-                                        }
-                                    }
-                                }
-                            </script>
-                        </div>
-                        <div class="tab-content inner-panel" id="myTabContent" style="padding-top: 0.313rem;">
-                        <div class="tab-pane fade in tab-helper-fella active" id="rubyshark" role="tabpanel" aria-labelledby="rubyshark-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Rubyshark Games</h6>
-                                <h3 class="card-header text-center card-head-colorer">Mantra</h3>
-
-                                <p class="card-text"><br><b>Mantra</b> is a fast paced, high mobility, first person shooter made in <b>Unreal Engine</b>. With design inspiration from games like
-                                <i>Halo</i>, <i>DOOM</i>, and <i>Titanfall 2</i>, Our core design pillars are fast paced combat, puzzle solving, and exploration.</p>
-                                <hr>
-                                </hr>
-                                <p class="card-text">Many of my major deliverables on this project have been related to combat, AI, enemies, and boss design. Lately, I've been focused on designing enemies that 
-                                require the player to keep mobile, while also pushing the conventions of FPS games with new twists on mechanics such as bullet-hell and evolving boss encounters!<br></p>
-
-                                <p class="card-text"> - Lead a small team in enemy creation, from concept to implementation.</p>
-                                <p class="card-text"> - Upgraded existing AI, such as improving pathfinding and awareness.</p>
-                                <p class="card-text"> - Refined combat flow to improve overall player experience and game feel.</p>
-                                <p class="card-text"> - Developed multiple intersystem assets with a high standard for quality.<br></p>
-                                <hr>
-                                 <p class="card-text"><i>Feel free to check a look or wishlist the game on <u><a href="https://store.steampowered.com/app/1994700/Mantra/"target="_blank">Steam</a></u>. (It'll be free)<br></i></p>
-                                </hr>
-                                <div class="card-footer text-center text-muted">May 2022 - Current</div>
-                            </div>
-                            <div class="tab-pane fade in tab-helper-fella" id="hangar-13" role="tabpanel" aria-labelledby="hangar-13-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">2K Games</h6>
-                                <h3 class="card-header text-center card-head-colorer">Hangar 13</h3>
-                                <hr>
-                                </hr>
-                                <p class="card-text">The project I worked on at Hangar 13 has yet to be announced. As such, I cannot disclose much about the game itself.<br></p>
-                                <p class="card-text"> - Used a powerful proprietary toolset and game engine to work on a unannounced Open World Multiplayer AAA game.</p>
-                                <p class="card-text"> - Drafted new abilities while enhancing existing attacks, locomotion, group behaviors, reactions, and combat roles.</p>
-                                <p class="card-text"> - Maintained and thrived with an extremely high level of quality in an international, fluid, and fast paced setting.</p>
-                                <p class="card-text"> - Evolved classic 2D game mechanics and concepts to construct a groundbreaking new style of 3D gameplay.</p>
-                                <p class="card-text"> - Aided overhaul the design of multiple enemies to create a more unique and consistent player experience.</p>
-                                <hr>
-                                </hr>
-                                <div class="card-footer text-center text-muted">Summer 2021</div>
-                            </div>
-                            <div class="tab-pane fade tab-helper-fella" id="eagle-scout" role="tabpanel"
-                                aria-labelledby="eagle-scout-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Boy Scouts of America</h6>
-                                <h3 class="card-header text-center card-head-colorer">Eagle Scout Award</h3>
-                                <hr>
-                                </hr>
-                                <p class="card-text">For my Eagle Scout Project: <br>
-                                    - I created three paver patios in my Highschool's Nature Center, providing dedicated homes
-                                    for picnic benches by a scenic view.<br>
-                                    - With my extensive preplanning and leadership experience, the project was finished over a
-                                    single weekend.<br>
-                                    - Motivated, managed, and provided leadership to a dynamic team of around 30+ people for
-                                    the duration of construction.<br>
-                                </p>
-                                <p class="card-text">As a member of Troop 206: <br>
-                                    - I frequently served as Head Quartermaster, a role that required proper organization and
-                                    management of the troops' gear.<br>
-                                    - As an upper-level position in my troop, it required learning more effective leadership and
-                                    communication skills.<br>
-                                    - Engaged with a multitude of people in the wonderful community, with people both inside and
-                                    outside of scouting.
-                                </p>
-                                <hr>
-                                </hr>
-                                <div class="card-footer text-center text-muted">Court of Honor: May 2018</div>
-                            </div>
-                            <div class="tab-pane fade tab-helper-fella" id="boating-director" role="tabpanel"
-                                aria-labelledby="boating-director-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Camp Teko</h6>
-                                <h3 class="card-header text-center card-head-colorer">Boating Director</h3>
-                                <hr>
-                                </hr>
-                                <p class="card-text"> - Being prepared to perform emergency rescues at the waterfront, and
-                                    maintaining the safety of both campers and counselors.</p>
-                                <p class="card-text"> - Directing and coordinating boating specialist and lifeguards during
-                                    rotations, while being engaged and welcoming to campers.</p>
-                                <p class="card-text"> - Identifying potential hazards, handling them to maintain the safety of
-                                    the campers during, and between boating rotations.</p>
-                                <p class="card-text"> - Provide leadership and maintain the boating beach, boats, and equipment.</p>
-                                <p class="card-text"> - Providing a positive role model for the campers, especially younger
-                                    campers.</p>
-                                <hr>
-                                </hr>
-                                <div class="card-footer text-center text-muted">Summers of 2017, 2018, and 2019</div>
-                            </div>
-                            <div class="tab-pane fade tab-helper-fella" id="tri-m" role="tabpanel" aria-labelledby="tri-m-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Music Honor Society</h6>
-                                <h3 class="card-header text-center card-head-colorer">Tri-M</h3>
-                                <hr>
-                                </hr>
-                                <p class="card-text">I have thousands of stories about band. I'd love to talk about them all,
-                                    but this is the leadership section! <br> Here's the highlights of my roles in regard to Band
-                                    Leadership and Tri-M:</p>
-                                <p class="card-text"> - Participated in and helped foster musical growth in the community.</p>
-                                <p class="card-text"> - Provided support for events aimed at the combination of music and
-                                    community engagement.</p>
-                                <p class="card-text"> - Lead or provided leadership for community events, pops concerts, and
-                                    other events the band hosted.</p>
-                                <p class="card-text"> - Supported and encouraged interest in music and the pursuit of learning
-                                    and growing as a musician.</p>
-                                <hr>
-                                </hr>
-                                <div class="card-footer text-center text-muted">Academic Years of 2017 and 2018</div>
-                            </div>
-                            <!-- <div class="tab-pane fade tab-helper-fella" id="barista" role="tabpanel"
-                                aria-labelledby="barista-tab">
-                                <h6 class="card-subtitle text-right mb-2 text-muted subtitle-aligner">Starbucks</h6>
-                                <h3 class="card-header text-center card-head-colorer">Barista</h3>
-                                <hr>
-                                </hr>
-                                <p class="card-text"> - Greeted each customer with a warm smile and positive attitude, even at
-                                    early hours of the day.</p>
-                                <p class="card-text"> - Maintained café cleanliness at all times, including cleaning tables,
-                                    maintaining condiment bar, and removing trash.</p>
-                                <p class="card-text"> - Prepared and served drinks and food in accordance with health codes and
-                                    café standards.</p>
-                                <p class="card-text"> - Offered courteous and friendly customer service to even the most
-                                    difficult patrons.</p>
-                                <p class="card-text"> - Maintained a strong understanding of company values and customer needs,
-                                    responding quickly in a fast-paced environment.</p>
-                                <p class="card-text"> - Proactively worked side by side with multiple levels of upper management
-                                    to ensure consistent, high quality customer service.</p>
-                                <hr>
-                                </hr>
-                                <div class="card-footer text-center text-muted">September 2017 - October 2018</div>
-                            </div> -->
-                            <script>
-                                $(document).on('shown.bs.tab', function (e) {
-                                    var target = $(e.target).attr("href") // activated tab
-                                    document.getElementById("Side-Image").innerHTML = sideImagePicker(target);
-
-                                    document.getElementById("Extra-Images").innerHTML = extraImagePicker(target);
-
-                                    if (document.getElementById("NavTabs").offsetHeight != null) {
-                                        document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
-                                        document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px";
-
-                                        if (window.outerWidth > 1380 && document.getElementById("NavTabs").offsetHeight < document.getElementById("myTabContent").offsetHeight) {
-                                            document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
-                                            document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
-                                        }
-                                        else {
-                                            document.getElementById("Image-Container").style.marginTop = 0;
-                                            document.getElementById("NavTabs").style.marginTop = 0;
-                                        }
-                                    }
-                                });
-                            </script>
-                        </div>
-                        <style>
-                            a {
-                                color: green;
-                            }
-        
-                            .nav-pills>li.active>a,
-                            .nav-pills>li.active>a:hover,
-                            .nav-pills>li.active>a:focus {
-                                background-color: green;
-                            }
-                        </style>
-                    </div>
-                </div>
-                <div class="col col-hide" id="Side-Image" style="padding-left: 0;">
-                    <div class="container-fluid" id="Image-Container" style="width: 0px; height: 0px;">
-                    </div>
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="container-fluid col-hide" id="Extra-Images"
-                    style="padding-left: 0.313rem; padding-right: 0.313rem; margin: 0 auto;"></div>
-            </div>  
-        </div>
-    </div>
-
-        <div class="parallax-container" style="height: 55vh;">
-            <div class="parallax"><img src="./Resources/Icons/raspi.jpg" style="display: block;"></div>
-            <!-- <div style="position: absolute; top:0.635rem;">
+                <div class="text-primary swiper-pagination"></div>
+                <div class="text-primary swiper-button-prev"></div>
+                <div class="text-primary swiper-button-next"></div>
+                <div class="container-fluid text-start container-overlay">
+                    <div class="row g-0 mb-4">
                         <div class="col-md-12">
-                            <div class="resizer-head">
-                                <span class="me_name Projects"><a>itch.io for Projects</a></span>
-                            </div>
+                            <p class="subtitle-header">Hi, I'm Michael Boschwitz!</p>
                         </div>
-                    </div> -->
-        </div>
-
-        <!--
-         .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
-        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-        | |   ______     | || |  _______     | || |     ____     | || |     _____    | || |  _________   | || |     ______   | || |  _________   | || |    _______   | |
-        | |  |_   __ \   | || | |_   __ \    | || |   .'    `.   | || |    |_   _|   | || | |_   ___  |  | || |   .' ___  |  | || | |  _   _  |  | || |   /  ___  |  | |
-        | |    | |__) |  | || |   | |__) |   | || |  /  .--.  \  | || |      | |     | || |   | |_  \_|  | || |  / .'   \_|  | || | |_/ | | \_|  | || |  |  (__ \_|  | |
-        | |    |  ___/   | || |   |  __ /    | || |  | |    | |  | || |   _  | |     | || |   |  _|  _   | || |  | |         | || |     | |      | || |   '.___`-.   | |
-        | |   _| |_      | || |  _| |  \ \_  | || |  \  `--'  /  | || |  | |_' |     | || |  _| |___/ |  | || |  \ `.___.'\  | || |    _| |_     | || |  |`\____) |  | |
-        | |  |_____|     | || | |____| |___| | || |   `.____.'   | || |  `.___.'     | || | |_________|  | || |   `._____.'  | || |   |_____|    | || |  |_______.'  | |
-        | |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
-        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-         '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-                                                                                                                                                           (projects)-->
-        <!--<div class="anchor" data-offset="0" id="projects"></div>-->
-        
-    <div class="anchor" data-offset="5" id="gameProjects" data-label="Game Projects">
-        
-        <div class="container-fluid" style="max-width: 1920px; padding-bottom: 0px;">
-            <h2 class="resizer-title">Game Projects</h2>
-            <div id="card-carousel-games" class="carousel slide card-carousel-games" data-ride="carousel" data-interval="false"
-                style="height: fit-content">
-        
-                <div class="carousel-inner" id="Games-Card-Carousel-Inner"></div>
-        
-                <a class="left carousel-control showtime" href="#card-carousel-games" data-slide="prev"
-                    style="background: none; width: fit-content;">
-                    <span class="glyphicon glyphicon-chevron-left" style="transform: translate(15px,0); color: white;"></span>
-                </a>
-                <a class="right carousel-control showtime" href="#card-carousel-games" data-slide="next"
-                    style="background: none; width: fit-content;">
-                    <span class="glyphicon glyphicon-chevron-right" style="transform: translate(-15px,0); color: white;"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="anchor" data-offset="5" id="codeProjects" data-label="Code Projects">
-        
-        <div class="container-fluid" style="max-width: 1920px; padding-bottom: 3.125rem;">
-            <h2 class="resizer-title">Coding Projects</h2>
-            <div id="card-carousel-code" class="carousel slide card-carousel-code" data-ride="carousel" data-interval="false"
-                style="height: fit-content;">
-        
-                <div class="carousel-inner" id="Code-Card-Carousel-Inner"></div>
-        
-                <a class="left carousel-control showtime" href="#card-carousel-code" data-slide="prev"
-                    style="background: none; width: fit-content;">
-                    <span class="glyphicon glyphicon-chevron-left" style="transform: translate(15px,0); color: white;"></span>
-                </a>
-                <a class="right carousel-control showtime" href="#card-carousel-code" data-slide="next"
-                    style="background: none; width: fit-content;">
-                    <span class="glyphicon glyphicon-chevron-right" style="transform: translate(-15px,0); color: white;"></span>
-                </a>
-        
-            </div>
-        </div>
-    </div>
-
-<!-- (some photos are on an old camera, some a more modern, and others on a professional camera)
-     ___       _______  ____    ____  _______ .__   __. .___________. __    __  .______       _______     _______.
-    /   \     |       \ \   \  /   / |   ____||  \ |  | |           ||  |  |  | |   _  \     |   ____|   /       |
-   /  ^  \    |  .--.  | \   \/   /  |  |__   |   \|  | `---|  |----`|  |  |  | |  |_)  |    |  |__     |   (----`
-  /  /_\  \   |  |  |  |  \      /   |   __|  |  . `  |     |  |     |  |  |  | |      /     |   __|     \   \    
- /  _____  \  |  '--'  |   \    /    |  |____ |  |\   |     |  |     |  `--'  | |  |\  \----.|  |____.----)   |   
-/__/     \__\ |_______/     \__/     |_______||__| \__|     |__|      \______/  | _| `._____||_______|_______/    
-                                                                                                   (adventures)-->
-    <div class="anchor" data-offset="0" id="adventures" data-label="Adventures">
-        <div id="adventure-carousel" class="carousel slide custom-image-caro adventure-carousel" data-ride="carousel" style="height: 90vh;">
-            <ol class="carousel-indicators">
-                <li data-target="#adventure-carousel" data-slide-to="0" class="carousel-button-helper active"></li>
-                <li data-target="#adventure-carousel" data-slide-to="1" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="2" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="3" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="4" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="5" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="6" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="7" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="8" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="9" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="10" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="11" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="12" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="13" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="14" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="15" class="carousel-button-helper"></li>
-                <li data-target="#adventure-carousel" data-slide-to="16" class="carousel-button-helper"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/Gion.jpg" alt="Responsive image"style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Gion, Kyoto</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/EvoJapan.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Evo Japan 2023, Tokyo</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/Osaka.jpg" alt="Responsive image"style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Gilco Running Man, Osaka</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/JapanStoneGarden.jpg" alt="Responsive image"style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Stone Garden Near Campus, Kyoto</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NY1.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Westfield World Trade Center, NYC</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NY2.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">August Wilson Theatre, NYC</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NY3.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Brooklyn Bridge, NYC</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/IMGVail.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Game Creek in Vail, Colorado</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/Vail1.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Top of Born Free in Vail, Colorado</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NZNight.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Off a Road on the South Island, New Zealand</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NZMillfordSound.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Milford Sound, New Zealand</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NZCar.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Mid-Roadtrip to Dunedin, New Zealand</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/NZMountain.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Near Picton, New Zealand</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/SpainSevilla.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub resizer-sub">The Plaza de España, Spain</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/SpainSwordShop.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">A Cliff Near Toledo, Spain</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/ParisMom.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Near The Louvre, France</h3></div>
-                </div>
-                <div class="item">
-                    <img class="center-block img-fluid image-corrector" src="./Resources/Adventures/ParisArch.jpg" alt="Responsive image" style="height: 95vh; width: 100%;">
-                    <div class="carousel-caption"><h3 class="photo-caption resizer-sub">Top of the Arc de Triomphe, France</h3></div>
-                </div>
-            </div>
-            <div style="position: absolute; top:0.635rem;">
-                <div class="col-md-12">
-                    <div class="resizer-head">
-                        <span class="me_name">Adventures</span>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col"><span id="typing-starter" class="resizer-sub typed-home">...</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container-fluid" style="max-width: 1920px; padding-bottom: 2.18rem;">
-                <h2 class="special-header">Oh, the Places I've Been!</h2>
-                <div id="map" class="hide-me"></div>
-                <p class="hide-me-alt">Check out this section on a maximized desktop, the pictures look much better.<br><br> Plus it has an interactive map here!</p>
-        </div>
-    </div>
-    </main>
-    <footer>
-        <div class="anchor" data-offset="0" id="contact" data-label="Contact">
-            <div class="hero-footer">
-                <div class="resizer-head">
-                    <span class="me_name">I'm Michael Boschwitz,</span>
+        </section>
+        <section class="portfolio-block pb-0 pt-5"><a class="link-body-emphasis d-table m-auto" href="projects.html">
+                <h1 class="display-5 text-center projects-section-headers" id="game-project-header">— Game Projects —</h1>
+            </a><span class="d-flex justify-content-center align-items-center">Click For an Overview!</span>
+            <div class="container-fluid text-center slider-container">
+                <div class="d-flex flex-row multiple-item-slider">
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/Mantra/LevelConcept.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Mantra</h4>
+                                        <p class="card-overview scaling-text">Set in the near future, a growing force of robots controlled by a corrupt AI is hell-bent on destroying humanity. Corrupted AI code caused thousands of industrial robots to turn into human-killing murder machines, pushing humanity to the brink of extinction.&nbsp;<br><br>Inspired by the likes of Doom, Titanfall and Halo, Mantra takes you through an expansive world where you'll encounter a healthy mix of action-packed combat, swift traversal spaces, and engaging puzzles to complete!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" data-bs-target="Projects/Mantra.html" href="Projects/Mantra.html">Learn More</a><a class="text-truncate pcb-right" role="button" href="https://store.steampowered.com/app/1994700/Mantra/" target="_blank">Wishlist</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Mantra</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 align-items-xxl-start">
+                                <div class="col-auto project-card-badge-column" style="text-align: center;"><span class="badge text-bg-primary badge-spacer">Unreal</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-success badge-spacer">FPS</span><span class="badge bg-danger badge-spacer">Action</span><span class="badge bg-orange badge-spacer">Sci-fi</span><span class="badge text-bg-warning badge-spacer">Story Driven</span><span class="badge bg-dark-red badge-spacer">Rubyshark</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/Firesale/1bitjam%20logo.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Firesale</h4>
+                                        <p class="card-overview">Winner of the 1Bit Jam 2023! This game is goofy mashup of Warioware, Rougelites, and Ice levels revolving around the theme of "Start with everything, end with nothing".&nbsp;<br><br>Evoking an addicting frenetic feeling, the game revolves around a shopkeeper forced by a demon to sell his entire catalogue of cursed wares before the clock strikes midnight.&nbsp; Skate, grapple, or rocket boost out into the streets to find "new customers" by crashing into them in this totally normal game.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Firesale.html">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://boschybee.itch.io/firesale">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Firesale</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Award Winning</span><span class="badge bg-black badge-spacer">Unity</span><span class="badge bg-black badge-spacer">Game Jam</span><span class="badge bg-black badge-spacer">Microgames</span><span class="badge bg-black badge-spacer">Rougelite</span><span class="badge bg-black badge-spacer">Short</span><span class="badge bg-black badge-spacer">Funny</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/FWNdIu0XwAI-vwF.jpeg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Project Ghost</h4>
+                                        <p class="card-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Project-Ghost.html">Learn More</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Project Ghost</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid flex-wrap card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge text-bg-primary badge-spacer">Unreal</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Action</span><span class="badge bg-black badge-spacer">Stealth</span><span class="badge bg-success badge-spacer">Historical</span><span class="badge bg-yellow badge-spacer">Story Driven</span><span class="badge bg-blue badge-spacer">Small Team</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Logos/Confidential.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Unannounced AAA Game</h4>
+                                        <p class="card-overview">The project I worked on at Hangar 13 has yet to be announced. As such, I cannot disclose much about the game itself.<br><br>Check out my Resume for a bit of an overview though!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="/Resources/Michael-Boschwitz-Resume.pdf">Resume</a><a role="button" class="pcb-right" target="_blank" href="https://hangar13games.com">Hangar 13</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Unannounced AAA Game</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-grey badge-spacer">Custom Engine</span><span class="badge bg-dark-blue badge-spacer">MP / Live Service</span><span class="badge text-bg-success badge-spacer">Open World</span><span class="badge bg-dark-red badge-spacer">Bullet Hell</span><span class="badge bg-blue badge-spacer">Looter Shooter</span><span class="badge bg-blue badge-spacer"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/Spring-Cleaning/SpringCleaning.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Spring Cleaning</h4>
+                                        <p class="card-overview">A short game jam project. The theme we got was "Minimalism", and this short, silly game about cleaning your computer is the result!.<br><br>The game jam was a 48 hour jam, so this game had to be made within that 48 hour window. I initially had to manage both the game jam and my group at the start, after a while I was mostly just in the trenches with my team. I was exhausted by the end, but it turned out great!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Spring-Cleaning.html">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://boschybee.itch.io/spring-cleaning">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Spring Cleaning</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-gold badge-spacer">Award Winning</span><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-black badge-spacer">Game Jam</span><span class="badge bg-blue badge-spacer">Point &amp; Click</span><span class="badge bg-green badge-spacer">Relaxing</span><span class="badge bg-success badge-spacer">Short</span><span class="badge bg-brown badge-spacer">Funny</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/High-Speed-Hominids/HighspeedHominids.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">High-Speed Hominids</h4>
+                                        <p class="card-overview">A cross between Ultrakill/Titanfall 2, and a Racing/Speedrunning game. High-Speed Hominids is a multiplayer 'Shmoover' (movement-shooter) about racing other gorillas to escape an experimental facility.&nbsp;<br><br>To make sure we really encourage speed and movement tech I replicated the Source Engine's movement and physics extremely closely, allowing tech like air-strafing and B-Hopping. Up to 4 players "Ape Out" and try to escape first and with the highest score.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/High-Speed-Hominids.html">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://boschybee.itch.io/high-speed-hominids">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">High-Speed Hominids</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">Multiplayer</span><span class="badge text-bg-success badge-spacer">FPS</span><span class="badge bg-orange badge-spacer">Racing</span><span class="badge bg-danger badge-spacer">Shmoover</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/Remnants/Remnants.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Remnants</h4>
+                                        <p class="card-overview">Probably one of the most complete VGDC projects to date. The themes for this game were "Unconventional Weapons, Copy, and Can't Stop/No Stopping". Inspired by everything from Mega Man to Bloodborne, this was a challenging project!<br><br>While I could explain all the mechanics like the Rally system, boss items, and the Remnant mechanic, why not give the game a shot and discover it all yourself!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Remnants.html">Learn More</a><a role="button" class="pcb-right" href="https://boschybee.itch.io/remnants" target="_blank">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Remnants</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge text-bg-success badge-spacer">Top Down RPG</span><span class="badge bg-green badge-spacer">Boss Rush</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/Dystopian-Defiers/ZHECLo.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Dystopian Defiers</h4>
+                                        <p class="card-overview">The final glimmer of hope in this dark future, is you Su. You may not know much about you or the world around you, but remember this well Su. As long as you keep destroying, you'll stay alive.<br><br>Welcome to ruined city of Varkamon. You play as Su, a rebel renegade fighting hordes of enemy bots in a dystopian future. However, your life is directly tied to your money. As you fight you can grow your health pool, but beware as the legion of bots grows stronger with each passing second.&nbsp;</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Dystopian-Defiers.html">Learn More</a><a role="button" class="pcb-right" href="https://boschybee.itch.io/dystopian-defiers" target="_blank">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Dystopian Defiers</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Bullet Hell</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-silver badge-spacer">Unique</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/DanielRadcliffe.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Untitled Rhythm Shooter</h4>
+                                        <p class="card-overview">This was inspired by Guns Akimbo, which was an upcoming movie at the time. Some people in my group really like rhythm games, so we came up with the idea of making a pseudo-rhythm game.<br><br>The twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype, but since it was made in a month it is a bit too janky to release.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Daniel-Radcliffe.html">Learn More</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Untitled Rhythm Shooter</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge text-bg-success badge-spacer">Top Down RPG</span><span class="badge bg-green badge-spacer">Boss Rush</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Game%20Projects/SonicDrillLAST.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Sonic Drill</h4>
+                                        <p class="card-overview">This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the least interesting. It was inspired by "Motherload", and "Factorio"<br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks in Construct 2, which is a fairly rudimentary engine.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Sonic-Drill.html">Learn More</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Sonic Drill</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge text-bg-secondary badge-spacer"></span><span class="badge bg-dark-blue badge-spacer">Construct</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Mining</span><span class="badge bg-success badge-spacer">Progression Based</span><span class="badge bg-green badge-spacer">Relaxing</span><span class="badge bg-yellow badge-spacer">Solo</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="resizer-sub">
-                    <span id="typing-ending" class="typed-footer"></span>
+            </div><a class="link-body-emphasis d-table m-auto" href="projects.html">
+                <h1 class="display-5 text-center projects-section-headers" id="code-project-header" href="projects.html">— Code Projects —</h1>
+            </a><span class="d-flex justify-content-center align-items-center">Click For an Overview!</span>
+            <div class="container-fluid text-center slider-container">
+                <div class="d-flex flex-row multiple-item-slider">
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/ImpossibleInc.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Impossible Inc.</h4>
+                                        <p class="card-overview">Our goal was to create a demo where each level becomes more and more overt that rooms are physically impossible sizes. Using Stencil buffering, we made a demo from scratch that is seamless to explore.<br><br>However, one of the main issues is that a 6mx6m play area is required. That being said, we were fortunate enough to have that amount of space, and I even showed it to some of my friends. When not primed, most did not even realize!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" onclick="window.open(&#39;https://drive.google.com/file/d/1IFCxx1gKcMkrqRqrD5Q7BpPmvSToRTD-/preview&#39;,&#39;_blank&#39;)">Watch Demo</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Impossible Inc.</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">VR / XR</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5619</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/PlatformingUnderPressure.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Platforming Under Pressure</h4>
+                                        <p class="card-overview">Platforming Under Pressure is an auto-platformer, where you help design the level. The character moves automatically, but you have to help get them across the gap!<br><br>We used an SPH fluid simulation to power the core of the gameplay. There are four levels inspired by the seasons, each with their own unique challenges. Help the lil fella cross the gap using the power of water pressure, and physics!</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="window.open(&#39;https://theshoes.itch.io/platforming-under-pressure&#39;,&#39;_blank&#39;)" type="button">Play Now!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Platforming Under Pressure</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">WebGL</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/ShopkeepSim.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">IK Solver</h4>
+                                        <p class="card-overview">Our goal was to make a simulation using an IK (inverse kinematic) motion solver. We implemented this project as a robot shopkeeper simulator, by using IK, Euler angles, quaternions, and a few models, we created our demonstration.<br><br>To make our character more lifelike, we used a recursive method to loop through all the bones in the skeleton, then moved the bones bit by bit to the desired location. Finally, we added some reactions based on if the object could be reached or not.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">IK Solver</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/VRInteractions.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">VR Interactions</h4>
+                                        <p class="card-overview">Although this project looks pretty game like on the surface, the majority of the project revolved around proper implementation of a multitude of interaction techniques. From basic controller and pointer-based grabbing techniques, to more unique and uncommon methods.<br><br>These were implementations such as Go-Go grasping, Spindle, and Fishing Reel. These techniques helped create a better common understanding of how creative you can get with numerous interaction techniques, as well as how they impact your control and influence in a virtual world.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">VR Interaction Systems</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">VR / XR</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5619</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/ClothSim.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Clothing Simulation</h4>
+                                        <p class="card-overview">To create the cloth simulation, we first generated a mesh composed of multiple ropes. Each rope had subsequent nodes attached to it. Then ropes were connected horizontally via their nodes to form the mesh. Soon after, we added a collision system for interactivity.<br><br>To try to make our simulation more accurate, we implemented the The Runge–Kutta method (RK4) of integration. RK4 let us have much higher accuracy with our simulation. With some optimizations to our code, it ended up at a level that felt realistic and nice to watch.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Clothing Simulation</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-light-yellow badge-spacer">OpenGL</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-blue badge-spacer">C++</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/Seafaring.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Ship Wayfinding</h4>
+                                        <p class="card-overview">This project had my partner and I implement an intelligent collision - avoidance system. To do this, we generated several random obstacles indicated by islands or circles, several random nodes, and two randomly generated points for the start and the goal positions.<br><br>To find the best path, we tried implementing Dijkstra's Algorithm to find the shortest path from the start to the goal points via our nodes + graph. Similarly, if it made more sense for our ship to "skip" a node and advance to the next node, it would do so.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Ship Wayfinding</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-grey badge-spacer">Processing 3</span><span class="badge bg-gold badge-spacer">AI / Pathfinding</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/SoYouThinkAntsCanDance.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Dancing Ants</h4>
+                                        <p class="card-overview">So You Think Ants Can Dance? Yes. Well... with the help of motion captured dancers they can. Dancing Ants was a very unique project. The goal of the project was to interpret Motion Captured Data of dancers and map it onto simple 3D characters.<br><br>While a bit minimalist, the project was still a great learning experience. It focused mostly on how to properly interpret the data, creating bones and joints for the characters, and properly keeping track of local vs. global spaces. The ants may look fairly simple, but they will bust out some moves!</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Dancing Ants</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-light-yellow badge-spacer">OpenGL</span><span class="badge bg-purple badge-spacer">Motion Capture</span><span class="badge bg-green badge-spacer">Data Parser</span><span class="badge bg-blue badge-spacer">C++</span><span class="badge bg-maroonish badge-spacer">CSCI 4611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/CarSoccer.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Car Soccer</h4>
+                                        <p class="card-overview">Car Soccer a was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular, it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.<br><br>The biggest part of the project was making a simple, but consistent enough physics simulation for the ball. Likewise, creating a system for the collisions was integral for the project to even be playable. Balancing these systems to allow a minimalistic, simple arcade game was a really fun class project.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Car Soccer</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-light-yellow badge-spacer">OpenGL</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-dark-blue badge-spacer">Multiplayer</span><span class="badge bg-blue badge-spacer">C++</span><span class="badge bg-maroonish badge-spacer">CSCI 4611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/TextRain.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Text Rain</h4>
+                                        <p class="card-overview">For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall like rain, and simulating interactions between the video feed and the text rain.<br><br>Implementing the video and webcam feeds was not exactly difficult; however, making the text react was the real challenge. My solution to this design challenge was to create a faux-physics system for the falling text. All in all, it was definitely a unique project.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Text Rain</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-grey badge-spacer">Processing 3</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 4611</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/BusSim.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Bus Simulation</h4>
+                                        <p class="card-overview">For this project, we were "tasked" to create a simulation and return a report to a hypothetical bus company.<br><br>The simulation was achieved by creating classes to model the behavior of each element of the system as well as each activity (event) that occurs in the system. There was no overall controller except for a main driver loop that runs queued events until time runs out. Each element in the system models its own behavior and interactions with other elements in the simulation.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Bus Simulation</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/BattleBoats.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Battle Boats</h4>
+                                        <p class="card-overview">This project involved us making "Battle Boats"... The battleship project consisted of 4 major parts that had to be built from scratch. The board, the boats, a turn system, and a debug mode.<br><br>For the board, The program simulated a rectangular X×Y board using a 2-dimensional array. Boats were represented by a line of X's on the board (Array), For turns, the user inputs a location (x, y) to attack and if they want to use an item. For the debug, it would display both boards so we could properly debug and test the game.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Battle Boats</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-gold badge-spacer">AI&nbsp; / Strategic</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/JavaDataStructure.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Data Structure Projects</h4>
+                                        <p class="card-overview">I've done several projects that relate to Data Structures, so for this card I will just list a few.<br><br>-HashMap (Java)<br>-ArrayLists (Java)<br>-Linked Lists (Java, C)<br>-Binary Trees(Java, C)<br><br>These projects all either involved making and/or using data structures for problems such as sorting, benchmarking, aggregating data, converting, etc.</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Data Structure Projects</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-green badge-spacer">Data Parser</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-silver badge-spacer">C</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span><span class="badge bg-maroonish badge-spacer">CSCI 2021</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>  
+            <div data-bss-parallax-bg="true" style="background: url(&quot;assets/img/Photos/raspi.jpg&quot;) center / cover;height: fit-content;">
+                <div class="container py-4 py-xl-5">
+                    <div class="row gx-1 row-cols-2 row-cols-md-4" style="background-color: black;border-radius: 5px;">
+                        <div class="col mx-auto">
+                            <div class="p-3">
+                                <h4 class="display-5 fw-bold text-center text-warning mb-0" style="font-size: min(max(20px, 4vw), 32px);">5+ Years</h4>
+                                <p class="text-center mb-0" style="font-size: min(max(11px, 2vw), 14px);color: rgba(255,255,255,0.75);">Professional and Personal Experience</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3">
+                                <h4 class="display-5 fw-bold text-center text-warning mb-0" style="font-size: min(max(20px, 4vw), 32px);">6+ Games</h4>
+                                <p class="text-center mb-0" style="font-size: min(max(11px, 2vw), 14px);color: rgba(255,255,255,0.75);">Released and/or Publicly Available&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3">
+                                <h4 class="display-5 fw-bold text-center text-warning mb-0" style="font-size: min(max(20px, 4vw), 32px);">5+ Awards</h4>
+                                <p class="text-center mb-0" style="font-size: min(max(11px, 2vw), 14px);color: rgba(255,255,255,0.75);">For Leadership and Academic Achievements</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3">
+                                <h4 class="display-5 fw-bold text-center text-warning mb-0" style="font-size: min(max(20px, 4vw), 32px);">20+ Years</h4>
+                                <p class="text-center mb-0" style="font-size: min(max(12px, 2vw), 14px);color: rgba(255,255,255,0.75);">Spent playing too many games...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-0">
+                        <div class="col-md-8 col-xl-6 text-center mx-auto">
+                            <hr class="disable-blur" style="border-width: 3px;opacity: 0.65;border-radius: 3px;">
+                        </div>
+                    </div>
+                    <div class="row g-0 d-xxl-flex" style="background-color: rgba(255,255,255,0.25);padding-right: 1%;padding-left: 1%;padding-top: 1%;border-top-left-radius: 16px;border-top-right-radius: 16px;">
+                        <div class="col d-xxl-flex align-self-center align-items-xxl-center">
+                            <ul class="leadership-image-list-wrapper">
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/1425334231-transparent-89916-400x142.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Unity-logo.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/logo_large_color_light.png" loading="auto"></li>
+                            </ul>
+                        </div>
+                        <div class="col align-self-center">
+                            <ul class="leadership-image-list-wrapper">
+                                <li class="leadership-image-list-element"><img class="rounded leadership-images" src="assets/img/Logos/kisspng-gamemaker-studio-game-engine-thepix-video-game-ga-game-logo-5ad4e3c1d4fb01.7497553715239013778724.png" loading="auto"></li>
+                                <li class="leadership-image-list-element" style="padding-right: 0px;margin-right: -10px;"><img class="leadership-images" src="assets/img/Logos/1200px-Source_engine_logo_and_wordmark.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/CryEngine_Nex-Gen(4th_Generation).png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/300px-Engine_-_Construct_3_-_logo.png" loading="auto"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row g-0 d-xxl-flex" style="background-color: rgba(255,255,255,0.25);padding-right: 1.25%;padding-left: 1.25%;">
+                        <div class="col d-xxl-flex align-self-center align-items-xxl-center">
+                            <ul class="leadership-image-list-wrapper disable-blur">
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/c--4.svg" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/cpp_logo.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/C_Programming_Language.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Python-logo-notext.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Java-Logo.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Lua-Logo.svg.png" loading="auto"></li>
+                            </ul>
+                        </div>
+                        <div class="col d-xxl-flex align-self-center align-items-xxl-center">
+                            <ul class="leadership-image-list-wrapper">
+                                <li class="leadership-image-list-element" style="margin-right: -10px;"><img class="leadership-images" src="assets/img/Logos/Opengl-logo.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/PgcSR.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/CSS.3.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/js-logo.webp" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/62a74dd1223343fbc2207d00.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Bootstrap_logo.svg.png" loading="auto"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row g-0 d-xxl-flex position-relative" style="background-color: rgba(255,255,255,0.25);padding-right: 1.25%;padding-left: 1.25%;border-bottom-right-radius: 16px;border-bottom-left-radius: 16px;">
+                        <div class="col d-xxl-flex align-self-center align-items-xxl-center">
+                            <ul class="leadership-image-list-wrapper">
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/1_biIy42Cn4Bnu0IkpUW1Zew.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Git-logo.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/d6a4fb8d-1f6e-421e-be7c-c0723c4b0000.jpg" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Jira_Logo.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/20210216184933!Trello_logo.svg" loading="auto"></li>
+                            </ul>
+                        </div>
+                        <div class="col d-xxl-flex align-self-center align-items-xxl-center">
+                            <ul class="leadership-image-list-wrapper">
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/blender_community_badge_orange.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/3ds-max-logo-9B624BE04F-seeklogo.com.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/a6a4bfb514e96ecf6fdbb6cce692cc48.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Adobe_Creative_Cloud_rainbow_icon.svg.png" loading="auto"></li>
+                                <li class="leadership-image-list-element"><img class="leadership-images" src="assets/img/Logos/Source_Filmmaker.webp" loading="auto"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="position-relative d-none d-sm-block">
+                        <h1 class="display-6 float-end subtitle-header-small position-absolute" style="transform: rotate(-20deg);right: -3%;margin-top: -3%;">...and more!</h1>
+                    </div>
+                    <div class="position-relative d-sm-none">
+                        <h1 class="display-6 float-end subtitle-header-small position-absolute" style="transform: rotate(-20deg);right: -3%;margin-top: -5%;font-size: 8px;">...and more!</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-end portfolio-block call-to-action border-bottom pb-0 pt-5">
+            <h1 class="display-5 text-center">— Leadership &amp; Work —</h1>
+            <div class="container align-items-center scroll-container">
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/Asset_24xcool__1_-removebg-preview.png" height=""></div>
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="text-start subtitle-header-small-alt">- Vice President -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">"VGDC" is a club at the University of Minnesota all about making games! Each semester, we get 3 new themes and have to try to make a game based on our interpretation. I was 'Lead' for several projects. I led the group, worked on anything, and supported everyone. Art, Music, Programming, Managing Pushes, etc. I was either working on it or helping the people who were. The VGDC Vice President's job is mainly to handle aspects of club at a similar level to the president of club. This includes things such as reserving rooms for club meetings, planning events, et cetera.<br><br>Another important role is being in charge of handling public presence of club. This was done by promoting the club on campus, outreaching to other clubs, and communication with gaming related people/companies. Some examples of this from the past are getting guest speakers who've worked in the industry to come to a meeting and chat; or our group having a field trip to the organization Glitch - a company in Minneapolis that offers services to upcoming indie devs.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Video Game Development Club at the University of Minnesota</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="subtitle-header-small-alt">- Technical / Combat Designer -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;margin-bottom: 7px;font-family: Lato, sans-serif;">Mantra is a fast paced, high mobility, first person shooter made in Unreal Engine. Many of my major deliverables on this project have been related to combat, AI, enemies, and boss design. Lately, I've been focused on designing enemies that require the player to keep mobile, while also pushing the conventions of FPS games with new twists on mechanics such as bullet-hell and evolving boss encounters!<br><br>- Lead a small team in enemy creation, from concept to implementation.<br>- Upgraded existing AI, such as improving pathfinding and awareness.<br>- Refined combat flow to improve overall player experience and game feel.<br>- Developed multiple intersystem assets with a high standard for quality.<br><br>Feel free to check a look or wishlist the game on Steam. (It'll be free)</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Rubyshark Games</p>
+                        </div>
+                    </div>
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/RSLogo.png" height=""></div>
+                </div>
+                <hr>
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/H13Logo.png" width=""></div>
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="text-start subtitle-header-small-alt">- AI/Enemy Design Intern -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">The project I worked on at Hangar 13 has yet to be announced. As such, I cannot disclose much about the game itself.<br><br>- Used a powerful proprietary toolset and game engine to work on a unannounced Open World Multiplayer AAA game.<br>- Drafted new abilities while enhancing existing attacks, locomotion, group behaviors, reactions, and combat roles.<br>- Maintained and thrived with an extremely high level of quality in an international, fluid, and fast paced setting.<br>- Evolved classic 2D game mechanics and concepts to construct a ground-breaking new style of 3D gameplay.<br>- Aided overhaul the design of multiple enemies to create a more unique and consistent player experience.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Hangar 13</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
+                    <div class="col w-75">
+                        <div class="text-start" style="font-family: Lato, sans-serif;">
+                            <h1 class="subtitle-header-small-alt">- Boating Director -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;margin-bottom: 7px;">I have thousands of stories about Camp Teko, and I'd love to talk about them all but I only have so much space! Here's an overview of my job at least.<br><br>- Being prepared to perform emergency rescues at the waterfront, and maintaining the safety of both campers and counselors.<br>- Directing and coordinating boating specialist and lifeguards during rotations, while being engaged and welcoming to campers.<br>- Identifying potential hazards, handling them to maintain the safety of the campers during, and between boating rotations.<br>- Provide leadership and maintain the boating beach, boats, and equipment.<br>- Providing a positive role model for the campers, especially younger campers.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);margin-right: -7px;">Camp Teko</p>
+                        </div>
+                    </div>
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/boating.png"></div>
+                </div>
+                <hr>
+            </div>
+            <div class="container mb-5">
+                <div class="row g-0 justify-content-around invisible w-100 gap-3" id="awards-container1">
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex"><img class="flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/Tri-M-Logo.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0 award-title">Tri-M Musical Honor Society</p>
+                                    <p class="text-center text-muted mb-0 award-sub">Orono H.S. 2016-2018</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/logo_tsukuba.webp">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0 award-title">立命館大学 SKP Award</p>
+                                    <p class="text-muted mb-0 award-sub">Spring 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0 award-title">Other</p>
+                                    <p class="text-muted mb-0 award-sub">Erat netus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0 d-xxl-flex justify-content-evenly align-content-center invisible w-100 gap-3 mt-3" id="awards-container2">
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex"><img class="flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/BSAImage.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0 award-title">Eagle Scout Award</p>
+                                    <p class="text-muted mb-0 award-sub">Boy Scouts of America, May 2018</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/1-bit-jam.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0 award-title">1-Bit Jam 2023 Winner</p>
+                                    <p class="text-muted mb-0 award-sub">MYLine Media, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/umn.jpg">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0 award-title">UMN Deans' List</p>
+                                    <p class="text-muted mb-0 award-sub">(Several Years)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block website gradient" style="padding-top: 0px;padding-bottom: 0px;height: fit-content;">
+            <div class="container-fluid justify-content-between justify-content-xxl-center align-items-xxl-center" style="width: 100%;padding: 0;height: 100%;">
+                <div class="row g-0 d-flex justify-content-center align-items-center h-100 w-100">
+                    <div class="col-md-12 col-lg-5 offset-lg-1 text" style="margin-top: 16px;">
+                        <h1 class="display-5 subtitle-header-small-alt" style="padding-bottom: 0px;margin-top: 16px;">Current Project: Mantra</h1>
+                        <p class="scaling-text m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efr nunc, vivamus vel accumsan dui. Quisque ac dolor cursus, volutpat nisl vel, porttitor eroLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efr nunc, vivamus vel accumsan dui. Quisque ac dolor cursus, volutpat nisl vel, porttitor eros.d-none d-sm-block</p>
+                    </div>
+                    <div class="col-md-12 col-lg-5 flex-fill current-project-img"><img class="current-project-image align-middle" src="assets/img/Game%20Projects/Mantra/PuzzleShooting.jpg"></div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block call-to-action border-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content">
+                    <h3>Like what you see?</h3><button class="btn btn-outline-success btn-lg hireme" type="button" onclick="showEmail">Hire me</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="vh-100 hero-footer">
+        <div class="parallax">
+            <div class="container text-start" style="display: inline;top: 0.625rem;z-index: 100;padding-bottom: 0px;margin-top: 0px;padding-right: 0px;padding-top: 11px;padding-left: 8px;">
+                <div class="row g-0" style="margin-bottom: 25px;margin-left: 16px;padding-top: 0px;margin-top: 0px;">
+                    <div class="col-md-12">
+                        <p class="subtitle-header">Hi, I'm Michael Boschwitz!</p>
+                    </div>
+                </div>
+                <div class="row g-0" style="padding-left: 16px;">
+                    <div class="col"><span id="typing-ending" class="resizer-sub typed-footer" style="line-height: 2.25;text-underline-offset: 2px;">...</span></div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="./Resources/jquery.min.js"></script>
-    <script>
-        if (!window.jQuery) {
-            var s = document.createElement('script');
-            s.setAttribute('src', 'assets/jquery/jquery-2.1.1.min.js');
-            document.body.appendChild(s);
-        }
-    </script>
-    <script type="text/javascript" src="./Resources/materialize.min.js"></script>
-    <script type="text/javascript" src="./Resources/typed.js"></script>
-    <link type="text/css" rel="stylesheet" href="./Resources/style.css">
-    <script type="text/javascript" src="./Resources/scripts.js"></script><div class="drag-target" style="right: 0; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
-    <script>
-        $('a[href*="./Resources/Michael-Boschwitz-Resume.pdf"]').click(function(e) {
-            if (window.ga && ga.create)
-                ga('send', 'pageview', "assets/resume");
-        });
-
-        $('a[href*="github.com/bosch137"]').click(function(e) {
-            if (window.ga && ga.create)
-                ga('send', 'pageview', 'assets/github' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('github.com') + 10));
-        });
-               
-        $('a[href*="https://boschybee.itch.io"]').click(function(e) {
-            if (window.ga && ga.create)
-                ga('send', 'pageview', 'assets/itch-io' + e.currentTarget.href.substring(e.currentTarget.href.indexOf('itch.io') + 10));
-        });
-
-        $('a[href*="linkedin.com/in/michaelboschwitz"]').click(function(e) {
-            if (window.ga && ga.create)
-                ga('send', 'pageview', 'assets/linkedin');
-        });
-    </script>
-    
-    <script>
-        document.getElementById("Side-Image").innerHTML = sideImagePicker("#rubyshark");
-        document.getElementById("Image-Container").style.height = document.getElementById("NavTabs").offsetHeight + "px";
-        document.getElementById("Image-Container").style.width = document.getElementById("NavTabs").offsetHeight + "px"; 
-
-        document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
-        document.getElementById("Extra-Images").innerHTML = extraImagePicker("#rubyshark");
-        
-        if(window.outerWidth > 1380){
-            document.getElementById("Leadership-Card").style.backgroundColor = "rgb(42,42,42)";
-            document.getElementById("myTabContent").style.marginLeft = document.getElementById("NavTabs").offsetWidth + 15 + "px";
-            document.getElementById("Leadership-Card").style.width = (document.getElementById("Leadership-Container").offsetWidth - document.getElementById("Image-Container").offsetWidth) - (parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue("font-size")) + 4) + "px";
-            document.getElementById("Extra-Images").style.height = document.getElementById("NavTabs").offsetHeight * 1.25 + "px";
-
-            document.getElementById("Image-Container").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("Image-Container").offsetHeight) / 2 + "px";
-            document.getElementById("NavTabs").style.marginTop = (document.getElementById("Leadership-Card").offsetHeight - document.getElementById("NavTabs").offsetHeight) / 2 + "px";
-        }
-        else{
-            document.getElementById("Image-Container").style.marginTop = 0;
-            document.getElementById("NavTabs").style.marginTop = 0;
-
-            document.getElementById("Leadership-Card").style.backgroundColor = "white";
-            document.getElementById("myTabContent").style.marginLeft = 0 + "px";
-            document.getElementById("Leadership-Card").style.width = 100 + "%";
-            document.getElementById("Side-Image").style.height = 0;
-            document.getElementById("Extra-Images").style.height = 0;
-        }
-
-        var gamesCardsAdjuster = cardCarouselAdjuster('games');
-        var codeCardsAdjuster = cardCarouselAdjuster('code');
-        document.getElementById("card-carousel-games").innerHTML = gamesCardsAdjuster[0] + document.getElementById("card-carousel-games").innerHTML;
-        document.getElementById("Games-Card-Carousel-Inner").innerHTML = gamesCardsAdjuster[1];
-        document.getElementById("card-carousel-code").innerHTML = codeCardsAdjuster[0] + document.getElementById("card-carousel-code").innerHTML;
-        document.getElementById("Code-Card-Carousel-Inner").innerHTML = codeCardsAdjuster[1]; 
-    </script>
-
-<!--Made from scratch with a little ❤, some googling, and some fancy web stuff-->
-</body></html>
+</html>

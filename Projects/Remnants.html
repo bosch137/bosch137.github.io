@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- for FF, Chrome, Opera -->
+    <link rel="icon" class="icon-generator" type="image/png" sizes="16x16">
+    <link rel="icon" class="icon-generator" type="image/png"  sizes="32x32">
+    
+    <!-- for IE -->
+    <link rel="icon" class="icon-generator" type="image/x-icon">
+    <link rel="shortcut icon" class="icon-generator" type="image/x-icon">
+
+        <script>
+            var iconNumber = Math.floor(Math.random() * 7);
+            var icons = document.getElementsByClassName("icon-generator");
+            for (var i = 0; i < icons.length; i++) {
+                icons[i].href = "/Icons/MBoschIcon" + iconNumber + ".png";
+            }
+        </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meet Michael Boschwitz!</title>
+    <meta property="og:type" content="Portfolio">
+    <meta property="og:image" content="Photos/NZLifeguard.png">
+    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime&amp;display=swap">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-color">
+        <div class="container-fluid"><a class="d-flex justify-content-center align-items-center justify-content-xxl-start align-items-xxl-end nav-shrink" href="index.html"><img class="navbarIcon" src="../assets/img/Icons/MBoschIcon7.png">
+                <p class="navbarText" href="../index.html">Michael Boschwitz - Game Designer</p>
+            </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-center" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="about-me.html">About Me</a></li>
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="projects.html">Projects</a></li>
+                    <li class="nav-item d-xxl-flex align-items-xxl-center m-1"><button class="btn btn-outline-warning ms-md-2 nav-grow hireme" type="button" onclick="showEmail()">Hire Me!</button></li>
+                    <li class="theme-switcher nav-item dropdown nav-grow m-1"><a class="dropdown-toggle nav-link m-auto text-white" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg></a>
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                                </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                                </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                                </svg>Auto</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page cv-page">
+        <section>
+            <div data-bss-parallax-bg="true" class="enable-blur" style="height: 600px;background: url(&quot;../assets/img/Game%20Projects/Remnants/remnantsbanner.png&quot;);">
+                <div class="container-fluid h-100 disable-blur">
+                    <div class="row h-100">
+                        <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                            <div style="max-width: 550px;">
+                                <h1 class="subtitle-header">Remnants</h1>
+                                <div class="mt-4 mb-4">
+                                    <p class="text-white subtitle-header-small disable-blur">Awaken, chosen undead, fated to travel throughout these lands in search of the five rulers. Fell each to be granted their powers, but beware of death lurking in the shadows.</p>
+                                </div>
+                                <div class="scale-on-hover glow-on-hover p-1 pt-0 pb-0" style="width: fit-content;border-radius: 6px;border: 4px solid rgb(255,255,255) ;"><a role="button" class="subtitle-header-small-alt" href="https://boschybee.itch.io/remnants" target="_blank">Play Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block block-intro pt-0">
+            <section class="py-4 pb-5 mt-0 pt-0" style="margin-top: -40px;">
+                <div class="container text-bg-secondary rounded-5" style="margin-top: -50px;">
+                    <div class="row">
+                        <div class="col-sm-auto col-md">
+                            <div class="text-white p-4 pb-0">
+                                <h1 class="display-5 text-start text-white mb-0">About Remnants:</h1>
+                                <p class="text-start text-dark-emphasis card-overview">Welcome to the Land of Remnants, chosen undead.<br><br>One of the most complete VGDC projects to date, the themes for this game were <br>"Unconventional Weapons, Copy, and Can't Stop/No Stopping". Inspired by everything from Mega Man to Bloodborne, there is quite a lot to experience!<br><br>While I could explain all the mechanics like the Rally system, boss items, and the Remnant mechanic, why not give the game a shot and discover it all yourself!</p>
+                                <div class="my-3"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 col-xxl-3 pb-4 pt-3"><img class="rounded-circle img-fluid d-xxl-flex fit-cover w-100" src="../assets/img/Game%20Projects/Remnants/Remnants.png" style="aspect-ratio: 1 / 1;"></div>
+                    </div>
+                    <div class="row justify-content-evenly">
+                        <div class="col-auto mb-3">
+                            <p class="pb-0 mb-0 fs-5">Project Length:</p><span class="badge bg-yellow badge-spacer">4 Months</span>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <p class="fs-5 pb-0 mb-0">Team Size:</p><span class="badge bg-pink badge-spacer">9 People</span>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <p class="fs-5 pb-0 mb-0" style="font-size: 1.25em;">Engine:</p><span class="badge bg-white badge-spacer">Unity</span>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <p class="fs-5 pb-0 mb-0">Roles:</p><span class="badge bg-grey badge-spacer">Team Lead</span><span class="badge bg-blue badge-spacer">Programmer</span><span class="badge bg-purple badge-spacer">Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="photo-gallery py-4 py-xl-5">
+                <div class="container-fluid w-75">
+                    <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
+                        <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid h-100 fit-cover" src="../assets/img/Game%20Projects/Remnants/remnants1.jpg"></a></div>
+                        <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid h-100 fit-cover" src="../assets/img/Game%20Projects/Remnants/remnants2.jpg"></a></div>
+                        <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid h-100 fit-cover" src="../assets/img/Game%20Projects/Remnants/remnants3.jpg"></a></div>
+                        <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid h-100 fit-cover" src="../assets/img/Game%20Projects/Remnants/remnants4.jpg"></a></div>
+                        <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid h-100 fit-cover" src="../assets/img/Game%20Projects/Remnants/remnants5.jpg"></a></div>
+                        <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid h-100 fit-cover" src="../assets/img/Game%20Projects/Remnants/remnants6.jpg"></a></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <section class="pt-5 mt-5 bg-secondary pb-5">
+        <h1 class="display-5 text-center">— My Role —</h1>
+        <div class="container align-items-center scroll-container">
+            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+                <div class="col w-75">
+                    <div class="text-start">
+                        <h1 class="text-start subtitle-header-small-alt">- Coming Soon! -</h1>
+                        <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Sorry, this is still a work in progress!</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <footer class="page-footer py-3 border-top pb-0 pt-5">
+        <section>
+            <header></header>
+            <h1 class="display-5 text-center">- Other Projects -</h1>
+            <div class="container-fluid text-center slider-container" style="margin-bottom: 60px;">
+                <div class="d-flex flex-row multiple-item-slider">
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/Mantra/LevelConcept.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Mantra</h4>
+                                        <p class="card-overview scaling-text">Set in the near future, a growing force of robots controlled by a corrupt AI is hell-bent on destroying humanity. Corrupted AI code caused thousands of industrial robots to turn into human-killing murder machines, pushing humanity to the brink of extinction.&nbsp;<br><br>Inspired by the likes of Doom, Titanfall and Halo, Mantra takes you through an expansive world where you'll encounter a healthy mix of action-packed combat, swift traversal spaces, and engaging puzzles to complete!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" data-bs-target="Projects/Mantra.html" href="Projects/Mantra.html">Learn More</a><a class="text-truncate pcb-right" role="button" href="https://store.steampowered.com/app/1994700/Mantra/" target="_blank">Wishlist</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Mantra</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 align-items-xxl-start">
+                                <div class="col-auto project-card-badge-column" style="text-align: center;"><span class="badge text-bg-primary badge-spacer">Unreal</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-success badge-spacer">FPS</span><span class="badge bg-danger badge-spacer">Action</span><span class="badge bg-orange badge-spacer">Sci-fi</span><span class="badge text-bg-warning badge-spacer">Story Driven</span><span class="badge bg-dark-red badge-spacer">Rubyshark</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/Firesale/1bitjam%20logo.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Firesale</h4>
+                                        <p class="card-overview">Winner of the 1Bit Jam 2023! This game is goofy mashup of Warioware, Rougelites, and Ice levels revolving around the theme of "Start with everything, end with nothing".&nbsp;<br><br>Evoking an addicting frenetic feeling, the game revolves around a shopkeeper forced by a demon to sell his entire catalogue of cursed wares before the clock strikes midnight.&nbsp; Skate, grapple, or rocket boost out into the streets to find "new customers" by crashing into them in this totally normal game.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Firesale.html">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://boschybee.itch.io/firesale">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Firesale</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Award Winning</span><span class="badge bg-black badge-spacer">Unity</span><span class="badge bg-black badge-spacer">Game Jam</span><span class="badge bg-black badge-spacer">Microgames</span><span class="badge bg-black badge-spacer">Rougelite</span><span class="badge bg-black badge-spacer">Short</span><span class="badge bg-black badge-spacer">Funny</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/FWNdIu0XwAI-vwF.jpeg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Project Ghost</h4>
+                                        <p class="card-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Project-Ghost.html">Learn More</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Project Ghost</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid flex-wrap card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge text-bg-primary badge-spacer">Unreal</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Action</span><span class="badge bg-black badge-spacer">Stealth</span><span class="badge bg-success badge-spacer">Historical</span><span class="badge bg-yellow badge-spacer">Story Driven</span><span class="badge bg-blue badge-spacer">Small Team</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Logos/Confidential.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Unannounced AAA Game</h4>
+                                        <p class="card-overview">The project I worked on at Hangar 13 has yet to be announced. As such, I cannot disclose much about the game itself.<br><br>Check out my Resume for a bit of an overview though!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="/Resources/Michael-Boschwitz-Resume.pdf">Resume</a><a role="button" class="pcb-right" target="_blank" href="https://hangar13games.com">Hangar 13</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Unannounced AAA Game</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-grey badge-spacer">Custom Engine</span><span class="badge bg-dark-blue badge-spacer">MP / Live Service</span><span class="badge text-bg-success badge-spacer">Open World</span><span class="badge bg-dark-red badge-spacer">Bullet Hell</span><span class="badge bg-blue badge-spacer">Looter Shooter</span><span class="badge bg-blue badge-spacer"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/Spring-Cleaning/SpringCleaning.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Spring Cleaning</h4>
+                                        <p class="card-overview">A short game jam project. The theme we got was "Minimalism", and this short, silly game about cleaning your computer is the result!.<br><br>The game jam was a 48 hour jam, so this game had to be made within that 48 hour window. I initially had to manage both the game jam and my group at the start, after a while I was mostly just in the trenches with my team. I was exhausted by the end, but it turned out great!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Spring-Cleaning.html">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://boschybee.itch.io/spring-cleaning">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Spring Cleaning</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-gold badge-spacer">Award Winning</span><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-black badge-spacer">Game Jam</span><span class="badge bg-blue badge-spacer">Point &amp; Click</span><span class="badge bg-green badge-spacer">Relaxing</span><span class="badge bg-success badge-spacer">Short</span><span class="badge bg-brown badge-spacer">Funny</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/High-Speed-Hominids/HighspeedHominids.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">High-Speed Hominids</h4>
+                                        <p class="card-overview">A cross between Ultrakill/Titanfall 2, and a Racing/Speedrunning game. High-Speed Hominids is a multiplayer 'Shmoover' (movement-shooter) about racing other gorillas to escape an experimental facility.&nbsp;<br><br>To make sure we really encourage speed and movement tech I replicated the Source Engine's movement and physics extremely closely, allowing tech like air-strafing and B-Hopping. Up to 4 players "Ape Out" and try to escape first and with the highest score.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/High-Speed-Hominids.html">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://boschybee.itch.io/high-speed-hominids">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">High-Speed Hominids</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">Multiplayer</span><span class="badge text-bg-success badge-spacer">FPS</span><span class="badge bg-orange badge-spacer">Racing</span><span class="badge bg-danger badge-spacer">Shmoover</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/Remnants/Remnants.png"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Remnants</h4>
+                                        <p class="card-overview">Probably one of the most complete VGDC projects to date. The themes for this game were "Unconventional Weapons, Copy, and Can't Stop/No Stopping". Inspired by everything from Mega Man to Bloodborne, this was a challenging project!<br><br>While I could explain all the mechanics like the Rally system, boss items, and the Remnant mechanic, why not give the game a shot and discover it all yourself!</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Remnants.html">Learn More</a><a role="button" class="pcb-right" href="https://boschybee.itch.io/remnants" target="_blank">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Remnants</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge text-bg-success badge-spacer">Top Down RPG</span><span class="badge bg-green badge-spacer">Boss Rush</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/Dystopian-Defiers/ZHECLo.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Dystopian Defiers</h4>
+                                        <p class="card-overview">The final glimmer of hope in this dark future, is you Su. You may not know much about you or the world around you, but remember this well Su. As long as you keep destroying, you'll stay alive.<br><br>Welcome to ruined city of Varkamon. You play as Su, a rebel renegade fighting hordes of enemy bots in a dystopian future. However, your life is directly tied to your money. As you fight you can grow your health pool, but beware as the legion of bots grows stronger with each passing second.&nbsp;</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Dystopian-Defiers.html">Learn More</a><a role="button" class="pcb-right" href="https://boschybee.itch.io/dystopian-defiers" target="_blank">Play Now!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Dystopian Defiers</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Bullet Hell</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-silver badge-spacer">Unique</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/DanielRadcliffe.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Untitled Rhythm Shooter</h4>
+                                        <p class="card-overview">This was inspired by Guns Akimbo, which was an upcoming movie at the time. Some people in my group really like rhythm games, so we came up with the idea of making a pseudo-rhythm game.<br><br>The twist was that the "notes" are actions. Each note makes the character perform an action like shooting, jumping, blocking, etc. It ended up as a really fun prototype, but since it was made in a month it is a bit too janky to release.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Daniel-Radcliffe.html">Learn More</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Untitled Rhythm Shooter</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge text-bg-success badge-spacer">Top Down RPG</span><span class="badge bg-green badge-spacer">Boss Rush</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="../assets/img/Game%20Projects/SonicDrillLAST.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">Sonic Drill</h4>
+                                        <p class="card-overview">This project was my Final for a game dev class in highschool. Of my Personal Projects, this one is the least interesting. It was inspired by "Motherload", and "Factorio"<br><br>The gameplay revolves around mining resources. The gameplay loop is fairly circular; mining earns money, money is used to buy upgrades for your miner, upgrading lets you mine more, etc. The biggest struggle I faced was doing complex tasks in Construct 2, which is a fairly rudimentary engine.</p>
+                                    </div>
+                                    <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" href="Projects/Sonic-Drill.html">Learn More</a><a role="button" class="pcb-right" onclick="showEmail()">Latest Build!</a></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">Sonic Drill</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0 d-xxl-flex justify-content-xxl-center align-items-xxl-start">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge text-bg-secondary badge-spacer"></span><span class="badge bg-dark-blue badge-spacer">Construct</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Mining</span><span class="badge bg-success badge-spacer">Progression Based</span><span class="badge bg-green badge-spacer">Relaxing</span><span class="badge bg-yellow badge-spacer">Solo</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block call-to-action border-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content">
+                    <h3>Like what you see?</h3>
+                </div>
+                <div class="d-flex justify-content-evenly align-items-center w-50 m-auto"><button class="btn btn-outline-warning btn-lg hireme" type="button" onclick="showEmail()">Hire Me</button><a class="btn btn-outline-success btn-lg" role="button" href="./Resources/Michael-Boschwitz-Resume.pdf" target="_blank">Resume/CV</a><a class="btn btn-outline-info btn-lg" role="button" href="../projects.html">Projects</a></div>
+            </div>
+        </section>
+    </footer>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>

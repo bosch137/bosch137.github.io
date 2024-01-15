@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- for FF, Chrome, Opera -->
+    <link rel="icon" class="icon-generator" type="image/png" sizes="16x16">
+    <link rel="icon" class="icon-generator" type="image/png"  sizes="32x32">
+    
+    <!-- for IE -->
+    <link rel="icon" class="icon-generator" type="image/x-icon">
+    <link rel="shortcut icon" class="icon-generator" type="image/x-icon">
+
+        <script>
+            var iconNumber = Math.floor(Math.random() * 7);
+            var icons = document.getElementsByClassName("icon-generator");
+            for (var i = 0; i < icons.length; i++) {
+                icons[i].href = "/Icons/MBoschIcon" + iconNumber + ".png";
+            }
+        </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meet Michael Boschwitz!</title>
+    <meta property="og:type" content="Portfolio">
+    <meta property="og:image" content="Photos/NZLifeguard.png">
+    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3 navbar-color">
+        <div class="container-fluid"><a class="d-flex justify-content-center align-items-center justify-content-xxl-start align-items-xxl-end nav-shrink" href="index.html"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png">
+                <p class="navbarText" href="index.html">Michael Boschwitz - Game Designer</p>
+            </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-center" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="about-me.html">About Me</a></li>
+                    <li class="nav-item m-1"><a class="nav-link active nav-grow text-white" href="projects.html">Projects</a></li>
+                    <li class="nav-item d-xxl-flex align-items-xxl-center m-1"><button class="btn btn-outline-warning ms-md-2 nav-grow hireme" type="button" onclick="showEmail()">Hire Me!</button></li>
+                    <li class="theme-switcher nav-item dropdown nav-grow m-1"><a class="dropdown-toggle nav-link m-auto text-white" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg></a>
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                                </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                                </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                                </svg>Auto</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page projects-page">
+        <div class="text-start text-center pt-4 mb-4"></div>
+        <section class="portfolio-block projects-cards p-0 m-0">
+            <div class="container">
+                <div class="text-center mb-2 p-4">
+                    <h1 class="display-6 text-center projects-section-headers">- Games -</h1>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Mantra.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Mantra</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/Mantra/LevelConcept.png" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge text-bg-primary badge-spacer">Unreal</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-success badge-spacer">FPS</span><span class="badge bg-danger badge-spacer">Action</span><span class="badge bg-orange badge-spacer">Sci-fi</span><span class="badge text-bg-warning badge-spacer">Story Driven</span><span class="badge bg-dark-red badge-spacer">Rubyshark</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Firesale.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Firesale</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/Firesale/1bitjam%20logo.png" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Award Winning</span><span class="badge bg-black badge-spacer">Unity</span><span class="badge bg-black badge-spacer">Game Jam</span><span class="badge bg-black badge-spacer">Microgames</span><span class="badge bg-black badge-spacer">Rougelite</span><span class="badge bg-black badge-spacer">Short</span><span class="badge bg-black badge-spacer">Funny</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Project-Ghost.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Project Ghost</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/FWNdIu0XwAI-vwF.jpeg" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge text-bg-primary badge-spacer">Unreal</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Action</span><span class="badge bg-black badge-spacer">Stealth</span><span class="badge bg-success badge-spacer">Historical</span><span class="badge bg-yellow badge-spacer">Story Driven</span><span class="badge bg-blue badge-spacer">Small Team</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Unannounced AAA Game</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Logos/Confidential.png" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-grey badge-spacer">Custom Engine</span><span class="badge bg-dark-blue badge-spacer">MP / Live Service</span><span class="badge text-bg-success badge-spacer">Open World</span><span class="badge bg-dark-red badge-spacer">Bullet Hell</span><span class="badge bg-blue badge-spacer">Looter Shooter</span><span class="badge bg-blue badge-spacer"></span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Spring-Cleaning.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Spring Cleaning</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/Spring-Cleaning/SpringCleaning.png" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-gold badge-spacer">Award Winning</span><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-black badge-spacer">Game Jam</span><span class="badge bg-blue badge-spacer">Point &amp; Click</span><span class="badge bg-green badge-spacer">Relaxing</span><span class="badge bg-success badge-spacer">Short</span><span class="badge bg-brown badge-spacer">Funny</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/High-Speed-Hominids.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">High-Speed Hominids</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/High-Speed-Hominids/HighspeedHominids.jpg" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">Multiplayer</span><span class="badge text-bg-success badge-spacer">FPS</span><span class="badge bg-orange badge-spacer">Racing</span><span class="badge bg-danger badge-spacer">Shmoover</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Remnants.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Remnants</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/Remnants/Remnants.png" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge text-bg-success badge-spacer">Top Down RPG</span><span class="badge bg-green badge-spacer">Boss Rush</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Booze-N-Bombs.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Booze n' Bombs</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/Booze-n-Bombs/Booze-n-bombs1.png" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-blue badge-spacer">Godot</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Bullet Hell</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Dystopian-Defiers.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Dystopian Defiers</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/Dystopian-Defiers/ZHECLo.jpg" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Bullet Hell</span><span class="badge bg-pink badge-spacer">Score Attack</span><span class="badge bg-silver badge-spacer">Unique</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Dystopian-Defiers.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Untitled Rhythm Shooter</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/DanielRadcliffe.jpg" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge text-bg-success badge-spacer">Top Down RPG</span><span class="badge bg-green badge-spacer">Boss Rush</span><span class="badge bg-orange badge-spacer">Pixel</span><span class="badge bg-red badge-spacer">Replayable</span><span class="badge bg-maroonish badge-spacer">VGDC</span></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="Projects/Dystopian-Defiers.html">
+                                <div class="position-absolute m-2 pt-1">
+                                    <h1 class="subtitle-header-small lh-1">Sonic Drill</h1>
+                                </div>
+                                <div class="projects-page-card-helper"><img class="rounded img-fluid projects-card-img" src="assets/img/Game%20Projects/SonicDrillLAST.jpg" alt="Card Image"></div>
+                            </a></div>
+                        <div class="text-center mt-2 pb-5"><span class="badge text-bg-secondary badge-spacer"></span><span class="badge bg-dark-blue badge-spacer">Construct</span><span class="badge bg-light-yellow badge-spacer">Singleplayer</span><span class="badge bg-red badge-spacer">Mining</span><span class="badge bg-success badge-spacer">Progression Based</span><span class="badge bg-green badge-spacer">Relaxing</span><span class="badge bg-yellow badge-spacer">Solo</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block projects-cards p-0 text-bg-secondary">
+            <div class="container">
+                <div class="text-center mt-5 mb-4 pt-5">
+                    <h1 class="display-6 text-center projects-section-headers">- Coding -</h1>
+                </div>
+                <hr class="mb-4">
+                <div class="row row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-3">
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/ImpossibleInc.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Impossible Inc.</h4>
+                                                    <p class="card-overview">Our goal was to create a demo where each level becomes more and more overt that rooms are physically impossible sizes. Using Stencil buffering, we made a demo from scratch that is seamless to explore.<br><br>However, one of the main issues is that a 6mx6m play area is required. That being said, we were fortunate enough to have that amount of space, and I even showed it to some of my friends. When not primed, most did not even realize!</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button><button class="scale-on-hover glow-on-hover projects-buttons" onclick="window.open(&#39;https://drive.google.com/file/d/1IFCxx1gKcMkrqRqrD5Q7BpPmvSToRTD-/preview&#39;,&#39;_blank&#39;)" type="button">Watch Demo</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Impossible Inc.</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">VR / XR</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5619</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/PlatformingUnderPressure.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Platforming Under Pressure</h4>
+                                                    <p class="card-overview">Platforming Under Pressure is an auto-platformer, where you help design the level. The character moves automatically, but you have to help get them across the gap!<br><br>We used an SPH fluid simulation to power the core of the gameplay. There are four levels inspired by the seasons, each with their own unique challenges. Help the lil fella cross the gap using the power of water pressure, and physics!</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="window.open(&#39;https://theshoes.itch.io/platforming-under-pressure&#39;,&#39;_blank&#39;)" type="button">Play Now!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Platforming Under Pressure</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-light-yellow badge-spacer">WebGL</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/ShopkeepSim.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">IK Solver</h4>
+                                                    <p class="card-overview">Our goal was to make a simulation using an IK (inverse kinematic) motion solver. We implemented this project as a robot shopkeeper simulator, by using IK, Euler angles, quaternions, and a few models, we created our demonstration.<br><br>To make our character more lifelike, we used a recursive method to loop through all the bones in the skeleton, then moved the bones bit by bit to the desired location. Finally, we added some reactions based on if the object could be reached or not.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">IK Solver</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/VRInteractions.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">VR Interaction Systems</h4>
+                                                    <p class="card-overview">Although this project looks pretty game like on the surface, the majority of the project revolved around proper implementation of a multitude of interaction techniques. From basic controller and pointer-based grabbing techniques, to more unique and uncommon methods.<br><br>These were implementations such as Go-Go grasping, Spindle, and Fishing Reel. These techniques helped create a better common understanding of how creative you can get with numerous interaction techniques, as well as how they impact your control and influence in a virtual world.</p>
+                                                    <div class="card-img-overlay text-start card-back-div">
+                                                        <h4 class="subtitle-header-small">VR Interaction Systems</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">VR Interaction Systems</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-white badge-spacer">Unity</span><span class="badge bg-dark-blue badge-spacer">VR / XR</span><span class="badge text-bg-success badge-spacer">C#</span><span class="badge bg-maroonish badge-spacer">CSCI 5619</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/ClothSim.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Cloth Simulations</h4>
+                                                    <p class="card-overview">Although this project looks pretty game like on the surface, the majority of the project revolved around proper implementation of a multitude of interaction techniques. From basic controller and pointer-based grabbing techniques, to more unique and uncommon methods.<br><br>These were implementations such as Go-Go grasping, Spindle, and Fishing Reel. These techniques helped create a better common understanding of how creative you can get with numerous interaction techniques, as well as how they impact your control and influence in a virtual world.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Cloth Simulations</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-light-yellow badge-spacer">OpenGL</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-blue badge-spacer">C++</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/Seafaring.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Ship Wayfinding</h4>
+                                                    <p class="card-overview">This project had my partner and I implement an intelligent collision - avoidance system. To do this, we generated several random obstacles indicated by islands or circles, several random nodes, and two randomly generated points for the start and the goal positions.<br><br>To find the best path, we tried implementing Dijkstra's Algorithm to find the shortest path from the start to the goal points via our nodes + graph. Similarly, if it made more sense for our ship to "skip" a node and advance to the next node, it would do so.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Ship Wayfinding</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-grey badge-spacer">Processing 3</span><span class="badge bg-gold badge-spacer">AI / Pathfinding</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 5611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/SoYouThinkAntsCanDance.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Dancing Ants Motion Capture Interpreter</h4>
+                                                    <p class="card-overview">This project had my partner and I implement an intelligent collision - avoidance system. To do this, we generated several random obstacles indicated by islands or circles, several random nodes, and two randomly generated points for the start and the goal positions.<br><br>To find the best path, we tried implementing Dijkstra's Algorithm to find the shortest path from the start to the goal points via our nodes + graph. Similarly, if it made more sense for our ship to "skip" a node and advance to the next node, it would do so.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Dancing Ants Motion Capture Interpreter</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-light-yellow badge-spacer">OpenGL</span><span class="badge bg-purple badge-spacer">Motion Capture</span><span class="badge bg-green badge-spacer">Data Parser</span><span class="badge bg-blue badge-spacer">C++</span><span class="badge bg-maroonish badge-spacer">CSCI 4611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/CarSoccer.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Car Soccer</h4>
+                                                    <p class="card-overview">Car Soccer a was really fun class project to work on! Although this was not part of the requirements, by making my functions more modular, it allowed me to make the project two-player! I also added a basic scoring system that displays in the console.<br><br>The biggest part of the project was making a simple, but consistent enough physics simulation for the ball. Likewise, creating a system for the collisions was integral for the project to even be playable. Balancing these systems to allow a minimalistic, simple arcade game was a really fun class project.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Car Soccer</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-light-yellow badge-spacer">OpenGL</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-dark-blue badge-spacer">Multiplayer</span><span class="badge bg-blue badge-spacer">C++</span><span class="badge bg-maroonish badge-spacer">CSCI 4611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/TextRain.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Text Rain</h4>
+                                                    <p class="card-overview">For a project that used software that was fairly new to me, this was still a great learning experience. The thrust of the project was interpreting a video or webcam feed, having text fall like rain, and simulating interactions between the video feed and the text rain.<br><br>Implementing the video and webcam feeds was not exactly difficult; however, making the text react was the real challenge. My solution to this design challenge was to create a faux-physics system for the falling text. All in all, it was definitely a unique project.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Text Rain</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-grey badge-spacer">Processing 3</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 4611</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/Fractals.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Fractal Generator</h4>
+                                                    <p class="card-overview">This project involved implementing several shape classes in Java to draw some fractals based on inputted shapes. There were three possible shapes that the program would accept, Triangles, Rectangles, and Circles.<br><br>The Java program needed to draw a fractal recursively, and each of the drawing methods would draw the shape passed in at the specified location and in the specified color. Once it had finished drawing it would compute the total area of any shapes that form your fractal, and print the results.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Fractal Generator</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-pink badge-spacer">Generator</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/BusSim.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Bus Simulator</h4>
+                                                    <p class="card-overview">For this project, we were "tasked" to create a simulation and return a report to a hypothetical bus company.<br><br>The simulation was achieved by creating classes to model the behavior of each element of the system as well as each activity (event) that occurs in the system. There was no overall controller except for a main driver loop that runs queued events until time runs out. Each element in the system models its own behavior and interactions with other elements in the simulation.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Bus Simulator</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-orange badge-spacer">Simulation</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/BattleBoats.png"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Battle Boats</h4>
+                                                    <p class="card-overview">This project involved us making "Battle Boats"... The battleship project consisted of 4 major parts that had to be built from scratch. The board, the boats, a turn system, and a debug mode.<br><br>For the board, The program simulated a rectangular X×Y board using a 2-dimensional array. Boats were represented by a line of X's on the board (Array), For turns, the user inputs a location (x, y) to attack and if they want to use an item. For the debug, it would display both boards so we could properly debug and test the game.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Battle Boats</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-gold badge-spacer">AI&nbsp; / Strategic</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/JavaDataStructure.png"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Data Structure Projects</h4>
+                                                    <p class="card-overview">I've done several projects that relate to Data Structures, so for this card I will just list a few.<br><br>-HashMap (Java)<br>-ArrayLists (Java)<br>-Linked Lists (Java, C)<br>-Binary Trees(Java, C)<br><br>These projects all either involved making and/or using data structures for problems such as sorting, benchmarking, aggregating data, converting, etc.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Data Structure Projects</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-green badge-spacer">Data Parser</span><span class="badge bg-red badge-spacer">Java</span><span class="badge bg-silver badge-spacer">C</span><span class="badge bg-maroonish badge-spacer">CSCI 1933</span><span class="badge bg-maroonish badge-spacer">CSCI 2021</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/diagonalMatrixProject.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Optimization &amp; Benchmarking</h4>
+                                                    <p class="card-overview">The first half of this project revolved around optimizing memory access of a matrix. We were provided with algorithms to search through a matrix and calculate the diagonal sums, and the task was optimizing the algorithm to improve performance as much as possible.<br><br>The other half of the project centered on timing several other algorithms and measuring their performance. We measured the performance of 4 search functions, which determined whether an integer query was present in an associated data structure.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Optimization &amp; Benchmarking</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-seafoam-green badge-spacer">Optimization&nbsp; /&nbsp; Profiling</span><span class="badge bg-silver badge-spacer">C</span><span class="badge bg-maroonish badge-spacer">CSCI 2021</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/GraphInterpretProject.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">File Interpreter and Graph Generator</h4>
+                                                    <p class="card-overview">This project centered around a simple task: reading integers from a file into a dynamically allocated array. The caveat to this is that the integers in the file are stored in a special format: an initial value followed by deltas, or changes from the previous element. This project required multiple formats to be usable: Text Integers, Binary Integers, and 4-Bit Signed Integers.<br><br>After interpretation, we needed to create a simple plotting routine for the text terminal. The function displayed an array of numbers on the screen in a graph-like fashion.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">File Interpreter and Graph Generator</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-pink badge-spacer">Generator</span><span class="badge bg-green badge-spacer">Data Parser</span><span class="badge bg-silver badge-spacer">C</span><span class="badge bg-maroonish badge-spacer">CSCI 2021</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/clocksProject.jpg"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">Clocks and Puzzle Box </h4>
+                                                    <p class="card-overview">For this project we were tasked with writing code which would be run by a microcontroller in a digital clock. It could only use integer operations. No floating point operations. My solution used bit shifting along with bitwise operations to construct the correct bit pattern for the clock display.<br><br>The other half of the project revolved around a Puzzle Box, which contained source code that reads inputs from a file. If the inputs are correct, points are awarded. If inputs are incorrect, error messages were printed.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">Clocks and Puzzle Box </h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-seafoam-green badge-spacer">Optimization&nbsp; /&nbsp; Profiling</span><span class="badge bg-silver badge-spacer">C</span><span class="badge bg-maroonish badge-spacer">CSCI 2021</span></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="justify-content-center spacer-slider">
+                            <div class="card border-0 mb-0"><a class="glow-on-hover scale-on-hover" href="#">
+                                    <div class="projects-card"><span class="project-span"></span>
+                                        <div class="card project-card"><img class="card-img projects-card-img h-100" src="assets/img/Code%20Projects/ELFProject.png"></div>
+                                        <div class="projects-content">
+                                            <div class="container-fluid d-flex justify-content-center card-container">
+                                                <div class="card-img-overlay text-start card-back-div">
+                                                    <h4 class="subtitle-header-small invisible">ELF64</h4>
+                                                    <p class="card-overview">This project explored the file format of ELF in order to print out the binary bytes associated with functions in a file. The goal of the project was to construct a program which was able to print out the binary bytes associated with a named function, and run the function.<br><br>The project required a couple of steps to do this. It had to parse the File Header to identify the positions of the Section Header Array and String Table, then search that to find .symtab , .strtab, and .text. Once we had that, we stored some data and ran the function.</p>
+                                                </div>
+                                                <div class="d-flex justify-content-evenly align-items-center pt-0 pb-0 p-0 w-100 project-button-spacers"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="showEmail()" type="button">Request a Build!</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-overlay text-start card-back-div">
+                                            <h4 class="subtitle-header-small">ELF64</h4>
+                                        </div>
+                                    </div>
+                                </a></div>
+                            <div class="text-center mt-2 pb-5"><span class="badge bg-black badge-spacer">Command Line</span><span class="badge bg-green badge-spacer">Data Parser</span><span class="badge bg-silver badge-spacer">C</span><span class="badge bg-grey badge-spacer">.ELF</span><span class="badge bg-maroonish badge-spacer">CSCI 2021</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
