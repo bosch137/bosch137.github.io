@@ -243,7 +243,7 @@
     <section class="pt-5 mt-5 bg-secondary pb-5">
         <h1 class="text-center">My Role:</h1>
         <div class="container align-items-center scroll-container">
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
                 <div class="col w-75">
                     <div class="text-start">
                         <h1 class="text-start subtitle-header-small-alt" style="font-size: xx-large;">Technical Designer</h1>
@@ -251,37 +251,37 @@
                 </div>
             </div>
             <hr>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col w-75">
+            <div class="row gx-3 row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 d-flex align-items-center scroll-element js-scroll slide-right">
+                <div class="col-sm-auto col-md-8 col-lg-8 col-xl-9 col-xxl-9">
                     <div class="text-start">
                         <h1 class="fs-3 text-start">- Threat Detector -</h1>
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">This initially started as a tool to help with encounter testing. One of the issues we ran into was unintentional behavior from enemies allowing the to get stuck off the NavMesh and/or in walls. To address this while solving the underlying issues that let them do that, I created a simple, flexible, and customizable mock-up that let designers be able to locate the enemies and test the areas better when this happened. The design was very heavily inspired by Destiny with 3 circles to help represent distance from the player.<br><br>1) Outer Circle = Farther away, but still a threat.<br>2) Inner Circle = Close and a bigger threat.<br>3) Center Circle = Extremely close and immediate threat.<br><br>Although this was initially planned to just be a developer tool to help designers eliminate enemies to continue encounters, player feedback indicated it was a pretty popular addition to the build. As such, this is an ongoing feature I am currently working on with the UI/UX team now!</p>
                     </div>
                 </div>
-                <div class="col-3"><img class="h-100 w-100" src="../assets/img/Game%20Projects/Mantra/why-halo-5s-radar-is-driving-some-players-up-the-wall-1446544236013.webp"></div>
+                <div class="col-auto col-md-4 col-lg-4 col-xl-3 col-xxl-3"><img class="h-100 w-100" src="../assets/img/Game%20Projects/Mantra/why-halo-5s-radar-is-driving-some-players-up-the-wall-1446544236013.webp" style="border-radius: 10px;"></div>
             </div>
             <hr>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col w-75">
+            <div class="row gx-3 row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 d-flex align-items-center scroll-element js-scroll slide-left">
+                <div class="col-md-auto col-lg-7 col-xl-8 col-xxl-8">
                     <div class="text-start">
                         <h1 class="fs-3 text-start">- Nav-Link Generator -</h1>
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Another system I designed related to both level / encounter design and AI. Originally, we had a really rudimentary version where we only needed to place NavLinks in important places. The purpose of this was to allow AI to jump between disconnected NavMeshes, or create a shorter path to jump across (I.E Jumping a gap in a horseshoe shaped encounter space.) This was done <em>by hand</em>&nbsp; for a while, but with the addition of the Cricket enemy and shift in combat focus, we desperately needed more NavLinks in levels.&nbsp;My solution to this was to overhaul both parts of NavLink system; the Launcher and the generation.<br><br>Firstly, I overhauled the actual math behind the scenes to make the launcher have much more accurate and consistent jump path. The original math would frequently result in paths that were shorter or longer than the designer had intended, causing AI to fail jumps, overshoot jumps, et cetra. This was addressed by complete updating how the launch trajectories were calculated, and resulted in much more predictable and reliable NavLink Launchers.</p>
                     </div>
                 </div>
-                <div class="col-5"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/Mantra/Navlinks.webp"></div>
+                <div class="col-auto col-sm-auto col-md-auto col-lg-5 col-xl-4 col-xxl-4"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/Mantra/Navlinks.webp" style="border-radius: 10px;"></div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col-4">
-                    <div class="overflow-hidden" style="width: 100%;left: 20%;"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/XX8p2hBfn0A?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=XX8p2hBfn0A&amp;controls=0" width="600" height="300" style="margin-left: -35%;"></iframe></div>
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
+                <div class="col-sm-auto col-md-auto col-lg-4 col-xl-4 col-xxl-4 m-sm-auto m-md-auto">
+                    <div class="overflow-hidden fit-cover" style="width: auto;left: 20%;border-radius: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/XX8p2hBfn0A?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=XX8p2hBfn0A&amp;controls=0" class="video-fixer" width="600" height="300"></iframe></div>
                 </div>
-                <div class="col w-75">
+                <div class="col">
                     <div class="text-start">
                         <h1 class="fs-3 text-start"></h1>
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Secondly, I created an entirely new design to actually generate the NavLinks. The issue with placing single links everywhere was that it caused the AI to become too predictable and unrealistic, due to them needing to jump from the same points and clumping by the launcher. The idea was to create several connections between two areas, using four points, creating a basic waterfall shape to the links and allowing several links to be places instantly. Additionally, the system needed to be extremely flexible and allows a lot of control to the designer after generating the links. <br><br>Generating the simple links between two points was fairly easy, but the bigger issue was getting the data from the simple links to the smart links (where the logic for jumping can be triggered from). This copying functionality is already built into Unreal Engine 4, but is not easily accessible out of the box. After going through some pretty much completely undocumented engine classes, I created a new C++ file and was able to get the functionality working. NavLinks would now generate and create a simple and smart link with the right data copied.</p>
                     </div>
                 </div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
                 <div class="col w-75">
                     <div class="text-start">
                         <h1 class="fs-3 text-start"></h1>
@@ -289,18 +289,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col text-center w-75"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/44gXUvAVNJQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=44gXUvAVNJQ&amp;controls=0" width="560" height="315"></iframe></div>
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
+                <div class="col"><iframe class="d-md-flex justify-content-md-center m-auto" allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/44gXUvAVNJQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=44gXUvAVNJQ&amp;controls=0" height="315" style="max-width: 560px;width: 100%;border-radius: 10px;"></iframe></div>
             </div>
             <hr>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col w-75">
+            <div class="row gx-3 row-cols-1 row-cols-sm-1 d-flex align-items-center scroll-element js-scroll slide-right">
+                <div class="col-md-8">
                     <div class="text-start">
                         <h1 class="fs-3 text-start">- Tokening System / Combat Director -</h1>
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Although this system has since been replaced with a much more robust combat director, I did create the original outline and implementation of this system which served to help in some part inform that later system.<br><br>The initial tokening system worked by limiting what the Crickets could do while chasing. The idea was to overwhelm the player with them chasing them, but not created an unfair system that swarmed the player and instantly gave them a game over. To do this, I created a combat director to keep track of and watch encounters. When enemies would pass certain checks, they were allowed to attack the player. These checks mostly involved distance, location, and time since they attacked last. <br><br>For example, if two Crickets wanted to attack the player we would check the distance of them from the player to see if they are close enough, and then the location. The importance of the latter is to make Crickets more likely to attack from in front of the player as opposed to being able to attack from behind the camera. This did not limit them from being able to attack from behind, but made it feel much more fair which is an important goal of the system. While this is a strong oversimplification of the system, the general idea that informed its design. This system has since been replaced by a much more complex Combat Director, which aspects of evolved this design into!</p>
                     </div>
                 </div>
-                <div class="col-3"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/mantraCombatDirector.png"></div>
+                <div class="col-auto col-md-4"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/mantraCombatDirector.png" style="border-radius: 10px;"></div>
             </div>
             <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left" style="padding-top: 0px;margin-top: 120px;">
                 <div class="col w-75">
@@ -310,7 +310,7 @@
                 </div>
             </div>
             <hr>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
                 <div class="col w-75">
                     <div class="text-start">
                         <h1 class="fs-3 text-start">- Cricket (Enemy Type) -</h1>
@@ -318,43 +318,43 @@
                     </div>
                 </div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col-6"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/MSC-suxe9XE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=MSC-suxe9XE&amp;controls=0" width="560" height="315"></iframe></div>
-                <div class="col w-75">
+            <div class="row gx-3 row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 d-flex align-items-center scroll-element js-scroll slide-left">
+                <div class="col"><iframe class="d-md-flex justify-content-md-center m-auto" allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/MSC-suxe9XE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=MSC-suxe9XE&amp;controls=0" width="560" height="315" style="max-width: 560px;width: 100%;border-radius: 10px;"></iframe></div>
+                <div class="col">
                     <div class="text-start">
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Originally nicknamed "Orville" (after the Popcorn Brand), the idea behind the Cricket stems in something I learned at Hangar 13. Namely, the concept of "Popcorn Enemies". Popcorn Enemies are a type of enemy that are there to add a burst of energy by adding intentionally weak enemies the player can "pop" to get a quick hit of adrenaline from in-between stronger foes.&nbsp;<br><br>Furthermore,&nbsp; combat around this time was really rough. It felt great to run around and shoot, but because enemies were on average fairly strong, the player was unintentionally encouraged to use cover to kite and deal damage instead of using their high mobility. This created a weird, rough, start-and-stop flow to the combat and was in conflict with the goal of 'Keep the player moving'. This is where the Cricket become a vital aspect to the flow of the games combat.</p>
                     </div>
                 </div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col w-75">
+            <div class="row gx-3 row-cols-1 row-cols-sm-1 row-cols-md-1 d-flex align-items-center scroll-element js-scroll slide-left">
+                <div class="col-md-8 col-xxl-9">
                     <div class="text-start">
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Crickets are designed to be extremely weak and somewhat stupid, but they spawn in much higher numbers and are much faster than any other enemy. This causes the player to get rushed down by a swarm of them during combat and forces and intuitively tells them one thing: "Move!". Crickets serve as a way to force the player to utilize mobility and keep moving,&nbsp; greatly improving the flow of combat.<br><br>When I first joined&nbsp;<em>Mantra</em>&nbsp; there was no enemy like this even planned to be included. The more I played through the game and experimented with combat, the more clear it became that we needed something to break up the deadlock of having to kill too many strong enemies back to back. As such I created and pitched the design to the team of adding a extremely weak "Chaser" popcorn enemy to the game. This was initially met with some pushback, as adding entire new enemy would increase the development time required to create enemies models, sounds, et cetera., but I was insistent on the importance of it. I created a mock-up of the enemy and let people on the team experiment with how it affected the flow of combat, and everyone noticed a significant improvement toward the intended design! Ever since then, Crickets have been a core part of the enemy line-up and are pretty well loved by the team.</p>
                     </div>
                 </div>
-                <div class="col-3"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/Mantra/mantracricket.png"></div>
+                <div class="col-md-4 col-xxl-3"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/Mantra/mantracricket.png"></div>
             </div>
             <hr>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
-                <div class="col w-75">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
+                <div class="col">
                     <div class="text-start">
                         <h1 class="fs-3">- "Area-Hell" Boss -</h1>
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">Another really amazing aspect of Mantra I've been able to design and implement! The "Area-Hell" boss is a combination of Bullet Hell and Area Denial. While originally those were to separate boss designs, the team realized that they overlapped heavily. After a few iterations on the "Area Denial" Boss we realized it would be better to just combine the two bosses and create a different type entirely. This resulted in me being in charge of the new "Area Denial/Bullet Hell" boss, and the creation of a "Rushdown" type boss!</p>
                     </div>
                 </div>
             </div>
-            <div class="row d-xl-flex justify-content-xl-center align-items-xl-center">
-                <div class="col-auto text-center"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/fDvPvLJaLlY?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=fDvPvLJaLlY&amp;controls=0" width="540" height="315"></iframe></div>
-                <div class="col-5"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/Mantra/Drone-Swarm-e1673497351565.jpg"></div>
+            <div class="row gx-3 row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 align-items-center scroll-element js-scroll slide-right">
+                <div class="col" style="border-radius: 10px;"><iframe class="d-md-flex justify-content-md-center m-auto" allowfullscreen="" frameborder="0" src="https://www.youtube-nocookie.com/embed/fDvPvLJaLlY?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=fDvPvLJaLlY&amp;controls=0" height="415" style="max-width: 660px;width: 100%;border-radius: 10px;"></iframe></div>
+                <div class="col"><img class="w-100 h-100 fit-contain" src="../assets/img/Game%20Projects/Mantra/Drone-Swarm-e1673497351565.jpg" style="border-radius: 10px;"></div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
                 <div class="col w-75">
                     <div class="text-start">
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">The process was more involved than I had intended. Originally, I assumed I would only be pitching the design to the other Technical Designers and the Art team to decide feasibility of the boss, but it ended up being a much more coordinated effort involving a lot&nbsp;department. I even ended up consulting with the Level Design team to decide ways I could make the boss feel organic and threating in the level leading up to them.<br><br>After a few versions, I landed on a design I like to refer to as "Aerial", both as a play on the type it is and a reference to the Gundam it takes some inspiration from. The design revolves around the boss using tiny drones to form the foundation of their attacks. These attacks are combination of either Area Denial or Bullet Hell, requiring the player to stay alert and engaged in order to avoid them. Additionally, since minor attacks are shared between bosses, the minor attacks all feature a special flare to them in line with the nature of the boss.</p>
                     </div>
                 </div>
             </div>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
                 <div class="col w-75">
                     <div class="text-start">
                         <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">I don't want to spoil the entire boss design and every attack, so please try Mantra when it releases for free on steam to get the full experience!</p>
@@ -362,7 +362,7 @@
                 </div>
             </div>
             <hr>
-            <div class="row gx-3 d-flex align-items-center scroll-element /js-scroll slide-left">
+            <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
                 <div class="col w-75">
                     <div class="text-start">
                         <h1 class="fs-5 text-start">And a few other things, such as:</h1>
