@@ -44,95 +44,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Meet Michael Boschwitz!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
     <meta property="og:title" content="Meet Michael Boschwitz">
-    <meta property="og:image" content="https://michael.boschwitz.me/assets/img/Photos/NZLifeguard.jpg">
     <meta property="og:type" content="Portfolio">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="620">
     <meta name="og:site_name" content="michael.boschwitz.me">
     <meta property="og:description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
-    <script>
-        (function() {
-
-            // JavaScript snippet handling Dark/Light mode switching
-
-            const getStoredTheme = () => localStorage.getItem('theme');
-            const setStoredTheme = theme => localStorage.setItem('theme', theme);
-            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
-
-            const getPreferredTheme = () => {
-
-                if (forcedTheme) return forcedTheme;
-
-                const storedTheme = getStoredTheme();
-                if (storedTheme) {
-                    return storedTheme;
-                }
-
-                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
-
-                if (pageTheme) {
-                    return pageTheme;
-                }
-
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            const setTheme = theme => {
-                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-bs-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-bs-theme', theme);
-                }
-            }
-
-            setTheme(getPreferredTheme());
-
-            const showActiveTheme = (theme, focus = false) => {
-                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
-
-                if (!themeSwitchers.length) return;
-
-                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                    element.classList.remove('active');
-                    element.setAttribute('aria-pressed', 'false');
-                });
-
-                for (const themeSwitcher of themeSwitchers) {
-
-                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
-
-                    if (btnToActivate) {
-                        btnToActivate.classList.add('active');
-                        btnToActivate.setAttribute('aria-pressed', 'true');
-                    }
-                }
-            }
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                const storedTheme = getStoredTheme();
-                if (storedTheme !== 'light' && storedTheme !== 'dark') {
-                    setTheme(getPreferredTheme());
-                }
-            });
-
-            window.addEventListener('DOMContentLoaded', () => {
-                showActiveTheme(getPreferredTheme());
-
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const theme = toggle.getAttribute('data-bs-theme-value');
-                            setStoredTheme(theme);
-                            setTheme(theme);
-                            showActiveTheme(theme);
-                        })
-                    })
-            });
-        })();
-    </script>
+    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <meta property="og:image" content="https://michael.boschwitz.me/assets/img/Photos/NZLifeguard.jpg">
+    <script>!function(){const e=()=>localStorage.getItem("theme"),t=document.documentElement.getAttribute("data-bss-forced-theme"),a=()=>{if(t)return t;const a=e();if(a)return a;const r=document.documentElement.getAttribute("data-bs-theme");return r||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")},r=e=>{"auto"===e&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.setAttribute("data-bs-theme","dark"):document.documentElement.setAttribute("data-bs-theme",e)};r(a());const c=(e,t=!1)=>{const a=[].slice.call(document.querySelectorAll(".theme-switcher"));if(a.length){document.querySelectorAll("[data-bs-theme-value]").forEach((e=>{e.classList.remove("active"),e.setAttribute("aria-pressed","false")}));for(const t of a){const a=t.querySelector('[data-bs-theme-value="'+e+'"]');a&&(a.classList.add("active"),a.setAttribute("aria-pressed","true"))}}};window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",(()=>{const t=e();"light"!==t&&"dark"!==t&&r(a())})),window.addEventListener("DOMContentLoaded",(()=>{c(a()),document.querySelectorAll("[data-bs-theme-value]").forEach((e=>{e.addEventListener("click",(t=>{t.preventDefault();const a=e.getAttribute("data-bs-theme-value");(e=>{localStorage.setItem("theme",e)})(a),r(a),c(a)}))}))}))}();</script>
     <link rel="icon" type="image/png" sizes="400x400" href="assets/img/Icons/MBoschIcon4.png">
     <link rel="icon" type="image/png" sizes="400x400" href="assets/img/Icons/MBoschIcon3.png" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="400x400" href="assets/img/Icons/MBoschIcon2.png">
@@ -150,7 +70,7 @@
     <nav class="navbar navbar-expand-lg py-3 navbar-color">
         <div class="container-fluid">
             <div class="visually-hidden"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon0.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon1.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon2.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon3.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon4.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon5.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon6.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png"></div><a class="d-flex justify-content-center align-items-center justify-content-xxl-start align-items-xxl-end nav-shrink" href="https://michael.boschwitz.me/"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png">
-                <p class="navbarText" href="index.html">Michael Boschwitz - Game Designer</p>
+                <p class="navbarText" href="index.html">Michael Boschwitz - Game Developer</p>
             </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse text-center" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
@@ -224,16 +144,21 @@
                     </div>
                 </div>
                 <div class="pt-1">
-                    <div class="container education group">
+                    <div class="container education group mb-5">
                         <h1 class="display-5 text-start m-2">Education:</h1>
-                        <div class="row gx-0 gy-3 gx-sm-0 gy-sm-3 gx-md-0 gy-md-0 gx-lg-0 gy-lg-0 gx-xl-0 gy-xl-0 gx-xxl-0 gy-xxl-0 d-flex d-sm-flex flex-row justify-content-center justify-content-sm-start justify-content-md-evenly justify-content-xxl-between">
-                            <div class="col-auto col-sm-auto col-md-auto col-lg-6 col-xl-7 text-start align-self-center bg-secondary rounded-5 p-4">
+                        <div class="row gx-0 gy-3 gx-sm-0 gy-sm-3 gx-md-0 gy-md-3 gx-lg-0 gy-lg-0 gx-xl-0 gy-xl-0 gx-xxl-0 gy-xxl-0 d-flex d-sm-flex flex-row justify-content-center align-items-center justify-content-sm-start justify-content-md-evenly justify-content-xxl-between">
+                            <div class="col-auto col-sm-auto col-md-9 col-lg-6 col-xl-6 text-start align-self-center mx-auto bg-secondary rounded-5 p-4">
                                 <h3 class="mb-0">University of Minnesota</h3><span class="text-muted align-middle p-2 mb-2">May 2023</span>
                                 <hr class="mt-2 mb-2 w-100">
                                 <p class="pb-0 mb-0 fs-5" style="font-family: Lato, sans-serif;">Software Engineering and Creative Design</p>
                                 <p class="mb-0 pb-1 fs-5" style="font-family: Lato, sans-serif;">+ Japanese Studies (Minor)</p>
                             </div>
-                            <div class="col-auto col-sm-auto col-md-auto col-lg-5 col-xl-4 text-start align-items-sm-end align-self-md-stretch bg-secondary rounded-5 p-4">
+                            <div class="col-auto col-sm-auto col-md-auto col-lg-3 col-xl-3 col-xxl-3 text-start align-self-center mx-auto align-items-sm-end align-self-md-stretch bg-secondary rounded-5 p-4">
+                                <h3 class="mb-0">立命館大学</h3><span class="text-muted align-middle pb-2">August 2023</span>
+                                <hr class="m-1 mt-1 mb-2 w-100">
+                                <p class="mb-0 fs-5" style="font-family: Lato, sans-serif;">SKP Program</p>
+                            </div>
+                            <div class="col-auto col-sm-auto col-md-auto col-lg-auto text-start align-self-center mx-auto align-items-sm-end align-self-md-stretch bg-secondary rounded-5 p-4">
                                 <h3 class="mb-0">Orono H.S</h3><span class="text-muted align-middle pb-2">June 2018</span>
                                 <hr class="m-1 mt-1 mb-2 w-100">
                                 <p class="mb-0 fs-5" style="font-family: Lato, sans-serif;">High School Diploma</p>
@@ -241,7 +166,7 @@
                         </div>
                         <div class="item"></div>
                     </div>
-                    <div class="container mb-3 mt-5 pt-4 scroll-container">
+                    <div class="container mb-5">
                         <div class="row g-0 justify-content-around invisible w-100 gap-3" id="awards-container1">
                             <div class="col-auto">
                                 <div>
@@ -300,7 +225,7 @@
                                     <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Logos/pngtree-gold-ribbon-rosette-award-vector-png-image_5980957.png">
                                         <div>
                                             <p class="fw-bold text-primary mb-0 award-title">T. Welty Award for Excellence</p>
-                                            <p class="text-muted mb-0 award-sub">Winter 2024</p>
+                                            <p class="text-muted mb-0 award-sub">Winter 2023</p>
                                         </div>
                                     </div>
                                 </div>
@@ -310,9 +235,19 @@
                 </div>
             </section>
         </section>
-        <section class="pt-5 mt-5 bg-secondary pb-5">
+        <section class="bg-secondary pt-5 pb-5">
             <h1 class="display-5 text-center">— Leadership &amp; Work —</h1>
             <div class="container align-items-center scroll-container">
+                <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-right">
+                    <div class="col w-75">
+                        <div class="text-start">
+                            <h1 class="subtitle-header-small-alt">- Gameplay Programmer -</h1>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;margin-bottom: 7px;font-family: Lato, sans-serif;">Avalon is an MMORPG developed by Avalon Corp, where players can explore new worlds, conquer dungeons, battle, collect rare items, and craft new experiences for others all using the power of Unreal Engine 5. From lush forested lands where you wield swords and spells to a gritty cyberpunk city with nothing but guns to dispatch enemies, Avalon features a world filled with both developer and community-created experiences for the players.&nbsp;<br><br>&nbsp;- Lead a team in overhauling the Animation Locomotion System to bring it to modern standards.<br>&nbsp;- Created an Animation Cancelling system for the 100+ player networked environment.<br>&nbsp;- Upgraded 3C's with various features such as Input Buffering and Coyote Time.<br>&nbsp;- Significantly improved the complexity and depth of combat with a "Combo Mixing" system.<br>&nbsp;- Developed an enormous amounts of both unique abilities and weapons for players and enemies.</p>
+                            <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">Avalon Corp.</p>
+                        </div>
+                    </div>
+                    <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/AvalonCorp.png" height=""></div>
+                </div>
                 <div class="row gx-3 d-flex align-items-center scroll-element js-scroll slide-left">
                     <div class="col-3"><img class="justify-content-xxl-end align-items-xxl-center w-100 fit-contain" src="assets/img/Logos/Asset_24xcool__1_-removebg-preview.png" height=""></div>
                     <div class="col w-75">
@@ -340,7 +275,7 @@
                     <div class="col w-75">
                         <div class="text-start">
                             <h1 class="text-start subtitle-header-small-alt">- Teachers Assistant (VR/XR) -</h1>
-                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">My senior year of college I was asked to help as a TA for the class on Virtual Reality and 3D Interaction (CSCI 5619), due in part to my exceptional performance as a student when I was took the class!<br><br>-&nbsp;Facilitated expansion of students’ breadth of knowledge in VR/AR.<br>&nbsp;- Demonstrated proficiency and adaptability to accommodate everyone.<br>&nbsp;-&nbsp; Left concise and communicative feedback on students’ VR/AR projects</p>
+                            <p class="scaling-text" style="margin-left: 10px;margin-top: 5px;font-family: Lato, sans-serif;">My senior year of college I was asked to help as a TA for the class on Virtual Reality and 3D Interaction (CSCI 5619), due in part to my exceptional performance as a student when I was took the class!<br><br>&nbsp;-&nbsp;Facilitated expansion of students’ breadth of knowledge in VR/AR.<br>&nbsp;- Demonstrated proficiency and adaptability to accommodate everyone.<br>&nbsp;-&nbsp; Left concise and communicative feedback on students’ VR/AR projects</p>
                             <p class="text-muted" style="font-size: min(max(11px, 2vw), 14px);">University of Minnesota</p>
                         </div>
                     </div>

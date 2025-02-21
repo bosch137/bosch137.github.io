@@ -44,12 +44,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Meet Michael Boschwitz!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
     <meta property="og:title" content="Meet Michael Boschwitz">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="620">
     <meta name="og:site_name" content="michael.boschwitz.me">
     <meta property="og:description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
+    <meta name="description" content="Software Engineering and Creative Design Graduate from the University of Minnesota. Passionate about technology, music, games, art, and eager to learn more.">
     <meta property="og:image" content="https://michael.boschwitz.me/assets/img/Photos/NZLifeguard.jpg">
     <meta property="og:type" content="Portfolio">
     <script type="application/ld+json">
@@ -59,88 +59,7 @@
             "name": "Meet Michael Boschwitz",
             "url": "https://michael.boschwitz.me/"
         }
-    </script>
-    <script>
-        (function() {
-
-            // JavaScript snippet handling Dark/Light mode switching
-
-            const getStoredTheme = () => localStorage.getItem('theme');
-            const setStoredTheme = theme => localStorage.setItem('theme', theme);
-            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
-
-            const getPreferredTheme = () => {
-
-                if (forcedTheme) return forcedTheme;
-
-                const storedTheme = getStoredTheme();
-                if (storedTheme) {
-                    return storedTheme;
-                }
-
-                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
-
-                if (pageTheme) {
-                    return pageTheme;
-                }
-
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            const setTheme = theme => {
-                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-bs-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-bs-theme', theme);
-                }
-            }
-
-            setTheme(getPreferredTheme());
-
-            const showActiveTheme = (theme, focus = false) => {
-                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
-
-                if (!themeSwitchers.length) return;
-
-                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                    element.classList.remove('active');
-                    element.setAttribute('aria-pressed', 'false');
-                });
-
-                for (const themeSwitcher of themeSwitchers) {
-
-                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
-
-                    if (btnToActivate) {
-                        btnToActivate.classList.add('active');
-                        btnToActivate.setAttribute('aria-pressed', 'true');
-                    }
-                }
-            }
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                const storedTheme = getStoredTheme();
-                if (storedTheme !== 'light' && storedTheme !== 'dark') {
-                    setTheme(getPreferredTheme());
-                }
-            });
-
-            window.addEventListener('DOMContentLoaded', () => {
-                showActiveTheme(getPreferredTheme());
-
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const theme = toggle.getAttribute('data-bs-theme-value');
-                            setStoredTheme(theme);
-                            setTheme(theme);
-                            showActiveTheme(theme);
-                        })
-                    })
-            });
-        })();
-    </script>
+    </script><script>!function(){const e=()=>localStorage.getItem("theme"),t=document.documentElement.getAttribute("data-bss-forced-theme"),a=()=>{if(t)return t;const a=e();if(a)return a;const r=document.documentElement.getAttribute("data-bs-theme");return r||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")},r=e=>{"auto"===e&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.setAttribute("data-bs-theme","dark"):document.documentElement.setAttribute("data-bs-theme",e)};r(a());const c=(e,t=!1)=>{const a=[].slice.call(document.querySelectorAll(".theme-switcher"));if(a.length){document.querySelectorAll("[data-bs-theme-value]").forEach((e=>{e.classList.remove("active"),e.setAttribute("aria-pressed","false")}));for(const t of a){const a=t.querySelector('[data-bs-theme-value="'+e+'"]');a&&(a.classList.add("active"),a.setAttribute("aria-pressed","true"))}}};window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",(()=>{const t=e();"light"!==t&&"dark"!==t&&r(a())})),window.addEventListener("DOMContentLoaded",(()=>{c(a()),document.querySelectorAll("[data-bs-theme-value]").forEach((e=>{e.addEventListener("click",(t=>{t.preventDefault();const a=e.getAttribute("data-bs-theme-value");(e=>{localStorage.setItem("theme",e)})(a),r(a),c(a)}))}))}))}();</script>
     <link rel="icon" type="image/png" sizes="400x400" href="assets/img/Icons/MBoschIcon4.png">
     <link rel="icon" type="image/png" sizes="400x400" href="assets/img/Icons/MBoschIcon3.png" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="400x400" href="assets/img/Icons/MBoschIcon2.png">
@@ -158,7 +77,7 @@
     <nav class="navbar navbar-expand-lg py-3 navbar-color">
         <div class="container-fluid">
             <div class="visually-hidden"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon0.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon1.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon2.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon3.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon4.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon5.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon6.png"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png"></div><a class="d-flex justify-content-center align-items-center justify-content-xxl-start align-items-xxl-end nav-shrink" href="https://michael.boschwitz.me/"><img class="navbarIcon" src="assets/img/Icons/MBoschIcon7.png">
-                <p class="navbarText" href="index.html">Michael Boschwitz - Game Designer</p>
+                <p class="navbarText" href="index.html">Michael Boschwitz - Game Developer</p>
             </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse text-center" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
@@ -226,7 +145,7 @@
                                 <div class="container-fluid card-container">
                                     <div class="card-img-overlay text-start card-back-div">
                                         <h4 class="subtitle-header-small invisible">Firesale</h4>
-                                        <p class="card-overview">Avalon is an upcoming MMORPG developed by Avalon Corp, where players can explore new worlds, conquer dungeons, battle, collect rare items, and craft new experiences for others all using the power of Unreal Engine 5. From lush forested lands where you wield swords and spells to a gritty cyberpunk city with nothing but guns to dispatch enemies, Avalon features a world filled with both developer and community-created experiences for the players.&nbsp;<br><br></p>
+                                        <p class="card-overview">Avalon is an upcoming MMORPG developed by Avalon Corp, where players can explore new worlds, conquer dungeons, battle, collect rare items, and craft new experiences for others all using the power of Unreal Engine 5. <br><br>From lush forested lands where you wield swords and spells to a gritty cyberpunk city with nothing but guns to dispatch enemies, Avalon features a world filled with both developer and community-created experiences for the players.&nbsp;<br><br></p>
                                     </div>
                                     <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-end card-footer project-card-buttons project-card-button-spacer"><a role="button" class="pcb-left" target="_blank" href="https://playavalon.com">Learn More</a><a role="button" class="pcb-right" target="_blank" href="https://www.youtube.com/watch?v=h_lisRB_aQM">Watch Trailer</a></div>
                                 </div>
@@ -467,6 +386,28 @@
             </a><span class="d-flex justify-content-center align-items-center">Click For an Overview!</span>
             <div class="container-fluid text-center slider-container">
                 <div class="d-flex flex-row multiple-item-slider">
+                    <div class="justify-content-center spacer-slider">
+                        <div class="projects-card"><span class="project-span"></span>
+                            <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/ReactBot.jpg"></div>
+                            <div class="projects-content">
+                                <div class="container-fluid card-container">
+                                    <div class="card-img-overlay text-start card-back-div">
+                                        <h4 class="subtitle-header-small invisible">React Bot</h4>
+                                        <p class="card-overview">React Bot is a simple, yet wildly entertaining Discord Bot I created to polish up my Python and Database skills. She can react to discord messages in a few different ways:&nbsp;<br><br>- Autoresponses 🌟: Simple Pseudo-Commands.<br>- Pinged 👀: Causes her to reply to the message that pinged her.<br>- Random 🔥: Random chance to reply during conversations.<br><br>For more info, why not add her to a discord server and try her out! You can use /help to learn more!</p>
+                                    </div>
+                                    <div class="card-footer project-card-buttons project-card-button-spacer justify-content-center"><button class="scale-on-hover glow-on-hover projects-buttons" onclick="window.open(&#39;https://discord.com/oauth2/authorize?client_id=1310670964077629470&#39;,&#39;_blank&#39;)" type="button">Chat with React Bot!</button></div>
+                                </div>
+                            </div>
+                            <div class="card-img-overlay text-start card-back-div">
+                                <h4 class="subtitle-header-small">React Bot</h4>
+                            </div>
+                        </div>
+                        <div class="container-fluid card align-items-center">
+                            <div class="row g-0">
+                                <div class="col-auto text-center project-card-badge-column"><span class="badge bg-blurple badge-spacer">Discord Bot</span><span class="badge bg-dark-blue badge-spacer">Python</span><span class="badge bg-gold badge-spacer">Discord.py</span><span class="badge bg-light-mint-green badge-spacer">AI/LLM</span><span class="badge bg-postgresql badge-spacer">PostgreSQL</span></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="justify-content-center spacer-slider">
                         <div class="projects-card"><span class="project-span"></span>
                             <div class="card project-card"><img class="card-img projects-card-img" src="assets/img/Code%20Projects/ImpossibleInc.jpg"></div>
